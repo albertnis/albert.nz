@@ -1,0 +1,7 @@
+[build]
+  publish = "public/"
+  command = "npm run-script build"
+
+[[redirects]]
+  from = "/posts/*"
+  to = "/:splat"
