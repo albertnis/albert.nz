@@ -1,0 +1,29 @@
+body.dark {
+  --code-color: #f8f8f2;
+  --code-background-color: #2e3440;
+  --code-comment: #636f88;
+  --code-punctuation: #81a1c1;
+  --code-property: #81a1c1;
+  --code-number: #b48ead;
+  --code-boolean: #81a1c1;
+  --code-selector: #a3be8c;
+  --code-operator: #81a1c1;
+  --code-atrule: #88c0d0;
+  --code-keyword: #81a1c1;
+  --code-regex: #ebcb8b;
+}
+
+body {
+  --code-color: #393a34;
+  --code-background-color: white;
+  --code-comment: #999988;
+  --code-punctuation: #393a34;
+  --code-property: #36acaa;
+  --code-number: #36acaa;
+  --code-boolean: #36acaa;
+  --code-selector: #e3116c;
+  --code-operator: #393a34;
+  --code-atrule: #00a4db;
+  --code-keyword: #00a4db;
+  --code-regex: #ebcb8b;
+}
