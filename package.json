@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "albertnis-gatsby",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Albert Nisbet's personal website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "author": "Albert Nisbet <albert@albert.nz>",
   "dependencies": {
     "gatsby": "^2.23.12",
     "gatsby-image": "^2.4.9",
@@ -38,15 +35,15 @@
   "devDependencies": {
     "prettier": "2.0.5"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://albert.nz",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "blog"
   ],
-  "license": "MIT",
-  "main": "n/a",
+  "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/albertnis/albertnis-gatsby"
   },
   "scripts": {
     "build": "gatsby build",

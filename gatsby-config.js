@@ -3,10 +3,10 @@ module.exports = {
     title: `Gatsby Starter Blog`,
     author: {
       name: `Albert Nisbet`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      summary: `who lives and works in Wellington building useful things.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `The blog of Albert Nisbet`,
+    siteUrl: `https://albert.nz/`,
     social: {
       twitter: `albertnis`,
     },
