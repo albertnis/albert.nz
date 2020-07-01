@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Albert Nisbet`,
     author: {
-      name: `Albert Nisbet`,
+      name: `Albert Nisbet PR edition`,
       summary: `who lives and works in Wellington building useful things.`,
     },
     description: `The blog of Albert Nisbet`,
