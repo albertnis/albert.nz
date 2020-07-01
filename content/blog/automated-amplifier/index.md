@@ -144,5 +144,5 @@ Instant smart speakers right there! Ask Google Assistant to play a song through 
 
 In this project, I learnt that - with a bit of automation - even old and/or "dumb" equipment can be made to be more convenient. I use these automations every day - it's nice to be able to ask Google to play music on the speakers or boot the computer without having to think about what the amplifier was last being used for. I haven't touched the remote for a long time. Best of all, I barely need to open Home Assistant to correct the input manually. That's what's automation's all about: removing repetitive actions and genuinely making things faster and easier.
 
-[ir-control-post]: {{ site.url }}/posts/reverse-engineering-ir-ad18/
+[ir-control-post]: /reverse-engineering-ir-ad18/
 [AD18]: http://www.smsl-audio.com/productshow.asp?id=95

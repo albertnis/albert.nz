@@ -104,9 +104,8 @@ Now it's very easy to add the desired automations in Node-RED. I just create sta
 ![Screenshot of Node-RED showing various automations](./esphome-button-automations.png)
 
 [esphome]: https://esphome.io
-
-[esphome-light-migration]: {{ site.url }}/posts/esphome-arm/
-[lightt-hardware]: {{ site.url }}/posts/voice-activated-lighting-hardware/
+[esphome-light-migration]: /esphome-arm/
+[lightt-hardware]: /voice-activated-lighting-hardware/
 [lightt]: https://github.com/albertnis/lightt
 [z2m-switch]: https://www.zigbee2mqtt.io/devices/WXKG11LM.html
 [full-config]: https://gist.github.com/albertnis/f33066b0b3623a9839a3429c8f19f4d4
