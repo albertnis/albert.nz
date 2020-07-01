@@ -10,7 +10,7 @@ links:
 
 A short detour during a recent road trip to Wairoa uncovered the picturesque town of Mahia on the east coast of New Zealand.
 
-![][cliff]{: .webfeedsFeaturedVisual }
+![][cliff]
 
 ![][hills]
 

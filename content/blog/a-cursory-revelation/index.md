@@ -7,7 +7,7 @@ accent: rgb(234, 156, 9)
 
 A decent gaming mouse for \$35? Even second-hand, that seemed just about too good to be true. Nevertheless, I bought the mouse as part of my recent [peripherals upgrade][apex]. So far the experience has been fantastic, to say the least.
 
-![](./g500.jpg){:webFeedsFeaturedVisual}
+![](./g500.jpg)
 
 It didn't start off too fantastically though. Just a week after I received my second-hand Logitech G500 I started noticing frustrating double-click issues, where the mouse would erratically click and release when the left button was held down. These second-hand qualms reached the point where I switched back to my trusty [Microsoft WMO1.1A][wmo] while I researched causes and potential fixes. First up, I followed through a [popular video][static] on YouTube, which involved shielding the top of the switch to prevent static buildup. This only worked partially for me however and the mouse was still barely usable. Eventually I bit the bullet and opened up the mouse switch to clean the contact point. The tutorial I used is [here][scrape]. I opted not to remove the spring from the switch and simply scraped the contact point with a flat head screwdriver. While I couldn't see any buildup before scraping, the trick worked marvellously; once reassembled, the mouse was as good as new!
 

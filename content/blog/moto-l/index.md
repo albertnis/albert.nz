@@ -11,7 +11,7 @@ In fact, it still hasn't officially arrived to a large proportion of Moto G owne
 
 My phone is the 'Global GSM' version of the US Moto G XT1032. After waiting months with no update, I became fed up with my nearly-crippled phone and turned to [Reddit][moto-reddit] and [XDA Forums][moto-xda] where I found many users in the same situation. I read daunting guides about manually flashing system images and custom ROMs. Yesterday I bit the bullet and somehow succeeded in manually installing Android Lollipop 5.1 on my phone (technical details below).
 
-![](./lollipop.jpg){:webFeedsFeaturedVisual}
+![](./lollipop.jpg)
 
 My first impressions of 5.1 compared to 4.4.4 are fantastic. Not only are those slick material design elements abundantly present, but memory management has come a long way. Apps open promptly, and the launcher only crashes if I do some serious multitasking. I can listen to music while browsing Facebook and using Facebook Messenger with no issues whatsoever. Plus there's a whole host of new settings to explore, and a mysterious camera flash bug has been fixed. It's early days for Lollipop on my phone though; I'm just hoping that performance won't deteriorate over time. But so far, so good. In fact, 5.1 is so smooth and bug-free that this whole experience has made me even more skeptical of Motorla's customer support and rollout strategy.
 

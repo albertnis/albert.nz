@@ -18,7 +18,7 @@ If my years of learning French only taught me two things about language, they wo
 
 I set out to explore and exaggerate the shortcomings of online translators by creating Obfuscator. For those who only speak one or two languages, it can be hard to gauge the inaccuracy of translation software from a single pass. Using the Bing translate API, Obfuscator takes a phrase and translates it through three successive languages before returning it to the origin language where it can be revealed to the viewer in all its glory. Depending on the languages and phrase, the translation software may completely nail it. Other times, it may not:
 
-![](./example.png){:webFeedsFeaturedVisual}
+![](./example.png)
 
 To make Bing play Chinese whispers with itself, click the project link.
 

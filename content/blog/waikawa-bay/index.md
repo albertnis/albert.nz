@@ -21,9 +21,9 @@ In January 2014, I spent a week in a remote part of the Marlborough Sounds, oppo
 
 ![][hills]
 
-[track]: ./waikawa-1.jpg
-[grass]: ./waikawa-2.jpg
-[fern]: ./waikawa-3.jpg
-[rocks]: ./waikawa-4.jpg
-[bellbird]: ./waikawa-5.jpg
-[hills]: ./waikawa-6.jpg
+[track]: ./waikawa-1.JPG
+[grass]: ./waikawa-2.JPG
+[fern]: ./waikawa-3.JPG
+[rocks]: ./waikawa-4.JPG
+[bellbird]: ./waikawa-5.JPG
+[hills]: ./waikawa-6.JPG

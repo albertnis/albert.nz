@@ -13,7 +13,7 @@ links:
 
 Early in 2016 I attempted to combat one of my few gripes with MusicBee: the mediocre built-in themes. While the latest 3.0 version of MusicBee has helped, the only decent theme in previous versions was the rather fantastic [DarkRED Flat](http://getmusicbee.com/forum/index.php?topic=10884.0) by forum user Endeavour1934. Using these theme files as a starting point, I developed a slightly more colourful variation. The idea was to have a single accent colour which could be easily changed to any desired colour
 
-![](./darkmod_screenshot.png){:webFeedsFeaturedVisual}
+![](./darkmod_screenshot.png)
 
 During the process, I identified a couple of things about the skinning process which I thought could be improved:
 

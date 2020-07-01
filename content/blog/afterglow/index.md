@@ -7,7 +7,7 @@ accent: rgb(184, 53, 195)
 
 In 2015, I discovered two glorious things in the world of electronics: Arduinos and RGB LED strip lights. Bounded only by imagination and enabled only by eBay, I set out to combine these two items in the grooviest way possible.
 
-![](./led.jpg){:webFeedsFeaturedVisual}
+![](./led.jpg)
 
 As it turns out, with three MOSFETs, an IR receiver and a bit of code, it was surprisingly easy to replicate the functionality of the bundled LED strip controller with an Arduino as the brains. With a bit more code, I was able to implement buttery-smooth colour-crossfading and coloured strobing with different speeds.
 
