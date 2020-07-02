@@ -32,11 +32,12 @@ pre[class*='language-'] {
   margin: 0.5em 0;
   overflow: auto;
   border-radius: 0.3em;
+  background: var(--color-background-popout);
 }
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-  background: var(--code-background-color);
+  background-color: var(--color-background-popout);
 }
 
 /* Inline code */
