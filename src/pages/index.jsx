@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Header from '../components/header'
 import Row from '../components/row'
+import PostPreview from '../components/postPreview'
 
 const BlogIndex = ({ data }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -20,21 +21,13 @@ const BlogIndex = ({ data }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <article key={node.fields.slug}>
-              <header>
-                <h3>
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
+              <PostPreview
+                to={node.fields.slug}
+                title={title}
+                date={node.frontmatter.date}
+                description={node.frontmatter.description || node.excerpt}
+                accent={node.frontmatter.accent}
+              />
             </article>
           )
         })}
@@ -63,6 +56,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            accent
           }
         }
       }

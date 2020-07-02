@@ -1,0 +1,31 @@
+.postprev {
+  margin-bottom: calc(var(--space-base) * 2);
+}
+
+.postlink,
+.postlink:link,
+.postlink:hover,
+.postlink:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.postlink:hover .title {
+  text-decoration: underline;
+  color: var(--color-accent);
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 1.1em;
+}
+
+.date {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+.description {
+  opacity: 0.7;
+}

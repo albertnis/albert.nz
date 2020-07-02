@@ -26,7 +26,6 @@ const BlogPostTemplate = ({ data, location }) => {
             <p>{post.frontmatter.date}</p>
           </header>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr />
         </article>
       </Row>
     </div>
