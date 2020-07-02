@@ -2,6 +2,7 @@
   --color-accent: rgb(33, 119, 182);
   --width-content: 900px;
   --space-base: 22px;
+  --width-mobile: 700px;
 }
 
 body {
