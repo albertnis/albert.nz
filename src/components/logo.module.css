@@ -1,0 +1,10 @@
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.logo line,
+.logo polygon {
+  stroke: var(--color-foreground);
+  stroke-width: 8;
+}

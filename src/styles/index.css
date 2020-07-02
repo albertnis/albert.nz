@@ -1,3 +1,9 @@
+:root {
+  --color-accent: rgb(33, 119, 182);
+  --width-content: 900px;
+  --space-base: 22px;
+}
+
 body {
   --color-foreground: #131311;
   --color-background: #fcfcfc;
@@ -36,7 +42,25 @@ body {
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: var(--color-foreground);
   background-color: var(--color-background);
+
+  font-family: 'PT Sans', serif;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: white;
+}
+
+::-moz-selection {
+  background: var(--color-accent);
+  color: white;
 }

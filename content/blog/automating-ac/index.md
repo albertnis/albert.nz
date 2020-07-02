@@ -68,7 +68,7 @@ Before we move on to automating the heat pump, we need to find somewhere for the
 
 We just need to build an image and run the container with something like the following:
 
-```sh
+```shell
 git clone https://github.com/albertnis/fujitsu-ar-ry13-ir-codes
 cd fujitsu-ar-ry13-ir-codes
 docker build -t ir-sandbox .
@@ -77,7 +77,7 @@ docker run -p 8080:8080 -d ir-sandbox --name="ir-sandbox" --restart="always"
 
 I'll be adding this to my home automation docker-compose file someday, but for now the manual build and run does the trick! At this stage IR codes can be constructed via the API. For example:
 
-```sh
+```shell
 $ curl "http://localhost:8080/broadlink?tempC=18&mode=heat&fanSpeed=Quiet&swing=Off&powerOn=0"
 JgAGAWg0DQ0NDQ0mDQ0NJg0NDQ0NDQ0mDSYNDQ0NDQ0NJg0mDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NJg0NDQ0NDQ0NDQ0NDQ0NDSYNDQ0NDQ0NDQ0mDSYNJg0mDSYNJg0mDSYNDQ0NDSYNDQ0NDQ0NDQ0NDQ0NDQ0NDSYNJg0NDQ0NDQ0NDQ0NDQ0NDSYNDQ0NDQ0NDQ0mDQ0NDQ0NDQ0NDQ0NDQ0NJg0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDSYNDQ0NDQ0NDQ0NDSYNDQ0NDQ0NJg3/DQUAAA==
 ```
