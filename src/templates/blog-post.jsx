@@ -5,10 +5,10 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Row from '../components/row'
 import Header from '../components/header'
+import Post from '../components/post'
 
-const BlogPostTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
+const BlogPostTemplate = ({ data }) => {
+  const { frontmatter, excerpt, html } = data.markdownRemark
 
   return (
     <div>
@@ -16,17 +16,11 @@ const BlogPostTemplate = ({ data, location }) => {
         <Header />
       </Row>
       <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        title={frontmatter.title}
+        description={frontmatter.description || excerpt}
       />
       <Row>
-        <article>
-          <header>
-            <h1>{post.frontmatter.title}</h1>
-            <p>{post.frontmatter.date}</p>
-          </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        </article>
+        <Post frontmatter={frontmatter} html={html} />
       </Row>
     </div>
   )
@@ -49,6 +43,8 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        accent
+        links
       }
     }
   }

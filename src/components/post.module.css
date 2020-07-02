@@ -1,0 +1,22 @@
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: var(--space-base);
+  color: var(--color-foreground);
+}
+
+@media screen and (max-width: 700px) {
+  .title {
+    font-size: 2.3rem;
+  }
+}
+
+.divider {
+  width: 140px;
+  height: 10px;
+  display: inline-block;
+  margin-bottom: calc(var(--space-base) * 2);
+  background-color: var(--color-accent);
+}

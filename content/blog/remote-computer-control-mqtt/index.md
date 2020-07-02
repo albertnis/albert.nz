@@ -1,6 +1,6 @@
 ---
-title: Remote controlling a computer using MQTT
-date: 2020-04-21T17:59:12+1200
+title: Remote controlling a computer with home automation
+date: 2020-06-11T20:45:02+1200
 description: Developing a simple Go application to solve a problem
 accent: rgb(144, 81, 237)
 links:
