@@ -21,13 +21,15 @@ const BioPreview = ({ style }) => {
             summary
           }
           social {
-            twitter
+            github
+            email
+            linkedin
           }
         }
       }
     }
   `)
-  const { author, social } = data.site.siteMetadata
+  const { social } = data.site.siteMetadata
   return (
     <Zone>
       <div className={styles.biopreview} style={{ style }}>
