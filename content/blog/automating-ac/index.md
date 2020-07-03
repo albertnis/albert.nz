@@ -125,7 +125,7 @@ Time to see this beast in action!
 
 Without a doubt, working on this heat pump has been one of the most satisfying home automation projects I have worked on for a while. From learning about how IR communication really works, to cracking the code of the remote, to wrapping the whole thing in an API - it's been a great learning experience.
 
-[re-article]: {% post_url 2019-06-15-reverse-engineering-ac %}
+[re-article]: /reverse-engineering-ac
 [climate-mqtt-docs]: https://www.home-assistant.io/components/climate.mqtt/
 [nodered]: ./node-red-heatpump.png
 [nodered-temp]: ./node-red-temperature.png

@@ -138,8 +138,8 @@ We have fully reverse engineered the AR-RY13 protocol at this stage. We know how
 
 In the [next article][automate-article] I'll go into how we can wrap this workflow in an automation pipeline using Node-RED for intuitive control through Home Assistant.
 
-[ir-article]: {% post_url 2019-05-10-reverse-engineering-ir-ad18 %}
-[automate-article]: {% post_url 2019-06-15-automating-ac %}
+[ir-article]: /reverse-engineering-ir-ad18
+[automate-article]: /automating-ac
 [fujitsu-reverse]: http://files.remotecentral.com/library/21-1/fujitsu/air_conditioner/index.html
 [github]: https://github.com/albertnis/fujitsu-ar-ry13-ir-codes
 [checksum]: https://stackoverflow.com/a/48533869

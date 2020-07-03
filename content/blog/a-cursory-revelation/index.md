@@ -17,7 +17,7 @@ But it doesn't stop there. The software can detect which program is focused and 
 
 This all sounds very much like a marketing pitch for Logitech, but in reality I am simply amazed by how flexible multi-button mice are. Initially I was fearful that the additional buttons would be flashy and useless, but once I took the time to decide on useful mappings, I realised the potential these mice have to improve the entire window management experience as well as certain applications. Are there other brands who have even better mice and software? Quite possibly. All I know is that I've found a new personal standard for a mouse. I just wish I had discovered it sooner.
 
-[Apex]: {% post_url 2016-02-27-the-apex %}
-[WMO]: http://www.newegg.com/Product/Product.aspx?Item=N82E16826105099
+[apex]: /the-apex
+[wmo]: http://www.newegg.com/Product/Product.aspx?Item=N82E16826105099
 [static]: https://www.youtube.com/watch?v=dWJk4EWfyOA
 [scrape]: http://zalbee.intricus.net/2014/02/how-i-fixed-my-logitech-g500-mouse/

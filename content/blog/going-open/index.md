@@ -13,6 +13,5 @@ The Dragonfly-SR125i combo has been a revelation for me in many ways. Rock music
 
 [online-hifi]: http://onlinehifi.co.nz/
 [tlp]: http://wellington.listeningpost.co.nz/
-
-[dac]: {% post_url 2015-02-06-the-dragonfly-effect %}
+[dac]: /the-dragonfly-effect
 [headphones]: ./grado.jpg

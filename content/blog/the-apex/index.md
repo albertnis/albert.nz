@@ -19,6 +19,5 @@ Knowing this, I jumped onto Massdrop and investigated their fantastic mechanical
 
 [logitech k220]: http://www.logitech.com/en-nz/product/wireless-combo-mk220
 [steelseries apex]: https://steelseries.com/gaming-keyboards/apex-350
-
-[Going Open]: {% post_url 2014-12-24-going-open %}
+[going open]: /going-open
 [mech]: https://www.massdrop.com/buy/magicforce-68-key-mini-mechanical-keyboard?mode=guest_open
