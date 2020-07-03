@@ -33,7 +33,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 700,
+              maxWidth: 900,
               quality: 80,
             },
           },
@@ -72,9 +72,15 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        fonts: [
+          `Fira code`,
+          `PT Sans`,
+          `Didact Gothic`,
+          `Raleway\:400,500,600,700,800`,
+        ],
+        display: 'swap',
       },
     },
   ],
