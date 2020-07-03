@@ -5,19 +5,21 @@ const Post = ({ accent, html, frontmatter }) => (
   <article
     style={frontmatter.accent ? { '--color-accent': frontmatter.accent } : {}}
   >
-    <header>
+    <header className={styles.header}>
       <h1 className={styles.title}>{frontmatter.title}</h1>
       <h className={styles.divider}></h>
-      <p>
-        {frontmatter.date}&nbsp;
-        {frontmatter.links &&
-          frontmatter.links.map(l => (
-            <span>
-              •&nbsp;
-              <span dangerouslySetInnerHTML={{ __html: l }} />
-            </span>
-          ))}
-      </p>
+      <div className={`markdown-body ${styles.meta}`}>
+        <p>
+          {frontmatter.date}&nbsp;
+          {frontmatter.links &&
+            frontmatter.links.map(l => (
+              <span>
+                •&nbsp;
+                <span dangerouslySetInnerHTML={{ __html: l }} />
+              </span>
+            ))}
+        </p>
+      </div>
     </header>
     <section
       className="markdown-body"

@@ -1,3 +1,6 @@
+.header {
+}
+
 .title {
   font-family: 'Raleway', sans-serif;
   font-size: 3rem;
@@ -19,4 +22,10 @@
   display: inline-block;
   margin-bottom: calc(var(--space-base) * 2);
   background-color: var(--color-accent);
+}
+
+.meta {
+  margin-bottom: 16px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
 }
