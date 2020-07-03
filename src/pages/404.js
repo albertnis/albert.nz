@@ -1,16 +1,27 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import SEO from '../components/seo'
+import Header from '../components/header'
+import Row from '../components/row'
+import Zone from '../components/zone'
 
 const NotFoundPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
 
   return (
     <div>
+      <Row>
+        <Header />
+      </Row>
       <SEO title="404: Not Found" />
-      <h1>Not Found</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <Row>
+        <Zone className="markdown-body">
+          <h5>Page not found</h5>
+          <p>The page you requested does not exist.</p>
+          <Link to="/">Back to homepage</Link>
+        </Zone>
+      </Row>
     </div>
   )
 }
