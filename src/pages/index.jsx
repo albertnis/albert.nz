@@ -6,6 +6,7 @@ import Header from '../components/header'
 import Row from '../components/row'
 import PostPreview from '../components/postPreview'
 import BioPreview from '../components/bioPreview'
+import Footer from '../components/footer'
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
@@ -34,6 +35,9 @@ const BlogIndex = ({ data }) => {
             </article>
           )
         })}
+      </Row>
+      <Row>
+        <Footer />
       </Row>
     </div>
   )

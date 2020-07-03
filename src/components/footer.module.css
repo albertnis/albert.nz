@@ -1,0 +1,11 @@
+.divider {
+  width: 140px;
+  height: 10px;
+  display: inline-block;
+  margin-bottom: var(--space-base);
+  background-color: var(--color-background-popout);
+}
+
+.content {
+  font-family: 'Raleway', sans-serif;
+}

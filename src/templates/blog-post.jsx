@@ -5,6 +5,7 @@ import SEO from '../components/seo'
 import Row from '../components/row'
 import Header from '../components/header'
 import Post from '../components/post'
+import Footer from '../components/footer'
 
 const BlogPostTemplate = ({ data }) => {
   const { frontmatter, excerpt, html } = data.markdownRemark
@@ -20,6 +21,9 @@ const BlogPostTemplate = ({ data }) => {
       />
       <Row>
         <Post frontmatter={frontmatter} html={html} />
+      </Row>
+      <Row>
+        <Footer />
       </Row>
     </div>
   )
