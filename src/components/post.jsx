@@ -10,11 +10,11 @@ const Post = ({ accent, html, frontmatter }) => (
       <h className={styles.divider}></h>
       <div className={`markdown-body ${styles.meta}`}>
         <p>
-          {frontmatter.date}&nbsp;
+          {frontmatter.date}
           {frontmatter.links &&
             frontmatter.links.map(l => (
               <span>
-                •&nbsp;
+                &nbsp;•&nbsp;
                 <span dangerouslySetInnerHTML={{ __html: l }} />
               </span>
             ))}
