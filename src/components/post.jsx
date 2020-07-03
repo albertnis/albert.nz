@@ -19,7 +19,10 @@ const Post = ({ accent, html, frontmatter }) => (
           ))}
       </p>
     </header>
-    <section dangerouslySetInnerHTML={{ __html: html }} />
+    <section
+      className="markdown-body"
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
   </article>
 )
 

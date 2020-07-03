@@ -8,6 +8,7 @@
 body {
   --color-foreground: #131311;
   --color-background: #fcfcfc;
+  --color-divider: #eaecef;
   --color-background-popout: #eaeae9;
   --code-color: #393a34;
   --code-background-color: white;
@@ -27,6 +28,7 @@ body {
   body {
     --color-foreground: #f9f9f9;
     --color-background: #161616;
+    --color-divider: #3e3e3c;
     --color-background-popout: #272326;
     --code-color: #f8f8f2;
     --code-background-color: #2e3440;
