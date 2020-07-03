@@ -57,18 +57,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-45382817-3`,
       },
     },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Albert Nisbet`,
+        short_name: `albert.nz`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#161616`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },
