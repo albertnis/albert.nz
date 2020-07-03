@@ -31,24 +31,22 @@ const BioPreview = ({ style }) => {
   `)
   const { social } = data.site.siteMetadata
   return (
-    <Zone>
-      <div className={styles.biopreview} style={{ style }}>
-        <Image
-          fixed={data.avatar.childImageSharp.fixed}
-          className={styles.avatar}
-        />
-        <div className={`markdown-body ${styles.tagline}`}>
-          <h5>Kia ora!</h5>
-          <p>
-            I'm a developer living and working in Wellington. I'm into
-            engineering, home automation and electronics. You can find me on{' '}
-            <a href={`https://linkedin.com/in/${social.linkedin}`}>LinkedIn</a>{' '}
-            and <a href={`https://github.com/${social.github}`}>GitHub</a>, or{' '}
-            <a href={`mailto:${social.email}`}>get in touch via email</a>.{' '}
-          </p>
-        </div>
+    <div className={styles.biopreview} style={{ style }}>
+      <Image
+        fixed={data.avatar.childImageSharp.fixed}
+        className={styles.avatar}
+      />
+      <div className={`markdown-body ${styles.tagline}`}>
+        <h5>Kia ora!</h5>
+        <p>
+          I'm Albert, a developer living and working in Wellington. I'm into
+          engineering, home automation and electronics. You can find me on{' '}
+          <a href={`https://linkedin.com/in/${social.linkedin}`}>LinkedIn</a>{' '}
+          and <a href={`https://github.com/${social.github}`}>GitHub</a>, or{' '}
+          <a href={`mailto:${social.email}`}>get in touch via email</a>.{' '}
+        </p>
       </div>
-    </Zone>
+    </div>
   )
 }
 
