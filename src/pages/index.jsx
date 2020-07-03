@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import SEO from '../components/seo'
 import Header from '../components/header'
@@ -7,7 +7,6 @@ import Row from '../components/row'
 import PostPreview from '../components/postPreview'
 
 const BlogIndex = ({ data }) => {
-  const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
 
   return (
