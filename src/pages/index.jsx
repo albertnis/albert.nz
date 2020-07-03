@@ -5,16 +5,20 @@ import SEO from '../components/seo'
 import Header from '../components/header'
 import Row from '../components/row'
 import PostPreview from '../components/postPreview'
+import BioPreview from '../components/bioPreview'
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
 
   return (
     <div>
+      <SEO />
       <Row>
         <Header />
       </Row>
-      <SEO />
+      <Row>
+        <BioPreview />
+      </Row>
       <Row>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug

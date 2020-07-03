@@ -1,0 +1,14 @@
+.zone {
+  position: relative;
+  background-color: var(--color-background-popout);
+  border-radius: var(--border-radius);
+  padding: var(--space-base);
+}
+
+@media screen and (max-width: 700px) {
+  .zone {
+    border-radius: 0;
+    left: calc(var(--space-base) * -1);
+    width: calc(100% + calc(var(--space-base) * 2));
+  }
+}

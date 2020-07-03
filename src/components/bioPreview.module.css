@@ -1,0 +1,29 @@
+.biopreview {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .biopreview {
+    flex-direction: column;
+  }
+}
+
+.avatar {
+  border-radius: var(--border-radius);
+  flex-shrink: 0;
+}
+
+.tagline {
+  margin: 0 0 0 var(--space-base);
+}
+
+@media screen and (max-width: 500px) {
+  .tagline {
+    margin: var(--space-base) 0 0 0;
+  }
+
+  .tagline h5 {
+    text-align: center;
+  }
+}

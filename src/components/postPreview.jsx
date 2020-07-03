@@ -7,14 +7,14 @@ const PostPreview = ({ to, title, date, description, accent }) => (
     className={style.postprev}
     style={accent ? { '--color-accent': accent } : {}}
   >
-    <Link to={to} class={style.postlink}>
+    <Link to={to} className={style.postlink}>
       <header>
         <h3 className={style.title}>{title}</h3>
       </header>
-      <div class={style.date}>{date}</div>
+      <div className={style.date}>{date}</div>
       <section>
         <div
-          class={style.description}
+          className={style.description}
           dangerouslySetInnerHTML={{ __html: description }}
         ></div>
       </section>

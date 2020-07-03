@@ -9,6 +9,9 @@ module.exports = {
     siteUrl: `https://albert.nz/`,
     social: {
       twitter: `albertnis`,
+      email: `albert@albert.nz`,
+      github: `albertnis`,
+      linkedin: `albertnis`,
     },
   },
   plugins: [
