@@ -5,7 +5,7 @@ date: 2017-05-14T17:23:25+1300
 accent: rgb(42, 178, 239)
 links:
   - <a href="https://github.com/albertnis/vmidi2">Github</a>
-  - <a href="./Nisbet_Green_Capture_of_Dynamic_Piano Performance_with_Depth_Vision.pdf">Research paper</a>
+  - <a href="/Nisbet_Green_Capture_of_Dynamic_Piano Performance_with_Depth_Vision.pdf">Research paper</a>
 ---
 
 In an effort to focus more of my attention on coding, I managed to pick up two computer science papers at the start of the year to add to my mechanical engineering degree. One of these was computer vision.
