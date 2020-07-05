@@ -6,6 +6,10 @@
   background-color: var(--color-background-popout);
 }
 
-.content {
-  font-family: 'Raleway', sans-serif;
+.contentRight {
+  float: left;
+}
+
+.contentRight {
+  float: right;
 }

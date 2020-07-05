@@ -1,5 +1,4 @@
 import React from 'react'
-import Row from './row'
 import { Link } from 'gatsby'
 import Logo from './logo'
 import style from './header.module.css'

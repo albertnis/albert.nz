@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './bioPreview.module.css'
-import Zone from './zone'
 import Image from 'gatsby-image'
 import { useStaticQuery, graphql } from 'gatsby'
 
