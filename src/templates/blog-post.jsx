@@ -22,7 +22,12 @@ const BlogPostTemplate = ({ data }) => {
       <Row>
         <Post frontmatter={frontmatter} html={html} />
       </Row>
-      <Row>
+      <Row
+        styles={{
+          'background-color': 'var(--color-background-footer)',
+          color: 'var(--color-foreground-footer)',
+        }}
+      >
         <Footer />
       </Row>
     </div>

@@ -6,6 +6,16 @@
   background-color: var(--color-background-popout);
 }
 
+.footerLink:link,
+.footerLink:visited {
+  color: inherit;
+}
+
+.footerLink:hover,
+.footerLink:active {
+  text-decoration: none;
+}
+
 .contentRight {
   float: left;
 }

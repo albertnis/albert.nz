@@ -20,17 +20,33 @@ const Footer = () => {
   const { social } = data.site.siteMetadata
   return (
     <div>
-      <h className={styles.divider}></h>
-      <div className={`${styles.content} markdown-body`}>
-        <span className={`${styles.contentLeft}`}>
-          <a href={`https://linked.com/in/${social.linkedin}`}>LinkedIn</a>
+      <div className={styles.content}>
+        <span className={styles.contentLeft}>
+          <a
+            className={styles.footerLink}
+            href={`https://linked.com/in/${social.linkedin}`}
+          >
+            LinkedIn
+          </a>
           &nbsp;•&nbsp;
-          <a href={`https://github.com/${social.github}`}>GitHub</a>
+          <a
+            className={styles.footerLink}
+            href={`https://github.com/${social.github}`}
+          >
+            GitHub
+          </a>
           &nbsp;•&nbsp;
-          <a href={`https://twitter.com/${social.linkedin}`}>Twitter</a>
+          <a
+            className={styles.footerLink}
+            href={`https://twitter.com/${social.linkedin}`}
+          >
+            Twitter
+          </a>
         </span>
         <span className={`${styles.contentRight}`}>
-          <a href="/rss.xml">RSS</a>
+          <a className={styles.footerLink} href="/rss.xml">
+            RSS
+          </a>
         </span>
       </div>
     </div>
