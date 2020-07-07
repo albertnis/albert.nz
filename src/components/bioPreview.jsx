@@ -39,10 +39,10 @@ const BioPreview = ({ style }) => {
         <h5>Kia ora!</h5>
         <p>
           I'm Albert, a developer living and working in Wellington. I'm into
-          engineering, home automation and electronics. You can find me on{' '}
+          engineering, home automation and electronics. Find me on{' '}
           <a href={`https://linkedin.com/in/${social.linkedin}`}>LinkedIn</a>{' '}
           and <a href={`https://github.com/${social.github}`}>GitHub</a>, or{' '}
-          <a href={`mailto:${social.email}`}>get in touch via email</a>.{' '}
+          <a href={`mailto:${social.email}`}>send an email</a>.{' '}
         </p>
       </div>
     </div>

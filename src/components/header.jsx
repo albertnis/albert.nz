@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Logo from './logo'
 import style from './header.module.css'
+import LogoMinimalLarge from './logoMinimalLarge'
 
 const Header = () => (
   <div className={style.container}>
     <Link to={`/`} className={style.link}>
       <div className={style.content}>
         <div className={style.logoWrapper}>
-          <Logo />
+          <LogoMinimalLarge />
         </div>
         <div className={style.title}>
           <h1>Albert Nisbet</h1>

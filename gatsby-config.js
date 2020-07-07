@@ -188,12 +188,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Fira code`,
-          `PT Sans`,
-          `Didact Gothic`,
-          `Raleway\:400,500,600,700,800`,
-        ],
+        fonts: [`Fira code`, `PT Sans`, `Raleway\:400,600,700,800`],
         display: 'swap',
       },
     },

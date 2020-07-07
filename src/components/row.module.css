@@ -1,8 +1,19 @@
 .row {
-  display: flex;
-  justify-content: center;
   width: 100%;
   padding: calc(var(--space-base) * 2) 0;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  max-width: var(--width-content);
+  width: 100vw;
+  padding-left: var(--space-base);
+  padding-right: var(--space-base);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-base);
+  font-size: 0.875em;
 }
 
 .content {
@@ -10,4 +21,6 @@
   width: 100vw;
   padding-left: var(--space-base);
   padding-right: var(--space-base);
+  margin-left: auto;
+  margin-right: auto;
 }

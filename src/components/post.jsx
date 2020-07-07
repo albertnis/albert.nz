@@ -7,13 +7,13 @@ const Post = ({ accent, html, frontmatter }) => (
   >
     <header className={styles.header}>
       <h1 className={styles.title}>{frontmatter.title}</h1>
-      <h className={styles.divider}></h>
+      <div className={styles.divider}></div>
       <div className={`markdown-body ${styles.meta}`}>
         <p>
           {frontmatter.date}
           {frontmatter.links &&
             frontmatter.links.map(l => (
-              <span>
+              <span key={l}>
                 &nbsp;•&nbsp;
                 <span dangerouslySetInnerHTML={{ __html: l }} />
               </span>

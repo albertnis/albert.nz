@@ -24,7 +24,7 @@ const BlogPostTemplate = ({ data }) => {
       </Row>
       <Row
         styles={{
-          'background-color': 'var(--color-background-popout)',
+          backgroundColor: 'var(--color-background-popout)',
         }}
       >
         <Footer />

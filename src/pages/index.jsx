@@ -20,7 +20,7 @@ const BlogIndex = ({ data }) => {
       <Row>
         <BioPreview />
       </Row>
-      <Row>
+      <Row title="Blog posts">
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -38,7 +38,7 @@ const BlogIndex = ({ data }) => {
       </Row>
       <Row
         styles={{
-          'background-color': 'var(--color-background-popout)',
+          backgroundColor: 'var(--color-background-popout)',
         }}
       >
         <Footer />

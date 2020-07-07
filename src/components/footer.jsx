@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './footer.module.css'
 import { useStaticQuery, Link } from 'gatsby'
-import LogoMini from './logoMini'
+import LogoMinimalSmall from './logoMinimalSmall'
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -22,6 +22,9 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div>
+        <div className={styles.copy}>
+          Copyright &copy; {new Date().getFullYear()} Albert Nisbet
+        </div>
         <div className={styles.links}>
           <a
             className={styles.footerLink}
@@ -54,7 +57,7 @@ const Footer = () => {
       </div>
       <div>
         <Link to="/">
-          <LogoMini />
+          <LogoMinimalSmall />
         </Link>
       </div>
     </div>
