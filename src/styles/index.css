@@ -9,8 +9,6 @@
 body {
   --color-foreground: #131311;
   --color-background: #fcfcfc;
-  --color-foreground-footer: #fcfcfc;
-  --color-background-footer: #161616;
   --color-divider: #eaecef;
   --color-background-popout: #eaeae9;
   --code-color: #393a34;
@@ -31,8 +29,6 @@ body {
   body {
     --color-foreground: #f9f9f9;
     --color-background: #161616;
-    --color-foreground-footer: #f9f9f9;
-    --color-background-footer: #272326;
     --color-divider: #3e3e3c;
     --color-background-popout: #272326;
     --code-color: #f8f8f2;

@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './footer.module.css'
-import { useStaticQuery } from 'gatsby'
+import { useStaticQuery, Link } from 'gatsby'
+import LogoMini from './logoMini'
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -19,9 +20,9 @@ const Footer = () => {
   `)
   const { social } = data.site.siteMetadata
   return (
-    <div>
-      <div className={styles.content}>
-        <span className={styles.contentLeft}>
+    <div className={styles.footer}>
+      <div>
+        <div className={styles.links}>
           <a
             className={styles.footerLink}
             href={`https://linked.com/in/${social.linkedin}`}
@@ -42,12 +43,19 @@ const Footer = () => {
           >
             Twitter
           </a>
-        </span>
-        <span className={`${styles.contentRight}`}>
-          <a className={styles.footerLink} href="/rss.xml">
-            RSS
-          </a>
-        </span>
+        </div>
+        <div>
+          <span>
+            <a className={styles.footerLink} href="/rss.xml">
+              RSS
+            </a>
+          </span>
+        </div>
+      </div>
+      <div>
+        <Link to="/">
+          <LogoMini />
+        </Link>
       </div>
     </div>
   )

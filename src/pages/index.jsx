@@ -38,8 +38,7 @@ const BlogIndex = ({ data }) => {
       </Row>
       <Row
         styles={{
-          'background-color': 'var(--color-background-footer)',
-          color: 'var(--color-foreground-footer)',
+          'background-color': 'var(--color-background-popout)',
         }}
       >
         <Footer />

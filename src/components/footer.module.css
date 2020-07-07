@@ -1,9 +1,9 @@
-.divider {
-  width: 140px;
-  height: 10px;
-  display: inline-block;
-  margin-bottom: var(--space-base);
-  background-color: var(--color-background-popout);
+.footer {
+  line-height: 2;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footerLink:link,

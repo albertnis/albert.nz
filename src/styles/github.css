@@ -564,14 +564,14 @@
   height: 0.25em;
   padding: 0;
   margin: 24px 0;
-  background-color: #e1e4e8;
+  background-color: var(--color-divider);
   border: 0;
 }
 
 .markdown-body blockquote {
   padding: 0 1em;
-  color: #6a737d;
-  border-left: 0.25em solid #dfe2e5;
+  color: var(--color-foreground);
+  border-left: 0.25em solid var(--color-divider);
 }
 
 .markdown-body blockquote > :first-child {
