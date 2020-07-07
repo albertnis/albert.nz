@@ -9,7 +9,6 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    inkscape:export-ydpi="96.838837"
    inkscape:export-xdpi="96.838837"
-   inkscape:export-filename="/home/albertnisbet/dev/albert.nz/content/assets/albertnz-favicon16x16.png"
    width="16"
    height="16"
    viewBox="0 0 4.2333332 4.2333332"
@@ -17,22 +16,6 @@
    id="svg961"
    inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
    sodipodi:docname="albertnz-favicon.svg">
-  <defs
-     id="defs955">
-    <filter
-       inkscape:collect="always"
-       style="color-interpolation-filters:sRGB"
-       id="filter1616"
-       x="-0.00062186618"
-       width="1.0012437"
-       y="-0.0011193592"
-       height="1.0022387">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="0.00061700785"
-         id="feGaussianBlur1618" />
-    </filter>
-  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
