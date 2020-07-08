@@ -28,7 +28,7 @@ const Footer = () => {
         <div className={styles.links}>
           <a
             className={styles.footerLink}
-            href={`https://linked.com/in/${social.linkedin}`}
+            href={`https://linkedin.com/in/${social.linkedin}`}
           >
             LinkedIn
           </a>
