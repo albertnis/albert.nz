@@ -12,6 +12,7 @@ body {
   --color-divider: #eaecef;
   --color-background-popout: #eaeae9;
   --code-color: #393a34;
+  --code-color-highlight: 9, 188, 248;
   --code-background-color: white;
   --code-comment: #999988;
   --code-punctuation: #393a34;
@@ -32,6 +33,7 @@ body {
     --color-divider: #3e3e3c;
     --color-background-popout: #272326;
     --code-color: #f8f8f2;
+    --code-color-highlight: 235, 203, 139;
     --code-background-color: #2e3440;
     --code-comment: #636f88;
     --code-punctuation: #81a1c1;
