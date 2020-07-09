@@ -50,7 +50,7 @@ I don't always want to run the thing I'm building! Often (but not always) I just
 
 But how to add this second step to the Dockerfile?
 
-```dockerfile{11..12}
+```dockerfile
 FROM node:14-buster as build
 WORKDIR /project
 COPY package.json .
@@ -61,8 +61,10 @@ COPY helloworld.ts .
 # Build to dist/helloworld.js
 RUN ["npm", "run-script", "build"]
 
+# highlight-start
 FROM scratch as output
 COPY --from=build /project/dist/helloworld.js .
+# highlight-end
 
 FROM node:14-buster-slim as runtime
 COPY --from=build /project/dist/helloworld.js .
