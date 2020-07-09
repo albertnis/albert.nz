@@ -42,7 +42,7 @@ Neato! So what's the problem?
 
 # The problem
 
-I don't always want to run the thing I'm building! Often (but not always) I just want to obtain the build output. This can be useful for uploading the artifact, such as for a GitHub release. This can be achieved by adding an extra step to the process:
+I don't always want to run the thing I'm building! Often (but not always) I just want to obtain the build output. This can be useful for uploading the artifact - such as for a GitHub release - and is achieved by adding an extra step to the process:
 
 1. (As before) Build an artifact using a full-fat build image
 1. **Move it to a scratch image where it can be exported**
@@ -89,11 +89,11 @@ The key here is using a build target in combination with the `-o` flag. This fla
 
 The best part of this process is that I know that the artifact I'm building is exactly the same as what would end up in the final running Docker image. It minimises the number of miscellaneous build scripts or Dockerfiles I would otherwise need and keeps all the build steps contained in a single source of truth.
 
-This approach is compatible with Docker-based CI/CD solutions such as GitHub actions. Docker-out-of-Docker can be used to run these build commands [within a `docker` Docker image](https://github.com/albertnis/demo-three-stage-dockerfile/blob/master/.github/actions/docker-build/Dockerfile). Which sounds a bit ridiculous, but works well.
+This approach is compatible with Docker-based CI/CD solutions such as GitHub actions; Docker-out-of-Docker can be used to run these build commands [within a `docker` Docker image](https://github.com/albertnis/demo-three-stage-dockerfile/blob/master/.github/actions/docker-build/Dockerfile). It's all a bit ridiculous, but works well.
 
 # Where have I used this?
 
-I took advantage of a three-stage Dockerfile in [mqcontrol][] where it's being used for [cross-compilation binary output](https://github.com/albertnis/mqcontrol/releases). That project also has a special requirement that there are multiple runtime base images depending on what commands mqcontrol will run. That makes it a perfect candidate for a separate build output stage.
+I took advantage of a three-stage Dockerfile in [mqcontrol][] where it's being used for [cross-compilation binary output](https://github.com/albertnis/mqcontrol/releases). That project also has a special requirement in that there are multiple runtime base images depending on what commands mqcontrol will run. That makes it a perfect candidate for a separate build output stage.
 
 Additionally, I've made a minimal repository for the examples above. Find it at [albertnis/demo-three-stage-dockerfile][]. Check out the [actions][] which automate [releases][] and [packages][] all using the one core Dockerfile for building.
 
