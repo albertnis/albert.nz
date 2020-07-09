@@ -108,7 +108,7 @@ It's all working nicely. Remember that each ESP device exposes its own API, so E
 
 # Adding the Device in Home Assistant
 
-Home Assistant has a solid ESPHome integration. Simply navigate to the Configuration -> Integrations screen and discovered devices can be added easily. If you're doing a migration, I'd recommend rename old devices _before_ adding the ESPHome ones to avoid IDs being suffixed by Home Assistant. If set, enter the API password used earlier. Once added, you can view the entities associated with the device.
+Home Assistant has a solid ESPHome integration. Simply navigate to the Configuration -> Integrations screen and discovered devices can be added easily. If you're doing a migration, I'd recommend renaming old devices _before_ adding the ESPHome ones to avoid IDs being suffixed by Home Assistant. If set, enter the API password used earlier. Once added, you can view the entities associated with the device.
 
 ![ESPHome device configuration in Home Assistant](./ha-esphome.png)
 
