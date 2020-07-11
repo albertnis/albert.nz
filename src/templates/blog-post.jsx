@@ -12,16 +12,6 @@ import Footer from '../components/footer'
 // The "fix" that broke this is https://github.com/gatsbyjs/gatsby/pull/10209
 // and the docs are out of date https://github.com/gatsbyjs/gatsby/blame/104f2cc980a019e4d0234d6aad4248341ccfd3ec/packages/gatsby-remark-prismjs/README.md#L520
 
-// Find all highlighted lines and add a newline to the end
-const fixPrism = inp => {
-  const el = document.createElement('div')
-  el.innerHTML = inp
-  el.querySelectorAll('span.gatsby-highlight-code-line').forEach(
-    s => (s.innerHTML += '\n')
-  )
-  return el.innerHTML
-}
-
 const BlogPostTemplate = ({ data }) => {
   const { frontmatter, excerpt, html } = data.markdownRemark
 
@@ -35,7 +25,7 @@ const BlogPostTemplate = ({ data }) => {
         description={frontmatter.description || excerpt}
       />
       <Row>
-        <Post frontmatter={frontmatter} html={fixPrism(html)} />
+        <Post frontmatter={frontmatter} html={html} />
       </Row>
       <Row
         styles={{
