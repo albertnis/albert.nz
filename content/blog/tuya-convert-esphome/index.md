@@ -3,8 +3,6 @@ title: Upgrading branded IoT devices with tuya-convert and ESPHome
 description: Or how my Kogan smart plug gained superpowers over-the-air
 date: 2020-07-11 19:52:25 +1200
 accent: rgb(243, 53, 53)
-links:
-  - <a href="https://github.com/albertnis/demo-three-stage-dockerfile">GitHub</a>
 ---
 
 ![Kogan smart plug](./20200711_0078.jpg)
