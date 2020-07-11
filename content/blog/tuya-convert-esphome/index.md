@@ -7,6 +7,8 @@ links:
   - <a href="https://github.com/albertnis/demo-three-stage-dockerfile">GitHub</a>
 ---
 
+![Kogan smart plug](./20200711_0078.jpg)
+
 A couple of weeks ago I was given a Kogan smart plug. This controls a wall outlet over WiFi and measures power draw. It's a feature set similar to the [Sonoff Pow R2][pow-r2] which I'm currently using to control my PC. It has a couple of notable benefits over the Pow R2:
 
 - It is sold officially in New Zealand
