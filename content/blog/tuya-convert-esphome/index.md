@@ -1,6 +1,6 @@
 ---
 title: Upgrading branded IoT devices with tuya-convert and ESPHome
-description: Or how my Kogan smart switch wirelessly gained superpowers
+description: Or how my Kogan smart plug gained superpowers over-the-air
 date: 2020-07-11 19:52:25 +1200
 accent: rgb(243, 53, 53)
 links:
@@ -55,16 +55,16 @@ I used tuya-convert in Docker on a Linux laptop for this process. For this you'l
 
 1.  Open the Docker Compose file and ensure the `WLAN` environment variable is the same as the one on your PC. (`ip link` will show all interfaces; I had to change mine from `wlan0` to `wlp3s0`).
 
-1.  At this stage I needed to manually disconnect my laptop from my home WiFi network.
+1.  At this stage I needed to manually disconnect my laptop from my home WiFi network
 
-1.  Follow the instructions to run tuya-convert.
+1.  Follow the instructions to run tuya-convert
 
     ```shell
     docker-compose up -d
     docker-compose exec tuya start
     ```
 
-1.  Remaining instructions will be displayed in the command line
+1.  The remaining instructions will be displayed in the command line
 
 # Getting it working with the new firmware
 
