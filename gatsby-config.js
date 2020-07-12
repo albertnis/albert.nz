@@ -36,7 +36,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 900,
+              maxWidth: 830,
               quality: 80,
             },
           },
@@ -90,7 +90,7 @@ module.exports = {
                         edge.node.frontmatter.links
                           ? `<p>${edge.node.frontmatter.links.join(' | ')}</p>`
                           : ''
-                      }${edge.node.html}`,
+                        }${edge.node.html}`,
                     },
                   ],
                 })
