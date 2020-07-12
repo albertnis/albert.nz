@@ -18,7 +18,6 @@
 
 .content {
   max-width: var(--width-content);
-  width: 100vw;
   padding-left: var(--space-base);
   padding-right: var(--space-base);
   margin-left: auto;
