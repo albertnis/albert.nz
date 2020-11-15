@@ -4,6 +4,10 @@
   word-wrap: break-word;
 }
 
+.markdown-body em {
+  font-style: italic;
+}
+
 .markdown-body details {
   display: block;
 }
