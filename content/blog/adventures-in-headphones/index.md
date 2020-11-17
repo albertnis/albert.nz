@@ -23,11 +23,15 @@ A clumsy entry into the world of nice headphones. I sold them a few weeks after 
 
 ## 2015-2019: [Audio-Technica ATH-M50xBL](https://www.amazon.com/gp/product/B00HVLUR86/ref=as_li_tl?ie=UTF8&tag=albertnis-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B00HVLUR86&linkId=0d0fc45ccc6b73b1527ba0f168c2215f)
 
+![](./DSC07833.jpg)
+
 I had actually tried these before the Grados and avoided them - but the Grado experience made me reconsider what I thought I knew. The M50x sound signature had no real surprises but was a clear upgrade from my old Sennheisers in terms of clarity and balance. Moreover, I suddenly appreciated the practicality in the M50x. Removable cables, foldable design, carrying bag - perfect! Plus these things paired so well with the DragonFly DAC, had very little sound leakage, and great isolation. I remember jamming to iconic EDM tracks ([_Afterglow_](https://www.youtube.com/watch?v=I9QGpHScGug) by Wilkinson) through these things during study sessions throughout university. I bought the 2014 Limited Edition blue and tan model which looked sublime. Oddly, the tan-coloured pads seemed less comfortable than the black on the M50xs owned by my friends. A good number of those friends had purchased the M50x on my recommendation.
 
 Tried and true, but I eventually became either sick or bored of their one-trick-pony sound signature which only seemed to sound great for electronic music.
 
 ## 2016-2019: [Superlux HD668B](https://www.amazon.com/gp/product/B003JOETX8/ref=as_li_tl?ie=UTF8&tag=albertnis-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B003JOETX8&linkId=23bb93b047c19298e9f2bbe88574e5e7)
+
+![](./DSC07071.jpg)
 
 I heard some ravings online about this semi-open model. 55NZD from Massdrop was so tempting I just bought them. My reasoning at the time was something like: _Maybe the "semi" in "semi-open" meant they'd be less bad than the fully-open Grados_. They were certainly less bad but the comfort was horrendous. The sticky vinyl pads were large but shallow and my ears rubbed on the driver. I bought some 15NZD velour pads from ebay and they instantly became some of the most comfortable headphones I've ever owned.
 
@@ -49,6 +53,8 @@ The problem with hi-fi headphones like the HD 6XX is that they're really only go
 
 ## 2019: Meze/Massdrop 99 Noir
 
+![](./DSC07064.jpg)
+
 I had been looking for ATH-M50x replacements in pursuit of a better home-listening experience for electronic music. The identical [99 Classics](https://www.amazon.com/gp/product/B018VZBH5M/ref=as_li_tl?ie=UTF8&tag=albertnis-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B018VZBH5M&linkId=24e3d65eaf5109652c02c656998fca1c) were selling for almost twice the price domestically. People online left very positive reviews praising a bassy sound signature that retained excellent detail and musicality.
 
 Those people were wrong.
@@ -57,7 +63,7 @@ In a similar situation to the Grado SR125i, I found myself wondering how the hel
 
 ## 2020: [HiFiMan HE4XX](https://www.amazon.com/gp/product/B07YBWT8PK/ref=as_li_tl?ie=UTF8&tag=albertnis-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B07YBWT8PK&linkId=842e2feb4e436bcfc15a3f37219a30a1)
 
-I felt ready to continue on my open-backed journey. I had heard about planar magentic headphones and how they could provide some of the better open-backed bass. What if the HE4XX was the open-backed electronic-music headphone I longed for to live alongside my HD 6XX? I bit the bullet and purchased from Drop.
+I felt ready to continue on my open-backed journey. I had heard about planar magnetic headphones and how they could provide some of the better open-backed bass. What if the HE4XX was the open-backed electronic-music headphone I longed for to live alongside my HD 6XX? I bit the bullet and purchased from Drop.
 
 The HE4XX was less comfortable than the HD 6XX. The pads were plush but smaller, and the whole device was heavy. Unlike the Sennheiser it was hard to forget about wearing the HE4XX. The sound was hard to compare to the HD 6XX. It was as if some of the mid-focused prowess of the HD 6XX had been traded for more textured bass and much clearer high-frequencies. I really enjoyed the HE4XX but I returned the headphone due to a notable driver imbalance.
 
@@ -73,6 +79,8 @@ Upon unboxing I was struck with the indestructible build quality and awesome com
 
 ## 2020-: [HiFiMan Sundara](https://www.amazon.com/gp/product/B077XDWT7X/ref=as_li_tl?ie=UTF8&tag=albertnis-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B077XDWT7X&linkId=5ddf8dc07e102a34eb279e4dfb68f597)
 
+![](./DSC08185.jpg)
+
 The HE4XX experience got me thinking. I really liked the tradeoff compared to the HD 6XX.
 
 1. The top-notch detail afforded by the more present high frequencies was undeniable. I enjoy treble that's crispy but not overwhelming and HE4XX had nailed that.
@@ -83,7 +91,7 @@ I decided to go up a level, purchasing the higher-end Sundara, the bigger brothe
 
 The Sundara solved many of the issues with HE4XX. A better headband, a smaller and lighter design, and slightly comfier earpads were highlights. And the sound is astonishingly enjoyable. Somehow it manages to be neutral but fun. High frequencies are emphasised somewhat, leading to tons of beautiful detail. Guitar strums and vocal consonants are always clear (_Should Have Known Better_ by Sufjan Stevens). Mids are less rich than the HD 6XX but plenty present: vocals seem to surround your head as opposed to caressing your eardrums ([_Watch Me Read You_](https://www.youtube.com/watch?v=EUC2CRc6Its) by Odette). The bass is noticeably nicer than the HD 6XX. It has texture and impact - nothing dominating (I'd still love a touch more) but enough to make electronic music pleasant to listen to ([_Disarm_](https://www.youtube.com/watch?v=9_UFTpfeyIY) by Alltta).
 
-On poorly-produced tracks, the Sundaras won't help: they'll sound flat and boring. Coversely, well-produced tracks will be presented in all their glory ([_Good News_](https://www.youtube.com/watch?v=aIHF7u9Wwiw) by Mac Miller, [_Year of the Cat_](https://www.youtube.com/watch?v=Yxy1eF_w7sU) by Al Stewart).
+On poorly-produced tracks, the Sundaras won't help: they'll sound flat and boring. Conversely, well-produced tracks will be presented in all their glory ([_Good News_](https://www.youtube.com/watch?v=aIHF7u9Wwiw) by Mac Miller, [_Year of the Cat_](https://www.youtube.com/watch?v=Yxy1eF_w7sU) by Al Stewart).
 
 The Sundaras dethroned my HD 6XX. They're not better in all ways but for me are definitely better overall. I've barely touched my DT770 since using the Sundara; I think I know which headphone to sell next.
 
@@ -93,10 +101,10 @@ True story: These 40NZD true wireless earbuds replaced my 420NZD Sony WH-1000XM2
 
 # Next steps
 
-The Sundara is well in the zone of dimishing returns; I don't see myself entering into the zone of super-high-end headphones any time soon. Rather, I'll probably sell my DT770 and upgrade the QCY T5 to higher-end true wireless earbuds.
+The Sundara is well in the zone of diminishing returns; I don't see myself entering into the zone of super-high-end headphones any time soon. Rather, I'll probably sell my DT770 and upgrade the QCY T5 to higher-end true wireless earbuds.
 
 # Reflections
 
-It's not so much headphones that I find enjoyable, it's finding different ways to experience the music I listen to. I enjoy owning a headphone for a while then selling it as I upgrade. I don't want to become a hoarder (refer [Zeos' wall 2020][zeos-wall]). I appreicate that I've been able to experience music through all of these headphones over the years!
+It's not so much headphones that I find enjoyable, it's finding different ways to experience the music I listen to. I enjoy owning a headphone for a while then selling it as I upgrade. I don't want to become a hoarder (refer [Zeos' wall 2020][zeos-wall]). I appreciate that I've been able to experience music through all of these headphones over the years!
 
 [zeos-wall]: https://www.youtube.com/watch?v=bcSa8MOz8ug
