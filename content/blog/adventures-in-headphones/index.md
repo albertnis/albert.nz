@@ -1,6 +1,6 @@
 ---
 title: Adventures in headphones
-description: A journey ear-based audio - 10 years and counting!
+description: Detailing the headphones I've tried over the last 10 years: Sennheiser, Grado, Audio-Technica, Superlux and HiFiMan.
 date: 2020-11-15 11:25:25 +1300
 accent: rgb(18, 188, 191)
 ---
