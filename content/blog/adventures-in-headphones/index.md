@@ -2,7 +2,7 @@
 title: Adventures in headphones
 description: A journey ear-based audio - 10 years and counting!
 date: 2020-11-15 11:25:25 +1300
-accent: rgb(43, 185, 22)
+accent: rgb(18, 188, 191)
 ---
 
 I've tried quite a few headphones in my time. For no particular reason, I have been wanting to document my thoughts on the models I have tried. Is this a note to self? A diary? A series of mini-reviews? You decide. Whatever it is, I've included links to some tracks that help prove the point. All of these songs are meaningful to me and are not to be missed.
