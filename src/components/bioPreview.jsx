@@ -38,7 +38,7 @@ const BioPreview = ({ style }) => {
       <div className={`markdown-body ${styles.tagline}`}>
         <h5>Kia ora!</h5>
         <p>
-          I'm Albert, a developer living and working in Wellington. I'm into
+          I'm Albert, a developer living and working in Christchurch. I'm into
           engineering, home automation and electronics. Find me on{' '}
           <a href={`https://linkedin.com/in/${social.linkedin}`}>LinkedIn</a>{' '}
           and <a href={`https://github.com/${social.github}`}>GitHub</a>, or{' '}
