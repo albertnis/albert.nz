@@ -1,5 +1,6 @@
 {
   "name": "albertnis-gatsby",
+  "browserslist": ["defaults", "not ie 11"],
   "private": true,
   "description": "Albert Nisbet's personal website",
   "version": "0.1.0",
