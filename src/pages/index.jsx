@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import SEO from '../components/seo'
 import Header from '../components/header'
@@ -19,6 +19,7 @@ const BlogIndex = ({ data }) => {
       </Row>
       <Row>
         <BioPreview />
+        Go to <Link to="/adventures">adventures</Link>
       </Row>
       <Row title="Blog posts">
         {posts.map(({ node }) => {
