@@ -43,6 +43,7 @@
     "url": "git+https://github.com/albertnis/albertnis-gatsby"
   },
   "scripts": {
+    "installall": "npm install && npm --prefix plugins/gatsby-transformer-gpx install",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
