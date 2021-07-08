@@ -52,6 +52,12 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-transformer-gpx`,
+      options: {
+        path: `${__dirname}/content/blog`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -86,10 +92,9 @@ module.exports = {
                   guid: edge.node.fields.slug,
                   custom_elements: [
                     {
-                      'content:encoded': `${
-                        edge.node.frontmatter.links
-                          ? `<p>${edge.node.frontmatter.links.join(' | ')}</p>`
-                          : ''
+                      'content:encoded': `${edge.node.frontmatter.links
+                        ? `<p>${edge.node.frontmatter.links.join(' | ')}</p>`
+                        : ''
                         }${edge.node.html}`,
                     },
                   ],

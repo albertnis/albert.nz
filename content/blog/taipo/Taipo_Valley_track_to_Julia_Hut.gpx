@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="StravaGPX"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd" version="1.1"
+    xmlns="http://www.topografix.com/GPX/1/1"
+    xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1"
+    xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+    <metadata>
+        <time>2021-07-02T07:20:28Z</time>
+    </metadata>
+    <trk>
+        <name>Taipo Valley track to Julia Hut</name>
+        <type>4</type>
+        <trkseg>
+            <trkpt lat="-42.7631010" lon="171.4347610">
+                <ele>162.0</ele>
+                <time>2021-07-02T07:20:28Z</time>
+                <extensions>
+                    <gpxtpx:TrackPointExtension>
+                        <gpxtpx:hr>84</gpxtpx:hr>
+                    </gpxtpx:TrackPointExtension>
+                </extensions>
+            </trkpt>
+            <head>
+                <trkpt lat="-42.7472130" lon="171.4179600">
+                    <ele>176.0</ele>
+                    <time>2021-07-04T05:14:30Z</time>
+                    <extensions>
+                        <gpxtpx:TrackPointExtension>
+                            <gpxtpx:hr>126</gpxtpx:hr>
+                        </gpxtpx:TrackPointExtension>
+                    </extensions>
+                </trkpt>
+
+                <trkpt lat="-42.7451840" lon="171.4188060">
+                    <ele>142.0</ele>
+                    <time>2021-07-04T05:16:36Z</time>
+                    <extensions>
+                        <gpxtpx:TrackPointExtension>
+                            <gpxtpx:hr>120</gpxtpx:hr>
+                        </gpxtpx:TrackPointExtension>
+                    </extensions>
+                </trkpt>
+                <trkpt lat="-42.7451100" lon="171.4187260">
+                    <ele>142.0</ele>
+                    <time>2021-07-04T05:16:37Z</time>
+                    <extensions>
+                        <gpxtpx:TrackPointExtension>
+                            <gpxtpx:hr>120</gpxtpx:hr>
+                        </gpxtpx:TrackPointExtension>
+                    </extensions>
+                </trkpt>
+                <trkpt lat="-42.7451020" lon="171.4187190">
+                    <ele>142.0</ele>
+                    <time>2021-07-04T05:16:38Z</time>
+                    <extensions>
+                        <gpxtpx:TrackPointExtension>
+                            <gpxtpx:hr>120</gpxtpx:hr>
+                        </gpxtpx:TrackPointExtension>
+                    </extensions>
+                </trkpt>
+                <trkpt lat="-42.7450930" lon="171.4187110">
+                    <ele>142.0</ele>
+                    <time>2021-07-04T05:16:39Z</time>
+                    <extensions>
+                        <gpxtpx:TrackPointExtension>
+                            <gpxtpx:hr>119</gpxtpx:hr>
+                        </gpxtpx:TrackPointExtension>
+                    </extensions>
+                </trkpt>
+                <trkpt lat="-42.7450850" lon="171.4187040">
+                    <ele>142.0</ele>
+                    <time>2021-07-04T05:16:40Z</time>
+                    <extensions>
+                        <gpxtpx:TrackPointExtension>
+                            <gpxtpx:hr>119</gpxtpx:hr>
+                        </gpxtpx:TrackPointExtension>
+                    </extensions>
+                </trkpt>
+            </trkseg>
+        </trk>
+    </gpx>
