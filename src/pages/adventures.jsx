@@ -7,16 +7,14 @@ import Row from '../components/row'
 import Map from '../components/map'
 
 const BlogIndex = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges
-
   return (
     <div>
       <SEO />
-        <Row styles={{position: 'relative', zIndex: 2}}> 
-            <Header />
-        </Row>
-      <div style={{position: 'absolute', top: 0, left: 0}}>
-      <Map />
+      <Row styles={{ position: 'relative', zIndex: 2 }}>
+        <Header />
+      </Row>
+      <div style={{ position: 'absolute', top: 0, left: 0 }}>
+        <Map data={data} />
       </div>
     </div>
   )
@@ -26,23 +24,22 @@ export default BlogIndex
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
+          frontmatter {
+            routes {
+              name
+              childGeoLineString {
+                geometry {
+                  coordinates
+                  type
+                }
+              }
+            }
+          }
           fields {
             slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-            accent
           }
         }
       }
