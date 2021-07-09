@@ -14,7 +14,7 @@ npm run installall
 # Develop it
 
 ```shell
-npm run develop
+npm run clean && npm run develop
 ```
 
 # Build and serve

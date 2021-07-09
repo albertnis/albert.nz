@@ -9,8 +9,6 @@
   "author": "Albert Nisbet",
   "license": "ISC",
   "dependencies": {
-    "@mapbox/togeojson": "^0.16.0",
-    "jsdom": "^16.6.0",
-    "lodash": "^4.17.21"
+    "@mapbox/togeojson": "^0.16.0"
   }
 }

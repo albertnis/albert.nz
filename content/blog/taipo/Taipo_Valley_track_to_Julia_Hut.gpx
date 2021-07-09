@@ -76,6 +76,7 @@
                         </gpxtpx:TrackPointExtension>
                     </extensions>
                 </trkpt>
-            </trkseg>
-        </trk>
-    </gpx>
+            </head>
+        </trkseg>
+    </trk>
+</gpx>
