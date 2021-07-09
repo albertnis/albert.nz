@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import mapboxgl from 'mapbox-gl'
+import mapboxgl from '!mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
 const lightMapStyle = 'mapbox://styles/albertnis/ckqu3o4rn6np917qz18x1whbz'
