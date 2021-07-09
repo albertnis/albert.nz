@@ -19,7 +19,6 @@ const BlogIndex = ({ data }) => {
       </Row>
       <Row>
         <BioPreview />
-        Go to <Link to="/adventures">adventures</Link>
       </Row>
       <Row title="Blog posts">
         {posts.map(({ node }) => {
