@@ -26,7 +26,9 @@ const Map = () => {
   const mapStyle = isDarkMode ? darkMapStyle : lightMapStyle
 
   useEffect(() => {
-    if (map.current) return
+    if (map.current) {
+      map.current.setStyle(mapStyle)
+    }
     mapboxgl.accessToken =
       'pk.eyJ1IjoiYWxiZXJ0bmlzIiwiYSI6ImNrcXUwNHlhcTJnODAydm84anEzanIwZHQifQ.B9-IeJHvH9nnfQT9QT4ouw'
     map.current = new mapboxgl.Map({
@@ -35,7 +37,7 @@ const Map = () => {
       center: [172.82, -40.74],
       zoom: 5,
     })
-  }, [map])
+  }, [map, mapStyle])
 
   return <div ref={mapContainer} className="map-container" style={styles}></div>
 }

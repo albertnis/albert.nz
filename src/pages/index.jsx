@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import Header from '../components/header'
 import Row from '../components/row'
 import PostPreview from '../components/postPreview'
@@ -13,7 +13,7 @@ const BlogIndex = ({ data }) => {
 
   return (
     <div>
-      <SEO />
+      <Seo />
       <Row>
         <Header />
       </Row>

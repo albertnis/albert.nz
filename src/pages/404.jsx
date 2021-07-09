@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import Header from '../components/header'
 import Row from '../components/row'
 import Zone from '../components/zone'
@@ -11,7 +11,7 @@ const NotFoundPage = ({ data }) => (
     <Row>
       <Header />
     </Row>
-    <SEO title="404: Not Found" />
+    <Seo title="404: Not Found" />
     <Row>
       <Zone className="markdown-body">
         <h5>Page not found</h5>

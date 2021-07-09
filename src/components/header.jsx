@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import style from './header.module.css'
+import * as style from './header.module.css'
 import LogoMinimalLarge from './logoMinimalLarge'
 
 const Header = () => (

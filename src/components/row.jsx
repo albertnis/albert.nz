@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './row.module.css'
+import * as style from './row.module.css'
 
 const Row = ({ styles, children, title }) => (
   <div className={style.row} style={styles}>

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './bioPreview.module.css'
+import * as styles from './bioPreview.module.css'
 import Image from 'gatsby-image'
 import { useStaticQuery, graphql } from 'gatsby'
 
