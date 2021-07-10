@@ -1,7 +1,7 @@
 ---
 title: Adventures placeholder
 date: 2021-07-09T15:00:00+1200
-description: Temporary post with all the GPX files
+description: Temporary post with all the GPX files for which I haven't written trip reports
 accent: rgb(144, 81, 237)
 routes:
   - ./Baring_Head.gpx
