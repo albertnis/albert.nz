@@ -56,7 +56,7 @@ const Map = ({ data }) => {
           map.getCanvas().style.cursor = ""
         })
         map.on('click', sourceName, () => {
-          map.fitBounds(bounds, {padding: 200})
+          map.fitBounds(bounds, {padding: 300})
           setSelected(sourceName)
         })
         return sourceName
