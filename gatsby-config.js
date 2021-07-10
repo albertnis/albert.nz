@@ -52,14 +52,15 @@ module.exports = {
         ],
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+
     {
       resolve: `gatsby-transformer-gpx`,
       options: {
         path: `${__dirname}/content/blog`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -92,10 +93,11 @@ module.exports = {
                   guid: edge.node.fields.slug,
                   custom_elements: [
                     {
-                      'content:encoded': `${edge.node.frontmatter.links
-                        ? `<p>${edge.node.frontmatter.links.join(' | ')}</p>`
-                        : ''
-                        }${edge.node.html}`,
+                      'content:encoded': `${
+                        edge.node.frontmatter.links
+                          ? `<p>${edge.node.frontmatter.links.join(' | ')}</p>`
+                          : ''
+                      }${edge.node.html}`,
                     },
                   ],
                 })

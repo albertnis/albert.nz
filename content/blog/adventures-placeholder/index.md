@@ -2,7 +2,7 @@
 title: Adventures placeholder
 date: 2021-07-09T15:00:00+1200
 description: Temporary post with all the GPX files for which I haven't written trip reports
-accent: rgb(144, 81, 237)
+accent: rgb(237, 81, 144)
 routes:
   - ./Baring_Head.gpx
   - ./Cass_Lagoon_Saddle_Track.gpx
@@ -18,7 +18,6 @@ routes:
   - ./Pinchgut_Track_Cattle_Peak_loop.gpx
   - ./Routeburn_Track.gpx
   - ./St_James_Walkway_to_Boyle_Flat_Hut.gpx
-  - ./Taipo_Valley_track_to_Julia_Hut.gpx
   - ./The_Great_Kauri_Run_Classic_30k.gpx
   - ./Waiopehu_Track.gpx
   - ./WUU2K_Marathon_Route.gpx
