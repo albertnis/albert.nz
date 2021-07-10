@@ -21,20 +21,22 @@ const BlogIndex = ({ data }) => {
         <BioPreview />
       </Row>
       <Row title="Blog posts">
-        {posts.filter(({ node }) => node.frontmatter.routes === null).map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <article key={node.fields.slug}>
-              <PostPreview
-                to={node.fields.slug}
-                title={title}
-                date={node.frontmatter.date}
-                description={node.frontmatter.description || node.excerpt}
-                accent={node.frontmatter.accent}
-              />
-            </article>
-          )
-        })}
+        {posts
+          .filter(({ node }) => node.frontmatter.routes === null)
+          .map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+            return (
+              <article key={node.fields.slug}>
+                <PostPreview
+                  to={node.fields.slug}
+                  title={title}
+                  date={node.frontmatter.date}
+                  description={node.frontmatter.description || node.excerpt}
+                  accent={node.frontmatter.accent}
+                />
+              </article>
+            )
+          })}
       </Row>
       <Row
         styles={{

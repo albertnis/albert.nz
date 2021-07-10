@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react'
 import mapboxgl from '!mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import MapPrompt from './mapPrompt'
+import MapPostPreview from './mapPostPreview'
 
 const lightMapStyle = 'mapbox://styles/albertnis/ckqu3o4rn6np917qz18x1whbz'
 const darkMapStyle = 'mapbox://styles/albertnis/ckqu1h7gs6e7x17q093ii0ltr'
@@ -17,51 +19,66 @@ const unselectedLineColor = 'rgba(255,40,60,0.7)'
 const Map = ({ data }) => {
   const [sourceNames, setSourceNames] = useState([])
   const [selected, setSelected] = useState(null)
-  
-  const loadPostsToGeoJson = mapRef => nodes => 
-    nodes.map(({ node }) => {
-      if (node.frontmatter.routes === null) return []
-      return node.frontmatter.routes.map(route => {
-        const map = mapRef.current
-        const sourceName = `${node.fields.slug}-${route.name}`
-        const geometry = route.childGeoLineString.geometry
-        const bounds = geometry.coordinates.reduce((bounds, coord) => bounds.extend(coord),
-          new mapboxgl.LngLatBounds(geometry.coordinates[0], geometry.coordinates[0]))
-        map.addSource(sourceName, {
-          type: 'geojson',
-          data: {
-            type: 'Feature',
-            geometry,
-          },
-        })
-        setSourceNames([...sourceNames, sourceName])
-        map.addLayer({
-          id: sourceName,
-          type: 'line',
-          source: sourceName,
-          layout: {
-            'line-join': 'round',
 
-            'line-cap': 'round',
-          },
-          paint: {
-            'line-color': node.fields.slug === selected ? selectedLineColor : unselectedLineColor,
-            'line-width': 5,
-          },
+  const loadPostsToGeoJson = mapRef => nodes =>
+    nodes
+      .map(({ node }) => {
+        if (node.frontmatter.routes === null) return []
+        return node.frontmatter.routes.map(route => {
+          const map = mapRef.current
+          const sourceName = `${node.fields.slug}-${route.name}`
+          const geometry = route.childGeoLineString.geometry
+          const bounds = geometry.coordinates.reduce(
+            (bounds, coord) => bounds.extend(coord),
+            new mapboxgl.LngLatBounds(
+              geometry.coordinates[0],
+              geometry.coordinates[0]
+            )
+          )
+          map.addSource(sourceName, {
+            type: 'geojson',
+            data: {
+              type: 'Feature',
+              geometry,
+            },
+          })
+          setSourceNames([...sourceNames, sourceName])
+          map.addLayer({
+            id: sourceName,
+            type: 'line',
+            source: sourceName,
+            layout: {
+              'line-join': 'round',
+
+              'line-cap': 'round',
+            },
+            paint: {
+              'line-color':
+                node.fields.slug === selected?.slug
+                  ? selectedLineColor
+                  : unselectedLineColor,
+              'line-width': 5,
+            },
+          })
+          map.on('mouseenter', sourceName, () => {
+            map.getCanvas().style.cursor = 'pointer'
+          })
+          map.on('mouseleave', sourceName, () => {
+            map.getCanvas().style.cursor = ''
+          })
+          map.on('click', sourceName, () => {
+            map.fitBounds(bounds, { padding: 300 })
+            setSelected({
+              sourceName,
+              slug: node.fields.slug,
+              description: node.frontmatter.description || node.excerpt,
+              title: node.frontmatter.title,
+            })
+          })
+          return sourceName
         })
-        map.on('mouseenter', sourceName, () => {
-          map.getCanvas().style.cursor = "pointer"
-        })
-        map.on('mouseleave', sourceName, () => {
-          map.getCanvas().style.cursor = ""
-        })
-        map.on('click', sourceName, () => {
-          map.fitBounds(bounds, {padding: 300})
-          setSelected(sourceName)
-        })
-        return sourceName
       })
-    }).flat(1)
+      .flat(1)
 
   const [isDarkMode, setIsDarkMode] = useState(false)
 
@@ -78,7 +95,15 @@ const Map = ({ data }) => {
 
   useEffect(() => {
     if (map.current) {
-      sourceNames.forEach((source) => {map.current.setPaintProperty(source, 'line-color', source === selected? selectedLineColor: unselectedLineColor)})
+      sourceNames.forEach(source => {
+        map.current.setPaintProperty(
+          source,
+          'line-color',
+          source === selected?.sourceName
+            ? selectedLineColor
+            : unselectedLineColor
+        )
+      })
     }
   }, [map, selected])
 
@@ -95,13 +120,26 @@ const Map = ({ data }) => {
       center: [172.82, -40.74],
       zoom: 5,
     })
-    map.current.on('load', () =>{
+    map.current.on('load', () => {
       const sourceNames = loadPostsToGeoJson(map)(data.allMarkdownRemark.edges)
-      setSourceNames(sourceNames)}
-    )
+      setSourceNames(sourceNames)
+    })
   }, [map, mapStyle, data.allMarkdownRemark.edges])
 
-  return <div ref={mapContainer} className="map-container" style={styles}></div>
+  return (
+    <div>
+      {selected === null ? (
+        <MapPrompt />
+      ) : (
+        <MapPostPreview
+          title={selected.title}
+          description={selected.description}
+          slug={selected.slug}
+        />
+      )}
+      <div ref={mapContainer} className="map-container" style={styles}></div>
+    </div>
+  )
 }
 
 export default Map
