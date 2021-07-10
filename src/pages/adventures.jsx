@@ -30,6 +30,7 @@ export const pageQuery = graphql`
           excerpt
           frontmatter {
             title
+            accent
             description
             routes {
               name

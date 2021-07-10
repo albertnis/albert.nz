@@ -1,0 +1,14 @@
+.mapFooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.map {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}

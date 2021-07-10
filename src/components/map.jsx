@@ -4,16 +4,12 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import MapPrompt from './mapPrompt'
 import MapPostPreview from './mapPostPreview'
 
+import * as styles from './map.module.css'
+
 const lightMapStyle = 'mapbox://styles/albertnis/ckqu3o4rn6np917qz18x1whbz'
 const darkMapStyle = 'mapbox://styles/albertnis/ckqu1h7gs6e7x17q093ii0ltr'
 
-const styles = {
-  width: '100vw',
-  height: '100vh',
-  margin: 0,
-}
-
-const selectedLineColor = '#63F'
+const selectedLineColor = '#2F2'
 const unselectedLineColor = 'rgba(255,40,60,0.7)'
 
 const Map = ({ data }) => {
@@ -67,12 +63,13 @@ const Map = ({ data }) => {
             map.getCanvas().style.cursor = ''
           })
           map.on('click', sourceName, () => {
-            map.fitBounds(bounds, { padding: 300 })
+            map.fitBounds(bounds, { padding: 200 })
             setSelected({
               sourceName,
               slug: node.fields.slug,
               description: node.frontmatter.description || node.excerpt,
               title: node.frontmatter.title,
+              accent: node.frontmatter.accent,
             })
           })
           return sourceName
@@ -128,16 +125,19 @@ const Map = ({ data }) => {
 
   return (
     <div>
-      {selected === null ? (
-        <MapPrompt />
-      ) : (
-        <MapPostPreview
-          title={selected.title}
-          description={selected.description}
-          slug={selected.slug}
-        />
-      )}
-      <div ref={mapContainer} className="map-container" style={styles}></div>
+      <div ref={mapContainer} className={styles.map}></div>
+      <div className={styles.mapFooter}>
+        {selected === null ? (
+          <MapPrompt />
+        ) : (
+          <MapPostPreview
+            accent={selected.accent}
+            title={selected.title}
+            description={selected.description}
+            slug={selected.slug}
+          />
+        )}
+      </div>
     </div>
   )
 }
