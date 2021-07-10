@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from './footer.module.css'
-import { useStaticQuery, Link } from 'gatsby'
+import * as styles from './footer.module.css'
+import { useStaticQuery, Link, graphql } from 'gatsby'
 import LogoMinimalSmall from './logoMinimalSmall'
 
 const Footer = () => {

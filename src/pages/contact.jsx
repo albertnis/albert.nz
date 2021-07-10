@@ -1,7 +1,6 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
-import SEO from '../components/seo'
 import Header from '../components/header'
 import Row from '../components/row'
 import Zone from '../components/zone'

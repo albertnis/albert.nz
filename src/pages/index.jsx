@@ -1,7 +1,7 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import Header from '../components/header'
 import Row from '../components/row'
 import PostPreview from '../components/postPreview'
@@ -13,7 +13,7 @@ const BlogIndex = ({ data }) => {
 
   return (
     <div>
-      <SEO />
+      <Seo />
       <Row>
         <Header />
       </Row>
@@ -21,7 +21,7 @@ const BlogIndex = ({ data }) => {
         <BioPreview />
       </Row>
       <Row title="Blog posts">
-        {posts.map(({ node }) => {
+        {posts.filter(({ node }) => node.frontmatter.routes === null).map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <article key={node.fields.slug}>
@@ -68,6 +68,9 @@ export const pageQuery = graphql`
             title
             description
             accent
+            routes {
+              id
+            }
           }
         }
       }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import Row from '../components/row'
 import Header from '../components/header'
 import Post from '../components/post'
@@ -20,7 +20,7 @@ const BlogPostTemplate = ({ data }) => {
       <Row>
         <Header />
       </Row>
-      <SEO
+      <Seo
         title={frontmatter.title}
         description={frontmatter.description || excerpt}
       />

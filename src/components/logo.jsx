@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './logo.module.css'
+import * as style from './logo.module.css'
 
 const Logo = ({ styles }) => (
   <svg

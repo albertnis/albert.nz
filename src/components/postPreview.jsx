@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import style from './postPreview.module.css'
+import * as style from './postPreview.module.css'
 
 const PostPreview = ({ to, title, date, description, accent }) => (
   <div

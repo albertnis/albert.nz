@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './logoMinimal.module.css'
+import * as styles from './logoMinimal.module.css'
 
 const LogoMinimalLarge = () => (
   <svg
