@@ -12,7 +12,7 @@ const styles = {
 }
 
 const selectedLineColor = '#63F'
-const unselectedLineColor = 'rgba(255,40,60,0.5)'
+const unselectedLineColor = 'rgba(255,40,60,0.7)'
 
 const Map = ({ data }) => {
   const [sourceNames, setSourceNames] = useState([])

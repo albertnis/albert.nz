@@ -21,7 +21,7 @@ const BlogIndex = ({ data }) => {
         <BioPreview />
       </Row>
       <Row title="Blog posts">
-        {posts.map(({ node }) => {
+        {posts.filter(({ node }) => node.frontmatter.routes === null).map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <article key={node.fields.slug}>
@@ -68,6 +68,9 @@ export const pageQuery = graphql`
             title
             description
             accent
+            routes {
+              id
+            }
           }
         }
       }
