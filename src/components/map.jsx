@@ -11,39 +11,54 @@ const styles = {
   margin: 0,
 }
 
-const loadPostsToGeoJson = mapRef => nodes => {
-  nodes.forEach(({ node }) => {
-    if (node.frontmatter.routes !== null) {
-      node.frontmatter.routes.forEach(route => {
-        const sourceName = `${node.fields.slug}-${route.name}`
-        console.log('adding source', sourceName)
-        mapRef.current.addSource(sourceName, {
-          type: 'geojson',
-          data: {
-            type: 'Feature',
-            geometry: route.childGeoLineString.geometry,
-          },
-        })
-        mapRef.current.addLayer({
-          id: sourceName,
-          type: 'line',
-          source: sourceName,
-          layout: {
-            'line-join': 'round',
-
-            'line-cap': 'round',
-          },
-          paint: {
-            'line-color': '#F00',
-            'line-width': 5,
-          },
-        })
-      })
-    }
-  })
-}
-
 const Map = ({ data }) => {
+  const [selected, setSelected] = useState(null)
+  const loadPostsToGeoJson = mapRef => nodes => {
+    nodes.forEach(({ node }) => {
+      if (node.frontmatter.routes !== null) {
+        node.frontmatter.routes.forEach(route => {
+          const map = mapRef.current
+          const sourceName = `${node.fields.slug}-${route.name}`
+          const geometry = route.childGeoLineString.geometry
+          const bounds = geometry.coordinates.reduce((bounds, coord) => bounds.extend(coord),
+            new mapboxgl.LngLatBounds(geometry.coordinates[0], geometry.coordinates[0]))
+          map.addSource(sourceName, {
+            type: 'geojson',
+            data: {
+              type: 'Feature',
+              geometry,
+            },
+          })
+          map.addLayer({
+            id: sourceName,
+            type: 'line',
+            source: sourceName,
+            layout: {
+              'line-join': 'round',
+  
+              'line-cap': 'round',
+            },
+            paint: {
+              'line-color': node.fields.slug === selected ? '#4F4' : '#F00',
+              'line-width': 5,
+            },
+          })
+          map.on('mouseenter', sourceName, () => {
+            map.getCanvas().style.cursor = "pointer"
+          })
+          map.on('mouseleave', sourceName, () => {
+            map.getCanvas().style.cursor = ""
+          })
+          map.on('click', sourceName, () => {
+            map.setPaintProperty(sourceName, 'line-color', '#4F4')
+            map.fitBounds(bounds, {padding: 200})
+            setSelected(node.fields.slug)
+          })
+        })
+      }
+    })
+  }
+
   console.log('data is ', data)
   const [isDarkMode, setIsDarkMode] = useState(false)
 
