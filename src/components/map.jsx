@@ -129,7 +129,7 @@ const Map = ({ data }) => {
   }, [map, mapStyle, data.allMarkdownRemark.edges])
 
   return (
-    <div>
+    <>
       <div ref={mapContainer} className={styles.map}></div>
       <div className={styles.mapFooter}>
         {selected === null ? (
@@ -143,7 +143,7 @@ const Map = ({ data }) => {
           />
         )}
       </div>
-    </div>
+    </>
   )
 }
 
