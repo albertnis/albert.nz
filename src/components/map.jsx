@@ -94,6 +94,7 @@ const Map = ({ data }) => {
   const map = useRef(null)
   const mapContainer = useRef(null)
   const mapStyle = isDarkMode ? darkMapStyle : lightMapStyle
+  const [isMapLoading, setIsMapLoading] = useState(true)
 
   useEffect(() => {
     if (map.current) {
@@ -124,12 +125,33 @@ const Map = ({ data }) => {
     })
     map.current.on('load', () => {
       const sourceNames = loadPostsToGeoJson(map)(data.allMarkdownRemark.edges)
+      setIsMapLoading(false)
       setSourceNames(sourceNames)
     })
   }, [map, mapStyle, data.allMarkdownRemark.edges])
 
   return (
     <>
+      {isMapLoading && (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 8 8"
+          version="1.1"
+          className={styles.loadingIndicator}
+        >
+          <circle
+            strokeWidth="1"
+            fill="none"
+            stroke="#000"
+            cx="4"
+            cy="4"
+            r="3"
+            className={styles.loadingIndicatorPath}
+          />
+        </svg>
+      )}
       <div ref={mapContainer} className={styles.map}></div>
       <div className={styles.mapFooter}>
         {selected === null ? (

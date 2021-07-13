@@ -17,3 +17,30 @@
   height: 100%;
   margin: 0;
 }
+
+.loadingIndicator {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  margin-bottom: -16px;
+  animation: 1s linear 0s infinite running spin;
+  z-index: 3;
+}
+
+.loadingIndicatorPath {
+  stroke-width: 0.5;
+  stroke-dasharray: 14 20;
+  stroke: var(--color-foreground);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
