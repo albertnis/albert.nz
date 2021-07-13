@@ -80,11 +80,16 @@ const Map = ({ data }) => {
   const [isDarkMode, setIsDarkMode] = useState(false)
 
   useEffect(() => {
-    setIsDarkMode(
-      window.matchMedia &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches
-    )
-  }, [])
+    if (window.matchMedia) {
+      const query = window.matchMedia('(prefers-color-scheme: dark)')
+      setIsDarkMode(query.matches)
+      const toggleDarkMode = () => {
+        setIsDarkMode(!isDarkMode)
+      }
+      query.addEventListener('change', toggleDarkMode)
+      return () => query.removeEventListener('change', toggleDarkMode)
+    }
+  }, [isDarkMode])
 
   const map = useRef(null)
   const mapContainer = useRef(null)
