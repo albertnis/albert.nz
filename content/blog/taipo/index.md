@@ -1,26 +1,34 @@
 ---
-title: Adventures placeholder
-date: 2021-07-09T15:00:00+1200
-description: Temporary post with all the GPX files
+title: Taipo track to Julia Hut
+date: 2021-07-02T15:30:00+1200
+description: Up the river with the Ngatea Tramping Club
 accent: rgb(144, 81, 237)
 routes:
-  - ./Baring_Head.gpx
-  - ./Cass_Lagoon_Saddle_Track.gpx
-  - ./Catchpool_Valley_to_Mt_Matthews_summit.gpx
-  - ./Edwards_Hut_Track.gpx
-  - ./Hooker_Valley_Track.gpx
-  - ./Kaituna_Valley_to_Te_Ahu_P_tiki.gpx
-  - ./Kohangapiripiri_loop.gpx
-  - ./Mt_Holdsworth_Jumbo_Circuit.gpx
-  - ./Mt_Oxford_summit.gpx
-  - ./Mt_Somers_Track.gpx
-  - ./Mueller_Hut_Route.gpx
-  - ./Pinchgut_Track_Cattle_Peak_loop.gpx
-  - ./Routeburn_Track.gpx
-  - ./St_James_Walkway_to_Boyle_Flat_Hut.gpx
   - ./Taipo_Valley_track_to_Julia_Hut.gpx
-  - ./The_Great_Kauri_Run_Classic_30k.gpx
-  - ./Waiopehu_Track.gpx
-  - ./WUU2K_Marathon_Route.gpx
-  - ./Aotea_track.gpx
 ---
+
+![][river-crossing]
+![][tree-astro]
+![][valley-photo]
+![][xander-crossing]
+![][hut-astro]
+![][gold]
+![][patrick-crossing]
+![][down-valley]
+![][big-river]
+![][gameboy]
+![][group]
+![][dawn-reading]
+
+[river-crossing]: ./DSC08215.jpg
+[tree-astro]: ./DSC08225.jpg
+[valley-photo]: ./DSC08233.jpg
+[xander-crossing]: ./DSC08254.jpg
+[hut-astro]: ./DSC08271.jpg
+[gold]: ./DSC08329.jpg
+[patrick-crossing]: ./DSC08321.jpg
+[down-valley]: ./DSC08312.jpg
+[big-river]: ./DSC08292.jpg
+[gameboy]: ./DSC08290.jpg
+[group]: ./DSC08277.jpg
+[dawn-reading]: ./DSC9273.jpg

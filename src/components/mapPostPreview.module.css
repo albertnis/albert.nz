@@ -15,7 +15,7 @@
   left: 50%;
   top: 1px;
   margin-top: calc(var(--space-base) * -1);
-  margin-left: calc(var(--space-base) * -0.5);
+  margin-left: calc(var(--space-base) * -1);
   border-left: var(--space-base) solid transparent;
   border-right: var(--space-base) solid transparent;
   border-bottom: var(--space-base) solid var(--color-background);
@@ -27,6 +27,8 @@
 .link:active {
   text-decoration: none;
   color: var(--color-foreground);
+  display: flex;
+  align-items: center;
 }
 
 .link:hover .title {
@@ -42,4 +44,23 @@
 
 .description {
   opacity: 0.7;
+}
+
+.arrow {
+  position: relative;
+  left: 0;
+  transition: left 0.1s ease-in;
+  margin-left: var(--space-base);
+}
+
+.link:hover .arrow {
+  left: 5px;
+}
+
+.logoPath {
+  stroke: var(--color-foreground);
+}
+
+.link:hover .logoPath {
+  stroke: var(--color-accent);
 }
