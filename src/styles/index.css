@@ -70,3 +70,10 @@ body {
   background: var(--color-accent);
   color: white;
 }
+
+figcaption {
+  font-size: 0.8em;
+  margin-bottom: 16px;
+  font-style: italic;
+  text-align: center;
+}
