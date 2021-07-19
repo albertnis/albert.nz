@@ -15,6 +15,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -36,8 +37,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 830,
-              quality: 80,
+              maxWidth: 6000,
             },
           },
           {
@@ -54,7 +54,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-
     {
       resolve: `gatsby-transformer-gpx`,
       options: {
@@ -93,11 +92,10 @@ module.exports = {
                   guid: edge.node.fields.slug,
                   custom_elements: [
                     {
-                      'content:encoded': `${
-                        edge.node.frontmatter.links
-                          ? `<p>${edge.node.frontmatter.links.join(' | ')}</p>`
-                          : ''
-                      }${edge.node.html}`,
+                      'content:encoded': `${edge.node.frontmatter.links
+                        ? `<p>${edge.node.frontmatter.links.join(' | ')}</p>`
+                        : ''
+                        }${edge.node.html}`,
                     },
                   ],
                 })

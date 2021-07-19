@@ -1,40 +1,43 @@
 import React from 'react'
 import * as styles from './bioPreview.module.css'
-import Image from 'gatsby-image'
+import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from 'gatsby'
 
 const BioPreview = ({ style }) => {
-  const data = useStaticQuery(graphql`
-    query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-crop.jpg/" }) {
-        childImageSharp {
-          fixed(width: 100, height: 100, quality: 100) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+  const data = useStaticQuery(graphql`query BioQuery {
+  avatar: file(absolutePath: {regex: ""}) {
+    childImageSharp {
+      gatsbyImageData(width: 100, height: 100, layout: FIXED)
+    }
+  }
+  site {
+    siteMetadata {
+      author {
+        name
+        summary
       }
-      site {
-        siteMetadata {
-          author {
-            name
-            summary
-          }
-          social {
-            github
-            email
-            linkedin
-          }
-        }
+      social {
+        github
+        email
+        linkedin
       }
     }
-  `)
+  }
+}
+`)
   const { social } = data.site.siteMetadata
   return (
     <div className={styles.biopreview} style={{ style }}>
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
+      <StaticImage
+        alt="Photo of Albert"
         className={styles.avatar}
-      />
+        src="../../content/assets/profile-crop.jpg"
+        width={100}
+        height={100}
+        quality={95} 
+        layout="fixed"
+        formats={["AUTO", "WEBP", "AVIF"]}
+        />
       <div className={`markdown-body ${styles.tagline}`}>
         <h5>Kia ora!</h5>
         <p>
@@ -46,7 +49,7 @@ const BioPreview = ({ style }) => {
         </p>
       </div>
     </div>
-  )
+  );
 }
 
 export default BioPreview
