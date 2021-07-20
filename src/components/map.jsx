@@ -63,7 +63,7 @@ const Map = ({ data }) => {
             map.getCanvas().style.cursor = ''
           })
           map.on('click', sourceName, () => {
-            map.fitBounds(bounds, { padding: 200 })
+            map.fitBounds(bounds, { padding: {top: 100, right: 100, bottom: 200, left: 100 }})
             setSelected({
               sourceName,
               slug: node.fields.slug,
@@ -80,15 +80,21 @@ const Map = ({ data }) => {
   const [isDarkMode, setIsDarkMode] = useState(false)
 
   useEffect(() => {
-    setIsDarkMode(
-      window.matchMedia &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches
-    )
-  }, [])
+    if (window.matchMedia) {
+      const query = window.matchMedia('(prefers-color-scheme: dark)')
+      setIsDarkMode(query.matches)
+      const toggleDarkMode = () => {
+        setIsDarkMode(!isDarkMode)
+      }
+      query.addEventListener('change', toggleDarkMode)
+      return () => query.removeEventListener('change', toggleDarkMode)
+    }
+  }, [isDarkMode])
 
   const map = useRef(null)
   const mapContainer = useRef(null)
   const mapStyle = isDarkMode ? darkMapStyle : lightMapStyle
+  const [isMapLoading, setIsMapLoading] = useState(true)
 
   useEffect(() => {
     if (map.current) {
@@ -119,12 +125,33 @@ const Map = ({ data }) => {
     })
     map.current.on('load', () => {
       const sourceNames = loadPostsToGeoJson(map)(data.allMarkdownRemark.edges)
+      setIsMapLoading(false)
       setSourceNames(sourceNames)
     })
   }, [map, mapStyle, data.allMarkdownRemark.edges])
 
   return (
-    <div>
+    <>
+      {isMapLoading && (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 8 8"
+          version="1.1"
+          className={styles.loadingIndicator}
+        >
+          <circle
+            strokeWidth="1"
+            fill="none"
+            stroke="#000"
+            cx="4"
+            cy="4"
+            r="3"
+            className={styles.loadingIndicatorPath}
+          />
+        </svg>
+      )}
       <div ref={mapContainer} className={styles.map}></div>
       <div className={styles.mapFooter}>
         {selected === null ? (
@@ -138,7 +165,7 @@ const Map = ({ data }) => {
           />
         )}
       </div>
-    </div>
+    </>
   )
 }
 

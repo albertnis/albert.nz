@@ -2,10 +2,11 @@
 .link:visited {
   text-decoration: none;
   color: inherit;
+  pointer-events: auto;
 }
 
 .content {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 
@@ -14,4 +15,5 @@
   font-size: 1.5em;
   font-family: 'Raleway', sans-serif;
   padding: 0 0.7em;
+  margin-right: auto;
 }

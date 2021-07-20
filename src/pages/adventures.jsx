@@ -10,10 +10,18 @@ const BlogIndex = ({ data }) => {
   return (
     <div>
       <SEO />
-      <Row styles={{ position: 'relative', zIndex: 2 }}>
+      <Row styles={{ position: 'relative', zIndex: 2, pointerEvents: 'none' }}>
         <Header />
       </Row>
-      <div style={{ position: 'absolute', top: 0, left: 0 }}>
+      <div
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+        }}
+      >
         <Map data={data} />
       </div>
     </div>
