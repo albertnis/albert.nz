@@ -10,7 +10,7 @@ const BlogIndex = ({ data }) => {
   return (
     <div>
       <SEO />
-      <Row styles={{ position: 'relative', zIndex: 2 }}>
+      <Row styles={{ position: 'relative', zIndex: 2, pointerEvents: 'none' }}>
         <Header />
       </Row>
       <div
