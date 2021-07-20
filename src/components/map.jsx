@@ -63,7 +63,9 @@ const Map = ({ data }) => {
             map.getCanvas().style.cursor = ''
           })
           map.on('click', sourceName, () => {
-            map.fitBounds(bounds, { padding: {top: 100, right: 100, bottom: 200, left: 100 }})
+            map.fitBounds(bounds, {
+              padding: { top: 100, right: 100, bottom: 200, left: 100 },
+            })
             setSelected({
               sourceName,
               slug: node.fields.slug,

@@ -1,13 +1,16 @@
 import React from 'react'
 import * as styles from './post.module.css'
 
-const Post = ({ accent, html, frontmatter }) => (
+const Post = ({ accent, html, frontmatter, hideTitle }) => (
   <article
     style={frontmatter.accent ? { '--color-accent': frontmatter.accent } : {}}
   >
     <header className={styles.header}>
-      <h1 className={styles.title}>{frontmatter.title}</h1>
-      <div className={styles.divider}></div>
+      <>
+        <h1 className={styles.title}>{frontmatter.title}</h1>
+        <div className={styles.divider}></div>
+      </>
+
       <div className={`markdown-body ${styles.meta}`}>
         <p>
           {frontmatter.date}

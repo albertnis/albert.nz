@@ -6,6 +6,7 @@ import Row from '../components/row'
 import Header from '../components/header'
 import Post from '../components/post'
 import Footer from '../components/footer'
+import Hero from '../components/hero'
 
 // prismjs plugin is NOT COOL and doesn't wrap highlighted lines properly
 // Relying on display: block is bad for accessibility and for reading without original CSS
@@ -17,13 +18,25 @@ const BlogPostTemplate = ({ data }) => {
 
   return (
     <div>
-      <Row>
-        <Header />
-      </Row>
       <Seo
         title={frontmatter.title}
         description={frontmatter.description || excerpt}
       />
+      {frontmatter.hero ? (
+        <Hero
+          title={frontmatter.title}
+          imgSrc={frontmatter.hero.childImageSharp.fluid.src}
+        >
+          <Row>
+            <Header />
+          </Row>
+        </Hero>
+      ) : (
+        <Row>
+          <Header />
+        </Row>
+      )}
+
       <Row>
         <Post frontmatter={frontmatter} html={html} />
       </Row>
@@ -57,6 +70,14 @@ export const pageQuery = graphql`
         description
         accent
         links
+        hero {
+          publicURL
+          childImageSharp {
+            fluid(maxWidth: 2560, quality: 75) {
+              src
+            }
+          }
+        }
       }
     }
   }

@@ -3,6 +3,7 @@ title: Taipo track to Julia Hut and hot pools
 date: 2021-07-02T15:30:00+1200
 description: Up the river with the Ngatea Tramping Club
 accent: rgb(144, 81, 237)
+hero: ./DSC08271.jpg
 routes:
   - ./Taipo_Valley_track_to_Julia_Hut.gpx
 ---
