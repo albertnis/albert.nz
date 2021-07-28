@@ -21,5 +21,4 @@ routes:
   - ./The_Great_Kauri_Run_Classic_30k.gpx
   - ./Waiopehu_Track.gpx
   - ./WUU2K_Marathon_Route.gpx
-  - ./Aotea_track.gpx
 ---

@@ -22,7 +22,7 @@ const BlogIndex = ({ data }) => {
       </Row>
       <Row title="Blog posts">
         {posts
-          .filter(({ node }) => node.frontmatter.routes === null)
+          .filter(({ node }) => node.fields.slug !== '/adventures-placeholder/')
           .map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
@@ -70,9 +70,6 @@ export const pageQuery = graphql`
             title
             description
             accent
-            routes {
-              id
-            }
           }
         }
       }
