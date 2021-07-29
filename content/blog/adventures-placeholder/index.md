@@ -13,7 +13,6 @@ routes:
   - ./Kohangapiripiri_loop.gpx
   - ./Mt_Holdsworth_Jumbo_Circuit.gpx
   - ./Mt_Oxford_summit.gpx
-  - ./Mt_Somers_Track.gpx
   - ./Mueller_Hut_Route.gpx
   - ./Pinchgut_Track_Cattle_Peak_loop.gpx
   - ./Routeburn_Track.gpx
