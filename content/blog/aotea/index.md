@@ -1,5 +1,5 @@
 ---
-title: Aotea track
+title: Aotea Track
 date: 2021-06-21T10:21:00+1200
 description: Three-day tramp on Great Barrier Island visiting Kaiaraara Hut, Mt Heale Hut and Kaitoke hot springs
 accent: rgb(241, 81, 146)
@@ -11,7 +11,7 @@ During a sibling trip to Great Barrier Island, we took on the Aotea Track. The t
 
 ## Day 1
 
-We started at the Forest Road trailhead, oppositing the Te Ahumata track on a saddle near Whagaparapara. We were planning to finish the tramp 2km down the road at the Kaitoke Hot Springs track. So I dropped the others off at the saddle, parked at the Hot Springs carpark, then ran back along the road.
+We started at the Forest Road trailhead, oppositing the Te Ahumata Track on a saddle near Whagaparapara. We were planning to finish the tramp 2km down the road at the Kaitoke Hot Springs Track. So I dropped the others off at the saddle, parked at the Hot Springs carpark, then ran back along the road.
 
 ![][trailhead]
 

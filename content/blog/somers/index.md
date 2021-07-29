@@ -1,5 +1,5 @@
 ---
-title: Mt Somers track
+title: Mt Somers Track
 date: 2021-03-07T10:30:00+1200
 description: Mountainous trail run in Mid Canterbury
 accent: rgb(70, 144, 237)
