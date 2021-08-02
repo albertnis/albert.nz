@@ -5,7 +5,6 @@ description: Temporary post with all the GPX files for which I haven't written t
 accent: rgb(237, 81, 144)
 routes:
   - ./Baring_Head.gpx
-  - ./Cass_Lagoon_Saddle_Track.gpx
   - ./Catchpool_Valley_to_Mt_Matthews_summit.gpx
   - ./Edwards_Hut_Track.gpx
   - ./Hooker_Valley_Track.gpx
