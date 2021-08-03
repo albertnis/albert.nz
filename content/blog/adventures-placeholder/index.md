@@ -5,11 +5,9 @@ description: Temporary post with all the GPX files for which I haven't written t
 accent: rgb(237, 81, 144)
 routes:
   - ./Edwards_Hut_Track.gpx
-  - ./Hooker_Valley_Track.gpx
   - ./Kaituna_Valley_to_Te_Ahu_P_tiki.gpx
   - ./Mt_Holdsworth_Jumbo_Circuit.gpx
   - ./Mt_Oxford_summit.gpx
-  - ./Mueller_Hut_Route.gpx
   - ./Pinchgut_Track_Cattle_Peak_loop.gpx
   - ./St_James_Walkway_to_Boyle_Flat_Hut.gpx
   - ./Waiopehu_Track.gpx

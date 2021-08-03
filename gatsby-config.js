@@ -92,10 +92,11 @@ module.exports = {
                   guid: edge.node.fields.slug,
                   custom_elements: [
                     {
-                      'content:encoded': `${edge.node.frontmatter.links
-                        ? `<p>${edge.node.frontmatter.links.join(' | ')}</p>`
-                        : ''
-                        }${edge.node.html}`,
+                      'content:encoded': `${
+                        edge.node.frontmatter.links
+                          ? `<p>${edge.node.frontmatter.links.join(' | ')}</p>`
+                          : ''
+                      }${edge.node.html}`,
                     },
                   ],
                 })
@@ -190,6 +191,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
