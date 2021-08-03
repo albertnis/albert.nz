@@ -4,7 +4,6 @@ date: 2021-07-09T15:00:00+1200
 description: Temporary post with all the GPX files for which I haven't written trip reports
 accent: rgb(237, 81, 144)
 routes:
-  - ./Baring_Head.gpx
   - ./Edwards_Hut_Track.gpx
   - ./Hooker_Valley_Track.gpx
   - ./Kaituna_Valley_to_Te_Ahu_P_tiki.gpx
