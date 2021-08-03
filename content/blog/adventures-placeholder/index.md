@@ -14,5 +14,4 @@ routes:
   - ./Pinchgut_Track_Cattle_Peak_loop.gpx
   - ./St_James_Walkway_to_Boyle_Flat_Hut.gpx
   - ./Waiopehu_Track.gpx
-  - ./WUU2K_Marathon_Route.gpx
 ---
