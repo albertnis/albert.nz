@@ -13,7 +13,6 @@ routes:
   - ./Mt_Oxford_summit.gpx
   - ./Mueller_Hut_Route.gpx
   - ./Pinchgut_Track_Cattle_Peak_loop.gpx
-  - ./Routeburn_Track.gpx
   - ./St_James_Walkway_to_Boyle_Flat_Hut.gpx
   - ./The_Great_Kauri_Run_Classic_30k.gpx
   - ./Waiopehu_Track.gpx
