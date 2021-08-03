@@ -8,6 +8,5 @@ routes:
   - ./Kaituna_Valley_to_Te_Ahu_P_tiki.gpx
   - ./Mt_Oxford_summit.gpx
   - ./Pinchgut_Track_Cattle_Peak_loop.gpx
-  - ./St_James_Walkway_to_Boyle_Flat_Hut.gpx
   - ./Waiopehu_Track.gpx
 ---
