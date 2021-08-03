@@ -14,7 +14,6 @@ routes:
   - ./Mueller_Hut_Route.gpx
   - ./Pinchgut_Track_Cattle_Peak_loop.gpx
   - ./St_James_Walkway_to_Boyle_Flat_Hut.gpx
-  - ./The_Great_Kauri_Run_Classic_30k.gpx
   - ./Waiopehu_Track.gpx
   - ./WUU2K_Marathon_Route.gpx
 ---
