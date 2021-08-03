@@ -8,7 +8,6 @@ routes:
   - ./Edwards_Hut_Track.gpx
   - ./Hooker_Valley_Track.gpx
   - ./Kaituna_Valley_to_Te_Ahu_P_tiki.gpx
-  - ./Kohangapiripiri_loop.gpx
   - ./Mt_Holdsworth_Jumbo_Circuit.gpx
   - ./Mt_Oxford_summit.gpx
   - ./Mueller_Hut_Route.gpx
