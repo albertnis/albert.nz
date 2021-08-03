@@ -1,6 +1,6 @@
 ---
 title: Running the Routeburn Track
-date: 2021-01-01T13:45:00+1200
+date: 2021-03-26T16:52:00+1200
 description: Completing one of New Zealand's most famous walks in a day
 accent: rgb(170, 18, 190)
 routes:
