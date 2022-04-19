@@ -1,5 +1,5 @@
 ---
-title: Pfeifer Biv and Otahake Hot Pools
+title: Pfeifer Biv and Otehake Hot Pools
 date: 2022-04-15T12:32:22+1200
 description: "Stunning mountain hut and natural hot spring in northern Arthur's Pass"
 accent: rgb(89, 180, 49)
@@ -7,7 +7,7 @@ routes:
   - ./Pfeifer_Biv_Otahake_Hot_Pools.gpx
 ---
 
-Easter weekend of 2022 presented a great opportunity to head into the hills near Christchurch. A traverse of Arthur's Pass, from Aickens to Hawdon Valley via Otahake Valley, was lined up. Before we knew it, the holiday was upon us and it was time to hike! A last-minute route change had us detouring to the dramatically-located Pfeifer Biv on the first day.
+Easter weekend of 2022 presented a great opportunity to head into the hills near Christchurch. A traverse of Arthur's Pass, from Aickens to Hawdon Valley via Otehake Valley, was lined up. Before we knew it, the holiday was upon us and it was time to hike! A last-minute route change had us detouring to the dramatically-located Pfeifer Biv on the first day.
 
 Access to the Mt Pfeifer tops is via a stream up to Waharoa Saddle. If you're going up there, make sure to stick to the left branch and you should have no trouble reaching the saddle.
 
