@@ -51,7 +51,7 @@ The hot pools are delightful and most of us agreed these were the best natural p
 
 <figcaption>Dinner time beside the hot pools</figcaption>
 
-With the delayed itinerary, we decided to split the party: Will and Hayley would speed onwards to complete the traverse, while the four others would head back to Morrions Footbridge (the easy way--that is, not going over a sizeable mountain). While it was a shame to miss the views of Tarn Col in brilliant weather, I was happy to return home before nightfall and in one piece, with plenty of Arthur's Pass secrets remaining for me to explore another day.
+With the delayed itinerary, we decided to split the party: Will and Hayley would speed onwards to complete the traverse, while the four others would head back to Morrisons Footbridge (the easy way--that is, not going over a sizeable mountain). While it was a shame to miss the views of Tarn Col in brilliant weather, I was happy to return home before nightfall and in one piece, with plenty of Arthur's Pass secrets remaining for me to explore another day.
 
 [stream]: ./DSC09522.jpg
 [spur]: ./DSC09534.jpg
