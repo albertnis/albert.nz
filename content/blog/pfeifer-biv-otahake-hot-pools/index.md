@@ -31,7 +31,7 @@ Beyond the bushline, the track fades. There are a couple of large basins to cros
 
 <figcaption>Mt Pfeifer Biv at dusk</figcaption>
 
-A cool, rainy morning broke and saw us heading down the mountain towards Lake Kaurapataka. Will expertly navigated us to our exit route: a screen chute marked as a stream on Topo250, a few hundred metres northeast of the biv beginning around the 1120m contour. This descent provided me with my first experiences in both bush-bashing and scree-skiing as we lost over 500m of altitude in a kilometre.
+A cool, rainy morning broke and saw us heading down the mountain towards Lake Kaurapataka. Will expertly navigated us to our exit route: a scree chute marked as a stream on Topo250, a few hundred metres northeast of the biv beginning around the 1120m contour. This descent provided me with my first experiences in both bush-bashing and scree-skiing as we lost over 500m of altitude in a kilometre.
 
 ![][spine]
 
