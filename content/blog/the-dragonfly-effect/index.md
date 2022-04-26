@@ -16,4 +16,4 @@ So far, so good. However, the most important attribute of a DAC is undoubtedly s
 So what's the verdict? Has the humble Dragonfly revolutionised my music experience? The answer is both yes and no. For better or for worse, the Dragonfly and the ATH-M50XBL enable me to identify well-mastered albums. Tracks on these albums sound clean, detailed and generally sublime. But not everything is well-mastered (Amy Winehouse and Imagine Dragons come to mind). It is on such albums that the Dragonfly effect is wasted.
 
 [online-hifi]: http://onlinehifi.co.nz/
-[grado sr125i]: /2014-12-24-going-open
+[grado sr125i]: /going-open
