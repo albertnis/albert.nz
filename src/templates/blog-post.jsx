@@ -6,6 +6,7 @@ import Row from '../components/row'
 import Header from '../components/header'
 import Post from '../components/post'
 import Footer from '../components/footer'
+import BaseMap from '../components/baseMap'
 
 // prismjs plugin is NOT COOL and doesn't wrap highlighted lines properly
 // Relying on display: block is bad for accessibility and for reading without original CSS
@@ -25,6 +26,7 @@ const BlogPostTemplate = ({ data }) => {
         description={frontmatter.description || excerpt}
       />
       <Row>
+        {frontmatter?.routes && <BaseMap data={data} />}
         <Post frontmatter={frontmatter} html={html} />
       </Row>
       <Row
@@ -51,12 +53,25 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         description
         accent
         links
+        routes {
+          name
+          publicURL
+          childGeoLineString {
+            geometry {
+              coordinates
+              type
+            }
+          }
+        }
       }
     }
   }

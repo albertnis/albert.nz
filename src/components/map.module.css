@@ -16,6 +16,33 @@
   width: 100%;
   height: 100%;
   margin: 0;
+  min-height: 500px;
+}
+
+.mapWrapper {
+  position: relative;
+}
+
+.gpxLink {
+  background-color: var(--color-background);
+  margin: var(--space-base);
+  padding: calc(var(--space-base) / 2);
+  border-radius: var(--border-radius);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-decoration: none;
+  color: var(--color-foreground);
+}
+
+.gpxLink:hover {
+  text-decoration: underline;
+}
+
+.baseMap {
+  width: 100%;
+  margin: 0 0 var(--space-base) 0;
+  height: 500px;
 }
 
 .loadingIndicator {
