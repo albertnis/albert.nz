@@ -2,7 +2,7 @@
 title: Top Hope Hut
 date: 2022-09-24T19:42:00+1200
 description: Meandering river valley track up Hope Valley near Lewis Pass
-accent: hsl(40, 70%, 100%)
+accent: hsl(40, 70%, 50%)
 routes:
   - ./Top_Hope_Hope_Kiwi_.gpx
 ---
