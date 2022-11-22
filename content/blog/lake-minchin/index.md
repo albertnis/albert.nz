@@ -1,7 +1,7 @@
 ---
 title: Camping at Lake Minchin
 date: 2022-01-14T18:42:22+1300
-description: Majestic hut with a view in South West Coast
+description: Hike to a remote lake near the Casey-Binser track and Poulter valley in Arthur's Pass, Canterbury
 accent: rgb(110, 80, 219)
 routes:
   - ./Lake_Minchin_overnighter.gpx
