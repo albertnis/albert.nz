@@ -1,70 +1,31 @@
 {
-  "name": "albertnis-gatsby",
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all",
-      "not chrome < 51",
-      "not safari < 10"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "private": true,
-  "description": "Albert Nisbet's personal website",
-  "version": "0.1.0",
-  "author": "Albert Nisbet <albert@albert.nz>",
-  "dependencies": {
-    "gatsby": "^3.9.1",
-    "gatsby-plugin-catch-links": "^3.10.0",
-    "gatsby-plugin-css-modules-typings": "^1.0.1",
-    "gatsby-plugin-feed": "^3.9.0",
-    "gatsby-plugin-google-analytics": "^3.9.0",
-    "gatsby-plugin-google-fonts": "^1.0.1",
-    "gatsby-plugin-image": "^1.9.0",
-    "gatsby-plugin-manifest": "^3.9.0",
-    "gatsby-plugin-offline": "^4.9.0",
-    "gatsby-plugin-react-helmet": "^4.9.0",
-    "gatsby-plugin-sharp": "^3.9.0",
-    "gatsby-remark-copy-linked-files": "^4.6.0",
-    "gatsby-remark-images": "^5.6.0",
-    "gatsby-remark-prismjs": "^5.6.0",
-    "gatsby-remark-responsive-iframe": "^4.6.0",
-    "gatsby-remark-smartypants": "^4.6.0",
-    "gatsby-source-filesystem": "^3.9.0",
-    "gatsby-transformer-remark": "^4.6.0",
-    "gatsby-transformer-sharp": "^3.9.0",
-    "mapbox-gl": "^2.3.1",
-    "prismjs": "^1.20.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0"
-  },
-  "devDependencies": {
-    "prettier": "2.0.5"
-  },
-  "homepage": "https://albert.nz",
-  "keywords": [
-    "gatsby",
-    "blog"
-  ],
-  "license": "UNLICENSED",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/albertnis/albertnis-gatsby"
-  },
-  "scripts": {
-    "installall": "npm install && npm --prefix plugins/gatsby-transformer-gpx install",
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  }
+	"name": "albert.nz",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^1.0.0",
+		"@sveltejs/kit": "^1.0.0",
+		"@typescript-eslint/eslint-plugin": "^5.45.0",
+		"@typescript-eslint/parser": "^5.45.0",
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"prettier": "^2.8.0",
+		"prettier-plugin-svelte": "^2.8.1",
+		"svelte": "^3.54.0",
+		"svelte-check": "^3.0.1",
+		"tslib": "^2.4.1",
+		"typescript": "^4.9.3",
+		"vite": "^4.0.0"
+	},
+	"type": "module"
 }

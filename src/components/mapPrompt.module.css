@@ -1,7 +1,0 @@
-.mapPrompt {
-  background-color: var(--color-background);
-  margin: var(--space-base);
-  padding: calc(var(--space-base) / 2);
-  border-radius: var(--border-radius);
-  font-style: italic;
-}
