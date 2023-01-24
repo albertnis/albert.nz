@@ -1,7 +1,7 @@
 ---
 title: Using three-stage Dockerfile for accessing build output
 description: How to make builds consistent and flexible with a single Dockerfile
-date: 2020-07-09 19:17:25 +1200
+date: 2020-07-09T19:17:25+1200
 accent: rgb(34, 139, 119)
 links:
   - <a href="https://github.com/albertnis/demo-three-stage-dockerfile">GitHub</a>

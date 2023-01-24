@@ -2,7 +2,7 @@
 layout: post
 title: Adventures with the MERN Stack
 subtitle: Full stack web development with JavaScript
-date: 2017-07-04 23:23:25 +1300
+date: 2017-07-04T23:23:25+1300
 thumb: /resources/2017-07-04-mern/mern-1.png
 categories: posts
 accent: rgb(70, 140, 152)

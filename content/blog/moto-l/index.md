@@ -1,7 +1,7 @@
 ---
 title: 'Moto L'
 description: Impatience made me delve into Android ROMs
-date: 2015-04-12 16:47:25 +1300
+date: 2015-04-12T16:47:25+1300
 accent: rgb(118, 65, 243)
 ---
 

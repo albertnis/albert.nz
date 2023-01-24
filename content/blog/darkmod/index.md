@@ -1,7 +1,7 @@
 ---
 title: DarkMOD
 description: A dynamic MusicBee skin using PHP
-date: 2017-02-06 21:23:25 +1300
+date: 2017-02-06T21:23:25+1300
 accent: rgb(59, 147, 104)
 links:
   - <a href="https://darkmod.albertnis.com">View project</a>

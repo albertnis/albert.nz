@@ -1,7 +1,7 @@
 ---
 title: Migrating from ESPHome to WLED, the easy over-the-air way
 description: Moving from ESPHome to WLED can be done without wires or worries
-date: 2020-10-18 12:44:25 +1200
+date: 2020-10-18T12:44:25+1200
 accent: rgb(43, 185, 22)
 ---
 
