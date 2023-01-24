@@ -1,10 +1,10 @@
-export const load = async ({ params }) => {
+export const load = async ({ params }: { params: { slug: string } }) => {
 	const post = await import(`../../../content/blog/${params.slug}/index.md`)
-	const { title } = post.metadata
+	const meta = post.metadata
 	const content = post.default
 
 	return {
-		title,
+		meta,
 		content
 	}
 }

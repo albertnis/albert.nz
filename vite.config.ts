@@ -7,7 +7,8 @@ const config: UserConfig = {
 		fs: {
 			allow: ['src', 'content']
 		}
-	}
+	},
+	assetsInclude: ['**/*.JPG']
 }
 
 export default config
