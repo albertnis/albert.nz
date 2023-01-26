@@ -1,9 +1,12 @@
+import type { ViteGpxPluginOutput } from '../../plugins/vite-plugin-gpx/types'
+
 export interface PostMetadata {
 	title: string
-	description: string
+	description?: string
 	date: string
 	accent: string
-	links: string[]
+	links?: string[]
+	routes?: string[]
 }
 
 export interface PostPreview {
@@ -13,5 +16,6 @@ export interface PostPreview {
 
 export interface Post {
 	meta: PostMetadata
+	geo: ViteGpxPluginOutput[]
 	content: any
 }

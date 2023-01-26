@@ -12,7 +12,7 @@ const config = {
 		vitePreprocess()
 	],
 
-	extensions: ['.svelte', '.md'],
+	extensions: ['.svelte', '.md', '.svx'],
 
 	kit: {
 		adapter: adapter()

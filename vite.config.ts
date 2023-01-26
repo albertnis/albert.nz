@@ -1,8 +1,9 @@
 import { sveltekit } from '@sveltejs/kit/vite'
 import type { UserConfig } from 'vite'
+import { gpxPlugin } from './plugins/vite-plugin-gpx'
 
 const config: UserConfig = {
-	plugins: [sveltekit()],
+	plugins: [sveltekit(), gpxPlugin({})],
 	server: {
 		fs: {
 			allow: ['src', 'content']
