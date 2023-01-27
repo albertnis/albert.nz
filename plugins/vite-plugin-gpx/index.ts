@@ -3,7 +3,13 @@ import type { ViteGpxPluginOptions, ViteGpxPluginOutput } from './types'
 import geojson from '@mapbox/togeojson'
 import type { Feature, FeatureCollection, GeoJSON, Geometry, Position } from 'geojson'
 import { DOMParser } from 'xmldom'
-import { intervalToDuration, parseISO } from 'date-fns'
+import {
+	differenceInHours,
+	differenceInMilliseconds,
+	differenceInMinutes,
+	intervalToDuration,
+	parseISO
+} from 'date-fns'
 import { LTTB } from 'downsample'
 import type { TupleDataPoint } from 'downsample'
 
@@ -56,7 +62,8 @@ const gpxDataToOutput = (gpxData: string): ViteGpxPluginOutput => {
 			feature.geometry.coordinates[0].length === 3
 				? computeCumulativeElevationGainMetres(feature.geometry.coordinates)
 				: null,
-		cumulativeDistancesMetres: computeCumulutiveDistanceMetres(downSampledCoordinates)
+		cumulativeDistancesMetres: computeCumulutiveDistanceMetres(downSampledCoordinates),
+		breakIndices: computeBreakIndices(feature)
 	}
 }
 
@@ -112,6 +119,24 @@ const computeStartTime = (input: Feature): Date | null => {
 	}
 
 	return null
+}
+
+const computeBreakIndices = (input: Feature): number[] => {
+	const times = input.properties?.coordTimes
+
+	if (!Array.isArray(times)) {
+		return []
+	}
+
+	const parsedTimes = times.filter((_, i) => i % 9 === 0).map((t) => parseISO(t))
+
+	const indices = []
+	for (let i = 1; i < parsedTimes.length; i++) {
+		if (differenceInHours(parsedTimes[i], parsedTimes[i - 1]) > 4) {
+			indices.push(i)
+		}
+	}
+	return indices
 }
 
 const computeCumulativeElevationGainMetres = (input: Position[]): number => {

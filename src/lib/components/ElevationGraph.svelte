@@ -23,12 +23,18 @@
 	let svg: SVGGraphicsElement
 	let svgX = 0
 	let svgY = 0
-	let hoveredIndex: number | undefined = undefined
+	export let hoveredIndex: number | undefined
+
+	function handleTouchmove(e: TouchEvent) {
+		handleMove(e.touches[0].clientX, e.touches[0].clientY)
+	}
 
 	function handleMousemove(e: MouseEvent) {
-		const pt = new DOMPointReadOnly(e.clientX, e.clientY).matrixTransform(
-			svg.getScreenCTM().inverse()
-		)
+		handleMove(e.clientX, e.clientY)
+	}
+
+	function handleMove(x: number, y: number) {
+		const pt = new DOMPointReadOnly(x, y).matrixTransform(svg.getScreenCTM().inverse())
 		svgX = pt.x
 		svgY = pt.y
 
@@ -56,6 +62,8 @@
 		class="overflow-visible"
 		bind:this={svg}
 		on:mousemove={handleMousemove}
+		on:touchmove={handleTouchmove}
+		on:touchend={handleMouseleave}
 		on:mouseleave={handleMouseleave}
 		viewBox={`-30 -30 ${xBasis + 60} ${maxElevation - minElevation + 90}`}
 	>
