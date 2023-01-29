@@ -22,7 +22,7 @@
 		<MapGroup geo={g} />
 	{/each}
 	<div
-		class="prose prose-stone prose-quoteless relative col-start-[prose-start] col-end-[prose-end] max-w-none prose-figcaption:mb-5 prose-img:max-w-full dark:prose-invert"
+		class="prose prose-stone prose-quoteless relative col-start-[prose-start] col-end-[prose-end] max-w-none overflow-x-hidden prose-figcaption:mb-5 prose-img:max-w-full dark:prose-invert"
 	>
 		<svelte:component this={data.content} />
 	</div>
