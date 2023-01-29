@@ -1,9 +1,9 @@
 <script lang="ts">
 	import type { GeoJSON } from 'geojson'
 	import { onMount } from 'svelte'
-	import mapboxgl, { GeoJSONSource, Map } from 'mapbox-gl'
+	import mapboxgl, { Map } from 'mapbox-gl'
+	import { type Marker as MarkerType, Marker } from 'mapbox-gl'
 	import 'mapbox-gl/dist/mapbox-gl.css'
-	import MapGroup from './MapGroup.svelte'
 
 	export let geoJson: GeoJSON
 	export let breakIndices: number[]
@@ -20,22 +20,16 @@
 
 	let mapDiv: HTMLElement | undefined
 	let map: Map
+	let hoveredMarker: MarkerType | undefined
 
-	$: if (map?.loaded()) {
-		const source = map.getSource('the_hoveredPoint') as GeoJSONSource
-		source.setData({
-			type: 'FeatureCollection',
-			features: [
-				{
-					type: 'Feature',
-					properties: {},
-					geometry: {
-						type: 'MultiPoint',
-						coordinates: hoveredIndex == null ? [] : [coords[hoveredIndex]]
-					}
-				}
-			]
-		})
+	$: if (map?.loaded() && hoveredMarker != null) {
+		if (hoveredIndex != null) {
+			const cod = coords[hoveredIndex]
+			hoveredMarker.setLngLat([cod[0], cod[1]])
+			hoveredMarker.addTo(map)
+		} else {
+			hoveredMarker.remove()
+		}
 	}
 
 	onMount(() => {
@@ -68,93 +62,19 @@
 					'line-width': 5
 				}
 			})
-			map.addSource('the_break', {
-				type: 'geojson',
-				data: {
-					type: 'FeatureCollection',
-					features: [
-						{
-							type: 'Feature',
-							properties: {},
-							geometry: {
-								type: 'MultiPoint',
-								coordinates: breakIndices?.map((b) => coords[b]) ?? []
-							}
-						}
-					]
-				}
+
+			breakIndices?.forEach((b) => {
+				const breakCoords = coords[b]
+				new Marker({ color: '#FB1' }).setLngLat([breakCoords[0], breakCoords[1]]).addTo(map)
 			})
-			map.addLayer({
-				id: 'the_break_layer',
-				type: 'circle',
-				source: 'the_break',
-				paint: {
-					'circle-radius': 10,
-					'circle-color': '#FB1'
-				}
-			})
-			map.addSource('the_hoveredPoint', {
-				type: 'geojson',
-				data: {
-					type: 'FeatureCollection',
-					features: [
-						{
-							type: 'Feature',
-							properties: {},
-							geometry: { type: 'MultiPoint', coordinates: [] }
-						}
-					]
-				}
-			})
-			map.addLayer({
-				id: 'the_hoveredPoint_layer',
-				type: 'circle',
-				source: 'the_hoveredPoint',
-				paint: {
-					'circle-radius': 10,
-					'circle-color': '#FFF'
-				}
-			})
-			map.addSource('the_end', {
-				type: 'geojson',
-				data: {
-					type: 'FeatureCollection',
-					features: [
-						{
-							type: 'Feature',
-							properties: {},
-							geometry: { type: 'Point', coordinates: coords[coords.length - 1] }
-						}
-					]
-				}
-			})
-			map.addLayer({
-				id: 'the_end_layer',
-				type: 'circle',
-				source: 'the_end',
-				paint: {
-					'circle-radius': 10,
-					'circle-color': '#F33'
-				}
-			})
-			map.addSource('the_start', {
-				type: 'geojson',
-				data: {
-					type: 'FeatureCollection',
-					features: [
-						{ type: 'Feature', properties: {}, geometry: { type: 'Point', coordinates: coords[0] } }
-					]
-				}
-			})
-			map.addLayer({
-				id: 'the_start_layer',
-				type: 'circle',
-				source: 'the_start',
-				paint: {
-					'circle-radius': 10,
-					'circle-color': '#5F5'
-				}
-			})
+
+			hoveredMarker = new Marker({ color: '#FFF' })
+
+			const endCoords = coords[coords.length - 1]
+			new Marker({ color: '#F33' }).setLngLat([endCoords[0], endCoords[1]]).addTo(map)
+
+			const startCoords = coords[0]
+			new Marker({ color: '#5F5' }).setLngLat([startCoords[0], startCoords[1]]).addTo(map)
 
 			if (
 				geoJson.type === 'FeatureCollection' &&
@@ -166,7 +86,7 @@
 					new mapboxgl.LngLatBounds(coords[0], coords[0])
 				)
 				map.fitBounds(bounds, {
-					padding: { top: 30, right: 30, bottom: 30, left: 30 }
+					padding: { top: 40, right: 40, bottom: 40, left: 40 }
 				})
 			}
 		})

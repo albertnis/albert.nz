@@ -13,7 +13,7 @@
 		cumulativeDistances={geo.cumulativeDistancesMetres}
 		geoJson={geo.geoJson}
 	/>
-	<div class="mb-5 flex justify-end align-bottom text-2xl">
+	<div class="mb-5 flex justify-end align-bottom text-lg lg:text-2xl">
 		<div class="mx-3">
 			<span class="mx-1 font-bold">{(geo.distanceMetres / 1000).toFixed(1)}</span><span
 				class="text-stone-600 dark:text-stone-400">km</span
