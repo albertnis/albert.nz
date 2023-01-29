@@ -63,6 +63,7 @@
 		bind:this={svg}
 		on:mousemove={handleMousemove}
 		on:touchmove={handleTouchmove}
+		on:touchstart={handleTouchmove}
 		on:touchend={handleMouseleave}
 		on:mouseleave={handleMouseleave}
 		viewBox={`-30 -30 ${xBasis + 60} ${maxElevation - minElevation + 90}`}
@@ -70,7 +71,7 @@
 		<polyline
 			stroke-linejoin="round"
 			stroke-linecap="round"
-			class="fill-none stroke-stone-800 stroke-[10] dark:stroke-stone-200"
+			class="fill-none stroke-stone-800 stroke-[20] dark:stroke-stone-200 md:stroke-[10]"
 			points={elevations.reduce(
 				(str, alt, i) =>
 					str + `${cumulativeDistances[i] * distanceScalingFactor},${maxElevation - alt} `,
@@ -98,9 +99,8 @@
 				y={maxElevation - elevations[hoveredIndex]}
 				stroke-width="10"
 				paint-order="stroke"
-				class="cursor-default fill-stone-800 stroke-stone-200 font-bold dark:fill-stone-200 dark:stroke-stone-800"
+				class="cursor-default fill-stone-800 stroke-stone-200 text-[100px] font-bold dark:fill-stone-200 dark:stroke-stone-800 md:text-[50px]"
 				dominant-baseline="middle"
-				font-size="50"
 				text-anchor="middle">{Math.round(elevations[hoveredIndex]).toLocaleString()}m</text
 			>
 			<text
@@ -108,7 +108,7 @@
 				y={maxElevation - minElevation + 30}
 				stroke-width="10"
 				paint-order="stroke"
-				class="cursor-default fill-stone-800 stroke-stone-200 dark:fill-stone-200 dark:stroke-stone-800"
+				class="cursor-default fill-stone-800 stroke-stone-200 text-[100px] dark:fill-stone-200 dark:stroke-stone-800 md:text-[50px]"
 				dominant-baseline="middle"
 				font-size="50"
 				text-anchor="middle">{(cumulativeDistances[hoveredIndex] / 1000).toFixed(2)}km</text
