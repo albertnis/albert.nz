@@ -14,7 +14,7 @@
 	<ul class="col-start-2 col-end-5 mt-10">
 		{#each data.posts as post}
 			<li class="my-8">
-				<a class="group" href={post.path}>
+				<a class="group inline-block" href={post.path}>
 					<h3
 						class="inline border-b border-b-stone-600 font-bold group-hover:border-b-2 group-hover:border-b-blue-600 dark:border-b-stone-400 dark:group-hover:border-b-blue-400"
 					>
