@@ -1,6 +1,6 @@
 ---
 title: 'Mahia'
-description: A voyage to the peninsula
+description: A voyage to the scenic Mahia peninsula on the east coast of New Zealand
 thumb: /resources/2016-07-03-mahia/mahia-t.jpg
 date: 2016-07-30T14:23:28+1300
 accent: rgb(28, 118, 222)

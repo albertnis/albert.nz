@@ -1,5 +1,6 @@
 ---
 title: A better alarm clock, powered by LED strips and sleep science
+description: Finding inspiration in the book Why We Sleep by Matthew Walker, I fill my bedroom with blue light on a schedule
 date: 2020-02-17T14:21:12+1300
 subtitle: Driven by Google Calendar, Home Assistant and Node-RED
 accent: rgb(85, 73, 255)

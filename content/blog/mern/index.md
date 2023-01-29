@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adventures with the MERN Stack
-subtitle: Full stack web development with JavaScript
+description: Teaching myself full-stack JavaScript with a WYSIWYG CMS of sorts
 date: 2017-07-04T23:23:25+1300
 thumb: /resources/2017-07-04-mern/mern-1.png
 categories: posts

@@ -1,6 +1,6 @@
 ---
 title: 'Going Closed'
-description: Some decisions are made to be undone
+description: A new headphone adventure ends early as I realise open-back headphones aren't perfect
 date: 2015-01-26T16:47:25+1300
 accent: rgb(129, 61, 193)
 ---

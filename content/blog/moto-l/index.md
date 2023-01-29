@@ -1,6 +1,6 @@
 ---
 title: 'Moto L'
-description: Impatience made me delve into Android ROMs
+description: Impatience made me delve into custom Android ROMs for my Motorola Moto G
 date: 2015-04-12T16:47:25+1300
 accent: rgb(118, 65, 243)
 ---

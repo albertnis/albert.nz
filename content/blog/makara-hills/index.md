@@ -1,6 +1,6 @@
 ---
 title: 'Makara Hills'
-description: Rural walk with seaside views
+description: Rural walk with seaside views just to the west of Wellington
 date: 2015-04-16T16:47:25+1300
 accent: rgb(48, 155, 234)
 links:

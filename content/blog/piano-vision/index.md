@@ -1,6 +1,6 @@
 ---
 title: Piano Vision
-Description: Capturing piano performance with depth vision
+description: Evaluating the use of Kinect depth cameras to capture piano keypresses from above
 date: 2017-05-14T17:23:25+1300
 accent: rgb(42, 178, 239)
 links:
