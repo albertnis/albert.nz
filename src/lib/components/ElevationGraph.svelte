@@ -41,7 +41,7 @@
 		if (svgX > 0 && svgX < xBasis) {
 			const hoveredDistance = (totalDistance * svgX) / xBasis
 			let i
-			for (i = 0; i < cumulativeDistances.length; i += 2) {
+			for (i = 0; i < cumulativeDistances.length - 2; i += 2) {
 				if (cumulativeDistances[i] > hoveredDistance) {
 					break
 				}
