@@ -3,7 +3,7 @@
 	import HeaderSmall from '$lib/components/HeaderSmall.svelte'
 	import type { Post } from '../../types/post'
 	import { parseISO, format } from 'date-fns'
-	import MapGroup from '$lib/components/MapGroup.svelte'
+	import '$lib/styles/prism.min.css'
 
 	export let data: Post
 	console.log({ datadotgeo: data.geo })
