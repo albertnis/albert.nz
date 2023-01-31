@@ -46,8 +46,6 @@
 			zoom: 5
 		})
 		map.on('load', () => {
-			console.log({ geoJson })
-
 			map.addSource('the_path', { type: 'geojson', data: geoJson })
 			map.addLayer({
 				id: 'the_path_layer',
