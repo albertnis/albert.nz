@@ -3,8 +3,6 @@ title: How to Reverse Engineer a Heat Pump Unit
 date: 2019-06-15T11:09:20+1200
 description: Cracking the code and paving the way to automation
 accent: rgb(170, 35, 170)
-links:
-  - <a href="https://github.com/albertnis/fujitsu-ar-ry13-ir-codes">Github</a>
 ---
 
 ![](./DSC06428.jpg)

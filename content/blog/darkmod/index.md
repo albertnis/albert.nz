@@ -3,10 +3,6 @@ title: DarkMOD
 description: A dynamic MusicBee skin using PHP
 date: 2017-02-06T21:23:25+1300
 accent: rgb(59, 147, 104)
-links:
-  - <a href="https://darkmod.albertnis.com">View project</a>
-  - <a href="https://github.com/albertnis/darkmod-js">Github</a>
-  - <a href="http://getmusicbee.com/forum/index.php?topic=17373.0">View forum post</a>
 ---
 
 [MusicBee][musicbee install] is without a doubt the best desktop music player I have used. I've been a convert now for about two years, lapping up features such as custom application launching, custom hotkeys, automatic renumbering, folder organisation and transcoding. The list goes on, and if you're on Windows I highly suggest giving it a go.
@@ -22,7 +18,7 @@ During the process, I identified a couple of things about the skinning process w
 
 My skin contains one accent colour, but I realised that if the user wanted to change this colour they would have to not only change the colour variable within the theme XML file, but also generate matching PNGs for the border and title bar shades before exporting to base64 and pasting into the file. Not ideal!
 
-From this conundrum, DarkMOD was born. DarkMOD is basically a php file which does the following:
+From this conundrum, [DarkMOD](https://darkmod.albertnis.com) was born. DarkMOD is a web app, which does the following:
 
 1. Receives a colour via GET request, sent from a webpage frontend with a pretty preview window which I spent far too long Photoshopping.
 1. Calculates required shades and tints for use in the theme.
@@ -30,6 +26,8 @@ From this conundrum, DarkMOD was born. DarkMOD is basically a php file which doe
 1. Runs through a template of the skin, replacing placeholders with the correct colours and resources.
 1. Returns the completed skin file as XML.
 
-Don't have or want MusicBee? Don't have or want Windows? Head over to the project anyway; the preview window should give you a good idea of what DarkMOD is about!
+Don't have or want MusicBee? Don't have or want Windows? [Head over to the project](https://darkmod.albertnis.com) anyway; the preview window should give you a good idea of what DarkMOD is about!
+
+The official forum thread for DarkMOD can be found on [the MusicBee forum](http://getmusicbee.com/forum/index.php?topic=17373.0). The source code for DarkMOD is available on [GitHub](https://github.com/albertnis/darkmod-js).
 
 [musicbee install]: http://getmusicbee.com/

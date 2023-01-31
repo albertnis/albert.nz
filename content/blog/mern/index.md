@@ -6,8 +6,6 @@ date: 2017-07-04T23:23:25+1300
 thumb: /resources/2017-07-04-mern/mern-1.png
 categories: posts
 accent: rgb(70, 140, 152)
-links:
-  - <a href="https://github.com/albertnis/level">Github</a>
 ---
 
 ![][one]

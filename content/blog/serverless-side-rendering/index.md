@@ -3,18 +3,17 @@ title: Rendering React Server-Side with AWS Lambda
 date: 2019-07-20T17:15:20+1200
 description: The dawn of serverless-side rendering?
 accent: rgb(15, 136, 126)
-links:
-  - <a href="https://obfuscator.albertnis.com">Obfuscator</a>
-  - <a href="https://github.com/albertnis/obfuscator-serverless">GitHub</a>
 ---
 
-I've been working on a React project called [Obfuscator][]. It's a rewrite of an older [project][obfuscator-old-gh] where you can enter a phrase to translate through multiple languages in sequence. Essentially it's a fun way to make a computer translator play Chinese whispers with itself.
+I've been working on a React project called [Obfuscator][]. It's a rewrite of an older [project](/obfuscator) where you can enter a phrase to translate through multiple languages in sequence. Essentially it's a fun way to make a computer translator play Chinese whispers with itself.
 
-![Obfuscator top screen](./top-screen.png)
+[![Obfuscator top screen](./top-screen.png)][obfuscator]
 
 With the product well-defined and my React knowledge workable at this stage, there was something else I focused on with this project: infrastructure. I wanted the entire thing to be serverless, cheap and scalable-to-zero. Single-page applications (SPAs) with serverless APIs and data stores are nothing new. But I realised nobody was running React one their Lambdas. Surely that's a missed opportunity! So what did I do?
 
 I ran React on a Lambda.
+
+> Code for Obfuscator can be found on [GitHub](https://github.com/albertnis/obfuscator-serverless)
 
 ## API Gateway
 
@@ -43,19 +42,19 @@ import ssr from '../../backend/ServerClient'
 
 // Lambda entrypoint
 export const server = (event, context, callback) => {
-  // Get string representing app HTML
-  const { content, state } = ssr()
+	// Get string representing app HTML
+	const { content, state } = ssr()
 
-  // Inject app HTML into full HTML template
-  const page = view('Obfuscator', content, state)
+	// Inject app HTML into full HTML template
+	const page = view('Obfuscator', content, state)
 
-  callback(null, {
-    statusCode: 200,
-    headers: {
-      'Content-Type': 'text/html',
-    },
-    body: page,
-  })
+	callback(null, {
+		statusCode: 200,
+		headers: {
+			'Content-Type': 'text/html'
+		},
+		body: page
+	})
 }
 ```
 
@@ -65,13 +64,13 @@ The server client serves as the base React element wrapping `<App />`.
 // ServerClient.tsx
 // [...]
 const ssr = (): { content: string; state: AppState } => {
-  let content = renderToString(
-    <Provider store={store}>
-      <App />
-    </Provider>
-  )
-  let state = store.getState()
-  return { content, state }
+	let content = renderToString(
+		<Provider store={store}>
+			<App />
+		</Provider>
+	)
+	let state = store.getState()
+	return { content, state }
 }
 ```
 
@@ -87,10 +86,10 @@ The client has a simpler structure with a simple client wrapper being used:
 // Client.tsx
 // [...]
 hydrate(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('app')
+	<Provider store={store}>
+		<App />
+	</Provider>,
+	document.getElementById('app')
 )
 ```
 

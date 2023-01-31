@@ -3,8 +3,6 @@ title: Improving LED lighting with ESP8226 and custom firmware
 description: Getting to grips with IoT networking
 date: 2018-06-20T09:23:25+1300
 accent: rgb(193, 80, 14)
-links:
-  - <a href="https://github.com/albertnis/lightt">Github</a>
 ---
 
 > This post is a bit out of date. I loved exploring LED control by writing custom software like Lightt, but nowadays I use much better software written by others. I recommend you check out my posts on [WLED](/esphome-wled-migration) (great for individually-addressable colour strips like those described in this article) and [ESPHome](/esp32-led-strip).

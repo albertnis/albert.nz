@@ -3,11 +3,9 @@ title: How to Automate a Heat Pump Unit
 date: 2019-06-15T14:10:20+1200
 description: Bringing smarts to dumb air conditioning units
 accent: rgb(170, 35, 170)
-links:
-  - <a href="https://github.com/albertnis/fujitsu-ar-ry13-ir-codes">Github</a>
 ---
 
-In the [previous article][re-article] I went into the details of reverse-engineering a heat pump remote. We got the stage were it was possible to send an arbitrary state to the heat pump by constructing IR packets from scratch. I even wrote some code to do the packet construction. But how do we make this useful? As a Home Assistant user, I wanted to be able to control the heat pump via Home Assistant. This would open up a world of automation potential as well as Google Assistant and Alexa control.
+In the [previous article][re-article] I went into the details of reverse-engineering a heat pump remote. We got to the stage were it was possible to send an arbitrary state to the heat pump by constructing IR packets from scratch. I even wrote some code to do the packet construction ([view it on GitHub](https://github.com/albertnis/fujitsu-ar-ry13-ir-codes)). But how do we make this useful? As a Home Assistant user, I wanted to be able to control the heat pump via Home Assistant. This would open up a world of automation potential as well as Google Assistant and Alexa control.
 
 # Automate
 
