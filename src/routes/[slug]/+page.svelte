@@ -3,10 +3,18 @@
 	import HeaderSmall from '$lib/components/HeaderSmall.svelte'
 	import type { Post } from '../../types/post'
 	import { parseISO, format } from 'date-fns'
+	import { onMount } from 'svelte'
+	import type { ComponentType, SvelteComponentTyped } from 'svelte'
 	import '$lib/styles/prism.min.css'
 
 	export let data: Post
-	console.log({ datadotgeo: data.geo })
+	let mapGroupComponent: ComponentType<SvelteComponentTyped> | undefined
+
+	onMount(async () => {
+		if (data.geo.length > 0) {
+			mapGroupComponent = (await import('$lib/components/MapGroup.svelte')).default
+		}
+	})
 </script>
 
 <HeaderSmall />
@@ -18,9 +26,12 @@
 			{format(parseISO(data.meta.date), 'MMMM d, yyyy')}
 		</div>
 	</div>
-	{#each data.geo as g}
-		<MapGroup geo={g} />
-	{/each}
+
+	{#if mapGroupComponent != null}
+		{#each data.geo as g}
+			<svelte:component this={mapGroupComponent} geo={g} />
+		{/each}
+	{/if}
 	<div
 		class="prose prose-stone prose-quoteless relative col-start-[prose-start] col-end-[prose-end] max-w-none overflow-x-hidden prose-figcaption:mb-5 prose-img:max-w-full dark:prose-invert"
 	>
