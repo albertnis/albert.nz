@@ -22,13 +22,17 @@
 	let map: Map
 	let hoveredMarker: MarkerType | undefined
 
-	$: if (map?.loaded() && hoveredMarker != null) {
-		if (hoveredIndex != null) {
-			const cod = coords[hoveredIndex]
-			hoveredMarker.setLngLat([cod[0], cod[1]])
-			hoveredMarker.addTo(map)
-		} else {
-			hoveredMarker.remove()
+	$: {
+		// Combining the following two if statements with `&&` breaks reactivity in prod...
+		if (hoveredMarker != null) {
+			if (map?.loaded()) {
+				if (hoveredIndex != null) {
+					const cod = coords[hoveredIndex]
+					hoveredMarker.setLngLat([cod[0], cod[1]]).addTo(map)
+				} else {
+					hoveredMarker.remove()
+				}
+			}
 		}
 	}
 
@@ -66,10 +70,10 @@
 				new Marker({ color: '#FB1' }).setLngLat([breakCoords[0], breakCoords[1]]).addTo(map)
 			})
 
-			hoveredMarker = new Marker({ color: '#FFF' })
-
 			const endCoords = coords[coords.length - 1]
 			new Marker({ color: '#F33' }).setLngLat([endCoords[0], endCoords[1]]).addTo(map)
+
+			hoveredMarker = new Marker({ color: '#FFF' })
 
 			const startCoords = coords[0]
 			new Marker({ color: '#5F5' }).setLngLat([startCoords[0], startCoords[1]]).addTo(map)
