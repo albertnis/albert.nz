@@ -20,3 +20,8 @@ export interface Post {
 	geo: ViteGpxPluginOutput[]
 	content: any
 }
+
+export type PageData<T = unknown> = T & {
+	title: string
+	description: string
+}

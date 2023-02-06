@@ -1,6 +1,6 @@
-import type { Post, PostMetadata } from '../../types/post'
+import type { Post, PostMetadata, PageData } from '../../types/post'
 
-export const load = async ({ params }: { params: { slug: string } }): Promise<Post> => {
+export const load = async ({ params }: { params: { slug: string } }): Promise<PageData<Post>> => {
 	const post = await import(`../../../content/blog/${params.slug}/index.md`)
 	const meta: PostMetadata = post.metadata
 	const content = post.default
@@ -17,6 +17,8 @@ export const load = async ({ params }: { params: { slug: string } }): Promise<Po
 	return {
 		meta,
 		content,
-		geo
+		geo,
+		title: `${meta.title} | Albert Nisbet`,
+		description: meta.description
 	}
 }
