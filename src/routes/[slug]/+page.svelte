@@ -6,12 +6,16 @@
 	import { onMount } from 'svelte'
 	import type { ComponentType, SvelteComponentTyped } from 'svelte'
 	import '$lib/styles/prism.min.css'
+	import type { ViteGpxPluginOutput } from '../../../plugins/vite-plugin-gpx/types'
 
 	export let data: Post
 	let mapGroupComponent: ComponentType<SvelteComponentTyped> | undefined
+	let geo: ViteGpxPluginOutput[] = []
 
 	onMount(async () => {
-		if (data.geo.length > 0) {
+		geo = await data.getGeo()
+
+		if (geo.length > 0) {
 			mapGroupComponent = (await import('$lib/components/MapGroup.svelte')).default
 		}
 	})
@@ -28,7 +32,7 @@
 	</div>
 
 	{#if mapGroupComponent != null}
-		{#each data.geo as g}
+		{#each geo as g}
 			<svelte:component this={mapGroupComponent} geo={g} />
 		{/each}
 	{/if}

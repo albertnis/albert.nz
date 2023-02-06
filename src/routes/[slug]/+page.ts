@@ -7,17 +7,18 @@ export const load = async ({ params }: { params: { slug: string } }): Promise<Pa
 
 	const routes = meta.routes ?? []
 
-	const geo = await Promise.all(
-		routes.map(async (relPath) => {
-			const routeSlug = relPath.substring(2, relPath.length - 4)
-			return (await import(`../../../content/blog/${params.slug}/${routeSlug}.gpx`)).default
-		})
-	)
+	const getGeo = async () =>
+		await Promise.all(
+			routes.map(async (relPath) => {
+				const routeSlug = relPath.substring(2, relPath.length - 4)
+				return (await import(`../../../content/blog/${params.slug}/${routeSlug}.gpx`)).default
+			})
+		)
 
 	return {
 		meta,
 		content,
-		geo,
+		getGeo,
 		title: `${meta.title} | Albert Nisbet`,
 		description: meta.description
 	}

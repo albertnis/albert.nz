@@ -17,7 +17,7 @@ export interface PostPreview {
 
 export interface Post {
 	meta: PostMetadata
-	geo: ViteGpxPluginOutput[]
+	getGeo: () => Promise<ViteGpxPluginOutput[]>
 	content: any
 }
 
