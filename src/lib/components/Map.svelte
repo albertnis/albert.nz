@@ -96,5 +96,5 @@
 </script>
 
 <div>
-	<div class="min-h-[800px]" bind:this={mapDiv} />
+	<div class="h-[800px] max-h-[70vh]" bind:this={mapDiv} />
 </div>
