@@ -12,7 +12,12 @@ export interface PostMetadata {
 export interface PostPreview {
 	meta: PostMetadata
 	path: string
-	content: string
+}
+
+export interface PostWithContent {
+	meta: PostMetadata
+	path: string
+	contentHtml: string
 }
 
 export interface Post {

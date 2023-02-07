@@ -1,12 +1,12 @@
 import type { SvelteComponent } from 'svelte'
-import type { PostMetadata, PostPreview } from '../../types/post'
+import type { PostMetadata, PostWithContent } from '../../types/post'
 
 interface ResolverResult {
 	metadata: PostMetadata
 	default: SvelteComponent
 }
 
-export const fetchMarkdownPosts = async (): Promise<PostPreview[]> => {
+export const fetchMarkdownPosts = async (): Promise<PostWithContent[]> => {
 	const allPostFiles = import.meta.glob('/content/blog/**/index.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
 
@@ -18,7 +18,7 @@ export const fetchMarkdownPosts = async (): Promise<PostPreview[]> => {
 			return {
 				meta: result.metadata,
 				path: postPath,
-				content: result.default.render().html
+				contentHtml: result.default.render().html
 			}
 		})
 	)

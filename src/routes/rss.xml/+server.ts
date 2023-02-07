@@ -1,7 +1,7 @@
 import { fetchMarkdownPosts } from '$lib/utils'
 import {} from '@sveltejs/kit'
 import { format, parseISO } from 'date-fns'
-import type { PostPreview } from '../../types/post'
+import type { PostWithContent } from '../../types/post'
 
 export const GET = async () => {
 	const posts = await fetchMarkdownPosts()
@@ -15,7 +15,7 @@ export const GET = async () => {
 }
 
 const render = (
-	posts: PostPreview[]
+	posts: PostWithContent[]
 ) => `<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel>
 <title>Albert Nisbet - RSS Feed</title>
@@ -27,14 +27,14 @@ ${posts.map(postToItem).join('\n')}
 </channel>
 </rss>`
 
-const postToItem = (post: PostPreview) => `<item>
+const postToItem = (post: PostWithContent) => `<item>
 <title>${post.meta.title}</title>
 <description>${post.meta.description}</description>
 <link>https://albert.nz${post.path}/</link>
 <guid isPermaLink="false">${post.path}/</guid>
 <pubDate>${formatRFC2822(parseISO(post.meta.date))}</pubDate>
 <content:encoded>
-<![CDATA[${transformRelativeLinksToAbsolute(post.content)}]]>
+<![CDATA[${transformRelativeLinksToAbsolute(post.contentHtml)}]]>
 </content:encoded>
 </item>`
 
