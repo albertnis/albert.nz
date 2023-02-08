@@ -9,7 +9,11 @@
 	class:opacity-100={y > 250}
 	class:translate-y-10={y > 250}
 >
-	<span><a class="hover:text-stone-800 dark:hover:text-stone-200" href="/"><Logo /></a></span>
+	<span
+		><a class="hover:text-stone-800 dark:hover:text-stone-200" href="/" aria-label="Home page"
+			><Logo /></a
+		></span
+	>
 </div>
 
 <svelte:window bind:scrollY={y} />
