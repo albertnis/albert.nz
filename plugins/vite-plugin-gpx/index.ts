@@ -213,5 +213,6 @@ const haversineDistanceMetres = (
 
 	const finalDistance = RADIUS_OF_EARTH_IN_M * c
 
-	return finalDistance
+	// TODO: Work out why measurements are about 10% too high
+	return finalDistance * 0.9 // Adjust by a proportion in the meantime
 }
