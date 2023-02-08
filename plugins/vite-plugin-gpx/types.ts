@@ -13,4 +13,5 @@ export interface ViteGpxPluginOutput {
 	cumulativeElevationGainMetres: number | null
 	cumulativeDistancesMetres: number[]
 	breakIndices: number[]
+	gpxFilePath: string
 }

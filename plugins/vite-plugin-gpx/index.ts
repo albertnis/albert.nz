@@ -1,4 +1,6 @@
-import type { Plugin } from 'vite'
+import { basename } from 'node:path'
+import { readFile } from 'node:fs/promises'
+import type { Plugin, ResolvedConfig } from 'vite'
 import type { ViteGpxPluginOptions, ViteGpxPluginOutput } from './types'
 import geojson from '@mapbox/togeojson'
 import type { Feature, FeatureCollection, GeoJSON, Geometry, Position } from 'geojson'
@@ -12,23 +14,88 @@ import {
 } from 'date-fns'
 import { LTTB } from 'downsample'
 import type { TupleDataPoint } from 'downsample'
+import { dataToEsm } from '@rollup/pluginutils'
 
 const defaultOptions: ViteGpxPluginOptions = {
 	samplingRate: 1
 }
 
-export const gpxPlugin = (options: Partial<ViteGpxPluginOptions>): Plugin => ({
-	name: 'vite-plugin-gpx',
-	transform: (src, id) => {
-		if (/\.gpx$/.test(id)) {
-			return {
-				code: `export default ${JSON.stringify(gpxDataToOutput(src))}`
+export function gpxPlugin(options: Partial<ViteGpxPluginOptions> = {}): Plugin {
+	let basePath: string
+	let viteConfig: ResolvedConfig
+	const gpxPaths = new Map()
+	return {
+		name: 'vite-plugin-gpx',
+		configResolved(cfg) {
+			viteConfig = cfg
+			basePath = (viteConfig.base?.replace(/\/$/, '') || '') + '/@gpx/'
+		},
+		// async transform(src, id) {
+		// 	if (!/\.gpx$/.test(id)) return null
+		// 	return await new Promise((res) => {
+		// 		res({
+		// 			code: `export default ${JSON.stringify(gpxDataToOutput(src))}`
+		// 		})
+		// 	})
+		// },
+		async load(id) {
+			if (!/\.gpx$/.test(id)) return null
+
+			const srcURL = new URL(id, 'file://')
+			const fileContents = await readFile(decodeURIComponent(srcURL.pathname))
+
+			gpxPaths.set(basename(srcURL.pathname), id)
+
+			let src: string
+			if (!this.meta.watchMode) {
+				const handle = this.emitFile({
+					name: basename(srcURL.pathname),
+					source: fileContents,
+					type: 'asset'
+				})
+
+				src = `__VITE_ASSET__${handle}__`
+			} else {
+				src = basePath + basename(srcURL.pathname)
 			}
+
+			// return fileContents.toString()
+
+			return await new Promise((res) => {
+				res({
+					code: `export default ${JSON.stringify(gpxDataToOutput(fileContents.toString(), src))}`
+				})
+			})
+		},
+		configureServer(server) {
+			server.middlewares.use(async (req, res, next) => {
+				if (req.url?.startsWith(basePath)) {
+					const [, id] = req.url.split(basePath)
+
+					const gpxPath = gpxPaths.get(id)
+
+					if (!gpxPath)
+						throw new Error(
+							`gpx cannot find GPX file with id "${id}" this is likely an internal error. Files are ${JSON.stringify(
+								gpxPaths
+							)}`
+						)
+
+					res.setHeader('Content-Type', 'application/gpx+xml')
+					res.setHeader('Cache-Control', 'max-age=360000')
+					const buffer = await readFile(gpxPath)
+					const contents = buffer.toString()
+					return res.end(contents)
+				}
+
+				next()
+			})
 		}
 	}
-})
+}
 
-const gpxDataToOutput = (gpxData: string): ViteGpxPluginOutput => {
+const gpxDataToOutput = (gpxData: string, path: string): ViteGpxPluginOutput => {
+	console.log('OUTPUT:::', gpxData.substring(0, 300))
 	const gpxXmlDocument = new DOMParser().parseFromString(gpxData)
 	const gj: GeoJSON = geojson.gpx(gpxXmlDocument)
 
@@ -63,7 +130,8 @@ const gpxDataToOutput = (gpxData: string): ViteGpxPluginOutput => {
 				? computeCumulativeElevationGainMetres(feature.geometry.coordinates)
 				: null,
 		cumulativeDistancesMetres: computeCumulutiveDistanceMetres(downSampledCoordinates),
-		breakIndices: computeBreakIndices(feature)
+		breakIndices: computeBreakIndices(feature),
+		gpxFilePath: path
 	}
 }
 
@@ -128,7 +196,7 @@ const computeBreakIndices = (input: Feature): number[] => {
 		return []
 	}
 
-	const parsedTimes = times.filter((_, i) => i % 9 === 0).map((t) => parseISO(t))
+	const parsedTimes = times.filter((_, i) => i % 15 === 0).map((t) => parseISO(t))
 
 	const indices = []
 	for (let i = 1; i < parsedTimes.length; i++) {

@@ -6,7 +6,7 @@ import { imagetools } from 'vite-imagetools'
 const config: UserConfig = {
 	plugins: [
 		sveltekit(),
-		gpxPlugin({}),
+		gpxPlugin(),
 		imagetools({
 			defaultDirectives: new URLSearchParams({
 				format: 'webp',

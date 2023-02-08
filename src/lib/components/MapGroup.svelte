@@ -13,6 +13,7 @@
 		cumulativeDistances={geo.cumulativeDistancesMetres}
 		geoJson={geo.geoJson}
 	/>
+	<a href={geo.gpxFilePath}>{geo.gpxFilePath}</a>
 	<div class="mb-5 flex justify-end align-bottom text-lg lg:text-2xl">
 		<div class="mx-3">
 			<span class="mx-1 font-bold">{(geo.distanceMetres / 1000).toFixed(1)}</span><span
