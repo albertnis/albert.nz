@@ -2,7 +2,6 @@
 	import FloatingHeader from '$lib/components/FloatingHeader.svelte'
 	import type { PageData } from './$types'
 	import { page } from '$app/stores'
-	import '../app.css'
 </script>
 
 <svelte:head>
@@ -18,3 +17,7 @@
 		<slot />
 	</div>
 </div>
+
+<style global>
+	@import '../app.css';
+</style>
