@@ -50,7 +50,7 @@ const gpxDataToOutput = (gpxData: string): ViteGpxPluginOutput => {
 		throw new TypeError('Feature geometry is not LineString')
 	}
 
-	const downSampledCoordinates = downSampleGeometry(feature.geometry.coordinates, 9)
+	const downSampledCoordinates = downSampleGeometry(feature.geometry.coordinates, 15)
 	const downSampledGeometry: Geometry = { ...feature.geometry, coordinates: downSampledCoordinates }
 
 	return {
