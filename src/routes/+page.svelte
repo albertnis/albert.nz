@@ -9,7 +9,7 @@
 <Header />
 
 <div class="col-start-[wide-start] col-end-[wide-end]">
-	<h2 class="text-4xl font-bold">Latest posts</h2>
+	<h2 class="text-2xl font-bold">Latest posts</h2>
 
 	<ul class="col-start-2 col-end-5 mt-10">
 		{#each data.posts as post}
