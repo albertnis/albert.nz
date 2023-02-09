@@ -30,14 +30,6 @@ export function gpxPlugin(options: Partial<ViteGpxPluginOptions> = {}): Plugin {
 			viteConfig = cfg
 			basePath = (viteConfig.base?.replace(/\/$/, '') || '') + '/@gpx/'
 		},
-		// async transform(src, id) {
-		// 	if (!/\.gpx$/.test(id)) return null
-		// 	return await new Promise((res) => {
-		// 		res({
-		// 			code: `export default ${JSON.stringify(gpxDataToOutput(src))}`
-		// 		})
-		// 	})
-		// },
 		async load(id) {
 			if (!/\.gpx$/.test(id)) return null
 
@@ -59,7 +51,7 @@ export function gpxPlugin(options: Partial<ViteGpxPluginOptions> = {}): Plugin {
 				src = basePath + basename(srcURL.pathname)
 			}
 
-			// return fileContents.toString()
+			console.log('VITECONFIG.base:::', viteConfig.base)
 
 			return await new Promise((res) => {
 				res({
@@ -95,7 +87,6 @@ export function gpxPlugin(options: Partial<ViteGpxPluginOptions> = {}): Plugin {
 }
 
 const gpxDataToOutput = (gpxData: string, path: string): ViteGpxPluginOutput => {
-	console.log('OUTPUT:::', gpxData.substring(0, 300))
 	const gpxXmlDocument = new DOMParser().parseFromString(gpxData)
 	const gj: GeoJSON = geojson.gpx(gpxXmlDocument)
 
