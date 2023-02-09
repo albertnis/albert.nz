@@ -16,16 +16,16 @@
 			<li class="my-8">
 				<a class="group inline-block" href={post.path}>
 					<h3
-						class="inline border-b border-b-stone-600 font-bold group-hover:border-b-2 group-hover:border-b-blue-600 dark:border-b-stone-400 dark:group-hover:border-b-blue-400"
+						class="inline border-b border-b-zinc-600 font-bold group-hover:border-b-2 group-hover:border-b-blue-600 dark:border-b-zinc-400 dark:group-hover:border-b-blue-400"
 					>
 						{post.meta.title}
 					</h3>
-					<span class="text-stone-600 dark:text-stone-400">&nbsp;/&nbsp;</span>
-					<span class="font-bold text-stone-600 dark:text-stone-400">
+					<span class="text-zinc-600 dark:text-zinc-400">&nbsp;/&nbsp;</span>
+					<span class="font-bold text-zinc-600 dark:text-zinc-400">
 						{format(parseISO(post.meta.date), 'MMMM d, yyyy')}
 					</span>
-					<div class="prose prose-stone max-w-none">
-						<p class="text-base text-stone-700 dark:text-stone-300">{post.meta.description}</p>
+					<div class="prose prose-zinc max-w-none">
+						<p class="text-base text-zinc-700 dark:text-zinc-300">{post.meta.description}</p>
 					</div>
 				</a>
 			</li>

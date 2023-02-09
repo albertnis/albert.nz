@@ -26,7 +26,7 @@
 <article class="contents">
 	<div class="col-start-[wide-start] col-end-[wide-end]">
 		<h1 class="mb-5 text-5xl font-bold md:text-7xl">{data.meta.title}</h1>
-		<div class="mb-12 font-bold text-stone-600 dark:text-stone-400">
+		<div class="mb-12 font-bold text-zinc-600 dark:text-zinc-400">
 			{format(parseISO(data.meta.date), 'MMMM d, yyyy')}
 		</div>
 	</div>
@@ -37,7 +37,7 @@
 		{/each}
 	{/if}
 	<div
-		class="prose prose-stone prose-quoteless relative col-start-[prose-start] col-end-[prose-end] max-w-none overflow-x-hidden prose-figcaption:mb-5 prose-img:max-w-full dark:prose-invert"
+		class="prose prose-zinc prose-quoteless relative col-start-[prose-start] col-end-[prose-end] max-w-none overflow-x-hidden prose-figcaption:mb-5 prose-img:max-w-full dark:prose-invert"
 	>
 		<svelte:component this={data.content} />
 	</div>

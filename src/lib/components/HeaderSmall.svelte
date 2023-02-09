@@ -6,7 +6,7 @@
 	<a class="group" href="/"
 		><h1 class="flex align-middle text-2xl font-extrabold md:text-3xl">
 			<span
-				class="contents text-stone-600 group-hover:text-stone-800 dark:text-stone-400 dark:group-hover:text-stone-200"
+				class="contents text-zinc-600 group-hover:text-zinc-800 dark:text-zinc-400 dark:group-hover:text-zinc-200"
 				><Logo /></span
 			><span class="ml-5">Albert Nisbet</span>
 		</h1></a

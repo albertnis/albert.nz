@@ -71,7 +71,7 @@
 		<polyline
 			stroke-linejoin="round"
 			stroke-linecap="round"
-			class="fill-none stroke-stone-800 stroke-[20] dark:stroke-stone-200 md:stroke-[10]"
+			class="fill-none stroke-zinc-800 stroke-[20] dark:stroke-zinc-200 md:stroke-[10]"
 			points={elevations.reduce(
 				(str, alt, i) =>
 					str + `${cumulativeDistances[i] * distanceScalingFactor},${maxElevation - alt} `,
@@ -80,14 +80,14 @@
 		/>
 		{#if hoveredIndex != null}
 			<line
-				class="fill-none stroke-stone-800 stroke-[3] dark:stroke-stone-200"
+				class="fill-none stroke-zinc-800 stroke-[3] dark:stroke-zinc-200"
 				x1={svgX}
 				y1={maxElevation - minElevation}
 				x2={svgX}
 				y2={maxElevation - elevations[hoveredIndex]}
 			/>
 			<line
-				class="fill-none stroke-stone-300 stroke-[3] dark:stroke-stone-700"
+				class="fill-none stroke-zinc-300 stroke-[3] dark:stroke-zinc-700"
 				x1={svgX}
 				y1={0}
 				x2={svgX}
@@ -99,7 +99,7 @@
 				y={maxElevation - elevations[hoveredIndex]}
 				stroke-width="10"
 				paint-order="stroke"
-				class="cursor-default fill-stone-800 stroke-stone-200 text-[100px] font-bold dark:fill-stone-200 dark:stroke-stone-800 md:text-[50px]"
+				class="cursor-default fill-zinc-800 stroke-zinc-200 text-[100px] font-bold dark:fill-zinc-200 dark:stroke-zinc-800 md:text-[50px]"
 				dominant-baseline="middle"
 				text-anchor="middle">{Math.round(elevations[hoveredIndex]).toLocaleString()}m</text
 			>
@@ -108,7 +108,7 @@
 				y={maxElevation - minElevation + 30}
 				stroke-width="10"
 				paint-order="stroke"
-				class="cursor-default fill-stone-800 stroke-stone-200 text-[100px] dark:fill-stone-200 dark:stroke-stone-800 md:text-[50px]"
+				class="cursor-default fill-zinc-800 stroke-zinc-200 text-[100px] dark:fill-zinc-200 dark:stroke-zinc-800 md:text-[50px]"
 				dominant-baseline="middle"
 				font-size="50"
 				text-anchor="middle">{(cumulativeDistances[hoveredIndex] / 1000).toFixed(2)}km</text
