@@ -16,9 +16,10 @@ After an early start and a disappointingly closed Sheffield pie shop, we got wal
 
 Beyond the hut the trail continues all the way to Taruahuna Pass, with the only addition being overgrown scrub and multiple small river crossings. The increasingly open surroundings really show off the surrounding mountains.
 
-![](./DSC00823.jpg)
-
-<figcaption>Attractive scrub in the upper Edwards Valley beyond Edwards Hut</figcaption>
+<figure>
+  <img src="./DSC00823.jpg" class="prose-custom-w-full" />
+  <figcaption>Attractive scrub in the upper Edwards Valley beyond Edwards Hut</figcaption>
+</figure>
 
 ![](./DSC00832.jpg)
 
@@ -68,9 +69,10 @@ During breaks in the cloud, we glimpsed sights of the otherwordly tops up here. 
 
 The route is poled all the way down to the intersection with Otehake River East Branch. Follow that river upstream until the marked turn off towards Walker Pass.
 
-![](./DSC00868.jpg)
-
-<figcaption>Descending the stream gorge from Tarn Col, with Pt 1742 looming large in the dramatic cloud</figcaption>
+<figure>
+  <img src="./DSC00868.jpg" class="prose-custom-w-full" />
+  <figcaption>Descending the stream gorge from Tarn Col, with Pt 1742 looming large in the dramatic cloud</figcaption>
+</figure>
 
 ![](./DSC00869.jpg)
 
