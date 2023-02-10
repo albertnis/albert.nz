@@ -10,8 +10,10 @@
 	class:translate-y-10={y > 250}
 >
 	<span
-		><a class="hover:text-zinc-800 dark:hover:text-zinc-200" href="/" aria-label="Home page"
-			><Logo /></a
+		><a
+			class="text-zinc-800 opacity-50 hover:opacity-100 dark:text-zinc-200"
+			href="/"
+			aria-label="Home page"><Logo /></a
 		></span
 	>
 </div>

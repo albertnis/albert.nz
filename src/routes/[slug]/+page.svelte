@@ -56,10 +56,72 @@
 		{/each}
 	{/if}
 	<div
-		class="prose prose-zinc prose-quoteless relative col-start-[prose-start] col-end-[prose-end] max-w-none overflow-x-hidden prose-figcaption:mb-5 prose-img:max-w-full dark:prose-invert"
+		class="prose-custom prose prose-zinc prose-quoteless relative max-w-none overflow-x-hidden prose-figcaption:mb-5 prose-img:max-w-full dark:prose-invert"
 	>
 		<svelte:component this={data.content} />
 	</div>
 </article>
 
 <Footer />
+
+<style>
+	.prose-custom {
+		display: contents;
+	}
+
+	:global(.prose-custom > *) {
+		grid-column-start: prose-start;
+		grid-column-end: prose-end;
+		margin-top: 0em;
+		margin-bottom: 1.25em;
+	}
+
+	:global(.prose-custom h1),
+	:global(.prose-custom h2),
+	:global(.prose-custom h3),
+	:global(.prose-custom h4) {
+		margin-top: 0em;
+		margin-bottom: 0.8em;
+	}
+
+	:global(.prose-custom figcaption) {
+		margin-top: 0em;
+		margin-bottom: 1.75em;
+	}
+
+	:global(.prose-custom blockquote p) {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	:global(.prose-custom > pre) {
+		margin-top: 0em;
+		margin-bottom: 1.75em;
+	}
+
+	:global(.prose-custom p > img) {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
+
+	:global(.prose-custom > figure) {
+		display: contents;
+	}
+
+	:global(.prose-custom > figure > *) {
+		grid-column-start: prose-start;
+		grid-column-end: prose-end;
+	}
+
+	:global(.prose-custom figure > img) {
+		margin-top: 0.5em;
+		margin-bottom: 1.75em;
+	}
+
+	:global(.prose-custom .prose-custom-w-full) {
+		grid-column-start: full-start;
+		grid-column-end: full-end;
+		margin-left: auto;
+		margin-right: auto;
+	}
+</style>
