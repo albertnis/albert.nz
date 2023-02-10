@@ -4,6 +4,7 @@ description: A voyage to the scenic Mahia peninsula on the east coast of New Zea
 thumb: /resources/2016-07-03-mahia/mahia-t.jpg
 date: 2016-07-30T14:23:28+1300
 accent: rgb(28, 118, 222)
+tags: [adventures]
 ---
 
 A short detour during a recent road trip to Wairoa uncovered the picturesque town of Mahia on the east coast of New Zealand.

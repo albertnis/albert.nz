@@ -5,6 +5,7 @@ description: Part of Mt Robert loop up Pourangahau / Mt Robert near Lake Rotoiti
 accent: rgb(220, 100, 45)
 routes:
   - ./Paddy_s_track_to_Pourangahau.gpx
+tags: [adventures]
 ---
 
 A popular hill walk near St Arnaud is the Mt Robert loop which takes walkers up Pourangahau / Mt Robert a few kilometres southeast of the town. The 9km loop is comprised of two tracks: Paddy's Track, a gentle trail passing Bushline Hut; and the lower section of Pinchgut Track which consists of steep switchbacks to the roadend carpark. We wanted a less steep trail so opted to take Paddy's Track up to Relax shelter near the summit and return the same way (11km total).

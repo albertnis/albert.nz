@@ -5,6 +5,7 @@ description: The pinnacle of Wellington bushwalking
 accent: rgb(180, 180, 20)
 routes:
   - ./Catchpool_Valley_to_Mt_Matthews_summit.gpx
+tags: [adventures]
 ---
 
 There are some astonishing bushwalks in the Wellington region, and Mt Matthews track is a prime example. For the highest peak in the Remutaka Range, the trail to the summit is well-maintained and accessible (albeit steep!). At around 26km return from the Catchpool Valley carpark, it's best attempted in summer with good weather. You'll also want to bring a map, clothes and emergency preparations to survive the unexpected.

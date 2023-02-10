@@ -5,6 +5,7 @@ description: The tallest peak on Banks Penninsula, accessed from the south
 accent: rgb(250, 70, 25)
 routes:
   - ./Kaituna_Valley_to_Te_Ahu_P_tiki.gpx
+tags: [adventures]
 ---
 
 Mt Herbert / Te Ahu Patiki is commonly accessed from the north, from either Charteris Bay or Diamond Harbour. We decided to approach from the south, leaving the car at the Parkinsons Road carpark in Kaituna Valley and headed up the Kaituna Valley Packhorse Hut Track.

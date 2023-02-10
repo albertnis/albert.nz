@@ -3,6 +3,7 @@ title: Using MQTT for Availability and Retained State
 description: Building more resilient networks with the LWT and retained state features of MQTT
 date: 2019-01-04T12:23:25+1300
 accent: rgb(173, 56, 121)
+tags: [technology]
 ---
 
 One of the crucial aspects of MQTT is the broker. Among other things, the broker manages connected clients, ensuring messages are received from and sent to the correct devices. The broker doesn't simply forward messages, however. It can also respond to devices being connected and disconnected - an immensely useful feature. I recently updated [lightt][] to leverage two MQTT features:

@@ -3,6 +3,7 @@ title: 'The Apex?'
 description: A deeply flawed keyboard that succeeds in being a gimmicks but fails at being a keyboard
 date: 2016-02-26T10:47:25+1300
 accent: rgb(200, 48, 48)
+tags: [technology]
 ---
 
 A new house means a new setup. With my audio system pretty much as good as I need it to be, I took this opportunity to turn my attention to my computer peripherals. First up: the keyboard.

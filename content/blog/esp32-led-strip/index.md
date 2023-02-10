@@ -3,6 +3,7 @@ title: Driving a high-quality LED strip with ESPHome and ESP32-C3
 date: 2022-05-26T14:11:00+1200
 description: Combining the new ElectroDragon control board with COB LEDs
 accent: rgb(90, 85, 255)
+tags: [technology]
 ---
 
 It's been over a year since I've taken on a new LED strip project. This is probably because of the rock-solid reliability demonstrated by the strips I already have installed. These are the "individually-addressable" style of strip, with RGBW colour. I drive them with the [WLED firmware](/esphome-wled-migration) running on the excellent [ESP8266 control boards](https://www.electrodragon.com/product/esp-led-strip-board/) from ElectroDragon (I've written about these boards [before](/voice-activated-lighting-hardware)).

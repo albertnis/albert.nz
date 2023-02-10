@@ -5,6 +5,7 @@ description: Cloudy tramp in the north-eastern Tararua Range
 accent: rgb(144, 81, 237)
 routes:
   - ./Waiopehu_Track.gpx
+tags: [adventures]
 ---
 
 The walk to Waiopehu Hut is a straightforward but steady climb up a ridgeline. Lovely dense forest surrounds the track to the hut, which sits near the bushline. The hut ostensibly has remarkable views out to Levin and the coast--surely a great introduction to tramping for the member of our party who was new to the activity. Of course, we received dense low cloud the whole time we were up there.

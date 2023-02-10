@@ -5,6 +5,7 @@ description: Scenic running event in the hills of Coromandel
 accent: rgb(17, 180, 199)
 routes:
   - ./The_Great_Kauri_Run_Classic_30k.gpx
+tags: [adventures]
 ---
 
 This 30km run starts and finshes in Coromandel Town. It travels along Harray Track the up Flays Road through private property, linking up with the ridgeline track which travels to Kaipawa Summit before dropping back down Success Track to the town.

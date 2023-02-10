@@ -3,6 +3,7 @@ title: Adventures in headphones
 description: "Detailing the headphones I've tried over the last 10 years: Sennheiser, Grado, Audio-Technica, Superlux and HiFiMan."
 date: 2020-11-15T11:25:25+1300
 accent: rgb(18, 188, 191)
+tags: [technology]
 ---
 
 I've tried quite a few headphones in my time. For no particular reason, I have been wanting to document my thoughts on the models I have tried. Is this a note to self? A diary? A series of mini-reviews? You decide. Whatever it is, I've included links to some tracks that help prove the point. All of these songs are meaningful to me and are not to be missed.

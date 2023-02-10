@@ -3,6 +3,7 @@ title: 'The Dragonfly Effect'
 description: I take my first dip into better computer audio
 date: 2015-02-06T16:47:25+1300
 accent: rgb(0, 110, 221)
+tags: [technology]
 ---
 
 Around the time I bought my [Grado SR125i][], I found the Audioquest Dragonfly DAC at [Online Hi-Fi][online-hifi] for a fantastic price. So why did I buy a DAC? Well, I had been thinking about purchasing an amplifier to improve the sound quality of my music, when I realised an amplifier isn't very useful if the source isn't up to par. Enter the Dragonfly DAC: a well-reviewed and affordable digital-to-analogue converter which could bypass my laptop's sound card to provide at least theoretically improved sound quality suitable for my soon-to-be-upgraded headphones.

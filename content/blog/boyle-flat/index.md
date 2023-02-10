@@ -5,6 +5,7 @@ description: Southernmost day of St James Walkway in Lewis Pass, to and from Boy
 accent: rgb(100, 45, 225)
 routes:
   - ./St_James_Walkway_to_Boyle_Flat_Hut.gpx
+tags: [adventures]
 ---
 
 Heavy flooding in mid Canterbury had closed Wharfedale Track (our plan A), so we had to quickly plan an overnighter. We headed a couple of hours north to Lewis Pass in hopes of avoiding flooding. St James Walkway is a 66km trail so we opted to just do the Southernmost leg, to and from Boyle Flat Hut.

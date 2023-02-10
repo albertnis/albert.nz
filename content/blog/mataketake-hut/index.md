@@ -5,6 +5,7 @@ description: Majestic hut with a view in South West Coast
 accent: rgb(170, 80, 69)
 routes:
   - ./Mataketake_Hut.gpx
+tags: [adventures]
 ---
 
 This recently-built hut has been on the to-do list for a few months now, ever since a friend recommended it while we were walking up [Taipo Valley](/taipo). Mataketake Hut sits high on the range of the same name, accessed from the Haast to Paringa Cattle Track north of Haast, a 6.5-hour drive from Christchurch.

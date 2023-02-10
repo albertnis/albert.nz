@@ -5,6 +5,7 @@ description: In my final week in Wellington, I pay my respects by breaking my bo
 accent: rgb(206, 56, 34)
 routes:
   - ./WUU2K_Marathon_Route.gpx
+tags: [adventures]
 ---
 
 Everything was lined up:

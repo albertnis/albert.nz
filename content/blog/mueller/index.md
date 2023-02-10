@@ -5,6 +5,7 @@ description: Steep track near Aoraki Village with mountain views
 accent: rgb(206, 56, 34)
 routes:
   - ./Mueller_Hut_Route.gpx
+tags: [adventures]
 ---
 
 Mueller Hut Route is one of the most beautiful walks I have done. As the hut was booked out, we camped at White Horse Hill Campsite (which is at the base of the track) and went up to the hut and back within a day. What makes this route awesome is the proximity to the campsite, combined with short distance, large vertical gain and mild track conditions in good weather. It feels like climbing to the top of the world--no mountaineering experience needed!

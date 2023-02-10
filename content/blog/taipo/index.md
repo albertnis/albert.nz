@@ -5,9 +5,10 @@ description: Up the river with the Ngatea Tramping Club
 accent: rgb(144, 81, 237)
 routes:
   - ./Taipo_Valley_track_to_Julia_Hut.gpx
+tags: [adventures]
 ---
 
-Julia Hut is a 25-kilometre walk up the Taipo Valley, to the West of Arthur's Pass. 
+Julia Hut is a 25-kilometre walk up the Taipo Valley, to the West of Arthur's Pass.
 
 ## Day 1
 

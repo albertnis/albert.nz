@@ -3,6 +3,7 @@ title: 'San Francisco'
 description: An enjoyable stay in an unbelievable city
 date: 2013-07-31T16:47:25+1300
 accent: rgb(111, 139, 136)
+tags: [adventures]
 ---
 
 In July 2013 I was lucky enough to travel to San Francisco as a family holiday, armed with my trustworthy 40D and four lenses. The city proved to be even more picturesque than I had expected.

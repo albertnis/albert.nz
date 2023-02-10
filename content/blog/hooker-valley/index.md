@@ -5,6 +5,7 @@ description: Popular track to Hooker Lake with views of Mt Cook / Aoraki
 accent: rgb(160, 56, 223)
 routes:
   - ./Hooker_Valley_Track.gpx
+tags: [adventures]
 ---
 
 Possibly the most popular walk in the area, Hooker Valley Track provided us with an easy afternoon walk after heavy rain confined us to the campsite shelter all morning. Compared to [Mueller Hut Route](/mueller), which we had completed the day before, Hooker Valley Track felt like a gentle highway. There is even a toilet block about halfway to the lake.

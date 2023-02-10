@@ -4,6 +4,7 @@ description: Finding inspiration in the book Why We Sleep by Matthew Walker, I f
 date: 2020-02-17T14:21:12+1300
 subtitle: Driven by Google Calendar, Home Assistant and Node-RED
 accent: rgb(85, 73, 255)
+tags: [technology]
 ---
 
 I'm currently reading [Why We Sleep][why-we-sleep] by Matthew Walker. There's an interesting section where he discusses the potential of technology and sleep science to improve our lives in the future. I was surprised that many of the suggestions seem achievable today for anyone with the right home automation devices. Here's an excerpt:

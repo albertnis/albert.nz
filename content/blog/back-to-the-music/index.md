@@ -3,6 +3,7 @@ title: 'Back to the Music'
 description: An offline music addict in a world of streaming, I dig into the pros of cons of being a iPod user in 2015
 date: 2015-08-30T16:47:25+1300
 accent: rgb(34, 119, 119)
+tags: [technology]
 ---
 
 The world of music today is a brave new one indeed. Every time I blink it seems that a new streaming service is born. People are using these services to fulfil all their music needs. And I think that's sad.

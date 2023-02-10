@@ -3,6 +3,7 @@ title: 'A Cursory Revelation'
 description: Learning about the benefits of gaming mice, on a budget
 date: 2016-04-09T11:47:25+1300
 accent: rgb(234, 156, 9)
+tags: [technology]
 ---
 
 A decent gaming mouse for \$35? Even second-hand, that seemed just about too good to be true. Nevertheless, I bought the mouse as part of my recent [peripherals upgrade][apex]. So far the experience has been fantastic, to say the least.

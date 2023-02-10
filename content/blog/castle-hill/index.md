@@ -3,6 +3,7 @@ title: Castle Hill
 description: Photos from the scenic mountainous landscape near Arthur's Pass, 90 minutes from Christchurch
 date: 2017-06-26T14:23:28+1300
 accent: rgb(217, 117, 0)
+tags: [adventures]
 ---
 
 The flat took a day trip to this strange stony place, and plenty of adventures were had.

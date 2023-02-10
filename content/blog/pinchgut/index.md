@@ -5,6 +5,7 @@ description: Canterbury's most accessible tramp?
 accent: rgb(206, 56, 34)
 routes:
   - ./Pinchgut_Track_Cattle_Peak_loop.gpx
+tags: [adventures]
 ---
 
 Pinchgut Track is a 5km walk near Rangiora leading to Pinchgut Hut. It's a short, easy track which is popular with families. After tramping this one I realised I barely took any photos.

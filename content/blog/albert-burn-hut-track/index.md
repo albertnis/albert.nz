@@ -5,6 +5,7 @@ description: Remote hut reachable by boating across Lake Wānaka or inland via t
 accent: hsl(100, 60%, 40%)
 routes:
   - ./Albert_Burn_Birthday_Bash.gpx
+tags: [adventures]
 ---
 
 Albert Burn Hut is the only hut in the entire country named Albert. This seemed like an excellent opportunity to make it a birthday destination. There are a couple of ways to approach the valley but the easiest is surely to paddle just over 2km across the lake from Boundary Creek Campsite then walk the remaining 10km. If you're going out this way, make sure to plan the trip for calm weather.

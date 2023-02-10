@@ -5,6 +5,7 @@ description: Exploring the secret lakes of Wellington's Pencarrow coastline
 accent: rgb(120, 203, 34)
 routes:
   - ./Kohangapiripiri_loop.gpx
+tags: [adventures]
 ---
 
 Mention the Pencarrow lakes to most Wellingtonians and they'll have no idea what you're talking about--just like so many of the coolest outdoors attractions in the region. Beyond the well-known Pencarrow Head, there are tracks all around these coastal lakes. With so many cool picnic and sightseeing spots, allow more time than I did and make a day of it. If it's sunny, bring plenty of sunscreen also.

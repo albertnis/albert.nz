@@ -5,6 +5,7 @@ description: Epic run along the Mt Oxford tops, a short drive from Christchurch
 accent: rgb(74, 200, 39)
 routes:
   - ./Mt_Oxford_summit.gpx
+tags: [adventures]
 ---
 
 This counterclockwise loop made for a great trail run about a half-marathon in length. The uphills and downhills are fairly steep but worth it for about a kilometre of good travel along the subalpine tops. I would recommend the side trip to Ryde Falls, especially on a warm day. A longer and even hillier daytrip could be created by making a detour to Wharfedale Hut.

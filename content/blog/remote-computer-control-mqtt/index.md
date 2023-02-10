@@ -3,6 +3,7 @@ title: Remote controlling a computer with home automation
 date: 2020-06-11T20:45:02+1200
 description: Developing a simple Go application to solve a problem
 accent: rgb(144, 81, 237)
+tags: [technology]
 ---
 
 As part of my home automation system, I like to be able to shutdown my computer remotely. This way I can safely shutdown the computer before powering it off at the wall.

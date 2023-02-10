@@ -5,6 +5,7 @@ description: Completing one of New Zealand's most famous walks in a day
 accent: rgb(170, 18, 190)
 routes:
   - ./Routeburn_Track.gpx
+tags: [adventures]
 ---
 
 To celebrate Chris' birthday a group of 17 took on Routeburn. The 32km trail is the shortest of New Zealand's Great Walks and one of the best-known. A large group makes logistics easier: we booked a shuttle to take us from Queenstown to The Divide and had some non-runners willing to meet us at the other end.

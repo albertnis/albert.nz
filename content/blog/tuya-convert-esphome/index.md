@@ -3,6 +3,7 @@ title: Upgrading branded IoT devices with tuya-convert and ESPHome
 description: Or how my Kogan smart plug gained superpowers over-the-air
 date: 2020-07-11T19:52:25+1200
 accent: rgb(243, 53, 53)
+tags: [technology]
 ---
 
 ![Kogan smart plug](./DSC07823.jpg)

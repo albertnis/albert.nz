@@ -3,6 +3,7 @@ title: 'Afterglow'
 description: 'An experiment in spectra: using an MSGEQ7 to make RGB LED lights pulse to the music'
 date: 2016-06-12T21:23:25+1300
 accent: rgb(184, 53, 195)
+tags: [technology]
 ---
 
 In 2015, I discovered two glorious things in the world of electronics: Arduinos and RGB LED strip lights. Bounded only by imagination and enabled only by eBay, I set out to combine these two items in the grooviest way possible.

@@ -5,6 +5,7 @@ description: Three-day tramp on Great Barrier Island visiting Kaiaraara Hut, Mt 
 accent: rgb(241, 81, 146)
 routes:
   - ./Aotea_track.gpx
+tags: [adventures]
 ---
 
 During a sibling trip to Great Barrier Island, we took on the Aotea Track. The track is a loop around the centre of the island with many options for entering and exiting from either the north or south. Three days is ample for this route and made for a leisurely tramp. It was seriously nice having the Kaitoke hot springs lined up for the last day; I'd thoroughly recommend exiting on this trail. For a more strenuous trip, consider exploring more side tracks during the three days. For an overnight excursion, make sure you overnight at Mt Heale Hut - it's the nicer hut!

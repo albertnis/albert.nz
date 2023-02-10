@@ -3,6 +3,7 @@ title: Rendering React Server-Side with AWS Lambda
 date: 2019-07-20T17:15:20+1200
 description: The dawn of serverless-side rendering?
 accent: rgb(15, 136, 126)
+tags: [technology]
 ---
 
 I've been working on a React project called [Obfuscator][]. It's a rewrite of an older [project](/obfuscator) where you can enter a phrase to translate through multiple languages in sequence. Essentially it's a fun way to make a computer translator play Chinese whispers with itself.

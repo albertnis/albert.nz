@@ -3,6 +3,7 @@ title: Using three-stage Dockerfile for accessing build output
 description: How to make builds consistent and flexible with a single Dockerfile
 date: 2020-07-09T19:17:25+1200
 accent: rgb(34, 139, 119)
+tags: [technology]
 ---
 
 [Multi-stage Dockerfiles][multi-stage-dockerfile] are a tried and true method for minimising the bloat of published docker images. The workflow is pretty typical:

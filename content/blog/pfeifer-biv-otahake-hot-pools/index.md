@@ -5,6 +5,7 @@ description: "Stunning mountain hut and natural hot spring in northern Arthur's 
 accent: rgb(89, 180, 49)
 routes:
   - ./Pfeifer_Biv_Otahake_Hot_Pools.gpx
+tags: [adventures]
 ---
 
 Easter weekend of 2022 presented a great opportunity to head into the hills near Christchurch. A traverse of Arthur's Pass, from Aickens to Hawdon Valley via Otehake Valley, was lined up. Before we knew it, the holiday was upon us and it was time to hike! A last-minute route change had us detouring to the dramatically-located Pfeifer Biv on the first day.

@@ -3,6 +3,7 @@ title: Using ESPHome on a Raspberry Pi with Docker
 date: 2019-07-14T11:09:20+1200
 description: Moving old devices to a powerful new platform
 accent: rgb(83, 101, 231)
+tags: [technology]
 ---
 
 A few weeks ago I changed the firmware on my LED strip controllers, migrating them from my custom software Lightt to [ESPHome](https://esphome.io/). I really enjoyed Lightt as a project. It taught me a ton about MQTT, LED strips and how home automation software interfaces with lights in general. It was also surprisingly reliable and had months of uptime on my strips. I identified [several issues](https://github.com/albertnis/lightt/issues) in Lightt which needed attention, such as OTA flashing and LED effects. Rather than implementing these features myself I decided to cut my losses and move to ESPHome which already supports these things.

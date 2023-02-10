@@ -3,6 +3,7 @@ title: Migrating from ESPHome to WLED, the easy over-the-air way
 description: Moving from ESPHome to WLED can be done without wires or worries
 date: 2020-10-18T12:44:25+1200
 accent: rgb(43, 185, 22)
+tags: [technology]
 ---
 
 Over a year ago, I [migrated][esphome-article] my LED strips from Lightt to [ESPHome][esphome]. I have recently moved on to the popular LED strip project [WLED][wled]. This means my trusty [Electrodragon ESP LED Strip Boards][edragon-esp] are on their third incarnation and have nearly two years of total uptime.

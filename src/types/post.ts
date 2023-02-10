@@ -7,6 +7,7 @@ export interface PostMetadata {
 	accent: string
 	links?: string[]
 	routes?: string[]
+	tags: string[]
 }
 
 export interface PostPreview {

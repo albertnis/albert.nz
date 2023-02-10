@@ -5,6 +5,7 @@ description: Overnight tramp in Tararua Range with outrageously good views
 accent: rgb(100, 230, 34)
 routes:
   - ./Mt_Holdsworth_Jumbo_Circuit.gpx
+tags: [adventures]
 ---
 
 Holdsworth-Jumbo Circuit is one of the more approachable Tararua tramps. It can be split into three sections: a climb up to Mt Holdsworth Summit, traversing a ridge to Pukeahurangi / Jumbo, then descending Raingauge Spur Track to exit along the valley floor. We set out intending to spend one night at Powell Hut then a second night at Jumbo Hut.

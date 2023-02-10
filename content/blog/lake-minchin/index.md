@@ -5,6 +5,7 @@ description: Hike to a remote lake near the Casey-Binser track and Poulter valle
 accent: rgb(110, 80, 219)
 routes:
   - ./Lake_Minchin_overnighter.gpx
+tags: [adventures]
 ---
 
 I have been overdue for a solo trip for a while now, and what's better than finding a remote lake to camp beside? Without too much additional thought, I packed my tent and headed for Lake Minchin.

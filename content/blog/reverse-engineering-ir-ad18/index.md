@@ -3,6 +3,7 @@ title: Understanding Infrared Remote Control
 date: 2019-05-11T21:23:25+1300
 description: Going beyond the remote in pursuit of automation
 accent: rgb(24, 170, 132)
+tags: [technology]
 ---
 
 ![Broadlink RM3 Mini3][rm3]

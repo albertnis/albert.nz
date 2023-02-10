@@ -3,6 +3,7 @@ title: 'Obfuscator'
 description: Highlighting the potentially hilarious flaws of modern computer translators
 date: 2016-11-05T21:23:25+1300
 accent: rgb(184, 43, 59)
+tags: [technology]
 ---
 
 I have always found online translators so interesting. With the continuous shrinking of the world led by the continuous growth of the internet, it is hardly surprising that we have been algorithmically converting between languages for years now, with online services like Google Translate and Bing Translate establishing themselves as vital when travelling, learning and communicating. These algorithms are good. Darn good, in fact — with [computer vision][google-translate] adding to the mix for an even more functional experience.

@@ -5,6 +5,7 @@ description: These three valleys in Arthur's Pass are connected by Tarn Col and 
 accent: hsl(230, 70%, 50%)
 routes:
   - ./Edwards_Otehake_Hawdon.gpx
+tags: [adventures]
 ---
 
 The Edwards-Hawdon route is a popular Arthur's Pass outing. We decided to add a side trip to the secluded Otehake Hut for our overnight adventure.

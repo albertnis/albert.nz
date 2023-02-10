@@ -5,6 +5,7 @@ description: Beautiful overnight walk in Arthur's Pass
 accent: rgb(100, 45, 220)
 routes:
   - ./Cass_Lagoon_Saddle_Track.gpx
+tags: [adventures]
 ---
 
 We dropped a car at the western carpark then drove to the eastern one, tackling the walk clockwise. With the popularity of State Highway 73, hitchhiking is a real alternative here to get between carparks. A couple of other Cass-Lagooners happened to arrive at the western carpark at the same time as us. They were intending to walk to the road to hitchhike but were able to get a ride with us.

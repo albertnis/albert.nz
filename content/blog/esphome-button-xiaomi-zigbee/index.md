@@ -3,6 +3,7 @@ title: Making a custom multi-click push button using ESPHome
 date: 2020-02-17T20:21:12+1300
 description: Or how I abandoned custom firmware because somebody else was doing it better
 accent: rgb(240, 100, 39)
+tags: [technology]
 ---
 
 Bit by bit, I'm moving all my WiFi IoT devices over to use [ESPHome][esphome]. I migrated my [LED strips][esphome-light-migration] a few months ago and have been impressed with the reliability and convenience of ESPHome since. This time, I'm migrating the last device which is still running custom firmware.

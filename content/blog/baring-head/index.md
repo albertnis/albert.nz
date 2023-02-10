@@ -5,6 +5,7 @@ description: A rugged attraction on Wellington's south coast
 accent: rgb(206, 56, 34)
 routes:
   - ./Baring_Head.gpx
+tags: [adventures]
 ---
 
 Baring Head is one of my favourite places in Wellington. I have been out there a couple of times in gale force southerlies and can highly recommend the experience. I mean to come back here to explore more trails around the hills, and perhaps to attempt some coastal astrophotography.

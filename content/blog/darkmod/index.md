@@ -3,6 +3,7 @@ title: DarkMOD
 description: A dynamic MusicBee skin using PHP
 date: 2017-02-06T21:23:25+1300
 accent: rgb(59, 147, 104)
+tags: [technology]
 ---
 
 [MusicBee][musicbee install] is without a doubt the best desktop music player I have used. I've been a convert now for about two years, lapping up features such as custom application launching, custom hotkeys, automatic renumbering, folder organisation and transcoding. The list goes on, and if you're on Windows I highly suggest giving it a go.

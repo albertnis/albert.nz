@@ -3,6 +3,7 @@ title: 'Going Closed'
 description: A new headphone adventure ends early as I realise open-back headphones aren't perfect
 date: 2015-01-26T16:47:25+1300
 accent: rgb(129, 61, 193)
+tags: [technology]
 ---
 
 That didn't take long. Sure enough, after only three weeks with the SR125i, I have sold my open-backed cans and am back on the closed-back bandwagon. That's not to say I regret the purchase of the mighty Grados. Here are a few things I learnt from the experience:

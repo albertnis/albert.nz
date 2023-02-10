@@ -5,6 +5,7 @@ description: Mountainous trail run in Mid Canterbury
 accent: rgb(70, 144, 237)
 routes:
   - ./Mt_Somers_Track.gpx
+tags: [adventures]
 ---
 
 This track around Mt Somers / Te Kiekie is a popular tramp. Huts were booked out so I decided to tackle this one as a meaty 25km run with almost 2km of vertical gain. There are a few ways to approach this track. To shorten the distance and position a steep ascent at the beginning, I started at the Sharplin Falls carpark to the east, following the trail clockwise all around the mountain. For a shorter, steeper option consider traversing the mountain via the summit - a trail runner I encountered assured me there is a northern summit track. A longer run could be created by including the Rhyolite and Woolshed Creek tracks, with the option to commence at the Woolshed Creek carpark in the west.

@@ -3,6 +3,7 @@ title: Smart home architecture - DIY vs off-the-shelf home automation setup
 date: 2020-04-11T12:54:12+1200
 description: Why smart homes can be a mess, and why there's a better way
 accent: rgb(144, 81, 237)
+tags: [technology]
 ---
 
 Smart home devices are all the rage these days. It's simple to grasp the basic concept of what such devices can do - they enable remote control and automation by connecting to the network, where they can be controlled by a server. There are many ways of building a system to achieve this outcome. I often have trouble explaining to friends what a smart home really _is_, and what it means to build a "DIY" smart home system.

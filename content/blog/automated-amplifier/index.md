@@ -3,6 +3,7 @@ title: Automating amplifiers with an IR blaster and Google Home
 date: 2019-12-08T16:31:12+1300
 description: Dumb speakers made smart with Home Assistant and Node-RED
 accent: rgb(30, 190, 200)
+tags: [technology]
 ---
 
 Smart speakers are great in some regards. They have voice assistants built-in and are always on and listening. But they lack the flexibility and modularity of the classic amplifier and passive speaker setup. I have just one pair of speakers for everything - Bluetooth, Chromecast and computer audio are my use-cases. But the only way to control my [AD18][] amplifier is manually, using an IR remote.

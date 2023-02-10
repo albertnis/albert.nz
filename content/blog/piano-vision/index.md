@@ -3,6 +3,7 @@ title: Piano Vision
 description: Evaluating the use of Kinect depth cameras to capture piano keypresses from above
 date: 2017-05-14T17:23:25+1300
 accent: rgb(42, 178, 239)
+tags: [technology]
 ---
 
 In an effort to focus more of my attention on coding, I managed to pick up two computer science papers at the start of the year to add to my mechanical engineering degree. One of these was computer vision.

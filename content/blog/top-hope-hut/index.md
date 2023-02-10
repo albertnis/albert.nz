@@ -5,6 +5,7 @@ description: Meandering river valley track up Hope Valley near Lewis Pass
 accent: hsl(40, 70%, 50%)
 routes:
   - ./Top_Hope_Hope_Kiwi_.gpx
+tags: [adventures]
 ---
 
 Top Hope Hut has been refurbished in the last couple of years--now is an excellent time to check out this classic but very tidy old hut near Lewis Pass. We combined it with a second night at the large (and popular) Hope Kiwi Lodge. For a summer trip it would be awesome to spend the second night at Lake Man before exiting through either Doubtful Range or Doubtful Valley.

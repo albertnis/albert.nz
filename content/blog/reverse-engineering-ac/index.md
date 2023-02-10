@@ -3,6 +3,7 @@ title: How to Reverse Engineer a Heat Pump Unit
 date: 2019-06-15T11:09:20+1200
 description: Cracking the code and paving the way to automation
 accent: rgb(170, 35, 170)
+tags: [technology]
 ---
 
 ![](./DSC06428.jpg)
