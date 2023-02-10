@@ -21,6 +21,12 @@
 	})
 </script>
 
+<svelte:head>
+	<meta property="og:type" content="article" />
+	<meta property="article:published_time" content={data.meta.date} />
+	<meta property="article:author" content="Albert Nisbet" />
+</svelte:head>
+
 <HeaderSmall />
 
 <article class="contents">

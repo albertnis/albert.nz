@@ -15,7 +15,8 @@
 
 		<p>
 			I'm Albert, a Christchurch-based software developer. I blog about things that are interesting
-			to me: these days that's largely home automation, electronics and the outdoors. Find me on <a
+			to me: these days that's largely home automation, electronics and tramping in New Zealand.
+			Find me on <a
 				href="https://linkedin.com/in/albertnis"
 				class="border-b border-b-zinc-600 hover:border-b-2 hover:border-b-blue-600 dark:border-b-zinc-400 dark:hover:border-b-blue-400"
 				>LinkedIn</a

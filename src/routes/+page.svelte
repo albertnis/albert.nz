@@ -6,6 +6,13 @@
 	export let data: { posts: PostPreview[] }
 </script>
 
+<svelte:head>
+	<meta property="og:type" content="profile" />
+	<meta property="profile:first_name" content="Albert" />
+	<meta property="profile:last_name" content="Nisbet" />
+	<meta property="profile:username" content="albertnis" />
+</svelte:head>
+
 <Header />
 
 <div class="col-start-[wide-start] col-end-[wide-end]">
