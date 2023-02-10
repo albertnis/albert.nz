@@ -1,10 +1,8 @@
 ---
 title: 'Makara Hills'
-description: Rural walk with seaside views
+description: Rural walk with seaside views just to the west of Wellington
 date: 2015-04-16T16:47:25+1300
 accent: rgb(48, 155, 234)
-links:
-  - <a href="https://www.google.co.nz/maps/place/Makara+Beach,+Wellington+6972/@-41.2196307,174.7025221,15z/data=!3m1!4b1!4m5!3m4!1s0x6d38b3bff9e799fb:0x500ef6143a33040!8m2!3d-41.2202566!4d174.7132332" target="_blank" rel="noreferrer">View at Google Maps</a>
 ---
 
 The Makara hills are home to walkways with awesome views.

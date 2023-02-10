@@ -1,6 +1,6 @@
 ---
 title: Automating amplifiers with an IR blaster and Google Home
-date: 2019-12-08 16:31:12 +1300
+date: 2019-12-08T16:31:12+1300
 description: Dumb speakers made smart with Home Assistant and Node-RED
 accent: rgb(30, 190, 200)
 ---

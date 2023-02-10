@@ -1,7 +1,7 @@
 ---
 title: 'The Dragonfly Effect'
 description: I take my first dip into better computer audio
-date: 2015-02-06 16:47:25 +1300
+date: 2015-02-06T16:47:25+1300
 accent: rgb(0, 110, 221)
 ---
 

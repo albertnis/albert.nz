@@ -1,9 +1,8 @@
 ---
 title: Using browsers as IoT screens with React and MQTT.js
+description: I built mq-display to show smart home status, notifications and more!
 date: 2019-11-03T09:33:20+1200
 accent: rgb(222, 106, 135)
-links:
-  - <a href="https://github.com/albertnis/mq-display">GitHub</a>
 ---
 
 When it comes to smart home displays, I've seen two main options:

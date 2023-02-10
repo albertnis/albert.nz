@@ -1,6 +1,6 @@
 ---
 title: 'Afterglow'
-description: An experiment in spectra
+description: 'An experiment in spectra: using an MSGEQ7 to make RGB LED lights pulse to the music'
 date: 2016-06-12T21:23:25+1300
 accent: rgb(184, 53, 195)
 ---

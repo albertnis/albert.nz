@@ -1,11 +1,11 @@
 ---
 title: 'Birds'
-description: The avian album
+description: Some bird photography from over the years
 date: 2015-04-16T16:47:25+1300
 accent: rgb(183, 36, 42)
 ---
 
-Birds have always intrigued me, and getting good snaps of them is often a great challenge.
+Birds have always intrigued me, and getting good snaps of them is often a great challenge. Here are some from my childhood home in Wellington.
 
 ![][1]
 

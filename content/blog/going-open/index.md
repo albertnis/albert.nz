@@ -1,6 +1,6 @@
 ---
 title: 'Going Open'
-subtitle: I set out on an adventure for a new sound
+description: Moving beyond the closed-back world of the ATH-M50x and starting a new headphone adventure
 date: 2014-12-24T16:47:25+1300
 accent: rgb(134, 134, 134)
 ---

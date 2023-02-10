@@ -1,6 +1,6 @@
 ---
 title: 'The Apex?'
-description: Gimmicks are key
+description: A deeply flawed keyboard that succeeds in being a gimmicks but fails at being a keyboard
 date: 2016-02-26T10:47:25+1300
 accent: rgb(200, 48, 48)
 ---

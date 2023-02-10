@@ -1,25 +1,27 @@
 <p align="center">
-    <img alt="Gatsby" src="content/assets/albertnz-favicon64x64.png" />
+    <img alt="Albert.nz" src="static/albertnz-favicon64x64.png" />
 </p>
 <h1 align="center">
   <a href="https://albert.nz">albert.nz</a>
 </h1>
 
-# Install dependencies
+Personal website of Albert Nisbet. Written in [SvelteKit](https://kit.svelte.dev) and featuring a GPX plugin for activity overviews.
+
+## Install dependencies
 
 ```shell
-npm run installall
+npm install
 ```
 
-# Develop it
+## Develop it
 
 ```shell
-npm run clean && npm run develop
+npm run dev
 ```
 
-# Build and serve
+## Build and serve
 
 ```shell
 npm run build
-npm run serve
+npm run preview
 ```

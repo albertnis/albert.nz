@@ -1,11 +1,8 @@
 ---
 title: Piano Vision
-Description: Capturing piano performance with depth vision
+description: Evaluating the use of Kinect depth cameras to capture piano keypresses from above
 date: 2017-05-14T17:23:25+1300
 accent: rgb(42, 178, 239)
-links:
-  - <a href="https://github.com/albertnis/vmidi2">Github</a>
-  - <a href="/Nisbet_Green_Capture_of_Dynamic_Piano Performance_with_Depth_Vision.pdf">Research paper</a>
 ---
 
 In an effort to focus more of my attention on coding, I managed to pick up two computer science papers at the start of the year to add to my mechanical engineering degree. One of these was computer vision.
@@ -14,7 +11,9 @@ My only previous experience with computer vision merged my interest in programmi
 
 When I discovered students could specify our own projects in the computer vision course, making the sequel to VMIDI seemed like a natural evolution of my previous line of thought. So I decided to give VMIDI2 a go, this time armed with one year more coding experience and departmental backing.
 
-There was a third difference between VMIDI and VMIDI2: the C++ language. Using C++ for VMIDI2 ended up being a bit of a revelation. While Python computer vision can be fast if native OpenCV calls are maximised, C++ makes speed seem effortless.
+There was a third difference between VMIDI and VMIDI2: the C++ language. Using C++ for VMIDI2 ended up being a bit of a revelation. While Python computer vision can be fast if native OpenCV calls are maximised, C++ makes speed seem effortless. The source code for VMIDI2 is available on [GitHub](https://github.com/albertnis/vmidi2).
+
+The rest of this article is a compressed version of the <a data-sveltekit-reload href="/Nisbet_Green_Capture_of_Dynamic_Piano_Performance_with_Depth_Vision.pdf">research paper</a> I wrote on this topic.
 
 ## Method
 

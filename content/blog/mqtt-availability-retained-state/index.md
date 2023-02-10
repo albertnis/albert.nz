@@ -1,6 +1,7 @@
 ---
 title: Using MQTT for Availability and Retained State
-date: 2019-01-04 12:23:25 +1300
+description: Building more resilient networks with the LWT and retained state features of MQTT
+date: 2019-01-04T12:23:25+1300
 accent: rgb(173, 56, 121)
 ---
 

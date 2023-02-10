@@ -1,6 +1,6 @@
 ---
 title: 'A Cursory Revelation'
-description: One man's trash
+description: Learning about the benefits of gaming mice, on a budget
 date: 2016-04-09T11:47:25+1300
 accent: rgb(234, 156, 9)
 ---

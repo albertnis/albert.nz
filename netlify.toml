@@ -1,7 +1,0 @@
-[build]
-  publish = "public/"
-  command = "npm run installall && npm run build"
-
-[[redirects]]
-  from = "/posts/*"
-  to = "/:splat"
