@@ -7,6 +7,7 @@
 	import type { ComponentType, SvelteComponentTyped } from 'svelte'
 	import '$lib/styles/prism.min.css'
 	import type { ViteGpxPluginOutput } from '../../../plugins/vite-plugin-gpx/types'
+	import MapLoading from '$lib/components/MapLoading.svelte'
 
 	export let data: Post
 	let mapGroupComponent: ComponentType<SvelteComponentTyped> | undefined
@@ -25,6 +26,13 @@
 	<meta property="og:type" content="article" />
 	<meta property="article:published_time" content={data.meta.date} />
 	<meta property="article:author" content="Albert Nisbet" />
+	<noscript>
+		<style>
+			.maploading {
+				display: none;
+			}
+		</style>
+	</noscript>
 </svelte:head>
 
 <HeaderSmall />
@@ -37,6 +45,11 @@
 		</div>
 	</div>
 
+	{#if mapGroupComponent == null && (data.meta.routes?.length ?? 0) > 0}
+		<div class="maploading col-start-[image-start] col-end-[image-end] mb-6">
+			<MapLoading />
+		</div>
+	{/if}
 	{#if mapGroupComponent != null}
 		{#each geo as g}
 			<svelte:component this={mapGroupComponent} geo={g} />

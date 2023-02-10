@@ -51,8 +51,6 @@ export function gpxPlugin(options: Partial<ViteGpxPluginOptions> = {}): Plugin {
 				src = basePath + basename(srcURL.pathname)
 			}
 
-			console.log('VITECONFIG.base:::', viteConfig.base)
-
 			return await new Promise((res) => {
 				res({
 					code: `export default ${JSON.stringify(gpxDataToOutput(fileContents.toString(), src))}`
