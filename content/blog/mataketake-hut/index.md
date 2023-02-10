@@ -48,13 +48,15 @@ As a personal first, I had planned for an entire hut day on this trip. This was 
 
 As sunset approached and the cloud layer lifted, it became clear that this hut's situation is truly special.
 
-![][pano]
+<figure>
+  <img class="prose-custom-w-full" src="./DSC09649-HDR-Pano.jpg" />
+  <figcaption>Sunset as viewed from the hut</figcaption>
+</figure>
 
-<figcaption>Sunset as viewed from the hut</figcaption>
-
-![][astro-hut]
-
-<figcaption>Mataketake Hut after sundown</figcaption>
+<figure>
+  <img class="prose-custom-w-full" src="./DSC09678.jpg" />
+  <figcaption>Mataketake Hut after sundown</figcaption>
+</figure>
 
 ![][astro-couple]
 
@@ -72,9 +74,10 @@ We awoke at dawn. This seemed fitting for ANZAC day and meant we would get back 
 
 <figcaption>Dawn breaks on ANZAC day, revealing excellent weather for our early departure</figcaption>
 
-![][leaving-tops]
-
-<figcaption>Looking out from the tops before descending back into the bush</figcaption>
+<figure>
+  <img class="prose-custom-w-full" src="./DSC09719.jpg?w=4000" />
+  <figcaption>Looking out from the tops before descending back into the bush</figcaption>
+</figure>
 
 We made it out from the hut in 4.5 hours, a fair bit faster than the 8 hours estimated by DOC. Before we knew it we were back in Christchurch and dreaming about getting back to the hills.
 
@@ -82,9 +85,6 @@ We made it out from the hut in 4.5 hours, a fair bit faster than the 8 hours est
 [entering-tops]: ./DSC09610.jpg
 [hut-approach]: ./DSC09618.jpg
 [wood]: ./DSC09621.jpg
-[pano]: ./DSC09649-HDR-Pano.jpg
-[astro-hut]: ./DSC09678.jpg
 [astro-couple]: ./DSC09685.jpg
 [astro-hills]: ./DSC09691.jpg
 [astro-dawn]: ./DSC09693.jpg
-[leaving-tops]: ./DSC09719.jpg
