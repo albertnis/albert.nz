@@ -2,6 +2,7 @@ import adapter from '@sveltejs/adapter-cloudflare'
 import { vitePreprocess } from '@sveltejs/kit/vite'
 import { mdsvex } from 'mdsvex'
 import relativeImages from 'mdsvex-relative-images'
+import rehypeFigure from 'rehype-figure'
 import { rehypeLazyImg } from './plugins/rehype-plugin-lazy-img/index.js'
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -12,7 +13,7 @@ const config = {
 		mdsvex({
 			extensions: ['.md', '.svx'],
 			remarkPlugins: [relativeImages],
-			rehypePlugins: [rehypeLazyImg]
+			rehypePlugins: [rehypeLazyImg, rehypeFigure]
 		}),
 		vitePreprocess()
 	],

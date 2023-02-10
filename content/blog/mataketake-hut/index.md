@@ -18,9 +18,7 @@ With a sketchy-but-passable weather forecast for ANZAC weekend, we committed to 
 
 After the long drive, it was under an hour's walk to Blue River Hut. What a great feeling to stretch the legs before arriving at this historic, cosy, building for the night! We even got a clear sky overnight. A noisy group of three kea zoomed overhead while we took some photos.
 
-![][blowfly-group]
-
-<figcaption>Posing for a photo outside Blue River (Blowfly) Hut on an unexpectedly clear evening</figcaption>
+![Posing for a photo outside Blue River (Blowfly) Hut on an unexpectedly clear evening][blowfly-group]
 
 By night the top-bunkers among us discovered a downside of this hut: the low ceilings made it comically easy to bump limbs and heads during the night.
 
@@ -30,21 +28,15 @@ With the skies still clear against the odds, we were keen to get up the hill! Th
 
 Before we knew it, we were out into openness with the sky still clear. Beautiful views of the surrounding ranges emerged, only to be swallowed up by low cloud as we approached Mataketake Hut.
 
-![][entering-tops]
+![Proceeding along the tops with clear skies to the left and low cloud to the right][entering-tops]
 
-<figcaption>Proceeding along the tops with clear skies to the left and low cloud to the right</figcaption>
-
-![][hut-approach]
-
-<figcaption>Mataketake Hut spotted!</figcaption>
+![Mataketake Hut spotted!][hut-approach]
 
 # Day three
 
 As a personal first, I had planned for an entire hut day on this trip. This was based on the nice things I had heard about the hut. Hopefully it would increase our chance of getting good weather and having the building to ourselves. Turns out neither of those things occurred during the first night at the hut. Sunday proved to be an excellent day to be indoors, with a storm bring plenty of rain and wind. Plus, over the course of a cosy day in the hut filled with board-gaming, tarn-swimming, and book-reading, we realised we would have a clear evening and sole occupancy in the second night.
 
-![][wood]
-
-<figcaption>Improvising some kindling for the fire by cutting larger pieces. There wasn't much firewood but we somehow got the fire raging.</figcaption>
+![Improvising some kindling for the fire by cutting larger pieces. There wasn't much firewood but we somehow got the fire raging.][wood]
 
 As sunset approached and the cloud layer lifted, it became clear that this hut's situation is truly special.
 
@@ -53,26 +45,22 @@ As sunset approached and the cloud layer lifted, it became clear that this hut's
   <figcaption>Sunset as viewed from the hut</figcaption>
 </figure>
 
+![][astro-couple]
+
+<figcaption>Watching shooting stars in the dying light of dusk</figcaption>
+
 <figure>
   <img class="prose-custom-w-full" src="./DSC09678.jpg" />
   <figcaption>Mataketake Hut after sundown</figcaption>
 </figure>
 
-![][astro-couple]
-
-<figcaption>Watching shooting stars in the dying light of dusk</figcaption>
-
-![][astro-hills]
-
-<figcaption>Mountains to the east of the range</figcaption>
+![Mountains to the east of the range][astro-hills]
 
 # Day four
 
 We awoke at dawn. This seemed fitting for ANZAC day and meant we would get back to Christchurch earlier. With a crisp breeze behind us and the day dawning in front of us, we packed up and headed out before sunrise. The views were distractingly stunning.
 
-![][astro-dawn]
-
-<figcaption>Dawn breaks on ANZAC day, revealing excellent weather for our early departure</figcaption>
+![Dawn breaks on ANZAC day, revealing excellent weather for our early departure][astro-dawn]
 
 <figure>
   <img class="prose-custom-w-full" src="./DSC09719.jpg?w=4000" />
