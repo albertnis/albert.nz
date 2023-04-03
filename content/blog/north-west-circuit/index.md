@@ -8,7 +8,7 @@ routes:
 tags: [adventures]
 ---
 
-Stewart Island's North West Circuit track provides a walk like no other. Even a speedy hiker will take 7 days to complete this walk. Those with plenty of spare time may combine it with the Southern Circuit for a 12-16 day doozy. In the 10 days we took to complete the one circuit, we trekked through undulating damp bush, traversed remote beaches and experienced all types of weather within the span of a single day. It's a rewarding challenge that for many people will push the limits of their self-sufficiency.
+Stewart Island's North West Circuit track provides a walk like no other. Even a speedy hiker will take 7 days to complete this loop. Those with plenty of spare time may combine it with the Southern Circuit for a 12-16 day doozy. In the 10 days we took to complete the one circuit, we trekked through undulating damp bush, traversed remote beaches and experienced all types of weather within the span of a single day. It's a rewarding challenge that for many people will push the limits of their self-sufficiency.
 
 ## Flora and fauna
 
@@ -22,7 +22,7 @@ Robins were numerous in the sheltered low-lying stretch between Mason Bay and Fr
 
 There's a varied range of plants around the place. Unfortunately the huge deer population is successful at continually suppressing new broadleaf growth, so there are large stretches of forest consisting of ferns, mature broadleaf trees, and nothing in between. I suppose hunters enjoy the good sight lines afforded by this distorted ecosystem.
 
-The forest is incredibly damp from the large amount of precipitation received in this part of the country. Windfall and dead trees rot quickly and give rise to new plant life.
+The forest is incredibly damp from the large amount of precipitation received on Stewart Island. Windfall and dead trees rot quickly and give rise to new plant life.
 
 ![Native orchid <i>Earina autumnalis</i> was often seen growing draped over windfall and rotting trees. It smells strongly like cheap air freshener and we often caught a whiff of it before we saw it.](./DSC01299.jpg)
 
@@ -69,7 +69,7 @@ We took 10 days and skipped the Great Walk huts only. This meant we had an addit
 
 ## Transport to and on the island
 
-Transport to Rakiura / Stewart Island is via boat or plane. The boat is operated by [realnz](https://www.realnz.com/en/experiences/ferry-services/stewart-island-ferry-services/) and costs $99 each way from Bluff. I'd agree with their website that it is quite an experience; the Fouveaux Strait lives up to its name and even on a calm day those prone to seasickness (like myself) will be reaching for the sick bag during the hour-long crossing. Get on the boat mentally prepared and with an empty stomach--or catch the plane. The [flight](https://www.stewartislandflights.co.nz/) is $240 return from Invercargill. It takes less than 30 minutes but is limited to 15kg baggage allowance.
+Transport to Rakiura / Stewart Island is via boat or plane. The boat is operated by [realnz](https://www.realnz.com/en/experiences/ferry-services/stewart-island-ferry-services/) and costs $99 each way from Bluff. I'd agree with their website that it is quite an experience; the Foveaux Strait lives up to its name and even on a calm day those prone to seasickness (like myself) will be reaching for the sick bag during the hour-long crossing. Get on the boat mentally prepared and with an empty stomach--or catch the plane. The [flight](https://www.stewartislandflights.co.nz/) is $240 return from Invercargill. It takes less than 30 minutes but is limited to 15kg baggage allowance.
 
 Water taxi services are available within the island. For $70 per person, they will shuttle you between Bungaree Hut and Oban, or Freshwater Hut and Oban. We used a taxi to skip our last day from Freshwater Hut to Oban--the taxi arrives at the landing adjacent to the hut at high tide then slaloms down Freshwater River at impressive speed, reaching Oban in about 45 minutes. You need at least three people to charter a boat (or get lucky and book onto an already-chartered boat) and you'll need to book ahead. Freshwater Hut has no cellphone reception and you're not guaranteed any reception from Rocky Mountain, either. There are two operators who sail to Freshwater Hut: [Rakiura Adventure](https://rakiura.nz/) and [Rakiura Charters](https://www.rakiuracharters.co.nz/).
 
@@ -77,7 +77,7 @@ Water taxi services are available within the island. For $70 per person, they wi
 
 Apart from the Great Walk huts, all huts are standard. You can use $5 hut tickets or a hut pass. There is alternatively a North West Circuit Pass which I am told is cheaper than individual tickets. There's little information online about this pass but you should enquire at the DOC visitor centre.
 
-The standard huts are quite generously sized. Most have 10-12 bunk beds with the exceptions being Mason Bay Hut (20 bunks) and Freshwater Hut (16 bunks). They all have at least two sleeping areas, with the exception of Long Harry Hut and Big Hellfire Hut which are single rooms with a "marae-syle" sleeping area.
+The standard huts are quite generously sized. Most have 10-12 bunk beds with the exceptions being Mason Bay Hut (20 bunks) and Freshwater Hut (16 bunks). They all have at least two sleeping areas, with the exception of Long Harry Hut and Big Hellfire Hut which are single rooms with a "marae-style" sleeping area.
 
 The northern huts (Bungaree, Christmas Village, Yankee River and Long Harry) have cell reception in or near to the hut.
 
@@ -108,13 +108,13 @@ For Mason Bay tides, the guidance from the DOC visitor centre was to subtract tw
 
 ## Track condition
 
-The track was well marked--much better than I expected. When we did the track there were many sections between Long Harry Hut and Mason Beach that were overgrown and had signifcant windfall. DOC told us there hasn't been much maintenance in the last couple of years due to COVID-19 but that they were expecting to get maintenance teams in there over winter 2023.
+The track was well marked--much better than I expected. When we did the track there were many sections between Long Harry Hut and Mason Beach that were overgrown and had significant windfall. DOC told us there hasn't been much maintenance in the last couple of years due to COVID-19 but that they were expecting to get maintenance teams in there over winter 2023.
 
 ## Side trips
 
 ### Mt Anglem / Hananui
 
-We skipped the side trip to Mt Anglem / Hananui from Christmas Village Hut. According to our DOC informant, it's a stunning view on a clear day, but generally you can't tell whether it's a nice day until you're 80% of the way up the mountain. It wasn't worth the gamble for us.
+We skipped the side trip to Mt Anglem / Hananui from Christmas Village Hut. According to our DOC informant, it's a stunning view on a clear day but generally you can't tell whether it's a nice day until you're 80% of the way up the mountain. It wasn't worth the gamble for us.
 
 ### East Ruggedy Beach lookout
 
@@ -130,7 +130,7 @@ Definitely worth the 90-minute return trip from Mason Bay Hut. There are nice vi
 
 ### Rocky Mountain
 
-2-3 hours return from Freshwater Hut, this gives great views back towards Mason Bay, and even towards Oban. Or so we were told. As we climbed the hill, the weather closed in and it was cold, wet and windy at the top. Probably only worth doing in good weather. Some say you can get cell reception at the top (theoretically great for booking or rescheduling a water taxi from the hut) but on this stormy day we had neither the patience nor the line of sight to find it.
+2-3 hours return from Freshwater Hut, the top of Rocky Mountain has a grand view back towards Mason Bay, and even towards Oban--or so we were told. As we climbed the hill, the weather closed in and it was cold, wet and windy at the top. Probably only worth doing in good weather. Some say you can get cell reception at the top (theoretically great for booking or rescheduling a water taxi from the hut) but on this stormy day we had neither the patience nor the line of sight to find it.
 
 ## Weather
 
