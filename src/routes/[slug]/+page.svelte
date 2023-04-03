@@ -46,7 +46,7 @@
 	</div>
 
 	{#if mapGroupComponent == null && (data.meta.routes?.length ?? 0) > 0}
-		<div class="maploading col-start-[image-start] col-end-[image-end] mb-6">
+		<div class="maploading col-start-[prose-start] col-end-[prose-end] mb-6">
 			<MapLoading />
 		</div>
 	{/if}
