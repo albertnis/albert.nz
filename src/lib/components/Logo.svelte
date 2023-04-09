@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="inline h-[1em]" viewBox="0 0 12 8" version="1.1"
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	height="1em"
+	class="inline h-[1em]"
+	viewBox="0 0 12 8"
+	version="1.1"
 	><path
 		stroke-width="1.3"
 		stroke-linecap="round"
