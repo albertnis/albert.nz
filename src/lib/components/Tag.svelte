@@ -10,11 +10,18 @@
 	const handleClick = () => (enabled = !enabled)
 </script>
 
-<button
+<label
 	class="relative inline-flex h-[1em] cursor-pointer items-center align-middle"
-	on:click={handleClick}
 	class:font-bold={enabled}
 >
+	<input
+		class="hidden appearance-none"
+		type="checkbox"
+		checked={enabled}
+		name={tag}
+		value={tag}
+		on:change={handleClick}
+	/>
 	{#if !enabled}
 		<span
 			class="rounded-full border border-zinc-800 px-2 text-[0.6em] line-through opacity-60 dark:border-zinc-400"
@@ -30,4 +37,4 @@
 			class="rounded-full border border-teal-800 bg-teal-600 px-2 text-[0.6em] text-zinc-50 dark:border-teal-400"
 			>{text[tag]}</span
 		>{/if}
-</button>
+</label>

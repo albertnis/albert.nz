@@ -38,8 +38,7 @@
 					>
 						{post.meta.title}
 					</h3>
-					<span class="text-zinc-600 dark:text-zinc-400">&nbsp;/&nbsp;</span>
-					<span class="font-bold text-zinc-600 dark:text-zinc-400">
+					<span class="font-bold text-zinc-600 before:mx-2 before:content-['/'] dark:text-zinc-400">
 						{format(parseISO(post.meta.date), 'MMMM d, yyyy')}
 					</span>
 					{#if post.meta.tags.includes('technology')}
