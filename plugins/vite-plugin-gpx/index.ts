@@ -106,21 +106,30 @@ const gpxDataToOutput = (gpxData: string, path: string): ViteGpxPluginOutput => 
 		throw new TypeError('Feature geometry is not LineString')
 	}
 
-	const downSampledCoordinates = downSampleGeometry(feature.geometry.coordinates, 15)
+	const samplingPeriod = 15
+	const downSampledCoordinates = downSampleGeometry(feature.geometry.coordinates, samplingPeriod)
 	const downSampledGeometry: Geometry = { ...feature.geometry, coordinates: downSampledCoordinates }
 
 	return {
-		duration: computeDuration(feature),
-		startTime: computeStartTime(feature),
-		geoJson: buildGeoJSONFromGeometry(downSampledGeometry),
-		distanceMetres: computeDistanceMetres(feature.geometry.coordinates),
-		cumulativeElevationGainMetres:
-			feature.geometry.coordinates[0].length === 3
-				? computeCumulativeElevationGainMetres(feature.geometry.coordinates)
-				: null,
-		cumulativeDistancesMetres: computeCumulutiveDistanceMetres(downSampledCoordinates),
-		breakIndices: computeBreakIndices(feature),
-		gpxFilePath: path
+		elevationData: {
+			elevationGainMetres:
+				feature.geometry.coordinates[0].length === 3
+					? computeCumulativeElevationGainMetres(feature.geometry.coordinates)
+					: null,
+			samplingPeriod
+		},
+		metadata: {
+			gpxFilePath: path,
+			breakIndices: computeBreakIndices(feature),
+			duration: computeDuration(feature),
+			startTime: computeStartTime(feature),
+			distanceMetres: computeDistanceMetres(feature.geometry.coordinates)
+		},
+		pathData: {
+			geoJson: buildGeoJSONFromGeometry(downSampledGeometry),
+			cumulativeDistancesMetres: computeCumulutiveDistanceMetres(downSampledCoordinates),
+			samplingPeriod
+		}
 	}
 }
 
