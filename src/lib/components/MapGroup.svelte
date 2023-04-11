@@ -61,13 +61,11 @@
 			href={geo.metadata.gpxFilePath}><DownloadIcon /></a
 		>
 	</div>
-</div>
-{#if mapComponent == null}
-	<div class="maploading col-start-[prose-start] col-end-[prose-end] mb-6">
-		<MapLoading />
-	</div>
-{:else}
-	<div class="col-start-[image-start] col-end-[image-end] mb-6">
+	{#if mapComponent == null}
+		<div class="maploading">
+			<MapLoading />
+		</div>
+	{:else}
 		<svelte:component
 			this={mapComponent}
 			hoveredIndex={hoveredIndex &&
@@ -75,5 +73,5 @@
 			breakIndices={geo.metadata.breakIndices}
 			pathData={geo.pathData}
 		/>
-	</div>
-{/if}
+	{/if}
+</div>
