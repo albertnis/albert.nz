@@ -30,6 +30,7 @@
 			<MapGroup geo={g} />
 		{/each}
 	{/if}
+	<hr class="hidden" />
 	<div
 		class="prose-custom prose prose-zinc prose-quoteless relative max-w-none overflow-x-hidden dark:prose-invert prose-figcaption:mb-5 prose-img:max-w-full"
 	>
