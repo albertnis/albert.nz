@@ -7,8 +7,6 @@
 	import MapGroup from '$lib/components/MapGroup.svelte'
 
 	export let data: Post
-
-	console.log(JSON.stringify(data.meta))
 </script>
 
 <svelte:head>
