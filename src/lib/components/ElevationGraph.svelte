@@ -1,21 +1,13 @@
 <script lang="ts">
-	import type { GeoJSON } from 'geojson'
-	import { onMount } from 'svelte'
-
-	export let geoJson: GeoJSON
+	export let elevations: number[]
 	export let cumulativeDistances: number[]
+	export let pathSamplingPeriod: number
+	export let elevationSamplingPeriod: number
 
 	const xBasis = 3000
 
 	let totalDistance = cumulativeDistances[cumulativeDistances.length - 1]
 	let distanceScalingFactor = xBasis / totalDistance
-
-	let elevations =
-		geoJson.type === 'FeatureCollection' &&
-		geoJson.features[0].geometry.type === 'LineString' &&
-		geoJson.features[0].geometry.coordinates[0].length === 3
-			? geoJson.features[0].geometry.coordinates.map((c) => c[2])
-			: []
 
 	let maxElevation = elevations.reduce((max, e) => (e > max ? e : max), elevations[0])
 	let minElevation = elevations.reduce((min, e) => (e < min ? e : min), elevations[0])
@@ -38,11 +30,14 @@
 		svgX = pt.x
 		svgY = pt.y
 
-		if (svgX > 0 && svgX < xBasis) {
+		if (svgX > 5 && svgX < xBasis - 15) {
 			const hoveredDistance = (totalDistance * svgX) / xBasis
 			let i
 			for (i = 0; i < cumulativeDistances.length - 2; i += 2) {
-				if (cumulativeDistances[i] > hoveredDistance) {
+				if (
+					cumulativeDistances[Math.floor(i * (elevationSamplingPeriod / pathSamplingPeriod))] >
+					hoveredDistance
+				) {
 					break
 				}
 			}
@@ -74,7 +69,11 @@
 			class="fill-none stroke-zinc-800 stroke-[20] dark:stroke-zinc-200 md:stroke-[10]"
 			points={elevations.reduce(
 				(str, alt, i) =>
-					str + `${cumulativeDistances[i] * distanceScalingFactor},${maxElevation - alt} `,
+					str +
+					`${
+						cumulativeDistances[Math.floor(i * (elevationSamplingPeriod / pathSamplingPeriod))] *
+						distanceScalingFactor
+					},${maxElevation - alt} `,
 				''
 			)}
 		/>
@@ -111,7 +110,12 @@
 				class="cursor-default fill-zinc-800 stroke-zinc-200 text-[100px] dark:fill-zinc-200 dark:stroke-zinc-800 md:text-[50px]"
 				dominant-baseline="middle"
 				font-size="50"
-				text-anchor="middle">{(cumulativeDistances[hoveredIndex] / 1000).toFixed(2)}km</text
+				text-anchor="middle"
+				>{(
+					cumulativeDistances[
+						Math.floor((hoveredIndex * elevationSamplingPeriod) / pathSamplingPeriod)
+					] / 1000
+				).toFixed(2)}km</text
 			>
 		{/if}
 	</svg>

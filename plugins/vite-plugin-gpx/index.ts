@@ -5,16 +5,7 @@ import type { ViteGpxPluginOptions, ViteGpxPluginOutput } from './types'
 import geojson from '@mapbox/togeojson'
 import type { Feature, FeatureCollection, GeoJSON, Geometry, Position } from 'geojson'
 import { DOMParser } from 'xmldom'
-import {
-	differenceInHours,
-	differenceInMilliseconds,
-	differenceInMinutes,
-	intervalToDuration,
-	parseISO
-} from 'date-fns'
-import { LTTB } from 'downsample'
-import type { TupleDataPoint } from 'downsample'
-import { dataToEsm } from '@rollup/pluginutils'
+import { differenceInHours, intervalToDuration, parseISO } from 'date-fns'
 
 const defaultOptions: ViteGpxPluginOptions = {
 	samplingRate: 1
@@ -52,8 +43,11 @@ export function gpxPlugin(options: Partial<ViteGpxPluginOptions> = {}): Plugin {
 			}
 
 			return await new Promise((res) => {
+				// Call processing code
+				const pluginOutput = gpxDataToOutput(fileContents.toString(), src)
+
 				res({
-					code: `export default ${JSON.stringify(gpxDataToOutput(fileContents.toString(), src))}`
+					code: `export default ${JSON.stringify(pluginOutput)}`
 				})
 			})
 		},
@@ -84,6 +78,12 @@ export function gpxPlugin(options: Partial<ViteGpxPluginOptions> = {}): Plugin {
 	}
 }
 
+/**
+ * Process GPX file into output object
+ * @param gpxData String contents of a GPX file
+ * @param path URL to the file
+ * @returns Output containing data about the parsed GPX file, for use by plugin consumers
+ */
 const gpxDataToOutput = (gpxData: string, path: string): ViteGpxPluginOutput => {
 	const gpxXmlDocument = new DOMParser().parseFromString(gpxData)
 	const gj: GeoJSON = geojson.gpx(gpxXmlDocument)
@@ -106,21 +106,58 @@ const gpxDataToOutput = (gpxData: string, path: string): ViteGpxPluginOutput => 
 		throw new TypeError('Feature geometry is not LineString')
 	}
 
-	const downSampledCoordinates = downSampleGeometry(feature.geometry.coordinates, 15)
-	const downSampledGeometry: Geometry = { ...feature.geometry, coordinates: downSampledCoordinates }
+	const coordinatesDataCount = feature.geometry.coordinates.length
+
+	// Compute path data
+
+	const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7) // Downsample more aggressively as path size increases
+	const pathSamplingPeriod = Math.floor(coordinatesDataCount / targetPathDataCount)
+	const downSampledCoordinates = downSampleArray(feature.geometry.coordinates, pathSamplingPeriod)
+	const downSampledGeometry: Geometry = {
+		...feature.geometry,
+		coordinates: downSampledCoordinates.map((c) => [c[0], c[1]]) // Strip out elevation data
+	}
+	const cumulativeDistancesMetres = computeCumulutiveDistanceMetres(downSampledCoordinates)
+	const distanceMetres = cumulativeDistancesMetres[cumulativeDistancesMetres.length - 1]
+
+	// Compute elevation data
+
+	const targetElevationDataCount = 900 // Aim for width of elevation graph in pixels
+	const elevationSamplingPeriod =
+		coordinatesDataCount < targetElevationDataCount
+			? 1 // Use all the datapoints if there are fewer
+			: Math.floor(coordinatesDataCount / targetElevationDataCount) // Downsample
+
+	const downSampledGeometryForElevation = downSampleArray(
+		feature.geometry.coordinates,
+		elevationSamplingPeriod
+	)
+	const downSampledElevations = downSampledGeometryForElevation.map((g) => g[2])
+	const cumulativeDistancesForElevation = computeCumulutiveDistanceMetres(
+		downSampledGeometryForElevation
+	)
 
 	return {
-		duration: computeDuration(feature),
-		startTime: computeStartTime(feature),
-		geoJson: buildGeoJSONFromGeometry(downSampledGeometry),
-		distanceMetres: computeDistanceMetres(feature.geometry.coordinates),
-		cumulativeElevationGainMetres:
-			feature.geometry.coordinates[0].length === 3
-				? computeCumulativeElevationGainMetres(feature.geometry.coordinates)
-				: null,
-		cumulativeDistancesMetres: computeCumulutiveDistanceMetres(downSampledCoordinates),
-		breakIndices: computeBreakIndices(feature),
-		gpxFilePath: path
+		elevationData: {
+			downSampledElevations,
+			elevationGainMetres:
+				feature.geometry.coordinates[0].length === 3
+					? computeCumulativeElevationGainMetres(feature.geometry.coordinates)
+					: null,
+			samplingPeriod: elevationSamplingPeriod
+		},
+		metadata: {
+			gpxFilePath: path,
+			breakIndices: computeBreakIndices(feature),
+			duration: computeDuration(feature),
+			startTime: computeStartTime(feature),
+			distanceMetres
+		},
+		pathData: {
+			geoJson: buildGeoJSONFromGeometry(downSampledGeometry),
+			cumulativeDistancesMetres,
+			samplingPeriod: pathSamplingPeriod
+		}
 	}
 }
 
@@ -135,21 +172,36 @@ const buildGeoJSONFromGeometry = (geometry: Geometry): FeatureCollection => ({
 	]
 })
 
-const downSampleGeometry = (coordinates: Position[], factor: number): Position[] => {
-	if (factor < 1 || factor % 1 != 0) {
-		throw new TypeError('Factor must be an integer greater than or equal to 1')
+/**
+ * Downsample an array by skipping over values
+ * @param input Array of values at high sample rate
+ * @param period Proportion of values to keep. e.g. 1 will take every value, 3 will take every third
+ * @returns Array of values at low sample rate
+ */
+const downSampleArray = <T>(input: T[], period: number): T[] => {
+	if (period < 1 || period % 1 != 0) {
+		throw new TypeError('Period must be an integer greater than or equal to 1')
 	}
 
-	const coordinatesIn: Position[] = coordinates
-	const coordinatesOut: Position[] = []
-
-	for (let i = 0; i < coordinates.length; i += factor) {
-		coordinatesOut.push(coordinatesIn[i])
+	if (period === 1) {
+		// Return a copy of input
+		return [...input]
 	}
 
-	return coordinatesOut
+	const output: T[] = []
+
+	for (let i = 0; i < input.length; i += period) {
+		output.push(input[i])
+	}
+
+	return output
 }
 
+/**
+ * Calculate the duration from the `coordTime`s stored in a feature's property
+ * @param input Feature to use for calculating duration
+ * @returns Duration between first and last `coordTime` in the feature
+ */
 const computeDuration = (input: Feature): Duration | null => {
 	const times = input.properties?.coordTimes
 	if (times == null || !Array.isArray(times)) {
@@ -162,6 +214,11 @@ const computeDuration = (input: Feature): Duration | null => {
 	return intervalToDuration({ start, end })
 }
 
+/**
+ * Calculate the start time from a feature
+ * @param input Feature to use for calculating start time
+ * @returns Date object representing the feature's `time` property, or the first `coordTime` if there is no such property
+ */
 const computeStartTime = (input: Feature): Date | null => {
 	const startTime = input.properties?.time
 
@@ -178,19 +235,29 @@ const computeStartTime = (input: Feature): Date | null => {
 	return null
 }
 
+/**
+ * Compute the locations of breaks exceeding four hours within a feature
+ * @param input Feature with coordTimes data used to evaluate breaks
+ * @returns Array of indexes where each index corresponds to a coordinate after which there were no coordinates recorded for at least four hours
+ */
 const computeBreakIndices = (input: Feature): number[] => {
+	// Self-contained sampling rate to accelerate calcs
+	// Can ususally set this high unless there are lots of stops
+	const samplingRate = 30
+
 	const times = input.properties?.coordTimes
 
 	if (!Array.isArray(times)) {
 		return []
 	}
 
-	const parsedTimes = times.filter((_, i) => i % 15 === 0).map((t) => parseISO(t))
+	// Get the date objects for a subsampled set of timestamps
+	const parsedTimes = times.filter((_, i) => i % samplingRate === 0).map((t) => parseISO(t))
 
 	const indices = []
 	for (let i = 1; i < parsedTimes.length; i++) {
 		if (differenceInHours(parsedTimes[i], parsedTimes[i - 1]) > 4) {
-			indices.push(i)
+			indices.push((i - 1) * samplingRate)
 		}
 	}
 	return indices
@@ -218,6 +285,11 @@ const computeCumulativeElevationGainMetres = (input: Position[]): number => {
 	return vertGain
 }
 
+/**
+ * Compute cumulative distances along a path
+ * @param input List of coordinate arrays representing a path
+ * @returns Array of distances. Each distance is the distance along the path from the start of the path to that point.
+ */
 const computeCumulutiveDistanceMetres = (input: Position[]): number[] => {
 	let distanceMetres = 0
 	const distancesMetres = [0]
@@ -233,6 +305,11 @@ const computeCumulutiveDistanceMetres = (input: Position[]): number[] => {
 	return distancesMetres
 }
 
+/**
+ * Compute distance along a path
+ * @param input Array of coordinate positions representing a path
+ * @returns Total distance of path in metres
+ */
 const computeDistanceMetres = (input: Position[]): number => {
 	let distanceMetres = 0
 	const sampling = 3
@@ -252,6 +329,12 @@ const RADIUS_OF_EARTH_IN_M = 6371e3
 const toRadian = (angle: number) => (Math.PI / 180) * angle
 const distance = (a: number, b: number) => (Math.PI / 180) * (a - b)
 
+/**
+ * Use Haversine algorithm to compute distance between two coordinates
+ * @param param0 Array of two numbers representing latitude and longitude of coordinate 1
+ * @param param1 Array of two numbers representing latitude and longitude of coordinate 2
+ * @returns Distance in metres between coordinate 1 and coordinate 2
+ */
 const haversineDistanceMetres = (
 	[lat1, lon1]: [number, number],
 	[lat2, lon2]: [number, number]

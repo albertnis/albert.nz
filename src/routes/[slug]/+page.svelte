@@ -3,36 +3,16 @@
 	import HeaderSmall from '$lib/components/HeaderSmall.svelte'
 	import type { Post } from '../../types/post'
 	import { parseISO, format } from 'date-fns'
-	import { onMount } from 'svelte'
-	import type { ComponentType, SvelteComponentTyped } from 'svelte'
 	import '$lib/styles/prism.min.css'
-	import type { ViteGpxPluginOutput } from '../../../plugins/vite-plugin-gpx/types'
-	import MapLoading from '$lib/components/MapLoading.svelte'
+	import MapGroup from '$lib/components/MapGroup.svelte'
 
 	export let data: Post
-	let mapGroupComponent: ComponentType<SvelteComponentTyped> | undefined
-	let geo: ViteGpxPluginOutput[] = []
-
-	onMount(async () => {
-		geo = await data.getGeo()
-
-		if (geo.length > 0) {
-			mapGroupComponent = (await import('$lib/components/MapGroup.svelte')).default
-		}
-	})
 </script>
 
 <svelte:head>
 	<meta property="og:type" content="article" />
 	<meta property="article:published_time" content={data.meta.date} />
 	<meta property="article:author" content="Albert Nisbet" />
-	<noscript>
-		<style>
-			.maploading {
-				display: none;
-			}
-		</style>
-	</noscript>
 </svelte:head>
 
 <HeaderSmall />
@@ -45,18 +25,14 @@
 		</div>
 	</div>
 
-	{#if mapGroupComponent == null && (data.meta.routes?.length ?? 0) > 0}
-		<div class="maploading col-start-[prose-start] col-end-[prose-end] mb-6">
-			<MapLoading />
-		</div>
-	{/if}
-	{#if mapGroupComponent != null}
-		{#each geo as g}
-			<svelte:component this={mapGroupComponent} geo={g} />
+	{#if (data.meta.routes?.length ?? 0) > 0}
+		{#each data.geo as g}
+			<MapGroup geo={g} />
 		{/each}
 	{/if}
+	<hr class="hidden" />
 	<div
-		class="prose-custom prose prose-zinc prose-quoteless relative max-w-none overflow-x-hidden prose-figcaption:mb-5 prose-img:max-w-full dark:prose-invert"
+		class="prose-custom prose prose-zinc prose-quoteless relative max-w-none overflow-x-hidden dark:prose-invert prose-figcaption:mb-5 prose-img:max-w-full"
 	>
 		<svelte:component this={data.content} />
 	</div>

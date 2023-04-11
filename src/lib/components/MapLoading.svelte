@@ -2,5 +2,8 @@
 	import LoadingIcon from './LoadingIcon.svelte'
 </script>
 
-<span class="flex items-center italic"><LoadingIcon /><span class="ml-3">Map is loading</span></span
+<div
+	class="flex h-[800px] max-h-[70vh] cursor-default items-center justify-center bg-zinc-300 italic dark:bg-zinc-900"
 >
+	<span><LoadingIcon /><span class="ml-3">Map is loading</span></span>
+</div>

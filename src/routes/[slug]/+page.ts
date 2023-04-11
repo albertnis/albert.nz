@@ -18,7 +18,7 @@ export const load = async ({ params }: { params: { slug: string } }): Promise<Pa
 	return {
 		meta,
 		content,
-		getGeo,
+		geo: await getGeo(),
 		title: `${meta.title} | Albert Nisbet`,
 		description: meta.description
 	}
