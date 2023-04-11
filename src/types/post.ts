@@ -23,7 +23,7 @@ export interface PostWithContent {
 
 export interface Post {
 	meta: PostMetadata
-	getGeo: () => Promise<ViteGpxPluginOutput[]>
+	geo: ViteGpxPluginOutput[]
 	content: any
 }
 

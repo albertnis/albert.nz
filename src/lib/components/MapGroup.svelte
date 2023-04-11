@@ -1,12 +1,29 @@
 <script lang="ts">
 	import type { ViteGpxPluginOutput } from '../../../plugins/vite-plugin-gpx/types'
-	import Map from '$lib/components/Map.svelte'
+	import type { ComponentType, SvelteComponentTyped } from 'svelte'
+	import { onMount } from 'svelte'
 	import ElevationGraph from '$lib/components/ElevationGraph.svelte'
 	import DownloadIcon from './DownloadIcon.svelte'
+	import MapLoading from './MapLoading.svelte'
 
 	export let geo: ViteGpxPluginOutput
 	let hoveredIndex: number | undefined = undefined
+	let mapComponent: ComponentType<SvelteComponentTyped> | undefined
+
+	onMount(async () => {
+		mapComponent = (await import('$lib/components/Map.svelte')).default
+	})
 </script>
+
+<svelte:head>
+	<noscript>
+		<style>
+			.maploading {
+				display: none;
+			}
+		</style>
+	</noscript>
+</svelte:head>
 
 <div class="col-start-[image-start] col-end-[image-end] mb-6">
 	<ElevationGraph
@@ -44,10 +61,19 @@
 			href={geo.metadata.gpxFilePath}><DownloadIcon /></a
 		>
 	</div>
-	<Map
-		hoveredIndex={hoveredIndex &&
-			Math.floor(hoveredIndex * (geo.elevationData.samplingPeriod / geo.pathData.samplingPeriod))}
-		breakIndices={geo.metadata.breakIndices}
-		pathData={geo.pathData}
-	/>
 </div>
+{#if mapComponent == null}
+	<div class="maploading col-start-[prose-start] col-end-[prose-end] mb-6">
+		<MapLoading />
+	</div>
+{:else}
+	<div class="col-start-[image-start] col-end-[image-end] mb-6">
+		<svelte:component
+			this={mapComponent}
+			hoveredIndex={hoveredIndex &&
+				Math.floor(hoveredIndex * (geo.elevationData.samplingPeriod / geo.pathData.samplingPeriod))}
+			breakIndices={geo.metadata.breakIndices}
+			pathData={geo.pathData}
+		/>
+	</div>
+{/if}
