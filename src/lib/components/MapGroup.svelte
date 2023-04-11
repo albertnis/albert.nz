@@ -12,7 +12,9 @@
 	<ElevationGraph
 		bind:hoveredIndex
 		cumulativeDistances={geo.pathData.cumulativeDistancesMetres}
-		geoJson={geo.pathData.geoJson}
+		pathSamplingPeriod={geo.pathData.samplingPeriod}
+		elevationSamplingPeriod={geo.elevationData.samplingPeriod}
+		elevations={geo.elevationData.downSampledElevations}
 	/>
 	<div class="mb-5 flex justify-end align-bottom text-lg lg:text-2xl">
 		<div class="md:mx-3">
@@ -42,5 +44,10 @@
 			href={geo.metadata.gpxFilePath}><DownloadIcon /></a
 		>
 	</div>
-	<Map {hoveredIndex} breakIndices={geo.metadata.breakIndices} geoJson={geo.pathData.geoJson} />
+	<Map
+		hoveredIndex={hoveredIndex &&
+			Math.floor(hoveredIndex * (geo.elevationData.samplingPeriod / geo.pathData.samplingPeriod))}
+		breakIndices={geo.metadata.breakIndices}
+		pathData={geo.pathData}
+	/>
 </div>

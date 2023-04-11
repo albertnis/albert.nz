@@ -14,6 +14,7 @@ export interface ViteGpxPluginOutput {
 export interface GeoElevationData {
 	elevationGainMetres: number | null
 	samplingPeriod: number
+	downSampledElevations: number[]
 }
 
 export interface GeoPathData {
@@ -23,8 +24,8 @@ export interface GeoPathData {
 }
 
 export interface GeoMetadata {
-	gpxFilePath: string
 	breakIndices: number[]
+	gpxFilePath: string
 	duration: Duration | null
 	startTime: Date | null
 	distanceMetres: number

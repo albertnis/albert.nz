@@ -4,15 +4,19 @@
 	import mapboxgl, { Map } from 'mapbox-gl'
 	import { type Marker as MarkerType, Marker } from 'mapbox-gl'
 	import 'mapbox-gl/dist/mapbox-gl.css'
+	import type { GeoPathData } from '../../../plugins/vite-plugin-gpx/types'
 
-	export let geoJson: GeoJSON
+	export let pathData: GeoPathData
 	export let breakIndices: number[]
 	export let hoveredIndex: number | undefined
 
+	let downSampledBreakIndices = breakIndices.map((i) => Math.floor(i / pathData.samplingPeriod))
+
+	let geoJson = pathData.geoJson
 	let coords =
 		geoJson.type === 'FeatureCollection' &&
 		geoJson.features[0].geometry.type === 'LineString' &&
-		geoJson.features[0].geometry.coordinates[0].length === 3
+		geoJson.features[0].geometry.coordinates[0].length >= 2
 			? geoJson.features[0].geometry.coordinates
 			: []
 
@@ -65,7 +69,7 @@
 				}
 			})
 
-			breakIndices?.forEach((b) => {
+			downSampledBreakIndices?.forEach((b) => {
 				const breakCoords = coords[b]
 				new Marker({ color: '#FB1' }).setLngLat([breakCoords[0], breakCoords[1]]).addTo(map)
 			})
