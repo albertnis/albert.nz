@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Footer from '$lib/components/Footer.svelte'
 	import HeaderSmall from '$lib/components/HeaderSmall.svelte'
-	import type { Post } from '../../types/post'
+	import type { Post } from '../../../types/post'
 	import { parseISO, format } from 'date-fns'
 	import '$lib/styles/prism.min.css'
 	import MapGroup from '$lib/components/MapGroup.svelte'

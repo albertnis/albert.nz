@@ -15,6 +15,12 @@ export interface PostPreview {
 	path: string
 }
 
+export interface PostMapPreview {
+	meta: PostMetadata
+	geo: ViteGpxPluginOutput[]
+	path: string
+}
+
 export interface PostWithContent {
 	meta: PostMetadata
 	path: string
