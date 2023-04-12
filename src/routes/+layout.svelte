@@ -17,7 +17,6 @@
 	class="min-h-full bg-zinc-200 font-inter text-lg text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200"
 >
 	<div class="grid grid-cols-layout-sm lg:grid-cols-layout-lg">
-		<FloatingHeader />
 		<slot />
 	</div>
 </div>

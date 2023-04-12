@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { format, parseISO } from 'date-fns'
-	import type { PostPreview } from '../types/post'
+	import type { PostPreview } from '../../types/post'
 	import Header from '$lib/components/Header.svelte'
 	import Footer from '$lib/components/Footer.svelte'
 	import Tag from '$lib/components/Tag.svelte'
