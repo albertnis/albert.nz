@@ -61,6 +61,7 @@
 			'pk.eyJ1IjoiYWxiZXJ0bmlzIiwiYSI6ImNrcXUwNHlhcTJnODAydm84anEzanIwZHQifQ.B9-IeJHvH9nnfQT9QT4ouw'
 		map = new mapboxgl.Map({
 			container: mapDiv,
+			cooperativeGestures: true,
 			style: mapStyle,
 			center: [172.82, -40.74],
 			zoom: 5
