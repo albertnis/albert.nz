@@ -26,10 +26,10 @@
 	>
 
 	<div
-		class="pointer-events-auto ml-2 flex items-center rounded-md border border-zinc-400 bg-zinc-200 p-2 shadow-md dark:border-zinc-600 dark:bg-zinc-800"
+		class="pointer-events-auto ml-2 rounded-md border border-zinc-400 bg-zinc-100 p-2 align-middle leading-none shadow-md dark:border-zinc-600 dark:bg-zinc-800"
 	>
 		<a
-			class="text-sm text-zinc-800 opacity-50 hover:opacity-100 dark:text-zinc-200"
+			class="border-b border-b-zinc-600 text-sm font-bold text-zinc-800 hover:border-b-2 hover:border-b-sky-600 dark:border-b-zinc-400 dark:text-zinc-200 dark:hover:border-b-sky-400"
 			href="/#posts"
 			aria-label="Home page">Back to list</a
 		>
@@ -38,10 +38,10 @@
 
 {#if selectedPost != null}
 	<div
-		class="pointer-events-none fixed bottom-0 left-0 z-10 w-[600px] max-w-full px-3 pb-10 sm:px-10"
+		class="pointer-events-none fixed bottom-0 left-0 z-10 w-full px-3 pb-10 sm:w-auto sm:max-w-[650px] sm:px-10"
 	>
 		<div
-			class="pointer-events-auto rounded-md border border-zinc-400 bg-zinc-200 p-3 shadow-md dark:border-zinc-600 dark:bg-zinc-800"
+			class="pointer-events-auto rounded-md border border-zinc-400 bg-zinc-100 p-3 shadow-md dark:border-zinc-600 dark:bg-zinc-800"
 		>
 			<div class="flex items-center justify-between text-sm">
 				<h2 class="mr-1 cursor-default font-bold text-sky-600 dark:text-sky-400">Selected route</h2>
@@ -52,7 +52,7 @@
 					<CloseIcon />
 				</button>
 			</div>
-			<a class="group inline-block" href={selectedPost.path}>
+			<a class="group inline-block w-full" href={selectedPost.path}>
 				<h3
 					class="inline border-b border-b-zinc-600 font-bold group-hover:border-b-2 group-hover:border-b-sky-600 dark:border-b-zinc-400 dark:group-hover:border-b-sky-400"
 				>

@@ -1,29 +1,10 @@
 <script lang="ts">
-	import type { GeoJSON } from 'geojson'
 	import { onMount } from 'svelte'
-	import mapboxgl, { Map, Marker } from 'mapbox-gl'
-	// import { type Marker as MarkerType, Marker } from 'mapbox-gl'
+	import mapboxgl, { Map } from 'mapbox-gl'
 	import 'mapbox-gl/dist/mapbox-gl.css'
-	import type { GeoPathData } from '../../../plugins/vite-plugin-gpx/types'
 	import type { PostMapPreview } from '../../types/post'
 
 	export let postMapPreviews: PostMapPreview[]
-
-	// export let pathData: GeoPathData
-	// export let breakIndices: number[]
-	// export let hoveredIndex: number | undefined
-
-	// let downSampledBreakIndices = breakIndices.map((i) => Math.floor(i / pathData.samplingPeriod))
-
-	// let geoJson = pathData.geoJson
-	// let coords =
-	// 	geoJson.type === 'FeatureCollection' &&
-	// 	geoJson.features[0].geometry.type === 'LineString' &&
-	// 	geoJson.features[0].geometry.coordinates[0].length >= 2
-	// 		? geoJson.features[0].geometry.coordinates
-	// 		: []
-
-	// let coords: number = []
 
 	let mapDiv: HTMLElement | undefined
 	let map: Map
@@ -126,7 +107,7 @@
 							new mapboxgl.LngLatBounds(coordns[0], coordns[0])
 						)
 						map.fitBounds(bounds, {
-							padding: { top: 40, right: 40, bottom: 120, left: 40 }
+							padding: { top: 40, right: 40, bottom: 200, left: 40 }
 						})
 						selectedGpxPath = g.metadata.gpxFilePath
 						selectedPostPath = p.path

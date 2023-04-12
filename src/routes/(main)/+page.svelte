@@ -29,20 +29,12 @@
 		<span class="text-zinc-600 dark:text-zinc-400">and</span>
 		<Tag tag="adventures" bind:enabled={showAdventuresTag} />
 	</h2>
-	<!-- <div>
-		<span class="text-zinc-600 dark:text-zinc-400">Show them as a </span>list{#if showAdventuresTag}
-			<span class="text-zinc-600 dark:text-zinc-400">{' or as a '}</span><a
-				class="inline border-b border-b-zinc-600 font-bold hover:border-b-2 hover:border-b-sky-600 dark:border-b-zinc-400 dark:hover:border-b-sky-400"
-				href="/adventures"
-				aria-label="Home page">map</a
-			>{/if}
-	</div> -->
 
 	{#if showAdventuresTag}
 		<div
 			class="my-8 rounded-md border border-teal-800 bg-teal-600 p-2 text-zinc-50 dark:border-teal-400 sm:w-[300px]"
 		>
-			<a class="group inline-block" href="/adventures">
+			<a class="group inline-block w-full" href="/adventures">
 				<div class="flex items-center font-bold">
 					<MapIcon />
 					<div>
