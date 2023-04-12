@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-cloudflare'
+import adapter from '@sveltejs/adapter-static'
 import { vitePreprocess } from '@sveltejs/kit/vite'
 import { mdsvex } from 'mdsvex'
 import relativeImages from 'mdsvex-relative-images'
@@ -21,7 +21,11 @@ const config = {
 	extensions: ['.svelte', '.md', '.svx'],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter({
+			pages: 'build',
+			assets: 'build',
+			strict: false
+		})
 	}
 }
 
