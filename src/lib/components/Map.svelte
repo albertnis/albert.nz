@@ -27,17 +27,6 @@
 	const darkMapStyle = 'mapbox://styles/albertnis/ckqu1h7gs6e7x17q093ii0ltr'
 	const lightMapStyle = 'mapbox://styles/albertnis/ckqu3o4rn6np917qz18x1whbz'
 
-	const mapStyle = window.matchMedia('(prefers-color-scheme: dark)').matches
-		? darkMapStyle
-		: lightMapStyle
-
-	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-		const newMapStyle = e.matches ? darkMapStyle : lightMapStyle
-		if (map?.loaded()) {
-			map.setStyle(newMapStyle)
-		}
-	})
-
 	$: {
 		// Combining the following two if statements with `&&` breaks reactivity in prod...
 		if (hoveredMarker != null) {
@@ -56,6 +45,17 @@
 		if (mapDiv == null) {
 			throw new TypeError('Map div is undefined')
 		}
+
+		const mapStyle = window.matchMedia('(prefers-color-scheme: dark)').matches
+			? darkMapStyle
+			: lightMapStyle
+
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+			const newMapStyle = e.matches ? darkMapStyle : lightMapStyle
+			if (map?.loaded()) {
+				map.setStyle(newMapStyle)
+			}
+		})
 
 		mapboxgl.accessToken =
 			'pk.eyJ1IjoiYWxiZXJ0bmlzIiwiYSI6ImNrcXUwNHlhcTJnODAydm84anEzanIwZHQifQ.B9-IeJHvH9nnfQT9QT4ouw'
@@ -77,7 +77,7 @@
 			hoveredMarker = new Marker({ color: '#FFF' })
 
 			const startCoords = coords[0]
-			new Marker({ color: '#5F5' }).setLngLat([startCoords[0], startCoords[1]]).addTo(map)
+			new Marker({ color: '#22c55e' }).setLngLat([startCoords[0], startCoords[1]]).addTo(map)
 
 			if (
 				geoJson.type === 'FeatureCollection' &&
@@ -104,7 +104,7 @@
 					'line-cap': 'round'
 				},
 				paint: {
-					'line-color': '#0CF',
+					'line-color': '#0ea5e9',
 					'line-width': 5
 				}
 			})

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import FloatingHeader from '$lib/components/FloatingHeader.svelte'
-	import type { PageData } from './$types'
 	import { page } from '$app/stores'
 </script>
 
@@ -16,9 +15,7 @@
 <div
 	class="min-h-full bg-zinc-200 font-inter text-lg text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200"
 >
-	<div class="grid grid-cols-layout-sm lg:grid-cols-layout-lg">
-		<slot />
-	</div>
+	<slot />
 </div>
 
 <style global>
