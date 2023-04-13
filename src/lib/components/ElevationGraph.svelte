@@ -31,13 +31,16 @@
 		svgY = pt.y
 
 		if (svgX > 5 && svgX < xBasis - 15) {
+			// Get distance corresponding to hovered position
 			const hoveredDistance = (totalDistance * svgX) / xBasis
+
+			// Convert the distance to the corresponding index in the cumulativeDistances data
 			let i
-			for (i = 0; i < cumulativeDistances.length - 2; i += 2) {
-				if (
-					cumulativeDistances[Math.floor(i * (elevationSamplingPeriod / pathSamplingPeriod))] >
-					hoveredDistance
-				) {
+			for (i = 0; i < elevations.length - 2; i += 2) {
+				const iCumulativeDistances = Math.floor(i * (elevationSamplingPeriod / pathSamplingPeriod))
+				const distanceAtIndex = cumulativeDistances[iCumulativeDistances]
+
+				if (distanceAtIndex > hoveredDistance) {
 					break
 				}
 			}
