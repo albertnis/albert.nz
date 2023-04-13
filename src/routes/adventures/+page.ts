@@ -5,6 +5,8 @@ export const load = async ({ fetch }: { fetch: typeof window.fetch }) => {
 	const posts = (await response.json()) as PostMapPreview[]
 
 	return {
-		posts
+		posts,
+		title: 'Adventures Map | Albert Nisbet',
+		description: 'Interactive map showing a variety of recommended tramps and hikes in New Zealand'
 	}
 }
