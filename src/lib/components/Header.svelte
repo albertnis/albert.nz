@@ -4,13 +4,13 @@
 
 <header class="col-start-[wide-start] col-end-[wide-end]">
 	<h1
-		class="mt-10 mb-20 flex cursor-default align-middle text-3xl font-extrabold sm:mt-20 sm:text-4xl"
+		class="mb-10 mt-5 flex cursor-default align-middle text-3xl font-extrabold sm:mb-20 sm:mt-20 sm:text-4xl"
 	>
-		<span class="contents text-zinc-600 dark:text-zinc-400"><Logo /></span><span class="ml-5"
-			>Albert Nisbet</span
+		<span class="contents text-zinc-600 dark:text-zinc-400"><Logo /></span><span
+			class="ml-3 sm:ml-5">Albert Nisbet</span
 		>
 	</h1>
-	<div class="my-20 text-lg font-medium">
+	<div class="my-10 text-lg font-medium sm:my-20">
 		<p>
 			<b>Kia ora!</b>
 		</p>
