@@ -31,6 +31,7 @@
 		"mapbox-gl": "^2.13.0",
 		"mdsvex": "^0.10.6",
 		"mdsvex-relative-images": "^1.0.3",
+		"node-html-parser": "^6.1.5",
 		"postcss": "^8.4.21",
 		"prettier": "^2.8.7",
 		"prettier-plugin-svelte": "^2.10.0",

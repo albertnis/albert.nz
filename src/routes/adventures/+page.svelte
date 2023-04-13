@@ -37,11 +37,9 @@
 </div>
 
 {#if selectedPost != null}
-	<div
-		class="pointer-events-none fixed bottom-0 left-0 z-10 w-full px-3 pb-10 sm:w-auto sm:max-w-[650px] sm:px-10"
-	>
+	<div class="pointer-events-none fixed bottom-0 left-0 z-10 flex w-full px-3 pb-10 sm:px-10">
 		<div
-			class="pointer-events-auto rounded-md border border-zinc-400 bg-zinc-100 p-3 shadow-md dark:border-zinc-600 dark:bg-zinc-800"
+			class="pointer-events-auto relative w-full rounded-md border border-zinc-400 bg-zinc-100 p-3 shadow-md dark:border-zinc-600 dark:bg-zinc-800 sm:max-w-[500px]"
 		>
 			<div class="flex items-center justify-between text-sm">
 				<h2 class="mr-1 cursor-default font-bold text-sky-600 dark:text-sky-400">Selected route</h2>
@@ -65,8 +63,29 @@
 					<p class="text-base text-zinc-700 dark:text-zinc-300">{selectedPost.meta.description}</p>
 				</div>
 			</a>
+			<div
+				class="post-img-carousel pointer-events-none absolute left-full top-0 z-10 hidden h-full w-[100vw] md:flex"
+			>
+				{#each selectedPost.imagesHtml as imageHtml}
+					{@html imageHtml}
+				{/each}
+			</div>
 		</div>
 	</div>
 {/if}
 
 <MapFullScreen bind:selectedPostPath bind:selectedGpxPath postMapPreviews={data.posts} />
+
+<style>
+	:global(.post-img-carousel img) {
+		border-radius: 0.375rem; /* rounded-md */
+		margin-left: 1.25rem;
+		height: 100%;
+		pointer-events: auto;
+		--tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+		--tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+			0 2px 4px -2px var(--tw-shadow-color);
+		box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
+			var(--tw-shadow);
+	}
+</style>

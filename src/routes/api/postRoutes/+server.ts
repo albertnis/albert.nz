@@ -1,6 +1,7 @@
 import { fetchMarkdownPosts } from '$lib/utils'
 import { json } from '@sveltejs/kit'
 import type { PostPreview as PostMapPreview, PostWithContent } from '../../../types/post'
+import { parse } from 'node-html-parser'
 
 export const GET = async () => {
 	const allPosts = await fetchMarkdownPosts()
@@ -20,7 +21,12 @@ const postWithContentToPostMapPreview = async (p: PostWithContent): Promise<Post
 		})
 	)
 
+	const imagesHtml = parse(p.contentHtml)
+		.getElementsByTagName('img')
+		.map((img) => img.toString())
+
 	return {
+		imagesHtml,
 		meta: p.meta,
 		path: p.path,
 		geo

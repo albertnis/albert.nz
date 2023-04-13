@@ -19,6 +19,7 @@ export interface PostMapPreview {
 	meta: PostMetadata
 	geo: ViteGpxPluginOutput[]
 	path: string
+	imagesHtml: string[]
 }
 
 export interface PostWithContent {
