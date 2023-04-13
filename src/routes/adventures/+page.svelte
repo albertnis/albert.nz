@@ -37,7 +37,9 @@
 </div>
 
 {#if selectedPost != null}
-	<div class="pointer-events-none fixed bottom-0 left-0 z-10 flex w-full px-3 pb-10 sm:px-10">
+	<div
+		class="pointer-events-none fixed bottom-0 left-0 z-10 flex w-full bg-gradient-to-t from-white/60 px-3 pb-10 dark:from-black/60 sm:px-10"
+	>
 		<div
 			class="pointer-events-auto relative w-full rounded-md border border-zinc-400 bg-zinc-100 p-3 shadow-md dark:border-zinc-600 dark:bg-zinc-800 sm:max-w-[500px]"
 		>
