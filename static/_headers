@@ -1,0 +1,4 @@
+/rss.xml
+	Cache-Control: max-age=0,s-max-age=600
+	Content-Type: application/xml
+  Access-Control-Allow-Origin: *
