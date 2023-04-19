@@ -3,6 +3,8 @@ import {} from '@sveltejs/kit'
 import { format, parseISO } from 'date-fns'
 import type { PostWithContent } from '../../types/post'
 
+export const prerender = true
+
 export const GET = async () => {
 	const posts = await fetchMarkdownPosts()
 
