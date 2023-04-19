@@ -27,7 +27,7 @@ const config = {
 			strict: false
 		}),
 		prerender: {
-			entries: ['/', '/rss.xml']
+			entries: ['/', '/rss.xml', '/404']
 		}
 	}
 }
