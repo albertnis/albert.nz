@@ -25,7 +25,10 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			strict: false
-		})
+		}),
+		prerender: {
+			entries: ['/', '/rss.xml', '/404']
+		}
 	}
 }
 
