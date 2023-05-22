@@ -1,7 +1,7 @@
 ---
 title: Edwards, Otehake, and Hawdon Valleys
 date: 2022-11-11T17:14:00+1300
-description: These three valleys in Arthur's Pass are connected by Tarn Col and straddle the border between Cantebury and the West Coast
+description: These three valleys in Arthur's Pass are connected by Tarn Col and straddle the border between Canterbury and the West Coast
 accent: hsl(230, 70%, 50%)
 routes:
   - ./Edwards_Otehake_Hawdon.gpx
