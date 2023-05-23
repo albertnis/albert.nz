@@ -75,6 +75,10 @@
 		margin-bottom: 1.75em;
 	}
 
+	:global(.prose-custom > pre > code) {
+		tab-size: 2;
+	}
+
 	:global(.prose-custom p > img) {
 		margin-top: 0.5em;
 		margin-bottom: 0.5em;
