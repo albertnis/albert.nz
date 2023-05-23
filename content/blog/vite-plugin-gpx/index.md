@@ -1,5 +1,5 @@
 ---
-title: Importing GPX files as rich maps with Vite plugins and SvelteKit
+title: Building a Vite GPX plugin to enable rich maps with one import
 date: 2023-05-23T08:39:00+1200
 description: I developed a custom Vite plugin to import GPX files for interactive maps and more
 accent: rgb(90, 85, 255)
@@ -23,11 +23,11 @@ routes:
 
 ![Screenshot showing the top of the rendered page](./screenshot.png)
 
-Let's jump in and see how this is achieved.
+Let's jump in and see how this is achieved, or [check out the code in GitHub](https://github.com/albertnis/albert.nz/tree/f0cf77fe327c37dff6bcdc2bf21364586650a815/src/plugins/vite-plugin-gpx).
 
 # Desired features
 
-The first step for tackling this problem was to identify the features I wanted from this functionality. Here are some features I wanted to replicate from Strava:
+The first step for tackling this problem was to identify the features I wanted from this functionality. Here are some features I want to replicate from Strava:
 
 - View the route on an interactive map
 - View an elevation profile
@@ -36,7 +36,7 @@ The first step for tackling this problem was to identify the features I wanted f
   - Total distance
   - Gross elevation gain
 
-And here are some features I desired beyond Strava's functionality:
+And here are some features I desire beyond Strava's functionality:
 
 - Ability for anybody to download original GPX file
 - View overnight stops along the route (most of my blogged adventures are multi-day hikes and the stops usually correspond to notable huts or campsites)
@@ -157,7 +157,7 @@ Now the plugin is fully set up and type-safe. By adding to our `pluginOutput`, w
 
 ## Enabling downloading of the original file
 
-The first and most trivial feature for the plugin is to enable the download of the original GPX file. Frustratingly, this feature is witheld by Strava; I personally love the idea of letting people download GPX files as it can help with navigation for their own travels.
+The first and most trivial feature for the plugin is to enable the download of the original GPX file. Frustratingly, this feature is withheld by Strava; I personally love the idea of letting people download GPX files as it can help with navigation for their own travels.
 
 The main aim here is to instruct Vite to either render or serve the file then obtain the hosted path for the file. I was inspired by Jonas Kruckenberg's work on the [`imagetools`](https://github.com/JonasKruckenberg/imagetools) library and implemented a simplified version of imagetools' [Vite plugin definition](https://github.com/JonasKruckenberg/imagetools/blob/82a810b78c3d5b7b44a1dfa0518c397c76f23522/packages/vite/src/index.ts). I'll place the code below and then walk through it.
 
@@ -238,7 +238,7 @@ export function gpxPlugin(): Plugin {
 
 There's a lot going on here. But at its core you should still able to see the `return` statement within the `load` function. Here's what is happening:
 
-1. When the Vite is started and "sees" the plugin, `configResolved` is called. The `cfg` argument contains a bunch of configuration and context about Vite. In this case, we use it to get base path information and store it for later use.
+1. When Vite is started and "sees" the plugin, `configResolved` is called. The `cfg` argument contains a bunch of configuration and context about Vite. In this case, we use it to get base path information and store it for later use.
 1. Whenever we import a file, the `load` function is called, just like before. It has a bit more functionality now, though. First, it reads the file using Node's `readFile`. It then needs to ensure this GPX data is hosted somewhere before returning the path at which it is hosted. This is achieved quite differently depending on whether Vite is running with a dev server or as a build command:
    - In build mode, the file contents are registered with Vite using the `this.emitFile` function. The output path looks like `__VITE_ASSET_{uniqueid}__`. Behind the scenes, Vite will replace this magic path with the path at which it has stored the emitted file. (I can't find much documentation on this process--reach out if you know more).
    - In dev server mode, a path is generated for each loaded gpx file with the form `/@gpx/{filename}`. The plugin also registers each loaded gpx file in the `gpxPaths` map. To ensure the files actually exist in this location, the `configureServer` function is used to register a sever middleware which intercepts requests to `/@gpx/*` paths. If the request is for a loaded GPX file, the file contents are read and returned.
@@ -274,11 +274,13 @@ The rest of the code in this section will be within the scope of this `gpxDataTo
 
 ## Understanding GPX
 
-A GPX file is an XML file with a schema. The most useful thing to do with it is to parse it into an GeoJSON format. This makes it easier to work with in JavaScript. Besides, most mapping libraries will accept GeoJSON as input. The `xmldom` and `@mapbox/togeojson` libraries work well here.
+A GPX file is an XML file with a schema. The most useful thing to do with it in this plugin is to parse it into an GeoJSON format. This makes it easier to work with in JavaScript. Besides, most mapping libraries will accept GeoJSON as input. The [`xmldom`](https://www.npmjs.com/package/xmldom) and [`@mapbox/togeojson`](https://www.npmjs.com/package/@mapbox/togeojson) libraries work well here.
 
 ```ts
 import geojson from '@mapbox/togeojson'
 import { DOMParser } from 'xmldom'
+
+// ...
 
 const gpxXmlDocument = new DOMParser().parseFromString(gpxData)
 const gj = geojson.gpx(gpxXmlDocument)
@@ -336,11 +338,11 @@ return {
 }
 ```
 
-Before doing that, consider file size! Everything that we return here will have to travel across the wire at some point, and GPX files can be huge--often tens of megabytes for long trips. That includes position, heart rate and timestamp data taken every second or two. Most of this data will end up in our GeoJSON file as metadata. Compressed server responses will help to some extent, but we have a prime candidate for optimisation here. Let's jump into how I tackled it.
+Before doing that, consider file size! Everything that we return here will have to travel across the wire at some point, and GPX files can be huge--often tens of megabytes for long trips. That includes position, heart rate and timestamp data taken every second or two. Without intervention, most of this data will end up in our GeoJSON file as metadata. Compressed server responses will help to some extent, but we have a prime candidate for optimisation here. Let's see how this can be achieved for path and elevation data.
 
 ## Path data
 
-First, I calculated the target number of datapoints for the route. I raised the input count to the power of 0.7 (a number I settled on after much experimentation). This means that longer trips are compressed more aggressively. A short route with 1,000 points will be downsampled to about 125 points, while a 30,000-point adventure will result in around 1,361 points in the output.
+First, the plugin calculates the target number of datapoints for the route. The input count is raised to the power of 0.7 (a number I settled on after much experimentation) to obtain the desired number of coordinates in the output data. This means that longer trips are compressed more aggressively. A short route with 1,000 points will be downsampled to about 125 points, while a 30,000-point adventure will result in around 1,361 points in the output.
 
 ```ts
 const coordinatesDataCount = feature.geometry.coordinates.length
@@ -388,7 +390,7 @@ const downSampledGeometry: Geometry = {
 
 ## Elevation data
 
-I used a similar method for elevation data, but with a different approach to obtaining a count target. I wanted the target to be at least 900, as this is approximately the number of pixels my elevation graph takes up at its maximum width.
+I used a similar method for elevation data, but with a different approach to obtaining a count target. Here I want the target to be at least 900, as this is approximately the number of pixels my elevation graph takes up at its maximum width.
 
 ```ts
 const targetElevationDataCount = 900
@@ -407,6 +409,8 @@ The final step is to extract just a list of elevations from the GeoJSON:
 ```ts
 const downSampledElevations = downSampledGeometryForElevation.map((g) => g[2])
 ```
+
+We could downsample elevation at the same rate as position data but generally speaking there are fewer elevation points required, so this saves space overall.
 
 ## Bringing it together
 
@@ -505,6 +509,8 @@ There are two key times to capture from an activity: duration and start time.
 
 Start time is easy. Most of the time the GeoJSON feature will contain a "time" which can be used. Just in case, I fall back to the first coordinate time.
 
+Times in GeoJSON are represented in ISO format, so liberal use of `parseISO` from `date-fns` is appropriate here.
+
 ```ts
 import { parseISO } from 'date-fns'
 
@@ -530,7 +536,7 @@ const computeStartTime = (input: Feature): Date | null => {
 }
 ```
 
-Elapsed duration can be calculated by taking the difference between the first and last coordinate time. The `date-fns` library has some very helpful methods and types to assist with this.
+Elapsed duration can be calculated by taking the difference between the first and last coordinate time. The `date-fns` library has some very helpful methods and types to assist with this. The timestamps appear in the `properties` key of the GeoJSON. I'm unsure whether this is standard or arbitrary behaviour in `@mapbox/togeojson`.
 
 ```ts
 import { intervalToDuration, parseISO } from 'date-fns'
@@ -684,11 +690,11 @@ Because my blog is using MDsveX to render Markdown, I can even use that exact co
   <figcaption>Example of GPX-derived data being loaded via map component</figcaption>
 </figure>
 
-For my blog, I check the blog post for the `routes` key, then import every GPX file reference and insert a component similar to the above.
+For my blog, I check the blog post for the `routes` key, then import every GPX file reference and insert a component similar to the above. [See how it works on GitHub](<https://github.com/albertnis/albert.nz/blob/f0cf77fe327c37dff6bcdc2bf21364586650a815/src/routes/(main)/%5Bslug%5D/%2Bpage.ts>).
 
 ## Graceful degradation in the absence of JavaScript
 
-An early version of my site's GPX integration used lazy loading for the entire map group, consisting of elevation graph, metadata disaply and map. But it's always worth considering how much can be rendered without JavaScript present in the browser at all. In my case, I could easily pre-render or server-side-render the SVG elevation graph, as well as the metadata block.
+An early version of my site's GPX integration used lazy loading for the entire map group, consisting of elevation graph, metadata display and map. But it's always worth considering how much can be rendered without JavaScript present in the browser at all. In my case, I could easily pre-render or server-side-render the SVG elevation graph, as well as the metadata block.
 
 ```svelte
 <script lang="ts">
@@ -739,4 +745,4 @@ In building a Vite GPX plugin, I set out to move a small slice of Strava to my p
 
 The next step might be to make some improvements to the performance of the loader, given that it can take 2-3 minutes to build the entire site. There are also plenty of options for enabling configuration which I will explore if I ever publish `vite-plugin-gpx` as a standalone library.
 
-I hope you have enjoyed this walkthrough of building a Vite GPX plugin!
+I hope you have enjoyed this walkthrough of building a Vite GPX plugin! You can find [the full source code for the plugin on GitHub](https://github.com/albertnis/albert.nz/tree/f0cf77fe327c37dff6bcdc2bf21364586650a815/src/plugins/vite-plugin-gpx).
