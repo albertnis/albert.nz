@@ -1,6 +1,6 @@
 import { sveltekit } from '@sveltejs/kit/vite'
 import type { UserConfig } from 'vite'
-import { gpxPlugin } from './plugins/vite-plugin-gpx'
+import { gpxPlugin } from './src/plugins/vite-plugin-gpx'
 import { imagetools } from 'vite-imagetools'
 
 const config: UserConfig = {

@@ -1,4 +1,4 @@
-import type { ViteGpxPluginOutput } from '../../plugins/vite-plugin-gpx/types'
+import type { ViteGpxPluginOutput } from '../plugins/vite-plugin-gpx/types'
 
 export interface PostMetadata {
 	title: string

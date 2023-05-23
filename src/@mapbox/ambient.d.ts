@@ -7,5 +7,5 @@ declare module '@mapbox/togeojson' {
 
 	const mapboxToGeoJson: MapboxToGeoJson
 
-	export = mapboxToGeoJson
+	export default mapboxToGeoJson
 }
