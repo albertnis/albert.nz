@@ -1,6 +1,6 @@
 ---
 title: Building a Vite GPX plugin to enable rich maps with one import
-date: 2023-05-23T08:39:00+1200
+date: 2023-05-23T019:17:00+1200
 description: I developed a custom Vite plugin to import GPX files for interactive maps and more
 accent: rgb(90, 85, 255)
 tags: [technology]
