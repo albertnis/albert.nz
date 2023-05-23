@@ -11,9 +11,6 @@
 	let selectedPostPath: string | null = null
 
 	$: selectedPost = selectedPostPath && data.posts.find((p) => p.path === selectedPostPath)
-	$: {
-		console.log({ selectedPost })
-	}
 </script>
 
 <div

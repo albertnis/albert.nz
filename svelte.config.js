@@ -3,7 +3,7 @@ import { vitePreprocess } from '@sveltejs/kit/vite'
 import { mdsvex } from 'mdsvex'
 import relativeImages from 'mdsvex-relative-images'
 import rehypeFigure from 'rehype-figure'
-import { rehypeLazyImg } from './plugins/rehype-plugin-lazy-img/index.js'
+import { rehypeLazyImg } from './src/plugins/rehype-plugin-lazy-img/index.js'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

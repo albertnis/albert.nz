@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ViteGpxPluginOutput } from '../../../plugins/vite-plugin-gpx/types'
+	import type { ViteGpxPluginOutput } from '../../plugins/vite-plugin-gpx/types'
 	import type { ComponentType, SvelteComponentTyped } from 'svelte'
 	import { onMount } from 'svelte'
 	import ElevationGraph from '$lib/components/ElevationGraph.svelte'

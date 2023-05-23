@@ -1,24 +1,19 @@
 import { basename } from 'node:path'
 import { readFile } from 'node:fs/promises'
 import type { Plugin, ResolvedConfig } from 'vite'
-import type { ViteGpxPluginOptions, ViteGpxPluginOutput } from './types'
+import type { ViteGpxPluginOutput } from './types'
 import geojson from '@mapbox/togeojson'
-import type { Feature, FeatureCollection, GeoJSON, Geometry, Position } from 'geojson'
+import type { Feature, FeatureCollection, Geometry, Position } from 'geojson'
 import { DOMParser } from 'xmldom'
 import { differenceInHours, intervalToDuration, parseISO } from 'date-fns'
 
-const defaultOptions: ViteGpxPluginOptions = {
-	samplingRate: 1
-}
-
-export function gpxPlugin(options: Partial<ViteGpxPluginOptions> = {}): Plugin {
+export function gpxPlugin(): Plugin {
 	let basePath: string
-	let viteConfig: ResolvedConfig
 	const gpxPaths = new Map()
 	return {
 		name: 'vite-plugin-gpx',
 		configResolved(cfg) {
-			viteConfig = cfg
+			const viteConfig = cfg
 			basePath = (viteConfig.base?.replace(/\/$/, '') || '') + '/@gpx/'
 		},
 		async load(id) {
@@ -42,14 +37,12 @@ export function gpxPlugin(options: Partial<ViteGpxPluginOptions> = {}): Plugin {
 				src = basePath + basename(srcURL.pathname)
 			}
 
-			return await new Promise((res) => {
-				// Call processing code
-				const pluginOutput = gpxDataToOutput(fileContents.toString(), src)
+			// Call processing code
+			const pluginOutput = gpxDataToOutput(fileContents.toString(), src)
 
-				res({
-					code: `export default ${JSON.stringify(pluginOutput)}`
-				})
-			})
+			return {
+				code: `export default ${JSON.stringify(pluginOutput)}`
+			}
 		},
 		configureServer(server) {
 			server.middlewares.use(async (req, res, next) => {
@@ -86,7 +79,7 @@ export function gpxPlugin(options: Partial<ViteGpxPluginOptions> = {}): Plugin {
  */
 const gpxDataToOutput = (gpxData: string, path: string): ViteGpxPluginOutput => {
 	const gpxXmlDocument = new DOMParser().parseFromString(gpxData)
-	const gj: GeoJSON = geojson.gpx(gpxXmlDocument)
+	const gj = geojson.gpx(gpxXmlDocument)
 
 	if (gj.type !== 'FeatureCollection') {
 		throw new TypeError('Coverted GeoJSON is not of type FeatureCollection')

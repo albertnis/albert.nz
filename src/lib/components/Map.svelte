@@ -4,7 +4,7 @@
 	import mapboxgl, { Map } from 'mapbox-gl'
 	import { type Marker as MarkerType, Marker } from 'mapbox-gl'
 	import 'mapbox-gl/dist/mapbox-gl.css'
-	import type { GeoPathData } from '../../../plugins/vite-plugin-gpx/types'
+	import type { GeoPathData } from '../../plugins/vite-plugin-gpx/types'
 
 	export let pathData: GeoPathData
 	export let breakIndices: number[]
