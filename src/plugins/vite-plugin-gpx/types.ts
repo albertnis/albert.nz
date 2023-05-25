@@ -18,7 +18,7 @@ export interface GeoElevationData {
 }
 
 export interface GeoPathData {
-	geoJson: FeatureCollection
+	geoJson: GeoJSON
 	samplingPeriod: number
 	cumulativeDistancesMetres: number[]
 }

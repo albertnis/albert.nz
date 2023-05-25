@@ -1,9 +1,9 @@
 import { basename } from 'node:path'
 import { readFile } from 'node:fs/promises'
-import type { Plugin, ResolvedConfig } from 'vite'
+import type { Plugin } from 'vite'
 import type { ViteGpxPluginOutput } from './types'
 import geojson from '@mapbox/togeojson'
-import type { Feature, FeatureCollection, Geometry, Position } from 'geojson'
+import type { Feature, Geometry, Position } from 'geojson'
 import { DOMParser } from 'xmldom'
 import { differenceInHours, intervalToDuration, parseISO } from 'date-fns'
 
@@ -147,23 +147,12 @@ const gpxDataToOutput = (gpxData: string, path: string): ViteGpxPluginOutput => 
 			distanceMetres
 		},
 		pathData: {
-			geoJson: buildGeoJSONFromGeometry(downSampledGeometry),
+			geoJson: downSampledGeometry,
 			cumulativeDistancesMetres,
 			samplingPeriod: pathSamplingPeriod
 		}
 	}
 }
-
-const buildGeoJSONFromGeometry = (geometry: Geometry): FeatureCollection => ({
-	type: 'FeatureCollection',
-	features: [
-		{
-			type: 'Feature',
-			properties: {},
-			geometry
-		}
-	]
-})
 
 /**
  * Downsample an array by skipping over values

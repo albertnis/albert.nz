@@ -14,11 +14,9 @@
 
 	let geoJson = pathData.geoJson
 	let coords =
-		geoJson.type === 'FeatureCollection' &&
-		geoJson.features[0].geometry.type === 'LineString' &&
-		geoJson.features[0].geometry.coordinates[0].length >= 2
-			? geoJson.features[0].geometry.coordinates
-			: []
+		geoJson.type === 'LineString' && geoJson.coordinates[0].length >= 2 ? geoJson.coordinates : []
+
+	console.log({ breakIndices, downSampledBreakIndices, length: coords.length })
 
 	let mapDiv: HTMLElement | undefined
 	let map: Map
@@ -80,11 +78,8 @@
 			const startCoords = coords[0]
 			new Marker({ color: '#22c55e' }).setLngLat([startCoords[0], startCoords[1]]).addTo(map)
 
-			if (
-				geoJson.type === 'FeatureCollection' &&
-				geoJson.features[0].geometry.type === 'LineString'
-			) {
-				const coords = geoJson.features[0].geometry.coordinates as [number, number][]
+			if (geoJson.type === 'LineString') {
+				const coords = geoJson.coordinates as [number, number][]
 				const bounds = coords.reduce(
 					(bounds, coord) => bounds.extend(coord),
 					new mapboxgl.LngLatBounds(coords[0], coords[0])
