@@ -2,7 +2,7 @@ import { basename } from 'node:path'
 import { readFile } from 'node:fs/promises'
 
 import geojson from '@mapbox/togeojson'
-import type { Geometry, Position } from 'geojson'
+import type { Geometry, LineString, Position } from 'geojson'
 import type { Plugin } from 'vite'
 import { DOMParser } from 'xmldom'
 
@@ -12,7 +12,7 @@ import { computeDuration } from './computeDuration'
 import { computeStartTime } from './computeStartTime'
 import { downSampleArray } from './downSampleArray'
 import { haversineDistanceMetres } from './haversineDistanceMetres'
-import type { ViteGpxPluginOutput } from './types'
+import type { GeoElevationData, GeoPathData, ViteGpxPluginOutput } from './types'
 
 export function gpxPlugin(): Plugin {
 	let basePath: string
@@ -84,7 +84,7 @@ export function gpxPlugin(): Plugin {
  * @param path URL to the file
  * @returns Output containing data about the parsed GPX file, for use by plugin consumers
  */
-const gpxDataToOutput = (gpxData: string, path: string): ViteGpxPluginOutput => {
+export const gpxDataToOutput = (gpxData: string, path: string): ViteGpxPluginOutput => {
 	const gpxXmlDocument = new DOMParser().parseFromString(gpxData)
 	const gj = geojson.gpx(gpxXmlDocument)
 
@@ -106,56 +106,59 @@ const gpxDataToOutput = (gpxData: string, path: string): ViteGpxPluginOutput => 
 		throw new TypeError('Feature geometry is not LineString')
 	}
 
-	const coordinatesDataCount = feature.geometry.coordinates.length
-
-	// Compute path data
-
-	const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7) // Downsample more aggressively as path size increases
-	const pathSamplingPeriod = Math.floor(coordinatesDataCount / targetPathDataCount)
-	const downSampledCoordinates = downSampleArray(feature.geometry.coordinates, pathSamplingPeriod)
-	const downSampledGeometry: Geometry = {
-		...feature.geometry,
-		coordinates: downSampledCoordinates.map((c) => [c[0], c[1]]) // Strip out elevation data
-	}
-	const cumulativeDistancesMetres = computeCumulutiveDistanceMetres(downSampledCoordinates)
-	const distanceMetres = cumulativeDistancesMetres[cumulativeDistancesMetres.length - 1]
-
-	// Compute elevation data
-
-	const targetElevationDataCount = 900 // Aim for width of elevation graph in pixels
-	const elevationSamplingPeriod =
-		coordinatesDataCount < targetElevationDataCount
-			? 1 // Use all the datapoints if there are fewer
-			: Math.floor(coordinatesDataCount / targetElevationDataCount) // Downsample
-
-	const downSampledGeometryForElevation = downSampleArray(
-		feature.geometry.coordinates,
-		elevationSamplingPeriod
-	)
-	const downSampledElevations = downSampledGeometryForElevation.map((g) => g[2])
+	const pathData = computeAllPathData(feature.geometry)
+	const elevationData = computeAllElevationData(feature.geometry)
 
 	return {
-		elevationData: {
-			downSampledElevations,
-			elevationGainMetres:
-				feature.geometry.coordinates[0].length === 3
-					? computeCumulativeElevationGainMetres(1)(feature.geometry.coordinates.map((c) => c[2]))
-					: null,
-			samplingPeriod: elevationSamplingPeriod
-		},
+		elevationData,
+		pathData,
 		metadata: {
 			gpxFilePath: path,
 			breakIndices: computeBreakIndices(30)(feature),
 			duration: computeDuration(feature),
 			startTime: computeStartTime(feature),
-			distanceMetres
-		},
-		pathData: {
-			geoJson: downSampledGeometry,
-			cumulativeDistancesMetres,
-			samplingPeriod: pathSamplingPeriod
+			distanceMetres:
+				pathData.cumulativeDistancesMetres[pathData.cumulativeDistancesMetres.length - 1]
 		}
 	}
+}
+
+const computeAllPathData = (geometry: LineString): GeoPathData => {
+	const coordinatesDataCount = geometry.coordinates.length
+
+	const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7) // Downsample more aggressively as path size increases
+	const samplingPeriod = Math.floor(coordinatesDataCount / targetPathDataCount)
+	const downSampledCoordinates = downSampleArray(geometry.coordinates, samplingPeriod)
+	const downSampledGeometry: Geometry = {
+		...geometry,
+		coordinates: downSampledCoordinates.map((c) => [c[0], c[1]]) // Strip out elevation data
+	}
+	const cumulativeDistancesMetres = computeCumulutiveDistanceMetres(downSampledCoordinates)
+
+	return {
+		geoJson: downSampledGeometry,
+		samplingPeriod,
+		cumulativeDistancesMetres
+	}
+}
+
+const computeAllElevationData = (geometry: LineString): GeoElevationData => {
+	const coordinatesDataCount = geometry.coordinates.length
+
+	const targetElevationDataCount = 900 // Aim for width of elevation graph in pixels
+	const samplingPeriod =
+		coordinatesDataCount < targetElevationDataCount
+			? 1 // Use all the datapoints if there are fewer
+			: Math.floor(coordinatesDataCount / targetElevationDataCount) // Downsample
+
+	const downSampledGeometryForElevation = downSampleArray(geometry.coordinates, samplingPeriod)
+	const downSampledElevations = downSampledGeometryForElevation.map((g) => g[2])
+
+	const elevationGainMetres = computeCumulativeElevationGainMetres(3)(
+		geometry.coordinates.map((c) => c[2])
+	)
+
+	return { downSampledElevations, samplingPeriod, elevationGainMetres }
 }
 
 /**

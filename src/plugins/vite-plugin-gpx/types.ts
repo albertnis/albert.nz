@@ -12,7 +12,7 @@ export interface ViteGpxPluginOutput {
 }
 
 export interface GeoElevationData {
-	elevationGainMetres: number | null
+	elevationGainMetres: number
 	samplingPeriod: number
 	downSampledElevations: number[]
 }
