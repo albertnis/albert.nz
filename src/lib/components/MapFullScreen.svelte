@@ -60,10 +60,8 @@
 				p.geo.forEach((g) => {
 					let geoJson = g.pathData.geoJson
 					let coords =
-						geoJson.type === 'FeatureCollection' &&
-						geoJson.features[0].geometry.type === 'LineString' &&
-						geoJson.features[0].geometry.coordinates[0].length >= 2
-							? geoJson.features[0].geometry.coordinates
+						geoJson.type === 'LineString' && geoJson.coordinates[0].length >= 2
+							? geoJson.coordinates
 							: []
 
 					map.addSource(g.metadata.gpxFilePath + '_source_path', { type: 'geojson', data: geoJson })

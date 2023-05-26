@@ -12,13 +12,13 @@ export interface ViteGpxPluginOutput {
 }
 
 export interface GeoElevationData {
-	elevationGainMetres: number | null
+	elevationGainMetres: number
 	samplingPeriod: number
 	downSampledElevations: number[]
 }
 
 export interface GeoPathData {
-	geoJson: FeatureCollection
+	geoJson: GeoJSON
 	samplingPeriod: number
 	cumulativeDistancesMetres: number[]
 }
