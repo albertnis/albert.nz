@@ -33,6 +33,7 @@ export function gpxPlugin(): Plugin {
 
 			let src: string
 			if (!this.meta.watchMode) {
+				// Instruct Vite to emit the file during build
 				const handle = this.emitFile({
 					name: basename(srcURL.pathname),
 					source: fileContents,
@@ -41,17 +42,20 @@ export function gpxPlugin(): Plugin {
 
 				src = `__VITE_ASSET__${handle}__`
 			} else {
+				// Use path {basePath}/{id} which we'll serve from dev server using `configureServer` below
 				src = basePath + basename(srcURL.pathname)
 			}
 
 			// Call processing code
 			const pluginOutput = gpxDataToOutput(fileContents.toString(), src)
 
+			// Serialise output into JS syntax to allow importing
 			return {
 				code: `export default ${JSON.stringify(pluginOutput)}`
 			}
 		},
 		configureServer(server) {
+			// During development, serve loaded files from {basePath}/{id}
 			server.middlewares.use(async (req, res, next) => {
 				if (req.url?.startsWith(basePath)) {
 					const [, id] = req.url.split(basePath)
