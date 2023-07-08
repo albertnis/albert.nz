@@ -5,6 +5,7 @@
 	import { parseISO, format } from 'date-fns'
 	import '$lib/styles/prism.min.css'
 	import MapGroup from '$lib/components/MapGroup.svelte'
+	import AuthorInfo from '$lib/components/AuthorInfo.svelte'
 
 	export let data: Post
 </script>
@@ -37,6 +38,8 @@
 		<svelte:component this={data.content} />
 	</div>
 </article>
+
+<AuthorInfo />
 
 <Footer />
 
