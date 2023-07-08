@@ -65,6 +65,13 @@
 		margin-bottom: 1.75em;
 	}
 
+	:global(.prose-custom figcaption::before) {
+		display: inline-block;
+		content: '↑';
+		opacity: 0.5;
+		margin-right: 0.25rem;
+	}
+
 	:global(.prose-custom blockquote p) {
 		margin-top: 0;
 		margin-bottom: 0;
