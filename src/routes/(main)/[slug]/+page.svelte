@@ -98,6 +98,13 @@
 		margin-bottom: 1.75em;
 	}
 
+	@media only screen and (max-width: 1023px) {
+		:global(.prose-custom figure > img) {
+			grid-column-start: full-start;
+			grid-column-end: full-end;
+		}
+	}
+
 	:global(.prose-custom .prose-custom-w-full) {
 		grid-column-start: full-start;
 		grid-column-end: full-end;
