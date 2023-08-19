@@ -1,4 +1,4 @@
-import type { PostMapPreview } from '../types/post'
+import type { PostMapPreview } from '../../types/post'
 
 export const load = async ({ fetch }: { fetch: typeof window.fetch }) => {
 	const response = await fetch(`/api/postRoutes`)
