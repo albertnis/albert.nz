@@ -8,7 +8,7 @@
 			<span
 				class="contents text-zinc-600 group-hover:text-zinc-800 dark:text-zinc-400 dark:group-hover:text-zinc-200"
 				><Logo /></span
-			><span class="ml-3 md:ml-5">Albert Nisbet</span>
+			><span class="ml-1 md:ml-5">Albert Nisbet</span>
 		</h1></a
 	>
 </header>
