@@ -30,6 +30,11 @@
 		<Tag tag="adventures" bind:enabled={showAdventuresTag} />
 	</h2>
 
+	<p class="mt-4 mb-8">
+		I blog about things that are interesting to me: these days that's largely home automation,
+		electronics and tramping in New Zealand.
+	</p>
+
 	{#if showAdventuresTag}
 		<div
 			class="my-8 rounded-md border border-teal-800 bg-teal-600 p-2 text-zinc-50 dark:border-teal-400 sm:w-[300px]"
