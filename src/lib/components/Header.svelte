@@ -36,8 +36,8 @@
 		<div>
 			<span class="font-bold">Work with me</span>
 		</div>
-		<div class="flex flex-col-reverse sm:flex-row gap-1 sm:gap-2 mt-1">
-			<p class="text-sm">
+		<div class="flex flex-col sm:flex-row gap-1 sm:gap-4 mt-1">
+			<p class="">
 				I have over five years' experience developing and shipping full-stack software products. <span
 					class="font-bold"
 				>
@@ -54,7 +54,11 @@
 				</div>
 				<div class="flex gap-1">
 					<dt class="text-blue-200">Skills</dt>
-					<dd class="font-bold">Rails, TypeScript, React and more</dd>
+					<dd><span class="font-bold">Rails, TypeScript, React</span> and more</dd>
+				</div>
+				<div class="flex gap-1">
+					<dt class="text-blue-200">Experience</dt>
+					<dd class="font-bold">Xero, Hatch, Kilterset</dd>
 				</div>
 			</dl>
 		</div>
