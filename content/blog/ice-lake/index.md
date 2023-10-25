@@ -8,11 +8,11 @@ routes:
 tags: [adventures]
 ---
 
-Ice Lake is an epic alpine lake accessed up the Whataroa and Butler Rivers on the West Coast. It's fairly remote, wedged right up against the Main Divide, but still accessible on a two-night tramp. Ice Lake has been on my radar for several years so I was excited to be part of a group tackling the hike up the river!
+Ice Lake is an epic alpine lake accessed up the Whataroa and Butler Rivers on the West Coast. It's fairly remote, wedged right up against the Main Divide, but still accessible on a two-night tramp. Ice Lake had been on my radar for several years so I was excited to be part of a group tackling the hike up the river!
 
 ## Day one
 
-The track proved easy-going until the main swingbridge at the Perth River Track junction. Beyond that, the track turns to follow the Whataroa River valley. There are a couple of large undulations, then things become increasingly slow-going and technical as the hut approaches. Thankfully, overgrown vegetation had been cleared on some of the track sections near the hut. Still, it took us over nine hours to reach the hut--longer than DOC's eight-hour estimate.
+With our sights set on Butler Junction Hut, we set off from the carpark adjacent to the Whataroa River. The track proved easy-going until the main swingbridge at the Perth River Track junction. Beyond that, the track turns to follow the Whataroa River valley. There are a couple of large undulations, then things become increasingly slow-going and technical as the hut approaches. Thankfully, overgrown vegetation had been recently cleared on some of the track sections near the hut. Still, it took us over nine hours to reach the hut--longer than DOC's eight-hour estimate.
 
 ![Butler Range viewed from near the start of the trail. Ice Lake is just on the other side. So close!](./DSC01942.jpg?w=1200)
 
@@ -22,19 +22,19 @@ The track proved easy-going until the main swingbridge at the Perth River Track 
 
 ![We encountered a pair of kea on the high section of track between Scotties Beach and Barrowman Flat](./DSC01961.jpg?w=1200)
 
-With the hut intentions book only going back to about March 2023, it was hard to get a good idea of visitation rates. It looked like there had been about one visit per month since then, but that rate would likely increase in summer.
+Butler Junction Hut is perched above a bend in the Whataroa River and comes into sight with a decent amount of walking remaining. With the hut intentions book only going back to about March 2023, it was hard to get a good idea of visitation rates. It looked like there had been about one visit per month since the start of the book, but I imagine that the rate would likely increase in summer.
 
 ## Day two
 
-The mission was simple: get up to Ice Lake. In line with DOC times, the Butler River Track took us about four hours to the lake, with Top Butler Hut at the halfway mark. This hut is in a dramatic clearing, surrounded by imposing mountain peaks. There is a notable river crossing of the Butler River South Branch near Top Butler Hut. The area hadn't received any rain for about a week, and this crossing was easily manageable.
+The mission was simple: get to Ice Lake. In line with DOC times, the Butler River Track took us about four hours to the lake, with Top Butler Hut at the halfway mark. This hut is in a dramatic clearing, surrounded by imposing mountain peaks. There is a notable river crossing of the Butler River South Branch near Top Butler Hut. The area hadn't received any rain for about a week, so this crossing was easily manageable.
 
-Like the later parts of day one, the Butler River track was undulating and slow-going, with a fair amount of windfall. There were some fascinating rock faces and cave-like area along the way, as well as a spicy section of ongaonga overgrowth.
+Like the later parts of day one, the Butler River track was undulating and slow-going, with a fair amount of windfall. There were some fascinating rock faces and cave-like areas along the way, as well as a spicy section of ongaonga overgrowth.
 
-The track emerged from the bush for the last 30 minutes of the approach to the lake. After much teasing, we crested a ridge to see Ice Lake in all its glory.
+The track emerges from the bush for the last 30 minutes of the approach to the lake. Eventually, we crested a ridge to see Ice Lake in all its glory.
 
 ![Ice Lake shore](./DSC01978.jpg?w=1200)
 
-The colour of the water is striking, with a light cloudy colour imparted by the rock dust delivered by the glaciers at the head of the lake. We sat near the lake for over an hour, soaking in the view and making some drinks with the nearby ice (it's called Ice Lake so the ice must be worth a try, right?).
+The colour of the water is striking, with a light cloudy colour imparted by the rock dust delivered by the glaciers beyond the head of the lake. We sat near the lake for over an hour, soaking in the view and making some drinks with the nearby ice (it's called Ice Lake so the ice must be worth a try, right?).
 
 <figure>
   <img src="./DSC01988-Pano.jpg?w=2200" class="prose-custom-w-full" />
