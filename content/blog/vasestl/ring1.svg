@@ -1,0 +1,10 @@
+<svg viewBox="-5 -5 10 10" width="10" height="10">
+  <circle cx="5.000" cy="0.000" fill="red" r="1" />
+  <circle cx="3.536" cy="3.536" fill="red" r="1" />
+  <circle cx="0.000" cy="5.000" fill="red" r="1" />
+  <circle cx="-3.536" cy="3.536" fill="red" r="1" />
+  <circle cx="-5.000" cy="0.000" fill="red" r="1" />
+  <circle cx="-3.536" cy="-3.536" fill="red" r="1" />
+  <circle cx="-0.000" cy="-5.000" fill="red" r="1" />
+  <circle cx="3.536" cy="-3.536" fill="red" r="1" />
+</svg>
