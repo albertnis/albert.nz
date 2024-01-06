@@ -3,6 +3,9 @@ import { vitePreprocess } from '@sveltejs/kit/vite'
 import { mdsvex } from 'mdsvex'
 import relativeImages from 'mdsvex-relative-images'
 import rehypeFigure from 'rehype-figure'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
+import { remarkKatexBlocks, correctHastTree } from './src/plugins/remark-katex-blocks/index.js'
 import { rehypeLazyImg } from './src/plugins/rehype-plugin-lazy-img/index.js'
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -12,8 +15,8 @@ const config = {
 	preprocess: [
 		mdsvex({
 			extensions: ['.md', '.svx'],
-			remarkPlugins: [relativeImages],
-			rehypePlugins: [rehypeLazyImg, rehypeFigure]
+			remarkPlugins: [relativeImages, remarkMath, remarkKatexBlocks],
+			rehypePlugins: [correctHastTree, rehypeKatex, rehypeLazyImg, rehypeFigure]
 		}),
 		vitePreprocess()
 	],
