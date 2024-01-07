@@ -679,17 +679,6 @@ Displaying the file is now a matter of writing some code that takes this data an
 </figure>
 ```
 
-Because my blog is using MDsveX to render Markdown, I can even use that exact code inline within this very blog post. Here's the output:
-
-<script>
-  import MapGroup from '$lib/components/MapGroup.svelte'
-  import geoData from '../top-hope-hut/Top_Hope_Hope_Kiwi_.gpx'
-</script>
-<figure>
-  <MapGroup geo={geoData} />
-  <figcaption>Example of GPX-derived data being loaded via map component</figcaption>
-</figure>
-
 For my blog, I check the blog post for the `routes` key, then import every GPX file reference and insert a component similar to the above. [See how it works on GitHub](<https://github.com/albertnis/albert.nz/blob/f0cf77fe327c37dff6bcdc2bf21364586650a815/src/routes/(main)/%5Bslug%5D/%2Bpage.ts>).
 
 ## Graceful degradation in the absence of JavaScript

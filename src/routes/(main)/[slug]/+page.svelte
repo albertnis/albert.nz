@@ -118,4 +118,9 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
+
+	:global(.katex-display) {
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
 </style>
