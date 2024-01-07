@@ -120,7 +120,7 @@
 	}
 
 	:global(.katex-display) {
-		overflow-x: scroll;
+		overflow-x: auto;
 		overflow-y: hidden;
 	}
 </style>
