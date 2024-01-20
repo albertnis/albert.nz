@@ -86,7 +86,7 @@
 		tab-size: 2;
 	}
 
-	:global(.prose-custom p > img) {
+	:global(.prose-custom p > picture > img) {
 		margin-top: 0.5em;
 		margin-bottom: 0.5em;
 	}
@@ -100,13 +100,22 @@
 		grid-column-end: prose-end;
 	}
 
-	:global(.prose-custom figure > img) {
+	:global(.prose-custom > figure > picture *) {
+		grid-column-start: prose-start;
+		grid-column-end: prose-end;
+	}
+
+	:global(.prose-custom figure > picture) {
+		display: contents;
+	}
+
+	:global(.prose-custom figure > picture > img) {
 		margin-top: 0.5em;
 		margin-bottom: 1.75em;
 	}
 
 	@media only screen and (max-width: 1023px) {
-		:global(.prose-custom figure > img) {
+		:global(.prose-custom figure > picture > img) {
 			grid-column-start: full-start;
 			grid-column-end: full-end;
 		}
