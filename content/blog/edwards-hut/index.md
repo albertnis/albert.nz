@@ -10,29 +10,17 @@ tags: [adventures]
 
 This fairly straightforward track follows Edwards River to the hut. Start at Greyneys Shelter, use the railway underpass to access Bealey River then look for a crossing towards Edwards Hut Track. Allow plenty of time for a swim in the river if you're doing this one in warm weather.
 
-![][upriver]
+![The group heads up Edwards River][upriver]
 
-<figcaption>The group heads up Edwards River</figcaption>
+![One of many perfect swimming spots along the river][swimminghole]
 
-![][swimminghole]
+![A curious robin][robin]
 
-<figcaption>One of many perfect swimming spots along the river</figcaption>
+![Scenic bend in the river][bend]
 
-![][robin]
+![Polar Range at night][astro]
 
-<figcaption>A curious robin</figcaption>
-
-![][bend]
-
-<figcaption>Scenic bend in the river</figcaption>
-
-![][astro]
-
-<figcaption>Polar Range at night</figcaption>
-
-![][waterfall]
-
-<figcaption>20m waterfall viewed from the track</figcaption>
+![20m waterfall viewed from the track][waterfall]
 
 [upriver]: ./DSC08989.jpg
 [swimminghole]: ./DSC09009.jpg

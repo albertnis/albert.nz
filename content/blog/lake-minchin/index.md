@@ -18,15 +18,11 @@ A mere 200 metres in to the track, I tripped and almost fell into a bush of Mata
 
 The following 15 or so kilometres to Casey hut has a couple of surprisingly steep ups and downs: don't underestimate the change in altitude between 550m and almost 900m! On the downhill approaching Casey hut I felt my IT band starting to play up. With 12km of walking remaining, this was not a great sign.
 
-![](./PXL_20220113_220904969.jpg)
-
-<figcaption>Dense beech forest somewhere near Casey Saddle, including this large trunk with something resembling a tumour</figcaption>
+![Dense beech forest somewhere near Casey Saddle, including this large trunk with something resembling a tumour](./PXL_20220113_220904969.jpg)
 
 Before I knew it, I was back on the flat in the Poulter Valley, and the pain vanished. It's quick travel up the track all the way to Poulter Hut.
 
-![](./PXL_20220114_025632071.jpg)
-
-<figcaption>Beelining across the Poulter River to reach Poulter Hut. The hut becomes visible at quite a distance but I kept GPS handy just in case.</figcaption>
+![Beelining across the Poulter River to reach Poulter Hut. The hut becomes visible at quite a distance but I kept GPS handy just in case.](./PXL_20220114_025632071.jpg)
 
 Nearing the hut, I heard a vaguely familiar "kekekekekek" sound and looked up to see a kārearea (NZ falcon) chasing a kāhu (harrier hawk). The falcon wasn't flying much faster than the hawk and would take a while to catch up to it, performing a dive bomb then repeating the whole process. They carried on like this for a good few minutes; it was majestic to watch.
 
@@ -34,17 +30,11 @@ Poulter Hut looked very tidy. I stopped for a snack and filled out the intention
 
 It didn't take long to cover the ground to Lake Minchin. The track meets the Lake at its southern point and continues around to the north. This northern shore is where I set up camp on some nice spongy ground.
 
-![](./PXL_20220114_042300159.jpg)
+![Lake Minchin comes into sight. The view unfortunately includes a flock of Canada Geese, a common pest in otherwise pristine areas like this.](./PXL_20220114_042300159.jpg)
 
-<figcaption>Lake Minchin comes into sight. The view unfortunately includes a flock of Canada Geese, a common pest in otherwise pristine areas like this.</figcaption>
+![Reflections in the lake](./PXL_20220114_183113285.MP.jpg)
 
-![](./PXL_20220114_183113285.MP.jpg)
-
-<figcaption>Reflections in the lake</figcaption>
-
-![](./PXL_20220114_183230862.jpg)
-
-<figcaption>Camp, with Pt. 1546 looming in the distance. Not pictured: the friendly hoard of sandflies following me around.</figcaption>
+![Camp, with Pt. 1546 looming in the distance. Not pictured: the friendly hoard of sandflies following me around.](./PXL_20220114_183230862.jpg)
 
 I should pause here to make a couple of points that I wish I had known before camping here:
 
@@ -59,18 +49,12 @@ Slightly thirsty and plagued by the gradually-awakening sandflies, my plan in th
 
 I couldn't help but stop just a half hour later when I spotted a kea chilling on a trunk off the side of the track. It seemed very interested in me as I watched it. A second kea appeared behind me on the track and started hopping closer while screeching. Next thing I knew, both of them were dive-bombing me as I escaped towards the hut. I've never seen such odd behaviour from these birds!
 
-![](./PXL_20220114_193935533.jpg)
+![One of the two irritated kea that chased me down the track](./PXL_20220114_193935533.jpg)
 
-<figcaption>One of the two irritated kea that chased me down the track</figcaption>
-
-![](./PXL_20220114_200153631.MP.jpg)
-
-<figcaption>Poulter Hut catching the morning rays</figcaption>
+![Poulter Hut catching the morning rays](./PXL_20220114_200153631.MP.jpg)
 
 After filling up on porridge and some much-needed water, I was back out on the riverbed. My two kea friends (frenemies?) emerged from the forest and circled me for a surreal few minutes, screeching the whole time.
 
 A day of backtracking proceeded. I saw a human for the first time in 23 hours somewhere just beyond the Casey Hut turnoff. Eventually I reached Andrews Shelter, clutching a sore leg but thankful for the weekend adventure that had been.
 
-![](./PXL_20220115_022817123.MP.jpg)
-
-<figcaption>The steep (and leg-breaking) final descent to Andrews Shelter</figcaption>
+![The steep (and leg-breaking) final descent to Andrews Shelter](./PXL_20220115_022817123.MP.jpg)

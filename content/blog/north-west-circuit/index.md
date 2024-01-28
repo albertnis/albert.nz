@@ -34,22 +34,13 @@ We saw some bright orange and blue fungi, too.
 
 The vast and pristine beaches did a great job of making me feel very small. It's a humbling wilderness.
 
-<figure>
-  <img src="./DSC01492.jpg" class="prose-custom-w-full" />
-  <figcaption>Three hikers on Mason beach. The prominent rock becomes impassable at high tide; the high tide route does not look fun. This photo was taken about two hours after a 2.7m high tide. Green marram grass is present on the foredunes on the right.</figcaption>
-</figure>
+<img src="./DSC01492.jpg" alt="Three hikers on Mason beach. The prominent rock becomes impassable at high tide; the high tide route does not look fun. This photo was taken about two hours after a 2.7m high tide. Green marram grass is present on the foredunes on the right." class="prose-custom-w-full" />
 
 ![Solo hiker crossing Smoky Beach](./DSC01335.jpg)
 
-<figure>
-  <img src="./DSC01385-Pano.jpg" class="prose-custom-w-full" />
-  <figcaption>Looking west to East Ruggedy Beach and the Rugged Islands with the Ruggedy Mountains visible in the distance along with approaching rain</figcaption>
-</figure>
+<img src="./DSC01385-Pano.jpg" alt="Looking west to East Ruggedy Beach and the Rugged Islands with the Ruggedy Mountains visible in the distance along with approaching rain" class="prose-custom-w-full" />
 
-<figure>
-  <img src="./DSC01391-Pano.jpg" class="" />
-  <figcaption>West Ruggedy Beach with Codfish Island / Whenua Hou visible in the background</figcaption>
-</figure>
+![West Ruggedy Beach with Codfish Island / Whenua Hou visible in the background](./DSC01391-Pano.jpg)
 
 Possibly my favourite terrain feature was the incredibly tall sand dune adjacent to Big Hellfire Hut. I was not prepared for a hut at 200m elevation to have a beach on its doorstep.
 

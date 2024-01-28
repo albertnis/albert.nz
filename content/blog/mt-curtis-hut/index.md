@@ -44,19 +44,13 @@ Even before we could collapse on the hut deck, we were greeted by a weka scurryi
 
 Mt Curtis Hut is a modern-but-basic four-bunker with a spare fifth mattress. The hut book indicates about a dozen visits per year. There's a fairly well-stocked pantry here with a few pots and pans. It's double-glazed and we certainly had no need for the fire on this clear summer night. The hut sits just below the bushline and the view is largely obscured by trees. Just five minutes' walk up the hill (quite doable in sandals) is a small knoll which has unobstructed views to the West. Mt Curtis summit itself is also easily accessible but might be a more appropriate side trip for a two-night stay.
 
-<figure>
-  <img src="./DSC01090-HDR-Pano.jpg" class="prose-custom-w-full" />
-  <figcaption>Sunset over the Paparoa Range</figcaption>
-</figure>
+<img src="./DSC01090-HDR-Pano.jpg" alt="Sunset over the Paparoa Range" class="prose-custom-w-full" />
 
 ![Milky Way over Mt Wynn further down the Victoria Range](./DSC01098.jpg)
 
 ![The hut at night with light pollution visible from Westport](./DSC01099.jpg)
 
-<figure>
-  <img src="./DSC01096.jpg" class="prose-custom-w-full" />
-  <figcaption>Paparoa Range after dusk</figcaption>
-</figure>
+<img src="./DSC01096.jpg" alt="Paparoa Range after dusk" class="prose-custom-w-full" />
 
 ## The return
 

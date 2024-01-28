@@ -27,9 +27,7 @@ I'm using a 24V two-channel white COB LED strip. One channel is warm white, and 
 - The COB (chip on board) design of this particular strip is incredibly bright at over 700 lumens per metre.
 - With an insane 640 LEDs per metre, the strip basically has all the diffusion it needs built right in. This is less of a concern given I will be bouncing the light off the ceiling.
 
-![][strip]
-
-<figcaption>The LEDs on the strip are inside that yellow stripe along the middle. You can see the solder pads for cold white and warm white channels, plus the common 24V anode attached to the red wire. The strip came with a four-pin connector with three wires. I got so confused about how the wires connected to the pins that I desoldered the factory connector and used these much more sensible three-wire JST connectors I had floating around.</figcaption>
+![The LEDs on the strip are inside that yellow stripe along the middle. You can see the solder pads for cold white and warm white channels, plus the common 24V anode attached to the red wire. The strip came with a four-pin connector with three wires. I got so confused about how the wires connected to the pins that I desoldered the factory connector and used these much more sensible three-wire JST connectors I had floating around.][strip]
 
 You'll need a 24V power supply to use with these. I bought a cheap supply from BTF Lighting, the same seller as the LED strip. I would recommend a more reputable 24V supply, perhaps one of those more traditional "plastic brick" style ones.
 
@@ -41,9 +39,7 @@ A big downside of the ESP8266 is its lack of hardware PWM. This means a direct d
 
 To configure the board's hardware in this project, I set both power jumpers to the "5-27V" setting. This means that I can use the 24V power supply required for the strip as input and power will be passed straight through. At the output side, I set the jumpers to R (as opposed to GND) and G (as opposed to IO2). This is the configuration for driving those "direct" LED strips via the MOSFETs.
 
-![][board]
-
-<figcaption>The ElectroDragon ESP LED strip control board alongside my USB FTDI adapter</figcaption>
+![The ElectroDragon ESP LED strip control board alongside my USB FTDI adapter][board]
 
 The board comes with screw terminals for the power connections. I was happy to see that unlike previous revisions, the power input terminals are labelled on the silkscreen. Like on my other projects with the board, once I was happy with my configuration, I soldered the input wires, output wires and jumper settings in place.
 

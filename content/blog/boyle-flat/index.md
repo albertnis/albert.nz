@@ -12,21 +12,13 @@ Heavy flooding in mid Canterbury had closed Wharfedale Track (our plan A), so we
 
 A big benefit of this section of trail is that the three major river crossings are bridged. It's clear the waters were higher than usual.
 
-![][bridge]
+![First crossing of Boyle River][bridge]
 
-<figcaption>First crossing of Boyle River</figcaption>
+![Second crossing of Boyle River][river]
 
-![][river]
+![Many friendly Robins were encountered. So too were Pīwakawaka, which followed us along sizeable sections of the trail.][robin]
 
-<figcaption>Second crossing of Boyle River</figcaption>
-
-![][robin]
-
-<figcaption>Many friendly Robins were encountered. So too were Pīwakawaka, which followed us along sizeable sections of the trail.</figcaption>
-
-![][hut]
-
-<figcaption>Valley views while approaching Boyle Flat Hut. The hut can be seen in the distance on the other side of the river.</figcaption>
+![Valley views while approaching Boyle Flat Hut. The hut can be seen in the distance on the other side of the river.][hut]
 
 A highlight of the hut were the new memory foam mattresses--a clear upgrade from the old ones--which made for a great night's sleep.
 

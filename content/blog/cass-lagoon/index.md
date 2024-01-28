@@ -16,46 +16,31 @@ If running the track, the counterclockwise direction would probably make more se
 
 Most of the day is a gradual climb up Cass River. The scenery gets dramatic at Cass Saddle.
 
-![][cass-saddle]
+![Looking back down the track while approaching Cass Saddle][cass-saddle]
 
-<figcaption>Looking back down the track while approaching Cass Saddle</figcaption>
-
-![][moss-beech]
-
-<figcaption>Just over Cass Saddle, the beech was covered in this mossy stuff - quite atmospheric in combination with the low cloud</figcaption>
+![Just over Cass Saddle, the beech was covered in this mossy stuff - quite atmospheric in combination with the low cloud][moss-beech]
 
 Hamilton Hut is halfway along the track. It's nicely located on a bank set back from Hamilton Creek. We were the first group at the hut, arriving around 3pm. This way we were able to make the most of the sunshine hours and great weather by reading in the sun and throwing a frisbee around.
 
-![][plain]
+![The riverside plain in front of Hamilton Hut. The ground is more level close to the hut and made for an excellent spot to throw a frisbee.][plain]
 
-<figcaption>The riverside plain in front of Hamilton Hut. The ground is more level close to the hut and made for an excellent spot to throw a frisbee.</figcaption>
-
-![][hut-astro]
-
-<figcaption>The night allowed for some good astrophotography before the cloud rolled in. Visible is Hamilton Hut and the bank upon which it sits.</figcaption>
+![The night allowed for some good astrophotography before the cloud rolled in. Visible is Hamilton Hut and the bank upon which it sits.][hut-astro]
 
 # Day 2
 
 We set off up Harper River as the sun rose above the hills.
 
-![][hut-sunrise]
+![Hamilton Hut and its surroundings in the morning][hut-sunrise]
 
-<figcaption>Hamilton Hut and its surroundings in the morning</figcaption>
-
-![][robin]
-
-<figcaption>I only had my landscape lens with me for this trip but robins are so tame that it served adequately for bird photography. This particular individual was quite fascinated with the toilet marker.</figcaption>
+![I only had my landscape lens with me for this trip but robins are so tame that it served adequately for bird photography. This particular individual was quite fascinated with the toilet marker.][robin]
 
 The second day was a bit harder than the first and more interesting too. We made our way up the river sections with help from cairns. It's lovely scenery, with dense beech forest and river junctions all over the place.
-![][lunch]
 
-<figcaption>We found a comfortable spot for lunch, perched high on a riverbank overlooking a clearing. There was this moss that made for the most pleasant cushion. We watched some others pass us while we ate.</figcaption>
+![We found a comfortable spot for lunch, perched high on a riverbank overlooking a clearing. There was this moss that made for the most pleasant cushion. We watched some others pass us while we ate.][lunch]
 
 Beyond A-Frame Hut, the vegetation falls away to reveal what must be some of the best views in the area.
 
-![][lagoon-saddle]
-
-<figcaption>Magnificent views from Lagoon Saddle</figcaption>
+![Magnificent views from Lagoon Saddle][lagoon-saddle]
 
 [moss-beech]: ./DSC09087-Pano.jpg
 [plain]: ./DSC09093.jpg

@@ -12,17 +12,11 @@ Possibly the most popular walk in the area, Hooker Valley Track provided us with
 
 The weather was far from perfect but there's no denying it's a walk with beautiful surroundings.
 
-![][sefton]
+![Looking up to Mt Sefton. An ominous shelf of ice is present and so too is Sefton Bivouac, merely a few red pixels in this image (click for higher resolution).][sefton]
 
-<figcaption>Looking up to Mt Sefton. An ominous shelf of ice is present and so too is Sefton Bivouac, merely a few red pixels in this image (click for higher resolution).</figcaption>
+![The view from the end of the track. Aoraki was frustratingly obscured by cloud most of the time we were there; I'm told this is quite typical.][lake]
 
-![][lake]
-
-<figcaption>The view from the end of the track. Aoraki was frustratingly obscured by cloud most of the time we were there; I'm told this is quite typical.</figcaption>
-
-![][peak]
-
-<figcaption>The cloud was clearing as we exited along the trail and Aoraki became almost fully visible</figcaption>
+![The cloud was clearing as we exited along the trail and Aoraki became almost fully visible][peak]
 
 [sefton]: ./DSC07241.jpg
 [lake]: ./DSC07243.jpg

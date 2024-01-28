@@ -12,15 +12,12 @@ What a marvellous hut to visit as an overnighter from Christchurch! The day of o
 
 The track to the hut is easy-going and could be safely walked at night by flashlight. Note that the hut is popular and had scarce water in the tank when we visited. Pack in plenty of water, and either arrive early to claim a bunk or bring a tent as backup.
 
-![Sunset over the Kaikōura Ranges](./DSC01889.jpg?w=1200)
+![Sunset over the Kaikōura Ranges](./DSC01889.jpg)
 
-![Looking down towards Kōwhai River](./DSC01897.jpg?w=1200)
+![Looking down towards Kōwhai River](./DSC01897.jpg)
 
-![Complex cloud patterns illuminated by sunset](./DSC01922.jpg?w=1200)
+![Complex cloud patterns illuminated by sunset](./DSC01922.jpg)
 
-<figure>
-  <img src="./DSC01929-HDR.jpg?w=2200" class="prose-custom-w-full" />
-  <figcaption>Glorious sunrise over Kaikōura Peninsula, viewed from near the hut</figcaption>
-</figure>
+<img src="./DSC01929-HDR.jpg" alt="Glorious sunrise over Kaikōura Peninsula, viewed from near the hut" class="prose-custom-w-full" />
 
-![Sunrise on the range to the northwest, looking towards Mt Saunders](./DSC01932.jpg?w=1200)
+![Sunrise on the range to the northwest, looking towards Mt Saunders](./DSC01932.jpg)

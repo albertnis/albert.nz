@@ -12,29 +12,17 @@ Mention the Pencarrow lakes to most Wellingtonians and they'll have no idea what
 
 > The boardwalk/bridge across upper Lake Kohangapiripiri closed for maintenance shortly after I did this walk. Please double check that it has reopened before attempting.
 
-![][kohangatera]
+![The track climbs above Lake Kohangatera][kohangatera]
 
-<figcaption>The track climbs above Lake Kohangatera</figcaption>
+![Back to the coast, Baring Head is visible in the distance][baring]
 
-![][baring]
+![Reeds of Lake Kohangapiripiri][reeds]
 
-<figcaption>Back to the coast, Baring Head is visible in the distance</figcaption>
+![Looking down to the main Pencarrow 4WD track. The lower lighthouse is just around that corner, with the upper one visible on the hill.][track]
 
-![][reeds]
+![The upper Pencarrow lighthouse][lighthouse]
 
-<figcaption>Reeds of Lake Kohangapiripiri</figcaption>
-
-![][track]
-
-<figcaption>Looking down to the main Pencarrow 4WD track. The lower lighthouse is just around that corner, with the upper one visible on the hill.</figcaption>
-
-![][lighthouse]
-
-<figcaption>The upper Pencarrow lighthouse</figcaption>
-
-![][plane]
-
-<figcaption>While approaching Pencarrow Head, I stopped to watch the A350 land from a distance</figcaption>
+![While approaching Pencarrow Head, I stopped to watch the A350 land from a distance][plane]
 
 [kohangatera]: ./DSC07084.jpg
 [baring]: ./DSC07095.jpg
