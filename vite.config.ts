@@ -11,10 +11,11 @@ const config: UserConfig = {
 			defaultDirectives: new URLSearchParams({
 				format: 'webp',
 				withoutEnlargement: 'true',
-				// 480 - mobile
-				// 780 - standard prose width
-				// 2560 - fullscreen width
-				w: '480;780;2560',
+				// 480 - mobile and thumbnail
+				// 768 - standard prose width
+				// 1536 - standard width, 2x density
+				// 2560 - max width
+				w: '480;768;1536;2560',
 				as: 'picture'
 			})
 		})

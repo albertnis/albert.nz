@@ -114,7 +114,7 @@
 		margin-bottom: 1.75em;
 	}
 
-	@media only screen and (max-width: 1023px) {
+	@media only screen and (max-width: 767px) {
 		:global(.prose-custom figure > picture > img) {
 			grid-column-start: full-start;
 			grid-column-end: full-end;
