@@ -39,6 +39,10 @@ const config = {
 		}),
 		prerender: {
 			entries: ['/', '/rss.xml', '/404']
+		},
+		paths: {
+			assets: process.env.CF_PAGES_URL,
+			relative: process.env.CF_PAGES_URL == null
 		}
 	}
 }
