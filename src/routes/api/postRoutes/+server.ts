@@ -22,7 +22,15 @@ const postWithContentToPostMapPreview = async (p: PostWithContent): Promise<Post
 	)
 
 	const imagesHtml = parse(p.contentHtml)
-		.getElementsByTagName('img')
+		.getElementsByTagName('picture')
+		.map((pic) => {
+			const sources = pic.getElementsByTagName('source')
+			for (const source of sources) {
+				source.setAttribute('sizes', '480px')
+			}
+
+			return pic
+		})
 		.map((img) => img.toString())
 
 	return {
