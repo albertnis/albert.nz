@@ -1,7 +1,6 @@
 // Based on https://github.com/mattjennings/mdsvex-relative-images
 
 import { visit } from 'unist-util-visit'
-import { inspect } from 'util'
 
 const toCamel = (input) => input.replace(/[^0-9a-zA-Z]/g, '')
 
@@ -38,8 +37,6 @@ export const imagetoolsSrcset = () => {
 			return url
 		}
 
-		// console.log('BEFORE=========', inspect(tree, { showHidden: false, depth: null, colors: true }))
-
 		// transform src in html nodes
 		visit(tree, { tagName: 'img' }, (node) => {
 			const url = node.properties?.src
@@ -69,7 +66,5 @@ export const imagetoolsSrcset = () => {
 				]
 			})
 		}
-
-		// console.log('AFTER=========', inspect(tree, { showHidden: false, depth: null, colors: true }))
 	}
 }
