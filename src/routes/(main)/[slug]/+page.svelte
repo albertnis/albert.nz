@@ -120,6 +120,11 @@
 		margin-bottom: 1.75em;
 	}
 
+	:global(.prose-custom > table) {
+		display: block;
+		overflow-x: scroll;
+	}
+
 	@media only screen and (max-width: 767px) {
 		:global(.prose-custom picture > img),
 		:global(.prose-custom > iframe) {
