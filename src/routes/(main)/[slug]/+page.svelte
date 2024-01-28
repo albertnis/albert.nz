@@ -96,13 +96,16 @@
 		display: contents;
 	}
 
+	:global(.prose-custom picture) {
+		display: contents;
+	}
+
 	:global(.prose-custom > figure > *) {
 		grid-column-start: prose-start;
 		grid-column-end: prose-end;
 	}
 
-	:global(.prose-custom > figure > picture *),
-	:global(.prose-custom > iframe) {
+	:global(.prose-custom picture *) {
 		grid-column-start: prose-start;
 		grid-column-end: prose-end;
 	}
@@ -112,17 +115,13 @@
 		height: 432px;
 	}
 
-	:global(.prose-custom figure > picture) {
-		display: contents;
-	}
-
-	:global(.prose-custom figure > picture > img) {
+	:global(.prose-custom picture > img) {
 		margin-top: 0.5em;
 		margin-bottom: 1.75em;
 	}
 
 	@media only screen and (max-width: 767px) {
-		:global(.prose-custom figure > picture > img),
+		:global(.prose-custom picture > img),
 		:global(.prose-custom > iframe) {
 			grid-column-start: full-start;
 			grid-column-end: full-end;
