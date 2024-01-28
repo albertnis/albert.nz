@@ -20,9 +20,7 @@ The code used for the MSGEQ7 is somewhat particular due to timing requirements, 
 
 After settling on a colour scheme, I had a great deal of fun paging through my music library identifying the best- and worst-looking songs for the setup. One of the best was _Red Dress_ by Submotion Orchestra. Here's the result:
 
-<div class="video-container">
-    <iframe width="660" height="400" src="https://www.youtube.com/embed/vmSqzH9hZJs" frameborder="0" class="video" allowfullscreen></iframe>
-</div>
+<iframe src="https://www.youtube.com/embed/vmSqzH9hZJs" frameborder="0" class="video" allowfullscreen></iframe>
 
 This project has been a great one so far, but there were frustrating times. The main annoyance was the capacitor used on the audio stage before input to the MSGEQ7. At relatively high volumes, the capacitor blew, resulting in a sad, flickering green output to the LED strip with which I became all too familiar. While I simply replaced blown capacitors, the problems could probably be fixed with higher quality caps, or additional circuit protection.
 

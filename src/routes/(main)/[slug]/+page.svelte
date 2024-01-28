@@ -50,6 +50,7 @@
 		grid-column-end: prose-end;
 		margin-top: 0em;
 		margin-bottom: 1.25em;
+		overflow: hidden;
 	}
 
 	:global(.prose-custom h1),
@@ -100,9 +101,15 @@
 		grid-column-end: prose-end;
 	}
 
-	:global(.prose-custom > figure > picture *) {
+	:global(.prose-custom > figure > picture *),
+	:global(.prose-custom > iframe) {
 		grid-column-start: prose-start;
 		grid-column-end: prose-end;
+	}
+
+	:global(.prose-custom > iframe) {
+		width: 100%;
+		height: 432px;
 	}
 
 	:global(.prose-custom figure > picture) {
@@ -115,7 +122,8 @@
 	}
 
 	@media only screen and (max-width: 767px) {
-		:global(.prose-custom figure > picture > img) {
+		:global(.prose-custom figure > picture > img),
+		:global(.prose-custom > iframe) {
 			grid-column-start: full-start;
 			grid-column-end: full-end;
 		}

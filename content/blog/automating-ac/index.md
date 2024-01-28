@@ -118,9 +118,7 @@ There's just one more automation we need to set up, to get current temperature s
 
 Time to see this beast in action!
 
-<div class="video-container">
-    <iframe width="660" height="400" src="https://www.youtube.com/embed/rYGHHMw8gq8" frameborder="0" class="video" allowfullscreen></iframe>
-</div>
+<iframe src="https://www.youtube.com/embed/rYGHHMw8gq8" frameborder="0" class="video" allowfullscreen></iframe>
 
 Without a doubt, working on this heat pump has been one of the most satisfying home automation projects I have worked on for a while. From learning about how IR communication really works, to cracking the code of the remote, to wrapping the whole thing in an API - it's been a great learning experience.
 
