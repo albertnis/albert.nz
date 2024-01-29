@@ -12,25 +12,15 @@ The walk to Waiopehu Hut is a straightforward but steady climb up a ridgeline. L
 
 I'd like to come back here in better weather and potentially create a longer loop with Gable End Ridge.
 
-![][view]
+![The best view we got from the track, out towards Levin. After this point, we rose into the cloud.][view]
 
-<figcaption>The best view we got from the track, out towards Levin. After this point, we rose into the cloud.</figcaption>
+![Waiopehu Hut in the morning][hut]
 
-![][hut]
+![Descending down the trail into foggy forest, shortly after the hut][track]
 
-<figcaption>Waiopehu Hut in the morning</figcaption>
+![Spiderweb alongside the track][web]
 
-![][track]
-
-<figcaption>Descending down the trail into foggy forest, shortly after the hut</figcaption>
-
-![][web]
-
-<figcaption>Spiderweb alongside the track</figcaption>
-
-![][plane]
-
-<figcaption>Marlborough Sounds while flying out of Wellington the evening after the tramp</figcaption>
+![Marlborough Sounds while flying out of Wellington the evening after the tramp][plane]
 
 [view]: ./DSC06970.jpg
 [hut]: ./DSC06987.jpg

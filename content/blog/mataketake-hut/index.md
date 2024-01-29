@@ -40,19 +40,11 @@ As a personal first, I had planned for an entire hut day on this trip. This was 
 
 As sunset approached and the cloud layer lifted, it became clear that this hut's situation is truly special.
 
-<figure>
-  <img class="prose-custom-w-full" src="./DSC09649-HDR-Pano.jpg" />
-  <figcaption>Sunset as viewed from the hut</figcaption>
-</figure>
+<img src="./DSC09649-HDR-Pano.jpg" alt="Sunset as viewed from the hut" class="prose-custom-w-full" />
 
-![][astro-couple]
+![Watching shooting stars in the dying light of dusk][astro-couple]
 
-<figcaption>Watching shooting stars in the dying light of dusk</figcaption>
-
-<figure>
-  <img class="prose-custom-w-full" src="./DSC09678.jpg" />
-  <figcaption>Mataketake Hut after sundown</figcaption>
-</figure>
+<img src="./DSC09678.jpg" alt="Mataketake Hut after sundown" class="prose-custom-w-full" />
 
 ![Mountains to the east of the range][astro-hills]
 
@@ -62,10 +54,7 @@ We awoke at dawn. This seemed fitting for ANZAC day and meant we would get back 
 
 ![Dawn breaks on ANZAC day, revealing excellent weather for our early departure][astro-dawn]
 
-<figure>
-  <img class="prose-custom-w-full" src="./DSC09719.jpg?w=4000" />
-  <figcaption>Looking out from the tops before descending back into the bush</figcaption>
-</figure>
+<img src="./DSC09719.jpg" alt="Looking out from the tops before descending back into the bush" class="prose-custom-w-full" />
 
 We made it out from the hut in 4.5 hours, a fair bit faster than the 8 hours estimated by DOC. Before we knew it we were back in Christchurch and dreaming about getting back to the hills.
 

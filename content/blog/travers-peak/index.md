@@ -13,11 +13,8 @@ Access is easy--park at Deer Valley campsite then go straight up Foley's Track t
 
 The peak itself has a few nice nooks to sit down and enjoy some snacks while enjoying the stunning view. It's amazing how open the tops are around here. Traversing the Libretto Range--or at least spending a night camping up here--could be a fun challenge.
 
-![Looking north from the summit](./DSC02073.jpg?w=1200)
+![Looking north from the summit](./DSC02073.jpg)
 
-<figure>
-  <img src="./DSC02074.jpg?w=2200" class="prose-custom-w-full">
-  <figcaption>Starting the descent, looking southwest</figcaption>
-</figure>
+<img src="./DSC02074.jpg" alt="Starting the descent, looking southwest" class="prose-custom-w-full">
 
-![Silvery moss and ferns among the beech forest near the bushline](./IMG_0568.jpg?h=1200)
+![Silvery moss and ferns among the beech forest near the bushline](./IMG_0568.jpg)

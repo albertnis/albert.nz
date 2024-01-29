@@ -22,7 +22,7 @@ Here are what the systems look like. As an example, the smart home has the follo
 
 You go to an electronics store and buy the components. After setting things up according the manuals you'll end up with the following:
 
-[![Architecture diagram for off-the-shelf smart home][ots-svg]][ots-svg]
+![Architecture diagram for off-the-shelf smart home][ots-svg]
 
 This is the typical "default" smart home setup. What you'll notice here is that **access to the devices is separated by brand** (represented by blue rectangles). For device setup and control you'll have to use the specific app or website for the device in question.
 
@@ -34,7 +34,7 @@ For devices which do not operate on WiFi, you'll need separate, brand-specific g
 
 With a home server and some learning, the system can be built more like the following:
 
-[![Architecture diagram for DIY smart home][diy-svg]][diy-svg]
+![Architecture diagram for DIY smart home][diy-svg]
 
 Crucially, unlike the off-the-shelf system, **access is controlled by domain** (represented by purple rectangles). This means that the app you open is not determined by _who made the device_; it's determined by _what you want to do_. These domain-specific services each run as a web server, shown by the blue boxes. In my case, these are Docker containers all running on a single server and defined in a single docker-compose file.
 

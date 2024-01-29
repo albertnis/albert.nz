@@ -14,25 +14,19 @@ During a sibling trip to Great Barrier Island, we took on the Aotea Track. The t
 
 We started at the Forest Road trailhead, oppositing the Te Ahumata Track on a saddle near Whagaparapara. We were planning to finish the tramp 2km down the road at the Kaitoke Hot Springs Track. So I dropped the others off at the saddle, parked at the Hot Springs carpark, then ran back along the road.
 
-![][trailhead]
-
-<figcaption>Setting off along Forest Road. Much of the first day was like this - 12km of travel along 4WD tracks. Take the Kiwiriki Track if you have more daylight hours than us!</figcaption>
+![Setting off along Forest Road. Much of the first day was like this - 12km of travel along 4WD tracks. Take the Kiwiriki Track if you have more daylight hours than us!][trailhead]
 
 We had lunch at a picnic table at the junction between Forest Road, Kiwiriki Track, and Maungapiko Track. The Maungopiko Track proved to be a delightful excursion. Just a few hundred metres and some rock scrambling leads to a beautiful view out from the centre of the island all the way to the western coast and Little Barrier Island beyond.
 
-![][maungapiko]
-
-<figcaption>Great Barrier Forest viewed from Maungapiko summit</figcaption>
+![Great Barrier Forest viewed from Maungapiko summit][maungapiko]
 
 A couple of kilometres before reaching Kaiaraara Hut, there is a lovely short nature walk to some incredibly large kauri trees - probably the biggest I have seen in my life.
 
-![][kauri]
+![Huge kauri tree][kauri]
 
 There was light left in the day so a few of us took an excursion to Bush's Beach. It's about 1.5km each way and well worth it. I'm sure this would be a lovely spot to relax in summer.
 
-![][beach]
-
-<figcaption>A couple we met at the hut were also walking down to Bush's Beach to get back to their boat anchored in the bay</figcaption>
+![A couple we met at the hut were also walking down to Bush's Beach to get back to their boat anchored in the bay][beach]
 
 ## Day 2
 
@@ -40,37 +34,27 @@ There are two ways from Kaiaraara Hut to Mt Heale Hut: the Kaiaraara Track (whic
 
 The track follows close to Kaiaraara Stream and is poorly marked for this distance. This isn't a big deal, though; just make sure to find the track at the stream fork about 600m after the track first hits the stream. A couple of us simply walked along the stream for this stretch. Some members of our party were less enthusiastic about wet feet.
 
-![][crossing]
-
-<figcaption>Carefully crossing the river. I got knee-deep to capture the moment.</figcaption>
+![Carefully crossing the river. I got knee-deep to capture the moment.][crossing]
 
 The remainder of the track is a straightforward and increasingly beautiful ascent up to Mt Heale Hut. See if you can spot the hut on the other side of the valley as the track climbs. Thankfully, the views keep on getting better all the way to the hut. From the balcony, the vista looks down the bush-clad valley out to the sea, with Little Barrier Island perfectly framed.
 
 We arrived at the hut early, around 2pm, just in time for a late lunch and reading on the deck until the sun went down and the winter cold forced us inside. Sunsets don't get much better than this.
 
-![][sunset]
-
-<figcaption>Sunset as viewed from the Mt Heale Hut balcony</figcaption>
+![Sunset as viewed from the Mt Heale Hut balcony][sunset]
 
 ## Day 3
 
 We woke up at 6am to climb Mt Hobson / Hirakimata. Unlike the Kaiaraara Track, the South Fork Track hadn't taken us up to the summit and we were really keen to watch sunrise from the tallest peak on the entire island! So we set off in the dawn light.
 
-![][dawn-hut]
-
-<figcaption>Dawn view from the hut balcony</figcaption>
+![Dawn view from the hut balcony][dawn-hut]
 
 The climb up is short and steep - I was grateful for the very nice stairs all the way to the top.
 
-![][dawn-hobson]
-
-<figcaption>The first light brushes Mt Heale below us. The town of Claris sits beneath the fog to the left.</figcaption>
+<img src="./DSC08070.jpg" alt="The first light brushes Mt Heale below us. The town of Claris sits beneath the fog to the left." class="prose-custom-w-full">
 
 Exiting was straightforward; it's a gentle downhill most of the way from the hut to the hot springs carpark. The hot pools themselves were delightful. There is one large pool, then more along a stream which stretches up the hill beyond. On advice from a local, we waded up the stream to a deep pool 50 metres along. The water was lukewarm with hot mud lining the streambed. While far from a spa, I really enjoyed this first natural hot pools experience and I would certainly recommend it for the last day of the trip.
 
-![][hotpools]
-
-<figcaption>The upper stream at the Kaitoke hot springs. Our deep pool was the far one. Quite magical!</figcaption>
+![The upper stream at the Kaitoke hot springs. Our deep pool was the far one. Quite magical!][hotpools]
 
 [trailhead]: ./DSC07960.jpg
 [maungapiko]: ./DSC07974.jpg
@@ -79,5 +63,4 @@ Exiting was straightforward; it's a gentle downhill most of the way from the hut
 [crossing]: ./DSC07996.jpg
 [sunset]: ./DSC08049.jpg
 [dawn-hut]: ./DSC08064.jpg
-[dawn-hobson]: ./DSC08070.jpg
 [hotpools]: ./DSC08152.jpg

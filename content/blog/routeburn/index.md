@@ -10,33 +10,19 @@ tags: [adventures]
 
 To celebrate Chris' birthday a group of 17 took on Routeburn. The 32km trail is the shortest of New Zealand's Great Walks and one of the best-known. A large group makes logistics easier: we booked a shuttle to take us from Queenstown to The Divide and had some non-runners willing to meet us at the other end.
 
-![][van]
+![We had an early start from Queenstown as it's almost 4 hours to drive to The Divide][van]
 
-<figcaption>We had an early start from Queenstown as it's almost 4 hours to drive to The Divide</figcaption>
+![The group gets ready to set off from The Divide][group]
 
-![][group]
+![Lake MacKenzie][mackenzie]
 
-<figcaption>The group gets ready to set off from The Divide</figcaption>
+![Livingstone and Earl Mountain Ranges viewed from above Lake MacKenzie. The clouds added much drama to the scenery.][mountains]
 
-![][mackenzie]
+![Tarns just beyond Harris Saddle Shelter][tarns]
 
-<figcaption>Lake MacKenzie</figcaption>
+![Turqoise waters of Route Burn][river]
 
-![][mountains]
-
-<figcaption>Livingstone and Earl Mountain Ranges viewed from above Lake MacKenzie. The clouds added much drama to the scenery.</figcaption>
-
-![][tarns]
-
-<figcaption>Tarns just beyond Harris Saddle Shelter</figcaption>
-
-![][river]
-
-<figcaption>Turqoise waters of Route Burn</figcaption>
-
-![][kea]
-
-<figcaption>One of a few kea near Routeburn Shelter</figcaption>
+![One of a few kea near Routeburn Shelter][kea]
 
 [group]: ./IMG20210326105232.jpg
 [van]: ./PXL_20210325_180133482.NIGHT.jpg

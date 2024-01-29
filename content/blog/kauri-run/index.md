@@ -10,25 +10,17 @@ tags: [adventures]
 
 This 30km run starts and finshes in Coromandel Town. It travels along Harray Track the up Flays Road through private property, linking up with the ridgeline track which travels to Kaipawa Summit before dropping back down Success Track to the town.
 
-![][trail]
+![Looking west from the ridgeline trail. This was my first trip to the region; the scenery reminds me of a warmer, busier Marlborough Sounds.][trail]
 
-<figcaption>Looking west from the ridgeline trail. This was my first trip to the region; the scenery reminds me of a warmer, busier Marlborough Sounds.</figcaption>
-
-![][finish]
-
-<figcaption>The finish line in town. A great feeling to complete my first trail running event!</figcaption>
+![The finish line in town. A great feeling to complete my first trail running event!][finish]
 
 The run was harder than expected but I managed to beat my four hour goal. Highlight: making a fair few overtakes in the 5km of technical flat trail between Flays Road and the ridgeline. Lowlight: the cramps, which begun 5km before the finish line and didn't relent for hours!
 
 # Back in Coromandel Town
 
-![][pigs]
+![We went to Stu's Pig Farm on The 309 Road nearby. An interesting place but I wouldn't go back.][pigs]
 
-<figcaption>We went to Stu's Pig Farm on The 309 Road nearby. An interesting place but I wouldn't go back.</figcaption>
-
-![][train]
-
-<figcaption>Driving Creek Railway provided great views and offbeat entertainment</figcaption>
+![Driving Creek Railway provided great views and offbeat entertainment][train]
 
 [trail]: ./PXL_20210430_231256790.jpg
 [finish]: ./PXL_20210501_014935918.jpg

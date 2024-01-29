@@ -14,63 +14,39 @@ Julia Hut is a 25-kilometre walk up the Taipo Valley, to the West of Arthur's Pa
 
 To maximise our hot pool time on day 2, we arrived late on Friday and walked to Dillons Hut in the dark. The first 2.5km is 4WD track which we tackled without too much difficulty in a Prado. We got out and started walking when it got too muddy to proceed in the vehicle, arriving at the hut around 9:30pm.
 
-![][river-crossing]
+![Nighttime crossing of the river just before Dillons Homestead Hut.][river-crossing]
 
-<figcaption>Nighttime crossing of the river just before Dillons Homestead Hut.</figcaption>
-
-![][tree-astro]
-
-<figcaption>Tree outside Dillon Hut</figcaption>
+![Tree outside Dillon Hut][tree-astro]
 
 ## Day 2
 
 We set off the next day, now able to see the valley views all around us as we proceeded to Mid Taipo Hut and beyond. There is a three-wire bridge incorrectly labelled as a cableway on Topo50. Following the markers when approaching the bridge from downstream will lead you onto the flood track. If possible I'd recommend staying on the riverbank all the way to the bridge.
 
-![][valley-photo]
+![Lining up a photo spot beside the river. The azure blue colour of the river was striking. The three-wire bridge can be seen in the distance.][valley-photo]
 
-<figcaption>Lining up a photo spot beside the river. The azure blue colour of the river was striking. The three-wire bridge can be seen in the distance.</figcaption>
-
-![][xander-crossing]
-
-<figcaption>Crossing the river at the bridge between Mid Taipo and Julia Huts</figcaption>
+![Crossing the river at the bridge between Mid Taipo and Julia Huts][xander-crossing]
 
 Shortly after arriving at Julia Hut, it was time to find the hot pools. Follow the track beyond the hut down to the stream and then head about 400m futher downstream. We found some shallow pools directly adjacent to the river on the true right. With the assistance of some spades and pots left by past groups, we dug some shallow pools big enough for six of us to sit half-submerged. The combination of dark skies, hot water and cold air made for a surreal stargazing experience.
 
-![][hut-astro]
+![Stargazing on the balcony at Julia Hut. Grevilles Cone (centre) and Campbell Range (right) can be seen in the background - not to mention the Large Magellanic Cloud.][hut-astro]
 
-<figcaption>Stargazing on the balcony at Julia Hut. Grevilles Cone (centre) and Campbell Range (right) can be seen in the background - not to mention the Large Magellanic Cloud.</figcaption>
-
-![][dawn-reading]
-
-<figcaption>Reading in the dawn light</figcaption>
+![Reading in the dawn light][dawn-reading]
 
 ## Day 3
 
 The next day we got up early and retraced our steps 23km back to the car.
 
-![][group]
+![The group ready to depart Julia Hut on a frosty morning][group]
 
-<figcaption>The group ready to depart Julia Hut on a frosty morning</figcaption>
+![Waiting for party members to cross one by one][gameboy]
 
-![][gameboy]
+![Crossing at Micks Creek][big-river]
 
-<figcaption>Waiting for party members to cross one by one</figcaption>
+![The group proceeds down Taipo Valley beyond Mid Taipo Hut][down-valley]
 
-![][big-river]
+![Crossing the lengthy three-wire bridge between Mid Taipo and Dillon Huts][patrick-crossing]
 
-<figcaption>Crossing at Micks Creek</figcaption>
-
-![][down-valley]
-
-<figcaption>The group proceeds down Taipo Valley beyond Mid Taipo Hut</figcaption>
-
-![][patrick-crossing]
-
-<figcaption>Crossing the lengthy three-wire bridge between Mid Taipo and Dillon Huts</figcaption>
-
-![][gold]
-
-<figcaption>Some interesting goldmining equipment near Dillons Homestead Hut</figcaption>
+![Some interesting goldmining equipment near Dillons Homestead Hut][gold]
 
 [river-crossing]: ./DSC08215.jpg
 [tree-astro]: ./DSC08225.jpg

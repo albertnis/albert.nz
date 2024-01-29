@@ -2,7 +2,7 @@
 	import Logo from './Logo.svelte'
 </script>
 
-<header class="col-start-2 col-end-3 mb-10 mt-5 md:mb-20 md:mt-20 lg:col-end-5">
+<header class="col-start-[wide-start] col-end-3 mb-10 mt-5 md:mb-20 md:mt-20 md:col-end-[wide-end]">
 	<a class="group" href="/"
 		><h1 class="flex align-middle text-2xl font-extrabold md:text-3xl">
 			<span

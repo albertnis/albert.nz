@@ -12,21 +12,13 @@ Mueller Hut Route is one of the most beautiful walks I have done. As the hut was
 
 > Check the weather! It seemed pretty doable on the sunny Saturday we attempted it, but the very next day the weather packed in; crampons were necessary on the route and we wouldn't have been able to do it in such conditions.
 
-![][tarn]
+![Sealy Tarns viewed from above, with Hooker Lake in the background][tarn]
 
-<figcaption>Sealy Tarns viewed from above, with Hooker Lake in the background</figcaption>
+![The last steep section of the track becomes rocky before rounding the corner][rocky]
 
-![][rocky]
+![Approach to Mueller Hut. One of my tramping companions had brought a longboard up, because why not?][hut]
 
-<figcaption>The last steep section of the track becomes rocky before rounding the corner</figcaption>
-
-![][hut]
-
-<figcaption>Approach to Mueller Hut. One of my tramping companions had brought a longboard up, because why not?</figcaption>
-
-![][hooker]
-
-<figcaption>Hooker Valley during the descent, with Aoraki taking pride of place at the head of the valley. The Mueller Glacier moraine wall sits in front.</figcaption>
+![Hooker Valley during the descent, with Aoraki taking pride of place at the head of the valley. The Mueller Glacier moraine wall sits in front.][hooker]
 
 # Other things
 
@@ -34,13 +26,9 @@ We ventured up the [Hooker Valley Track](/hooker-valley) the following day.
 
 There was enough clear sky at night to get some nightscape photos.
 
-![][nightroad]
+![We stopped shortly before Aoraki to take some photos across Lake Pukaki. The weather forecast was ominous; sure enough, we arrived at the campsite around 10pm to pouring rain.][nightroad]
 
-<figcaption>We stopped shortly before Aoraki to take some photos across Lake Pukaki. The weather forecast was ominous; sure enough, we arrived at the campsite around 10pm to pouring rain.</figcaption>
-
-![][nightmount]
-
-<figcaption>Mt Sefton viewed from the campsite. This night was clear and windy.</figcaption>
+![Mt Sefton viewed from the campsite. This night was clear and windy.][nightmount]
 
 [tarn]: ./DSC07097.jpg
 [rocky]: ./DSC07124.jpg

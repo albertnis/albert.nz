@@ -26,13 +26,9 @@ I mentally broke down the trail into four sections.
 
 My favourite stretch of the run! After a quick walk to Mt Kaukau it's lovely running along the undulating Skyline Walkway. In worse weather this track gets some awful wind, so be prepared for that.
 
-![][kaukau]
+![Mt Kaukau / Tarikākā summit][kaukau]
 
-<figcaption>Mt Kaukau / Tarikākā summit</figcaption>
-
-![][makara]
-
-<figcaption>Makara Peak summit</figcaption>
+![Makara Peak summit][makara]
 
 # Section 2: Makara Peak to Wrights Hill
 
@@ -40,25 +36,19 @@ Now for the best bush trail on the entire route. A solid downhill along a 4WD tr
 
 Then it's up Salvation Track, a gentle uphill which is quite runnable. Cross the road near the top of the hill to continue along the trail.
 
-![][wrights]
-
-<figcaption>Wrights Hill summit</figcaption>
+![Wrights Hill summit][wrights]
 
 # Section 3: Zealandia fenceline
 
 A simple but steep 4WD section to the turbine. The legs were really starting to feel it now and I began to fade a bit.
 
-![][brooklyn]
-
-<figcaption>Brooklyn wind turbine</figcaption>
+![Brooklyn wind turbine][brooklyn]
 
 # Section 3: Tip Track and Island Bay
 
 Backtracking from the turbine but now on the other side of the road, the trail is good going all the way to Hawkins Hill. It was still slow travel on weary legs.
 
-![][hawkins]
-
-<figcaption>Near Hawkins Hill summit</figcaption>
+![Near Hawkins Hill summit][hawkins]
 
 The tip track heads down to Happy Valley from here and is easy cardio-wise--but like a jackhammer on the knees.
 
@@ -66,17 +56,13 @@ Just before the Berhampore Golf Course there's a compact but confusing mess of t
 
 The official route from The Parade up to Mt Albert Road is also unclear. It appears the route heads directly up the hill. I think I found the intended track but it was so overgrown as to be unnavigable. I opted for the longer left track instead.
 
-![][albert]
-
-<figcaption>Mt Albert summit</figcaption>
+![Mt Albert summit][albert]
 
 # Section 4: Southern Walkway
 
 I was familiar with this one. Mostly just follow the signs, but pay attention to the shimmy past the zoo: there's no need to go up to Truby King park so just get onto the hill road as soon as possible. Further along, take the detour along the left of the velodrome, then it's straight up to the summit. This entire section I wasn't doing much running. Better nutrition probably would have helped.
 
-![][victoria]
-
-<figcaption>Mt Victoria summit. I collapsed in this spot and stayed here for a good 15 minutes.</figcaption>
+![Mt Victoria summit. I collapsed in this spot and stayed here for a good 15 minutes.][victoria]
 
 I struggled to walk for the rest of the day, but the sense of achievement more than made up for it. How cool is it that this marathon route is almost entirely on good-quality trail close to town and only crosses three major roads? I'll miss you, Wellington!
 

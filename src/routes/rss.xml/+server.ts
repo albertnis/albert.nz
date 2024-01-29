@@ -36,11 +36,8 @@ const postToItem = (post: PostWithContent) => `<item>
 <guid isPermaLink="false">${post.path}/</guid>
 <pubDate>${formatRFC2822(parseISO(post.meta.date))}</pubDate>
 <content:encoded>
-<![CDATA[${transformRelativeLinksToAbsolute(post.contentHtml)}]]>
+<![CDATA[${post.contentHtml}]]>
 </content:encoded>
 </item>`
 
 const formatRFC2822 = (date: Date) => format(date, 'EEE, dd MMM yyyy HH:mm:ss O')
-
-const transformRelativeLinksToAbsolute = (html: string) =>
-	html.replaceAll(/(src|href)="(\/.+?)"/g, '$1="https://albert.nz$2"')

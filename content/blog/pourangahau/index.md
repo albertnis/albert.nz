@@ -10,17 +10,11 @@ tags: [adventures]
 
 A popular hill walk near St Arnaud is the Mt Robert loop which takes walkers up Pourangahau / Mt Robert a few kilometres southeast of the town. The 9km loop is comprised of two tracks: Paddy's Track, a gentle trail passing Bushline Hut; and the lower section of Pinchgut Track which consists of steep switchbacks to the roadend carpark. We wanted a less steep trail so opted to take Paddy's Track up to Relax shelter near the summit and return the same way (11km total).
 
-![][lake-view]
+![The trail climbs up high above the lake, granting panoramic views across the entire region][lake-view]
 
-<figcaption>The trail climbs up high above the lake, granting panoramic views across the entire region</figcaption>
+![The party passes over a saddle near Bushline Hut][saddle]
 
-![][saddle]
-
-<figcaption>The party passes over a saddle near Bushline Hut</figcaption>
-
-![][mountain-view]
-
-<figcaption>A walker crests the hill near Bushedge Shelter, about to tackle the steep downhill of Pinchgut Track</figcaption>
+![A walker crests the hill near Bushedge Shelter, about to tackle the steep downhill of Pinchgut Track][mountain-view]
 
 ![][frost]
 
@@ -34,9 +28,7 @@ We were only in town for a couple of nights but enjoyed heading down to Lake Rot
 
 <figcaption>Meeting the local longfin eels (tuna kuwharuwharu). They are friendly and squishy. I researched more about these creatures and learnt <a href="https://en.wikipedia.org/wiki/New_Zealand_longfin_eel">they can live to 60 years old before swimming to Tonga to breed</a>.</figcaption>
 
-![][pier]
-
-<figcaption>A night walk didn't reveal any kiwi, but a narrow layer of dense fog settled over the lake making for dramatic sights</figcaption>
+![A night walk didn't reveal any kiwi, but a narrow layer of dense fog settled over the lake making for dramatic sights][pier]
 
 [eels]: ./DSC08487.jpg
 [pier]: ./DSC08513.jpg

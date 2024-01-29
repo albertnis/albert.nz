@@ -50,6 +50,7 @@
 		grid-column-end: prose-end;
 		margin-top: 0em;
 		margin-bottom: 1.25em;
+		overflow: hidden;
 	}
 
 	:global(.prose-custom h1),
@@ -86,7 +87,7 @@
 		tab-size: 2;
 	}
 
-	:global(.prose-custom p > img) {
+	:global(.prose-custom p > picture > img) {
 		margin-top: 0.5em;
 		margin-bottom: 0.5em;
 	}
@@ -95,18 +96,38 @@
 		display: contents;
 	}
 
+	:global(.prose-custom picture) {
+		display: contents;
+	}
+
 	:global(.prose-custom > figure > *) {
 		grid-column-start: prose-start;
 		grid-column-end: prose-end;
 	}
 
-	:global(.prose-custom figure > img) {
+	:global(.prose-custom picture *) {
+		grid-column-start: prose-start;
+		grid-column-end: prose-end;
+	}
+
+	:global(.prose-custom > iframe) {
+		width: 100%;
+		height: 432px;
+	}
+
+	:global(.prose-custom picture > img) {
 		margin-top: 0.5em;
 		margin-bottom: 1.75em;
 	}
 
-	@media only screen and (max-width: 1023px) {
-		:global(.prose-custom figure > img) {
+	:global(.prose-custom > table) {
+		display: block;
+		overflow-x: scroll;
+	}
+
+	@media only screen and (max-width: 767px) {
+		:global(.prose-custom picture > img),
+		:global(.prose-custom > iframe) {
 			grid-column-start: full-start;
 			grid-column-end: full-end;
 		}

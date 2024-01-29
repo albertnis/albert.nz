@@ -10,25 +10,17 @@ tags: [adventures]
 
 Mt Herbert / Te Ahu Patiki is commonly accessed from the north, from either Charteris Bay or Diamond Harbour. We decided to approach from the south, leaving the car at the Parkinsons Road carpark in Kaituna Valley and headed up the Kaituna Valley Packhorse Hut Track.
 
-![][packhorse]
-
-<figcaption>Packhorse Hut in the low cloud. Good to stop for a snack and to top up the water supplies.</figcaption>
+![Packhorse Hut in the low cloud. Good to stop for a snack and to top up the water supplies.][packhorse]
 
 We were worried that the cloud would mean no views. But as we climbed higher along the steep (and surprisingly lush) Te Ara Pātaka Walkway, it was revealed that the cloud was simply a low layer appearing to sit across the entire mid Canterbury region.
 
-![][fog]
+![Climbing above the cloud to the south of Mt Bradley (Te Ara Pātaka Walkway)][fog]
 
-<figcaption>Climbing above the cloud to the south of Mt Bradley (Te Ara Pātaka Walkway)</figcaption>
-
-![][summit]
-
-<figcaption>Mt Herbert summit. Ethereal views above the cloud all the way to the alps!</figcaption>
+![Mt Herbert summit. Ethereal views above the cloud all the way to the alps!][summit]
 
 To form a bit of a loop, we returned to Packhorse Hut along Faulkner Track on the other side of Mt Bradley.
 
-![][valley]
-
-<figcaption>Desceding back along Kaituna Valley Packhorse Hut Track to the car</figcaption>
+![Desceding back along Kaituna Valley Packhorse Hut Track to the car][valley]
 
 I would definitely recommend this for a day walk or run in the region. For a faster, fuller loop with some road running, consider continuing past Mt Herbert summit and decsending Monument Track and Kaituna Valley Road--that's what I would try next time.
 

@@ -18,10 +18,7 @@ After refilling water bottles at the hut, I ascended back up to the saddle with 
 
 ![Buckland Peaks Hut as viewed from the saddle. The mouth of the Buller River is in the distance, framed between hills.](./DSC01603.jpg)
 
-<figure>
-  <img src="./DSC01633-HDR.jpg" class="prose-custom-w-full" />
-  <figcaption>View of the West Coast from the saddle</figcaption>
-</figure>
+<img src="./DSC01633-HDR.jpg" alt="View of the West Coast from the saddle" class="prose-custom-w-full" />
 
 ![Preparing soup with a view](./DSC01636-HDR.jpg)
 
@@ -33,9 +30,6 @@ The hut is weathertight and double-glazed, and it retained its heat well into th
 
 Judging by the intentions book, it is common to walk up to Buckland Peaks themselves on the second day, before descending in the afternoon. I walked along the ridge to get a better view of the peaks but decided not to venture any further, to allow myself plenty of time to drive back to Christchurch. It's epic country up here, and somewhere I'd love to come back to one day for more exploration.
 
-<figure>
-  <img src="./DSC01687-Pano.jpg" class="prose-custom-w-full" />
-  <figcaption>Buckland Peaks in the morning. The access ridge is visible on the left.</figcaption>
-</figure>
+<img src="./DSC01687-Pano.jpg" alt="Buckland Peaks in the morning. The access ridge is visible on the left." class="prose-custom-w-full" />
 
 &ZeroWidthSpace;<a id="footnote-1-to" href="#footnote-1-from">\*</a> The naming I experienced along this track was weirdly inconsistent. The hut is called "Buckland Peaks Hut". The peaks are called "Buckland Peaks". But, somehow, the road is called "Bucklands Peak Road" and there are plenty of signs talking about "Buckland Peak Hut" and other permutations. It seems like nobody could remember the correct name--or that there are definitely multiple peaks.
