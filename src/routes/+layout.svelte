@@ -1,5 +1,4 @@
 <script lang="ts">
-	import FloatingHeader from '$lib/components/FloatingHeader.svelte'
 	import { page } from '$app/stores'
 </script>
 

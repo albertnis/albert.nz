@@ -10,7 +10,7 @@
 </script>
 
 {#if typeof data === 'object' && 'sources' in data}
-	<picture>
+	<picture data-width={data.img.w} data-height={data.img.h}>
 		{#each Object.entries(data.sources) as [format, images]}
 			<source srcset={images} type={`image/${format}`} {sizes} />
 		{/each}

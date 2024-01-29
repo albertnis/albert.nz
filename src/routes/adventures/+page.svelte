@@ -14,23 +14,15 @@
 </script>
 
 <div
-	class="pointer-events-none fixed left-0 top-0 z-10 flex w-full items-center justify-between p-[1rem] sm:justify-start sm:p-6"
+	class="fixed left-5 top-5 z-10 text-xl bg-zinc-200 dark:bg-zinc-800 bg-opacity-50 flex rounded-md backdrop-blur-md items-center justify-between p-[1rem] sm:justify-start sm:p-4 shadow-md"
 >
 	<a
-		class="pointer-events-auto flex text-3xl text-zinc-800 opacity-50 hover:opacity-100 dark:text-zinc-200"
+		class="pointer-events-auto flex opacity-50 hover:opacity-100 dark:text-zinc-200 text-zinc-800 relative bottom-[0.05em]"
 		href="/"
 		aria-label="Home page"><Logo /></a
 	>
 
-	<div
-		class="pointer-events-auto ml-2 rounded-md border border-zinc-400 bg-zinc-100 p-2 align-middle leading-none shadow-md dark:border-zinc-600 dark:bg-zinc-800"
-	>
-		<a
-			class="border-b border-b-zinc-600 text-sm font-bold text-zinc-800 hover:border-b-2 hover:border-b-sky-600 dark:border-b-zinc-400 dark:text-zinc-200 dark:hover:border-b-sky-400"
-			href="/#posts"
-			aria-label="Home page">Back to list</a
-		>
-	</div>
+	<div class="ml-2 border-zinc-400 align-middle leading-none font-bold">Adventures</div>
 </div>
 
 {#if selectedPost != null && selectedPost != ''}

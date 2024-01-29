@@ -6,6 +6,7 @@
 	import Tag from '$lib/components/Tag.svelte'
 	import TagSmall from '$lib/components/TagSmall.svelte'
 	import MapIcon from '$lib/components/MapIcon.svelte'
+	import CameraIcon from '$lib/components/CameraIcon.svelte'
 	export let data: { posts: PostPreview[] }
 
 	let showTechnologyTag = true
@@ -36,19 +37,37 @@
 	</p>
 
 	{#if showAdventuresTag}
-		<div
-			class="my-8 rounded-md border border-teal-800 bg-teal-600 p-2 text-zinc-50 dark:border-teal-400 sm:w-[300px]"
-		>
-			<a class="group inline-block w-full" href="/adventures">
-				<div class="flex items-center font-bold">
-					<MapIcon />
-					<div>
-						<span class="ml-2 border-b border-b-zinc-50 group-hover:border-b-2">Adventures map</span
-						>
+		<div class="flex gap-5 my-8">
+			<div
+				class="rounded-md border border-teal-800 bg-teal-600 p-2 text-zinc-50 dark:border-teal-400 sm:w-[300px]"
+			>
+				<a class="group inline-block w-full" href="/adventures">
+					<div class="flex items-center font-bold">
+						<MapIcon />
+						<div>
+							<span class="ml-2 border-b border-b-zinc-50 group-hover:border-b-2"
+								>Adventures map</span
+							>
+						</div>
 					</div>
-				</div>
-				<div class="text-sm text-teal-200">View adventures on an interactive map</div>
-			</a>
+					<div class="text-sm text-teal-200">View adventures on an interactive map</div>
+				</a>
+			</div>
+			<div
+				class="rounded-md border border-cyan-800 bg-cyan-600 p-2 text-zinc-50 dark:border-cyan-400 sm:w-[300px]"
+			>
+				<a class="group inline-block w-full" href="/pictures">
+					<div class="flex items-center font-bold">
+						<CameraIcon />
+						<div>
+							<span class="ml-2 border-b border-b-zinc-50 group-hover:border-b-2"
+								>Adventures gallery</span
+							>
+						</div>
+					</div>
+					<div class="text-sm text-cyan-200">View gallery of adventurous photos</div>
+				</a>
+			</div>
 		</div>
 	{/if}
 

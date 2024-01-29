@@ -22,6 +22,13 @@ export interface PostMapPreview {
 	imagesHtml: string[]
 }
 
+export interface Image {
+	postSlug: string
+	imageHtml: string
+	tags: string[]
+	aspectRatio: number
+}
+
 export interface PostWithContent {
 	meta: PostMetadata
 	path: string
