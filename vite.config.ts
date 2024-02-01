@@ -2,6 +2,7 @@ import { sveltekit } from '@sveltejs/kit/vite'
 import type { UserConfig } from 'vite'
 import { gpxPlugin } from './src/plugins/vite-plugin-gpx'
 import { imagetools } from 'vite-imagetools'
+import { remark } from './src/plugins/vite-plugin-remark'
 
 const config: UserConfig = {
 	plugins: [
@@ -16,9 +17,10 @@ const config: UserConfig = {
 				// 1536 - standard width, 2x density
 				// 2560 - max width
 				w: '480;768;1536;2560',
-				as: 'picture'
+				as: 'metadata'
 			})
-		})
+		}),
+		remark()
 	],
 	server: {
 		fs: {
