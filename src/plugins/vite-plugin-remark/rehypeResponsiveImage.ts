@@ -60,6 +60,24 @@ const processImageNode = async (
 	imports.push(importStatement)
 }
 
+/**
+ * Rehype plugin to convert img tags using relative src into responsive versions.
+ *
+ * Requires `vite-imagetools` to be installed.
+ *
+ * For file types supported by `vite-imagetools`, the plugin will do the following
+ * - Convert src attribute value into a URL to a responsive image
+ * - Add srcset attribute with URLs
+ * - Add aspect ratio to inline style
+ *
+ * Unsupported file types for relative src will be converted to a JS import
+ *
+ * Non-relative src will be untouched
+ *
+ * Import statements are set on `file.data.imports`.
+ * String replacements are set on `file.data.replaceMap` - the key is the value written to the AST
+ * and the value is the expression with which the key will be replaced in the serialised output
+ */
 export const rehypeResponsiveImage = () => async (tree: Node, file: VFile) => {
 	const nodes: Element[] = []
 

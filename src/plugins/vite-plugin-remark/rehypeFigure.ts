@@ -2,6 +2,17 @@ import type { Node } from 'unist'
 import { visit } from 'unist-util-visit'
 import type { Element, Text } from 'hast'
 
+/**
+ * Rehype plugin to wrap img elements with an alt element with a figure element containing a caption.
+ *
+ * The caption text will be set to the value of the alt tag.
+ *
+ * Images without an alt attribute will not be altered.
+ *
+ * If the img is the only child of a p tag, the entire p tag will be replaced with the figure.
+ *
+ * This plugin does not work on raw img elements so may need to be preceded by rehype-raw.
+ */
 export const rehypeFigure = () => (tree: Node) =>
 	visit(tree, { type: 'element', tagName: 'img' }, (n, index, parent: any) => {
 		const node = n as Element

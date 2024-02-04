@@ -1,7 +1,6 @@
 import { inspect } from 'node:util'
-import path from 'node:path'
 import type { Plugin } from 'vite'
-import { unified, type Processor } from 'unified'
+import { unified } from 'unified'
 import type { Node } from 'unist'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
@@ -15,10 +14,10 @@ import remarkFrontmatter from 'remark-frontmatter'
 import rehypeRaw from 'rehype-raw'
 import { read } from 'to-vfile'
 
-import { remarkSmartypants } from '../remark-smartypants'
-import { rehypeLazyImg } from '../rehype-lazy-img'
-import { rehypeFigure } from '../rehype-figure'
-import { rehypeResponsiveImage } from '../rehype-responsive-image'
+import { remarkSmartypants } from './remarkSmartypants'
+import { rehypeLazyImg } from './rehypeLazyImage'
+import { rehypeFigure } from './rehypeFigure'
+import { rehypeResponsiveImage } from './rehypeResponsiveImage'
 
 type Serializable =
 	| {
