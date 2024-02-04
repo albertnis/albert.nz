@@ -76,13 +76,7 @@
 <MapFullScreen bind:selectedPostPath bind:selectedGpxPath postMapPreviews={data.posts} />
 
 <style>
-	:global(.post-img-carousel picture) {
-		margin-left: 1.25rem;
-		height: 100%;
-		display: contents;
-	}
-
-	:global(.post-img-carousel picture img) {
+	:global(.post-img-carousel img) {
 		margin-left: 1.25rem;
 		border-radius: 0.375rem;
 		height: 100%;

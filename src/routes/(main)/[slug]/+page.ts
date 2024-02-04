@@ -1,11 +1,12 @@
 import type { RemarkRehypePluginOutput } from '../../../plugins/vite-plugin-remark'
 import type { Post, PostMetadata, PageData } from '../../../types/post'
+import { updateSizesForArticle } from '$lib/utils/sizes'
 
 export const load = async ({ params }: { params: { slug: string } }): Promise<PageData<Post>> => {
 	const post = (await import(`../../../../content/blog/${params.slug}/index.md`))
 		.default as RemarkRehypePluginOutput
 	const meta: PostMetadata = post.metadata as unknown as PostMetadata
-	const content = post.html
+	const content = updateSizesForArticle(post.html)
 
 	const routes: string[] = meta.routes ?? []
 

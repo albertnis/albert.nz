@@ -1,5 +1,4 @@
 import { fetchMarkdownPosts } from '$lib/utils'
-import {} from '@sveltejs/kit'
 import { format, parseISO } from 'date-fns'
 import type { PostWithContent } from '../../types/post'
 

@@ -2,6 +2,7 @@ import { fetchMarkdownPosts } from '$lib/utils'
 import { json } from '@sveltejs/kit'
 import type { PostMapPreview, PostWithContent } from '../../../types/post'
 import { parse } from 'node-html-parser'
+import { updateSizesForAdventuresThumbnail } from '$lib/utils/sizes'
 
 export const GET = async () => {
 	const allPosts = await fetchMarkdownPosts()
@@ -22,16 +23,8 @@ const postWithContentToPostMapPreview = async (p: PostWithContent): Promise<Post
 	)
 
 	const imagesHtml = parse(p.contentHtml)
-		.getElementsByTagName('picture')
-		.map((pic) => {
-			const sources = pic.getElementsByTagName('source')
-			for (const source of sources) {
-				source.setAttribute('sizes', '480px')
-			}
-
-			return pic
-		})
-		.map((img) => img.toString())
+		.getElementsByTagName('img')
+		.map((pic) => updateSizesForAdventuresThumbnail(pic.toString()))
 
 	return {
 		imagesHtml,
