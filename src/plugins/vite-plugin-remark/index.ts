@@ -8,6 +8,7 @@ import remarkRehype from 'remark-rehype'
 import rehypeKatex from 'rehype-katex'
 import rehypeStringify from 'rehype-stringify'
 import remarkMath from 'remark-math'
+import rehypeHighlight from 'rehype-highlight'
 import type { VFile, Compatible as VFileCompatible } from 'vfile'
 import { matter } from 'vfile-matter'
 import remarkFrontmatter from 'remark-frontmatter'
@@ -77,6 +78,7 @@ const processor = unified()
 	.use(remarkRehype, { allowDangerousHtml: true })
 	.use(rehypeKatex, { output: 'mathml' })
 	.use(rehypeRaw)
+	.use(rehypeHighlight, { aliases: { html: 'svelte' } })
 	.use(rehypeResponsiveImage)
 	.use(rehypeFigure)
 	.use(rehypeLazyImg)

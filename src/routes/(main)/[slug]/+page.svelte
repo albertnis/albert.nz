@@ -3,7 +3,7 @@
 	import HeaderSmall from '$lib/components/HeaderSmall.svelte'
 	import type { Post } from '../../../types/post'
 	import { parseISO, format } from 'date-fns'
-	import '$lib/styles/prism.min.css'
+	import '$lib/styles/highlight.min.css'
 	import MapGroup from '$lib/components/MapGroup.svelte'
 
 	export let data: Post
@@ -81,6 +81,7 @@
 	:global(.prose-custom > pre) {
 		margin-top: 0em;
 		margin-bottom: 1.75em;
+		padding: 0;
 	}
 
 	:global(.prose-custom > pre > code) {
