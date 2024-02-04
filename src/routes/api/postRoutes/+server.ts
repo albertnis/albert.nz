@@ -1,6 +1,6 @@
 import { fetchMarkdownPosts } from '$lib/utils'
 import { json } from '@sveltejs/kit'
-import type { PostPreview as PostMapPreview, PostWithContent } from '../../../types/post'
+import type { PostMapPreview, PostWithContent } from '../../../types/post'
 import { parse } from 'node-html-parser'
 
 export const GET = async () => {

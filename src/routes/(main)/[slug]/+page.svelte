@@ -34,7 +34,7 @@
 	<div
 		class="prose-custom prose prose-zinc prose-quoteless relative max-w-none overflow-x-hidden dark:prose-invert prose-figcaption:mb-5 prose-img:max-w-full"
 	>
-		<svelte:component this={data.content} />
+		{@html data.content}
 	</div>
 </article>
 
@@ -87,25 +87,23 @@
 		tab-size: 2;
 	}
 
-	:global(.prose-custom p > picture > img) {
+	:global(.prose-custom img) {
+		background-color: #d4d4d8; /* zinc-300 */
 		margin-top: 0.5em;
-		margin-bottom: 0.5em;
+		margin-bottom: 1.75em;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:global(.prose-custom img) {
+			background-color: #3f3f46; /* zinc-700 */
+		}
 	}
 
 	:global(.prose-custom > figure) {
 		display: contents;
 	}
 
-	:global(.prose-custom picture) {
-		display: contents;
-	}
-
 	:global(.prose-custom > figure > *) {
-		grid-column-start: prose-start;
-		grid-column-end: prose-end;
-	}
-
-	:global(.prose-custom picture *) {
 		grid-column-start: prose-start;
 		grid-column-end: prose-end;
 	}
@@ -115,18 +113,13 @@
 		height: 432px;
 	}
 
-	:global(.prose-custom picture > img) {
-		margin-top: 0.5em;
-		margin-bottom: 1.75em;
-	}
-
 	:global(.prose-custom > table) {
 		display: block;
 		overflow-x: scroll;
 	}
 
 	@media only screen and (max-width: 767px) {
-		:global(.prose-custom picture > img),
+		:global(.prose-custom img),
 		:global(.prose-custom > iframe) {
 			grid-column-start: full-start;
 			grid-column-end: full-end;

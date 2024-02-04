@@ -31,5 +31,15 @@ export const rehypeFigure = () => (tree: Node) =>
 			children: [node, caption]
 		}
 
-		parent.children.splice(index, 1, outputNode)
+		if (parent.tagName === 'p' && parent.children.length === 1) {
+			// img is only child of a p. Figures aren't allowed in a p. So replace the parent.
+			parent.tagName = outputNode.tagName
+			parent.properties = outputNode.properties
+			parent.children = outputNode.children
+		} else if (parent.tagName !== 'p') {
+			// replace img with figure in-place
+			parent.children.splice(index, 1, outputNode)
+		}
+
+		// The parent is a p but has other children. Leave img untouched to be safe.
 	})

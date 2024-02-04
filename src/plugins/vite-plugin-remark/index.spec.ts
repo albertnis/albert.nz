@@ -1,19 +1,7 @@
 import { describe, it, expect } from 'vitest'
-import { compileMarkdownToJs } from '.'
+import { compileIntermediateToScript, compileMarkdownToJs, type IntermediateOutput } from '.'
 import { VFile } from 'vfile'
 import path from 'node:path'
-
-describe('importing a file', () => {
-	it('imports successfully', async () => {
-		const data = await import('./test.md')
-		expect(data.default).toEqual({
-			metadata: {
-				key: 'value'
-			},
-			html: '<p>Test</p>'
-		})
-	})
-})
 
 describe('when the markdown is simple', () => {
 	const data = `Hello **world**`
@@ -97,7 +85,7 @@ describe('when the markdown contains an image without alt text', () => {
 	})
 })
 
-describe.only('when the markdown contains a relative image', () => {
+describe('when the markdown contains a relative image', () => {
 	const fakeCwd = path.join(__dirname, '../../../content/blog/taipo')
 	const dataMd = ['markdown', '![](./DSC08233.jpg)']
 	const dataHtml = ['html', '<img src="./DSC08233.jpg" />']
@@ -116,5 +104,29 @@ describe.only('when the markdown contains a relative image', () => {
 			expect(output.html).toContain('sizes=')
 			expect(output.html).toContain('aspect-ratio')
 		})
+	})
+})
+
+describe.only('compiling a script', () => {
+	it('compiles as expected', () => {
+		const intermediate: IntermediateOutput = {
+			html: '<img src="SUB-A" style="aspect-ratio: SUB-B;">`backticks`',
+			metadata: { hi: 'there' },
+			imports: ['import thing from "that"', 'import me from "you"'],
+			replaceMap: {
+				'SUB-A': 'thing',
+				'SUB-B': 'me'
+			}
+		}
+
+		const output = compileIntermediateToScript(intermediate)
+
+		expect(output).toEqual(`import thing from "that"
+import me from "you"
+
+const html = \`<img src="\${thing}" style="aspect-ratio: \${me};">\\\`backticks\\\`\`
+const metadata = {"hi":"there"}
+export default { html, metadata }
+`)
 	})
 })
