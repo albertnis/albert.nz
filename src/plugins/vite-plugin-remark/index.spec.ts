@@ -107,7 +107,7 @@ describe('when the markdown contains a relative image', () => {
 	})
 })
 
-describe.only('compiling a script', () => {
+describe('compiling a script', () => {
 	it('compiles as expected', () => {
 		const intermediate: IntermediateOutput = {
 			html: '<img src="SUB-A" style="aspect-ratio: SUB-B;">`backticks`',
