@@ -16,7 +16,7 @@ describe('when the markdown contains dashes', () => {
 	const dataMd = ['markdown', 'Hello--world']
 	const dataHtml = ['html', '<p>Hello--world</p>']
 
-	describe.only.each([dataMd, dataHtml])('and the syntax is %s', (_, data) => {
+	describe.each([dataMd, dataHtml])('and the syntax is %s', (_, data) => {
 		it('improves the dashes using smartypants', async () => {
 			const output = await compileMarkdownToJs(data)
 			expect(output.html).toEqual('<p>Hello—world</p>')
