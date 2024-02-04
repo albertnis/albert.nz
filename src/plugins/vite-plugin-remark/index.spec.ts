@@ -13,11 +13,14 @@ describe('when the markdown is simple', () => {
 })
 
 describe('when the markdown contains dashes', () => {
-	const data = `Hello--world`
+	const dataMd = ['markdown', 'Hello--world']
+	const dataHtml = ['html', '<p>Hello--world</p>']
 
-	it('improves the dashes using smartypants', async () => {
-		const output = await compileMarkdownToJs(data)
-		expect(output.html).toEqual('<p>Hello—world</p>')
+	describe.only.each([dataMd, dataHtml])('and the syntax is %s', (_, data) => {
+		it('improves the dashes using smartypants', async () => {
+			const output = await compileMarkdownToJs(data)
+			expect(output.html).toEqual('<p>Hello—world</p>')
+		})
 	})
 })
 

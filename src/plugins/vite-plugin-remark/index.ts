@@ -14,7 +14,7 @@ import remarkFrontmatter from 'remark-frontmatter'
 import rehypeRaw from 'rehype-raw'
 import { read } from 'to-vfile'
 
-import { remarkSmartypants } from './remarkSmartypants'
+import { rehypeSmartypants } from './rehypeSmartypants'
 import { rehypeLazyImg } from './rehypeLazyImage'
 import { rehypeFigure } from './rehypeFigure'
 import { rehypeResponsiveImage } from './rehypeResponsiveImage'
@@ -73,10 +73,10 @@ const processor = unified()
 	.use(remarkParse)
 	.use(remarkFrontmatter, ['yaml'])
 	.use(remarkMath, { singleDollarTextMath: false })
-	.use(remarkSmartypants)
 	.use(remarkRehype, { allowDangerousHtml: true })
 	.use(rehypeKatex, { output: 'mathml' })
 	.use(rehypeRaw)
+	.use(rehypeSmartypants)
 	.use(rehypeHighlight, { aliases: { html: 'svelte' } })
 	.use(rehypeResponsiveImage)
 	.use(rehypeFigure)
