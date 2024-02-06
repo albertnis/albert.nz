@@ -19,6 +19,7 @@ import { rehypeSmartypants } from './rehypeSmartypants'
 import { rehypeLazyImg } from './rehypeLazyImage'
 import { rehypeFigure } from './rehypeFigure'
 import { rehypeResponsiveImage } from './rehypeResponsiveImage'
+import { remarkUnwrapImage } from './remarkUnwrapImage'
 
 type Serializable =
 	| {
@@ -74,7 +75,9 @@ const processor = unified()
 	.use(remarkParse)
 	.use(remarkGfm)
 	.use(remarkFrontmatter, ['yaml'])
+	.use(remarkUnwrapImage)
 	.use(remarkMath, { singleDollarTextMath: false })
+	.use(log)
 	.use(remarkRehype, { allowDangerousHtml: true })
 	.use(rehypeKatex, { output: 'mathml' })
 	.use(rehypeRaw)

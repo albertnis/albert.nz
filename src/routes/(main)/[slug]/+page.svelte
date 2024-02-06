@@ -49,7 +49,7 @@
 		grid-column-start: prose-start;
 		grid-column-end: prose-end;
 		margin-top: 0em;
-		margin-bottom: 1.25em;
+		margin-bottom: 1.25rem;
 		overflow: hidden;
 	}
 
@@ -57,8 +57,8 @@
 	:global(.prose-custom h2),
 	:global(.prose-custom h3),
 	:global(.prose-custom h4) {
-		margin-top: 0em;
-		margin-bottom: 0.8em;
+		margin-top: 0rem;
+		margin-bottom: 0.8rem;
 	}
 
 	:global(.prose-custom li) {
@@ -68,12 +68,7 @@
 
 	:global(.prose-custom li > p) {
 		margin-top: 0;
-		margin-bottom: 1.25em;
-	}
-
-	:global(.prose-custom figcaption) {
-		margin-top: 0em;
-		margin-bottom: 1.75em;
+		margin-bottom: 1.25rem;
 	}
 
 	:global(.prose-custom figcaption::before) {
@@ -89,8 +84,8 @@
 	}
 
 	:global(.prose-custom pre) {
-		margin-top: 0em;
-		margin-bottom: 1.75em;
+		margin-top: 0rem;
+		margin-bottom: 1.75rem;
 		padding: 0;
 	}
 
@@ -105,16 +100,8 @@
 	:global(.prose-custom > figure > *) {
 		grid-column-start: prose-start;
 		grid-column-end: prose-end;
-	}
-
-	:global(.prose-custom > figure > img) {
-		margin-top: 0.5em;
-		margin-bottom: 1.75em;
-	}
-
-	:global(.prose-custom p > img) {
-		margin-top: 0.5em;
-		margin-bottom: 0.5em;
+		margin-top: 0rem;
+		margin-bottom: 1.25rem;
 	}
 
 	:global(.prose-custom img) {
@@ -138,7 +125,8 @@
 	}
 
 	@media only screen and (max-width: 767px) {
-		:global(.prose-custom img),
+		:global(.prose-custom > img),
+		:global(.prose-custom > figure > img),
 		:global(.prose-custom > iframe) {
 			grid-column-start: full-start;
 			grid-column-end: full-end;
