@@ -141,13 +141,13 @@ I flashed the board on Linux using [esptool](https://github.com/espressif/esptoo
 
 First, erase the contents of the flash:
 
-```shell
+```bash
 python -m esptool -p /dev/ttyUSB0 -b 460800 --before default_reset --after hard_reset --chip esp32c3 erase_flash
 ```
 
 Now replug the board and flash the firmware:
 
-```shell
+```bash
 python -m esptool -p /dev/ttyUSB0 -b 460800 --before default_reset --after hard_reset --chip esp32c3 write_flash 0x0 firmware-factory.bin
 ```
 
@@ -155,7 +155,7 @@ Easy as! The device should eventually appear as online in the ESPHome dashboard.
 
 > For troubleshooting, I found [picocom](https://github.com/npat-efault/picocom) a useful tool to monitor serial output over USB:
 >
-> ```shell
+> ```bash
 > picocom -b 115200 /dev/ttyUSB0
 > ```
 

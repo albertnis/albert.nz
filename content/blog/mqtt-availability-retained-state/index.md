@@ -54,7 +54,7 @@ if (mqttConnected) {
 
 You can play around with this by using mosquitto_sub to investigate messages. Run mosquitto_sub then turn the device on and off. You should see something like this:
 
-```shell
+```bash
 $ mosquitto_sub -t "light/desktop/availability" -v -h localhost
 light/desktop/availability online
 light/desktop/availability offline
@@ -85,21 +85,21 @@ Both approaches have their merits, but I like the second option because it ensur
 
 MQTT has a feature just for this - [retained messages][retain]. Any message can be sent as a retained message. This message will be sent to future subscribers to the topic _as soon as they subscribe_. Only the latest retained message for that topic will be sent. Let's see it in action using mosquitto_sub and mosquitto_pub.
 
-```shell
+```bash
 $ mosquitto_sub -t "light/test" -v -h localhost
 
 ```
 
 Nothing to see here! No messages are being published to this channel so the output is empty. Kill this command and we can do some publishing:
 
-```shell
+```bash
 $ mosquitto_pub -t "light/test" -h localhost -m "retained!" -r
 $ mosquitto_pub -t "light/test" -h localhost -m "not retained"
 ```
 
 We sent two messages to the test topic, with a key difference: the `-r` flag in the first command means this message is retained and will be sent to new subscribers. We can check this by subscribing again:
 
-```shell
+```bash
 $ mosquitto_sub -t "light/test" -v -h localhost
 light/test retained!
 ```

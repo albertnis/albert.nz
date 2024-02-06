@@ -31,7 +31,7 @@ ENTRYPOINT ["node", "helloworld.js"]
 
 I can use this Dockerfile to build an image and run it as a container quite easily:
 
-```shell
+```bash
 docker build -t helloworld .
 docker run --rm helloworld Albert
 # Hello Albert!
@@ -72,7 +72,7 @@ ENTRYPOINT ["node", "helloworld.js"]
 
 As before, I can build and run the script easily enough:
 
-```shell
+```bash
 docker build -t helloworld .
 docker run --rm helloworld Albert
 # Hello Albert!
@@ -80,7 +80,7 @@ docker run --rm helloworld Albert
 
 But now I've got a new trick up my sleeve for extricating the build output from the container:
 
-```shell
+```bash
 DOCKER_BUILDKIT=1 docker build -t helloworld --target output -o dist .
 ls dist
 # helloworld.js

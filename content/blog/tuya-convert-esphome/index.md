@@ -42,13 +42,13 @@ I used tuya-convert in Docker on a Linux laptop for this process. For this you'l
 1.  Copy your ESPHome binary to the `files` directory. (You'll need to do this before the Docker build as for some reason the binaries are copied to the image rather than mounted in the container by default.)
 1.  Build the image
 
-    ```shell
+    ```bash
     docker build -t tuya .
     ```
 
 1.  Copy the docker-compose template
 
-    ```shell
+    ```bash
     cp docker/docker-compose-sample.yml docker-compose.yml
     ```
 
@@ -58,7 +58,7 @@ I used tuya-convert in Docker on a Linux laptop for this process. For this you'l
 
 1.  Follow the instructions to run tuya-convert
 
-    ```shell
+    ```bash
     docker-compose up -d
     docker-compose exec tuya start
     ```
