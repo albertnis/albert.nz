@@ -6,6 +6,7 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeKatex from 'rehype-katex'
 import rehypeStringify from 'rehype-stringify'
+import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import rehypeHighlight from 'rehype-highlight'
 import type { VFile, Compatible as VFileCompatible } from 'vfile'
@@ -71,6 +72,7 @@ export function remark(): Plugin {
 
 const processor = unified()
 	.use(remarkParse)
+	.use(remarkGfm)
 	.use(remarkFrontmatter, ['yaml'])
 	.use(remarkMath, { singleDollarTextMath: false })
 	.use(remarkRehype, { allowDangerousHtml: true })
