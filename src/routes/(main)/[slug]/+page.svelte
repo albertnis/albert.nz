@@ -88,13 +88,13 @@
 		margin-bottom: 0;
 	}
 
-	:global(.prose-custom > pre) {
+	:global(.prose-custom pre) {
 		margin-top: 0em;
 		margin-bottom: 1.75em;
 		padding: 0;
 	}
 
-	:global(.prose-custom > pre > code) {
+	:global(.prose-custom pre > code) {
 		tab-size: 2;
 	}
 
