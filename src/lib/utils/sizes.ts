@@ -18,6 +18,13 @@ export const updateSizesForArticle = (html: string): string => {
 
 export const updateSizesForAdventuresThumbnail = (html: string): string => {
 	const dom = parse(html)
-	dom.getElementsByTagName('img').forEach((el) => el.setAttribute('sizes', '480px'))
+	dom.getElementsByTagName('img').forEach((el) => {
+		const aspect = parseFloat(el.getAttribute('data-aspect') ?? '')
+		if (aspect > 2) {
+			el.setAttribute('sizes', '768px')
+		} else {
+			el.setAttribute('sizes', '480px')
+		}
+	})
 	return dom.toString()
 }

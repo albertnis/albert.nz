@@ -45,10 +45,14 @@ const processImageNode = async (
 		node.properties.srcset = srcsetId
 		replaceMap[srcsetId] = srcset
 
-		const style = `(${imagesVar}[0].width / ${imagesVar}[0].height).toFixed(3)` // `.aspect` not always present
-		const styleId = randomUUID()
-		node.properties.style = `aspect-ratio: ${styleId};` + (node.properties.style ?? '')
-		replaceMap[styleId] = style
+		const aspect = `(${imagesVar}[0].width / ${imagesVar}[0].height).toFixed(3)` // `.aspect` not always present
+		const styleAspectId = randomUUID()
+		node.properties.style = `aspect-ratio: ${styleAspectId};` + (node.properties.style ?? '')
+		replaceMap[styleAspectId] = aspect
+
+		const dataAspectId = randomUUID()
+		node.properties.dataAspect = dataAspectId
+		replaceMap[dataAspectId] = aspect
 
 		node.properties.sizes = 'auto'
 	} else {
