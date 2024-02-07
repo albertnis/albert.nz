@@ -84,8 +84,6 @@
 	}
 
 	:global(.prose-custom pre) {
-		margin-top: 0rem;
-		margin-bottom: 1.75rem;
 		padding: 0;
 	}
 
