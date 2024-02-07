@@ -32,19 +32,20 @@ const processImageNode = async (
 
 	const defaultImport = '_' + createHash('md5').update(absPath).digest('hex')
 	const importStatement = `import ${defaultImport} from "${absPath}"`
+	const imagesVar = `[${defaultImport}].flat()`
 
 	if (absPath.match(imagetoolsMatch)) {
-		const src = `[${defaultImport}].flat()[[${defaultImport}].flat().length - 1].src`
+		const src = `${imagesVar}[${imagesVar}.length - 1].src` // Use biggest image as nominal src
 		const srcId = randomUUID()
 		node.properties.src = srcId
 		replaceMap[srcId] = src
 
-		const srcset = `[${defaultImport}].flat().map(im => \`\${im.src} \${im.width}w\`).join(',')`
+		const srcset = `${imagesVar}.map(im => \`\${im.src} \${im.width}w\`).join(',')`
 		const srcsetId = randomUUID()
 		node.properties.srcset = srcsetId
 		replaceMap[srcsetId] = srcset
 
-		const style = `[${defaultImport}].flat()[0].aspect`
+		const style = `(${imagesVar}[0].width / ${imagesVar}[0].height).toFixed(3)` // `.aspect` not always present
 		const styleId = randomUUID()
 		node.properties.style = `aspect-ratio: ${styleId};` + (node.properties.style ?? '')
 		replaceMap[styleId] = style
