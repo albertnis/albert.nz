@@ -62,7 +62,7 @@ Our misguided trip in to the hut took 6½ hours. Out, it had taken just 3½.
 
 This is not a DOC hut so hut passes and tickets do not apply. Payments towards the hut can instead be made to the following account which was displayed on a sign in the hut.
 
-```
+```txt
 Mount Curtis Community Hut
 38-9012-0653480-00
 ```

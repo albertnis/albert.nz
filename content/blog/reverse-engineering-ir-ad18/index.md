@@ -43,19 +43,19 @@ The pulses aren't just random, of course. They encode a data payload which can b
 
 Let consider the example from the before. Another way of writing the cycles is with [n-on, n-off] notation, like this:
 
-```
+```txt
 [70, 130], [16, 16], [30, 16], [16, 16], [16, 16], [70, 110]
 ```
 
 These pairs are called **burst pairs**. Grouping pulses into burst pairs makes outliers clearer. The long pulses and the beginning and end of the message stand out here. They are probably the **leader** and **trailer**, respectively. Such pulses are used to serve as a kind of "marker" for the receiver. But they typically don't encode data. As we're trying to extract data, let's remove them, leaving the following:
 
-```
+```txt
 [16, 16], [30, 16], [16, 16], [16, 16]
 ```
 
 When we get to a stage of having two types of burst pair, we're in a good spot. This means we can extract binary from the pairs. Typically the pairs with a proportionally longer "on" duration mean a `1` and the other pairs mean `0`. In our case some pairs have a 30-cycle "on" duration and some have a 16-cycle "on" duration. Let's replace the 30-cycle pairs with `1` and the others with `0`:
 
-```
+```txt
 0100
 ```
 
@@ -69,7 +69,7 @@ Say we want to send this timing data to an IR blaster as packet. What do we send
 
 Pronto are used by Pronto-branded IR blasters and are also a generally accepted IR code format. Do a web search for "pronto codes" and you'll find a ton for your device. Pronto codes are hexadecimal and consist of a "preamble" which declares carrier frequency and message length, followed by the burst pairs defined as cycle counts. Here's what our previous example looks like as a Pronto code packet, with some extra annotation added beneath.
 
-```
+```txt
 0000 00cf 0006 0000 0046 0082 0010 0010 001e 0010 0010 0010 0010 0010 0046 006e
      freq  len      leader    bit 1     bit 2     bit 3     bit 4     trailer
 preamble --->       burst pairs --->
@@ -81,7 +81,7 @@ There's much more information about this popular format at [Remote Central][pron
 
 Broadlink devices like my IR blasters use their own code format. Broadlink codes are basically burst-pair information converted from cycles to multiples of a certain time period. This is surrounded by a Broadlink preamble and postamble, then converted to base64 encoding before sending to the device (which I'm doing via Home Assistant). Here's our (rather ugly) Broadlink code packet.
 
-```
+```txt
 JgAOAHLVGhoxGhoaGhpytA0FAAAAAAAAAAAAAA==
 ```
 

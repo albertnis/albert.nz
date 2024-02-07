@@ -3,7 +3,7 @@
 	import HeaderSmall from '$lib/components/HeaderSmall.svelte'
 	import type { Post } from '../../../types/post'
 	import { parseISO, format } from 'date-fns'
-	import '$lib/styles/prism.min.css'
+	import '$lib/styles/highlight.min.css'
 	import MapGroup from '$lib/components/MapGroup.svelte'
 
 	export let data: Post
@@ -34,7 +34,7 @@
 	<div
 		class="prose-custom prose prose-zinc prose-quoteless relative max-w-none overflow-x-hidden dark:prose-invert prose-figcaption:mb-5 prose-img:max-w-full"
 	>
-		<svelte:component this={data.content} />
+		{@html data.content}
 	</div>
 </article>
 
@@ -49,7 +49,7 @@
 		grid-column-start: prose-start;
 		grid-column-end: prose-end;
 		margin-top: 0em;
-		margin-bottom: 1.25em;
+		margin-bottom: 1.25rem;
 		overflow: hidden;
 	}
 
@@ -57,13 +57,18 @@
 	:global(.prose-custom h2),
 	:global(.prose-custom h3),
 	:global(.prose-custom h4) {
-		margin-top: 0em;
-		margin-bottom: 0.8em;
+		margin-top: 0rem;
+		margin-bottom: 0.8rem;
 	}
 
-	:global(.prose-custom figcaption) {
-		margin-top: 0em;
-		margin-bottom: 1.75em;
+	:global(.prose-custom li) {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	:global(.prose-custom li > p) {
+		margin-top: 0;
+		margin-bottom: 1.25rem;
 	}
 
 	:global(.prose-custom figcaption::before) {
@@ -78,46 +83,38 @@
 		margin-bottom: 0;
 	}
 
-	:global(.prose-custom > pre) {
-		margin-top: 0em;
-		margin-bottom: 1.75em;
+	:global(.prose-custom pre) {
+		padding: 0;
 	}
 
-	:global(.prose-custom > pre > code) {
+	:global(.prose-custom pre > code) {
 		tab-size: 2;
-	}
-
-	:global(.prose-custom p > picture > img) {
-		margin-top: 0.5em;
-		margin-bottom: 0.5em;
 	}
 
 	:global(.prose-custom > figure) {
 		display: contents;
 	}
 
-	:global(.prose-custom picture) {
-		display: contents;
-	}
-
 	:global(.prose-custom > figure > *) {
 		grid-column-start: prose-start;
 		grid-column-end: prose-end;
+		margin-top: 0rem;
+		margin-bottom: 1.25rem;
 	}
 
-	:global(.prose-custom picture *) {
-		grid-column-start: prose-start;
-		grid-column-end: prose-end;
+	:global(.prose-custom img) {
+		background-color: #d4d4d8; /* zinc-300 */
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:global(.prose-custom img) {
+			background-color: #3f3f46; /* zinc-700 */
+		}
 	}
 
 	:global(.prose-custom > iframe) {
 		width: 100%;
 		height: 432px;
-	}
-
-	:global(.prose-custom picture > img) {
-		margin-top: 0.5em;
-		margin-bottom: 1.75em;
 	}
 
 	:global(.prose-custom > table) {
@@ -126,7 +123,8 @@
 	}
 
 	@media only screen and (max-width: 767px) {
-		:global(.prose-custom picture > img),
+		:global(.prose-custom > img),
+		:global(.prose-custom > figure > img),
 		:global(.prose-custom > iframe) {
 			grid-column-start: full-start;
 			grid-column-end: full-end;

@@ -13,21 +13,21 @@ I have been using the impressive [Hyprland][] compositor on my Linux laptop for 
 
 To change the brightness of the internal display, I use [brillo][] because it supports smoothed brightness adjustments. This is the command I previously had bound to the brightness up key in Hyprland's config:
 
-```shell
+```bash
 # Increase the brightness 8% over 150ms
 brillo -u 150000 -A 8
 ```
 
 To increase the brightness of the external display, [ddcutil][] is perfect as it uses DDC/CI to change the display's paramters over I²C (magic!):
 
-```shell
+```bash
 # Increase the brightness of the first external monitor by 8%
 ddcutil --display=1 setvcp 10 + 8
 ```
 
 What I really wanted to do was run the relevant command for the currently focused monitor (ie, the one where the cursor is). Here's where Hyprland comes in:
 
-```shell
+```bash
 # Get a list of monitors including focused state and ID, in JSON format
 hyprctl monitors -j
 ```

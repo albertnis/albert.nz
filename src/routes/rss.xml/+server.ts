@@ -1,5 +1,4 @@
 import { fetchMarkdownPosts } from '$lib/utils'
-import {} from '@sveltejs/kit'
 import { format, parseISO } from 'date-fns'
 import type { PostWithContent } from '../../types/post'
 
@@ -23,7 +22,6 @@ const render = (
 <title>Albert Nisbet - RSS Feed</title>
 <description>The blog of Albert Nisbet</description>
 <link>https://albert.nz</link>
-<generator>GatsbyJS</generator>
 <lastBuildDate>${formatRFC2822(new Date())}</lastBuildDate>
 ${posts.map(postToItem).join('\n')}
 </channel>

@@ -31,25 +31,25 @@ I tackled timing of the remote codes first because it will let us try out some b
 
 The off code is an example of a stateless code which can be sent to the heat pump. Using the Broadlink RM Mini 3's learning capability, I captured the off packet of my remote control. It looks like this:
 
-```
+```txt
 JgB2AG4zDwsQCxAmDwwPJhALEAsPDA8mECYQCw8MDwsQJhAmDwsQCxALEAsPDA8MDwsQCxALEAsPDA8LEAsQJg8MDwsQCxALEAsPDA8LECYQCxALDwwPCxAmEAsPDA8LEAsQCxALDyYQCxAmECYPJhAmDyYQJhAADQUAAA==
 ```
 
 That's the base64 representation which is used by Broadlink devices. Decoding it reveals the following byte array:
 
-```
+```txt
 [26, 00, 76, 00, 6e, 33, 0f, 0b, 10, 0b, 10, 26, 0f, 0c, 0f, 26, 10, 0b, 10, 0b, 0f, 0c, 0f, 26, 10, 26, 10, 0b, 0f, 0c, 0f, 0b, 10, 26, 10, 26, 0f, 0b, 10, 0b, 10, 0b, 10, 0b, 0f, 0c, 0f, 0c, 0f, 0b, 10, 0b, 10, 0b, 10, 0b, 0f, 0c, 0f, 0b, 10, 0b, 10, 26, 0f, 0c, 0f, 0b, 10, 0b, 10, 0b, 10, 0b, 0f, 0c, 0f, 0b, 10, 26, 10, 0b, 10, 0b, 0f, 0c, 0f, 0b, 10, 26, 10, 0b, 0f, 0c, 0f, 0b, 10, 0b, 10, 0b, 10, 0b, 0f, 26, 10, 0b, 10, 26, 10, 26, 0f, 26, 10, 26, 0f, 26, 10, 26, 10, 00, 0d, 05, 00, 00]
 ```
 
 In Broadlink protocol, most of these numbers represent timings in multiples of 2^-15s (the first few and last few are a [bit different][bl-protocol]). I know that this code, when sent to the heat pump, will turn it off. The trick now is to try to derive this same code from the information in David Abrams' document. Then I will know that I have worked out the timing information for the heat pump and can send any bits to the heat pump. The document says this is the code:
 
-```
+```txt
 00101000110001100000000000001000000010000100000010111111
 ```
 
 That's a series of bits which need to be converted to a code. The document says that "one" bits become `0010 0010` and "zero" bits become `0010 002e`. Those are _pronto codes_ which means each hex value is a number of cycles. I added the leader and trailer specified in the document then converted this to a Broadlink code by using the frequency 39kHz, close to the 38kHz specified by Abrams. I chose this because the resulting code had the "26" values which I saw in the real packet. This is a good indicator that the frequency is close. Here's what this generated value looks like, with the real bytes (from before) alongside:
 
-```
+```txt
 Real:      [26, 00, 76, 00, 6e, 33, 0f, 0b, 10, 0b, 10, 26, 0f, 0c, 0f, 26, 10, 0b, 10, 0b, 0f, 0c, 0f, 26, 10, 26, 10, 0b, 0f, 0c, 0f, 0b, 10, 26, 10, 26, 0f, 0b, 10, 0b, 10, 0b, 10, 0b, 0f, 0c, 0f, 0c, 0f, 0b, 10, 0b, 10, 0b, 10, 0b, 0f, 0c, 0f, 0b, 10, 0b, 10, 26, 0f, 0c, 0f, 0b, 10, 0b, 10, 0b, 10, 0b, 0f, 0c, 0f, 0b, 10, 26, 10, 0b, 10, 0b, 0f, 0c, 0f, 0b, 10, 26, 10, 0b, 0f, 0c, 0f, 0b, 10, 0b, 10, 0b, 10, 0b, 0f, 26, 10, 0b, 10, 26, 10, 26, 0f, 26, 10, 26, 0f, 26, 10, 26, 10, 00, 0d, 05, 00, 00]
 Generated: [26, 00, 76, 00, 68, 34, 0d, 26, 0d, 26, 0d, 0d, 0d, 26, 0d, 0d, 0d, 26, 0d, 26, 0d, 26, 0d, 0d, 0d, 0d, 0d, 26, 0d, 26, 0d, 26, 0d, 0d, 0d, 0d, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 0d, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 0d, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 0d, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 0d, 0d, 26, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, ff, 0d, 05, 00, 00]
 ```
@@ -58,7 +58,7 @@ The good news is that the length is perfect! We're clearly on to something here.
 
 I performed the same generation as before, but this time "one" bits become `0010 002e` and "zero" bits become `0010 0010` - opposite to before. I left the trailer and leader the same.
 
-```
+```txt
 Real:             [26, 00, 76, 00, 6e, 33, 0f, 0b, 10, 0b, 10, 26, 0f, 0c, 0f, 26, 10, 0b, 10, 0b, 0f, 0c, 0f, 26, 10, 26, 10, 0b, 0f, 0c, 0f, 0b, 10, 26, 10, 26, 0f, 0b, 10, 0b, 10, 0b, 10, 0b, 0f, 0c, 0f, 0c, 0f, 0b, 10, 0b, 10, 0b, 10, 0b, 0f, 0c, 0f, 0b, 10, 0b, 10, 26, 0f, 0c, 0f, 0b, 10, 0b, 10, 0b, 10, 0b, 0f, 0c, 0f, 0b, 10, 26, 10, 0b, 10, 0b, 0f, 0c, 0f, 0b, 10, 26, 10, 0b, 0f, 0c, 0f, 0b, 10, 0b, 10, 0b, 10, 0b, 0f, 26, 10, 0b, 10, 26, 10, 26, 0f, 26, 10, 26, 0f, 26, 10, 26, 10, 00, 0d, 05, 00, 00]
 Generated + flip: [26, 00, 76, 00, 68, 34, 0d, 0d, 0d, 0d, 0d, 26, 0d, 0d, 0d, 26, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 26, 0d, 26, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 26, 0d, 26, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 26, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 26, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 26, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 26, 0d, 0d, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, 26, 0d, ff, 0d, 05, 00, 00]
 ```
@@ -71,37 +71,37 @@ Looks much better! Note how the first `[0d, 0d]` lines up with a `[0f, 0b]`. The
 
 Having worked out timing information, we can move on to look at data. Abrams' document says the heat pump broadcasts its entire state in 16 bytes of information. Let's capture a code and take a look. This is a code for 30 degrees Celsius, heat mode, no fan, no swing, with the heat pump already on:
 
-```
+```txt
 JgAGAXAyEAsQCxAlEAsQJhAKEQoQCxAmECUQCxALEAsQJRElEAsPDBAKEAsRChALEAsQChEKEQoQCxALEAsPJhALEAsPDBAKEQoQCxALECYQChEKEAsQCxAlESUQJhAlECYQJhAlECYQCxAKESUQCxALEAoQCxALDwwQCxAKESUQJhALEAoQCxALEAsQCw8MECUQJhAlEQoQCxAmEAoRChALDwwQCxAKEAwPJhALDwwQChEKEAsQCw8MEAoRChALEAsQCxAKEQoQCxALEAsQCxAKEQoQCxALEAsQChEKEAsQCxALEAoRChEKEAsQCxALECUQCw8MDwwQChALECYQCxAKESUQJhAADQUAAA==
 ```
 
 Decoded into timing bytes, we get this:
 
-```
+```txt
 [26, 00, 06, 01, 70, 32, 10, 0b, 10, 0b, 10, 25, 10, 0b, 10, 26, 10, 0a, 11, 0a, 10, 0b, 10, 26, 10, 25, 10, 0b, 10, 0b, 10, 0b, 10, 25, 11, 25, 10, 0b, 0f, 0c, 10, 0a, 10, 0b, 11, 0a, 10, 0b, 10, 0b, 10, 0a, 11, 0a, 11, 0a, 10, 0b, 10, 0b, 10, 0b, 0f, 26, 10, 0b, 10, 0b, 0f, 0c, 10, 0a, 11, 0a, 10, 0b, 10, 0b, 10, 26, 10, 0a, 11, 0a, 10, 0b, 10, 0b, 10, 25, 11, 25, 10, 26, 10, 25, 10, 26, 10, 26, 10, 25, 10, 26, 10, 0b, 10, 0a, 11, 25, 10, 0b, 10, 0b, 10, 0a, 10, 0b, 10, 0b, 0f, 0c, 10, 0b, 10, 0a, 11, 25, 10, 26, 10, 0b, 10, 0a, 10, 0b, 10, 0b, 10, 0b, 10, 0b, 0f, 0c, 10, 25, 10, 26, 10, 25, 11, 0a, 10, 0b, 10, 26, 10, 0a, 11, 0a, 10, 0b, 0f, 0c, 10, 0b, 10, 0a, 10, 0c, 0f, 26, 10, 0b, 0f, 0c, 10, 0a, 11, 0a, 10, 0b, 10, 0b, 0f, 0c, 10, 0a, 11, 0a, 10, 0b, 10, 0b, 10, 0b, 10, 0a, 11, 0a, 10, 0b, 10, 0b, 10, 0b, 10, 0b, 10, 0a, 11, 0a, 10, 0b, 10, 0b, 10, 0b, 10, 0a, 11, 0a, 10, 0b, 10, 0b, 10, 0b, 10, 0a, 11, 0a, 11, 0a, 10, 0b, 10, 0b, 10, 0b, 10, 25, 10, 0b, 0f, 0c, 0f, 0c, 10, 0a, 10, 0b, 10, 26, 10, 0b, 10, 0a, 11, 25, 10, 26, 10, 00, 0d, 05, 00, 00]
 ```
 
 We can remove the Broadlink preamble and postamble, as well as the leader and trailer pair to give us this:
 
-```
+```txt
 [10, 0b, 10, 0b, 10, 25, 10, 0b, 10, 26, 10, 0a, 11, 0a, 10, 0b, 10, 26, 10, 25, 10, 0b, 10, 0b, 10, 0b, 10, 25, 11, 25, 10, 0b, 0f, 0c, 10, 0a, 10, 0b, 11, 0a, 10, 0b, 10, 0b, 10, 0a, 11, 0a, 11, 0a, 10, 0b, 10, 0b, 10, 0b, 0f, 26, 10, 0b, 10, 0b, 0f, 0c, 10, 0a, 11, 0a, 10, 0b, 10, 0b, 10, 26, 10, 0a, 11, 0a, 10, 0b, 10, 0b, 10, 25, 11, 25, 10, 26, 10, 25, 10, 26, 10, 26, 10, 25, 10, 26, 10, 0b, 10, 0a, 11, 25, 10, 0b, 10, 0b, 10, 0a, 10, 0b, 10, 0b, 0f, 0c, 10, 0b, 10, 0a, 11, 25, 10, 26, 10, 0b, 10, 0a, 10, 0b, 10, 0b, 10, 0b, 10, 0b, 0f, 0c, 10, 25, 10, 26, 10, 25, 11, 0a, 10, 0b, 10, 26, 10, 0a, 11, 0a, 10, 0b, 0f, 0c, 10, 0b, 10, 0a, 10, 0c, 0f, 26, 10, 0b, 0f, 0c, 10, 0a, 11, 0a, 10, 0b, 10, 0b, 0f, 0c, 10, 0a, 11, 0a, 10, 0b, 10, 0b, 10, 0b, 10, 0a, 11, 0a, 10, 0b, 10, 0b, 10, 0b, 10, 0b, 10, 0a, 11, 0a, 10, 0b, 10, 0b, 10, 0b, 10, 0a, 11, 0a, 10, 0b, 10, 0b, 10, 0b, 10, 0a, 11, 0a, 11, 0a, 10, 0b, 10, 0b, 10, 0b, 10, 25, 10, 0b, 0f, 0c, 0f, 0c, 10, 0a, 10, 0b, 10, 26, 10, 0b, 10, 0a, 11, 25, 10, 26]
 ```
 
 That's 256 timing entries in the array, or 128 burst pairs. Each pair is a bit - meaning we have 16 bytes right here, as predicted by Abrams' document. Maybe this won't be so hard after all. Using the timing knowledge gleaned earlier, we can go through and replace each pair with a bit. We can't just do a find and replace. This is due to the jitter I mentioned earlier: "One" bits aren't always `[0d, 26]` - sometimes they are `[10, 25]` or `[0f, 26]`. We can look at proportions instead. Here's the kind of substitution rule which works: Each pair where the second item is at least 1.5 times the first item encodes a "one" bit. Otherwise we take the pair as encoding a "zero" bit. Applying this rule for each pair of timing values, the code becomes:
 
-```
+```txt
 00101000110001100000000000001000000010000111111110010000000011000000011100100000001000000000000000000000000000000000010000010011
 ```
 
 Or, in hex:
 
-```
+```txt
 [28, c6, 00, 08, 08, 7f, 90, 0c, 07, 20, 20, 00, 00, 00, 04, 13]
 ```
 
 Boom! We have ourselves a state payload. Are all these hex codes getting confusing? Remember that we are now in the data domain. These bytes represent encoded state _data_, not _timing_. We just made an algorithm to convert a captured IR packet to a data payload. Let's apply the algorithm to an IR code for 18 degrees celsius instead of 30 with all other settings equal. Can you spot the difference?
 
-```
+```txt
 30deg: [28, c6, 00, 08, 08, 7f, 90, 0c, 07, 20, 20, 00, 00, 00, 04, 13]
 18deg: [28, c6, 00, 08, 08, 7f, 90, 0c, 04, 20, 20, 00, 00, 00, 04, 11]
                                          ^                           ^

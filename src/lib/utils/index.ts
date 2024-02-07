@@ -1,31 +1,26 @@
-import type { SvelteComponent } from 'svelte'
 import type { PostMetadata, PostWithContent } from '../../types/post'
-
-interface ResolverResult {
-	metadata: PostMetadata
-	default: SvelteComponent
-}
+import type { RemarkRehypePluginOutput } from '../../plugins/vite-plugin-remark'
 
 export const fetchMarkdownPosts = async (): Promise<PostWithContent[]> => {
 	const allPostFiles = import.meta.glob('/content/blog/**/index.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
 
-	const allPosts = await Promise.all(
+	const allPosts: PostWithContent[] = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
-			const result = (await resolver()) as ResolverResult
+			const result = ((await resolver()) as any).default as RemarkRehypePluginOutput
 			const postPath = path.slice(13, -9)
 
 			return {
-				meta: result.metadata,
+				meta: result.metadata as unknown as PostMetadata,
 				path: postPath,
-				contentHtml: result.default.render().html
+				contentHtml: result.html
 			}
 		})
 	)
 
-	const sortedPosts = allPosts.sort((a, b) => {
-		return new Date(b.meta.date).valueOf() - new Date(a.meta.date).valueOf()
+	allPosts.sort((a, b) => {
+		return new Date(b.meta.date as string).valueOf() - new Date(a.meta.date as string).valueOf()
 	})
 
-	return sortedPosts
+	return allPosts
 }

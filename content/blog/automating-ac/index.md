@@ -67,7 +67,7 @@ Before we move on to automating the heat pump, we need to find somewhere for the
 
 We just need to build an image and run the container with something like the following:
 
-```shell
+```bash
 git clone https://github.com/albertnis/fujitsu-ar-ry13-ir-codes
 cd fujitsu-ar-ry13-ir-codes
 docker build -t ir-sandbox .
@@ -76,7 +76,7 @@ docker run -p 8080:8080 -d ir-sandbox --name="ir-sandbox" --restart="always"
 
 I'll be adding this to my home automation docker-compose file someday, but for now the manual build and run does the trick! At this stage IR codes can be constructed via the API. For example:
 
-```shell
+```bash
 $ curl "http://localhost:8080/broadlink?tempC=18&mode=heat&fanSpeed=Quiet&swing=Off&powerOn=0"
 JgAGAWg0DQ0NDQ0mDQ0NJg0NDQ0NDQ0mDSYNDQ0NDQ0NJg0mDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NJg0NDQ0NDQ0NDQ0NDQ0NDSYNDQ0NDQ0NDQ0mDSYNJg0mDSYNJg0mDSYNDQ0NDSYNDQ0NDQ0NDQ0NDQ0NDQ0NDSYNJg0NDQ0NDQ0NDQ0NDQ0NDSYNDQ0NDQ0NDQ0mDQ0NDQ0NDQ0NDQ0NDQ0NJg0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDSYNDQ0NDQ0NDQ0NDSYNDQ0NDQ0NJg3/DQUAAA==
 ```
@@ -96,7 +96,7 @@ I'll run through the steps briefly:
 1. **Map state to remote query** just reorganises new state information into a neater structure within the flow message under the `query` key. This step isn't strictly needed.
 1. **Construct query string** is a template node which changes the `query` object into a string to be passed to our API.
 
-   ```
+   ```txt
    ?tempC={{query.tempC}}&mode={{query.mode}}&fanSpeed={{query.fanSpeed}}&swing={{query.swing}}&powerOn={{query.powerOn}}
    ```
 
@@ -104,7 +104,7 @@ I'll run through the steps briefly:
 1. **Set packet** moves the response string into the `msg.payload` key of the flow message.
 1. **Send IR code** is where we close the loop. It invokes the `switch.broadlink_send_packet` service in Home Assistant to send our code to a Broadlink IR blaster entity. The data template looks like this:
 
-   ```
+   ```txt
    {
      "packet": "{{payload}}"
    }
