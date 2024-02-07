@@ -21,7 +21,7 @@ Enter my solution: [vasestl](https://github.com/albertnis/vasestl). I opted to u
 
 ## Compute points
 
-The first step is to come up with an equation describing the shape. I decided to use polar co-ordinates for this process, which makes it easier to define periodic shapes that will wrap around the pot seamlessly. At each increment of height ($z$) and angle ($\theta$), the distance from the origin ($r$) can be defined--which yields a point in 3D space. One of the simplest options is a cylinder, which would have a mathematical definition like this:
+The first step is to come up with an equation describing the shape. I decided to use polar co-ordinates for this process, which makes it easier to define periodic shapes that will wrap around the pot seamlessly. At each increment of height ($$z$$) and angle ($$\theta$$), the distance from the origin ($$r$$) can be defined--which yields a point in 3D space. One of the simplest options is a cylinder, which would have a mathematical definition like this:
 
 ```math
 r(\theta, z) = 30
@@ -54,7 +54,7 @@ fn r(t: f32, z: f32) -> f32 {
 }
 ```
 
-Where this can get a bit painful is for non-circular shapes, such as squares and rectangles. These need to use a polar representation of the shape. For example, a square pot shape of side length $s$ would be defined as:
+Where this can get a bit painful is for non-circular shapes, such as squares and rectangles. These need to use a polar representation of the shape. For example, a square pot shape of side length $$s$$ would be defined as:
 
 ```math
 r(\theta, z) = \begin{cases}
@@ -99,9 +99,9 @@ It is possible to also build rectangles using a similar strategy. See the [examp
 
 ## Convert the points to triangles
 
-After computing the points at every increment of $z$ and $\theta$, the code has a point cloud where every point lies on the surface of the pot shape. This needs to be converted to a series of triangles which will define the surface which can later be printed.
+After computing the points at every increment of $$z$$ and $$\theta$$, the code has a point cloud where every point lies on the surface of the pot shape. This needs to be converted to a series of triangles which will define the surface which can later be printed.
 
-Because the points were computed at discrete increments of $z$, the array of points is effectively a series of vertically-stacked "rings" of points, where each "ring" has the same number of points (determined by the increment of $\theta$). Building triangles is a matter of iterating through the rings and connecting adjacent points to form squares, which are then stored as two triangles. Additionally, the normal vector of each triangle is determined, which can be computed using a cross product. This normal is later embedded in the STL file to indicate which side is the "outside" of the surface.
+Because the points were computed at discrete increments of $$z$$, the array of points is effectively a series of vertically-stacked "rings" of points, where each "ring" has the same number of points (determined by the increment of $$\theta$$). Building triangles is a matter of iterating through the rings and connecting adjacent points to form squares, which are then stored as two triangles. Additionally, the normal vector of each triangle is determined, which can be computed using a cross product. This normal is later embedded in the STL file to indicate which side is the "outside" of the surface.
 
 <figure>
 <div style="display: flex; justify-content: center;">
