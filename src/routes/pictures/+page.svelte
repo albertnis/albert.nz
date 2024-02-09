@@ -7,7 +7,7 @@
 </script>
 
 <div
-	class="mt-20 flex flex-wrap images-container w-full max-w-[1920px] mx-auto justify-stretch items-stretch gap-1 sm:gap-3"
+	class="pt-24 flex flex-wrap images-container w-full max-w-[1920px] mx-auto justify-stretch items-stretch gap-1 sm:gap-3"
 >
 	{#each adventuresImages as image}
 		<a href={image.postSlug} data-aspect-ratio={Math.round(image.aspectRatio * 2) / 2}>

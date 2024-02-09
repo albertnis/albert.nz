@@ -3,7 +3,7 @@
 	import Logo from '$lib/components/Logo.svelte'
 </script>
 
-<div class="bg-zinc-900 text-zinc-100 col-start-[full-start] col-end-[full-end] p-3">
+<div class="bg-zinc-900 text-zinc-100 col-start-[full-start] col-end-[full-end]">
 	<div
 		class="fixed left-5 top-5 z-10 text-xl bg-zinc-800 bg-opacity-50 flex rounded-md backdrop-blur-md items-center justify-between p-[1rem] sm:justify-start sm:p-4 shadow-md"
 	>
