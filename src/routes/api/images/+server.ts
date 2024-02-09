@@ -1,7 +1,7 @@
 import { fetchMarkdownPosts } from '$lib/utils'
 import { json } from '@sveltejs/kit'
 import type { Image, PostWithContent } from '../../../types/post'
-import parse from 'node-html-parser'
+import { parse } from 'node-html-parser'
 
 export const GET = async () => {
 	const allPosts = await fetchMarkdownPosts()
