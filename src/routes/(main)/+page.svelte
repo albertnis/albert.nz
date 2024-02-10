@@ -58,7 +58,7 @@
 				<li class="inline">
 					<a
 						class="group inline-block dark:bg-zinc-700 dark:hover:bg-zinc-600 dark:active:bg-zinc-950 bg-zinc-300 hover:bg-zinc-400 active:bg-zinc-50 rounded-md py-2 px-3"
-						href="/pictures"
+						href="/gallery"
 					>
 						<div class="flex items-center font-bold">
 							<CameraIcon />
