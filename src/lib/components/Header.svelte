@@ -10,7 +10,7 @@
 			class="ml-1 sm:ml-5">Albert Nisbet</span
 		>
 	</h1>
-	<div class="my-10 text-lg font-medium sm:my-20">
+	<div class="my-10 text-base sm:text-lg font-medium sm:my-20">
 		<p>
 			<b>Kia ora!</b>
 		</p>
