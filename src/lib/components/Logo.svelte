@@ -6,6 +6,7 @@
 	version="1.1"
 	><path
 		stroke-width="1.3"
+		pathLength="1"
 		stroke-linecap="round"
 		stroke-linejoin="round"
 		fill="none"
