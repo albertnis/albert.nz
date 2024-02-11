@@ -104,6 +104,7 @@
 
 	:global(.prose-custom img) {
 		background-color: #d4d4d8; /* zinc-300 */
+		color: transparent;
 	}
 
 	@media (prefers-color-scheme: dark) {
