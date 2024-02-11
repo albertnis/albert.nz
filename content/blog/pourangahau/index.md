@@ -16,23 +16,23 @@ A popular hill walk near St Arnaud is the Mt Robert loop which takes walkers up 
 
 ![A walker crests the hill near Bushedge Shelter, about to tackle the steep downhill of Pinchgut Track][mountain-view]
 
-![][frost]
-
-<figcaption><a href="https://en.wikipedia.org/wiki/Needle_ice">Needle ice</a> was present along much of the track. It's the first time I've experienced it.</figcaption>
+<figure>
+  <img src="./DSC08537.jpg" alt="Needle ice was present along much of the track. It's the first time I've experienced it.">
+  <figcaption><a href="https://en.wikipedia.org/wiki/Needle_ice">Needle ice</a> was present along much of the track. It's the first time I've experienced it.</figcaption>
+</figure>
 
 # Back in St Arnaud
 
 We were only in town for a couple of nights but enjoyed heading down to Lake Rotoiti which was a short walk from our accomodation. I already want to come back to this region, possibly for some fast-packing in summer - there are so many interesting longer trails to explore.
 
-![][eels]
-
-<figcaption>Meeting the local longfin eels (tuna kuwharuwharu). They are friendly and squishy. I researched more about these creatures and learnt <a href="https://en.wikipedia.org/wiki/New_Zealand_longfin_eel">they can live to 60 years old before swimming to Tonga to breed</a>.</figcaption>
+<figure>
+  <img src="./DSC08487.jpg" alt="Meeting the local longfin eels (tuna kuwharuwharu)">
+  <figcaption>Meeting the local longfin eels (tuna kuwharuwharu). They are friendly and squishy. I researched more about these creatures and learnt <a href="https://en.wikipedia.org/wiki/New_Zealand_longfin_eel">they can live to 60 years old before swimming to Tonga to breed</a>.</figcaption>
+</figure>
 
 ![A night walk didn't reveal any kiwi, but a narrow layer of dense fog settled over the lake making for dramatic sights][pier]
 
-[eels]: ./DSC08487.jpg
 [pier]: ./DSC08513.jpg
-[frost]: ./DSC08537.jpg
 [saddle]: ./DSC08542.jpg
 [lake-view]: ./DSC08548.jpg
 [mountain-view]: ./DSC08561.jpg

@@ -24,11 +24,17 @@ There's a varied range of plants around the place. Unfortunately the huge deer p
 
 The forest is incredibly damp from the large amount of precipitation received on Stewart Island. Windfall and dead trees rot quickly and give rise to new plant life.
 
-![Native orchid <i>Earina autumnalis</i> was often seen growing draped over windfall and rotting trees. It smells strongly like cheap air freshener and we often caught a whiff of it before we saw it.](./DSC01299.jpg)
+<figure>
+  <img src="./DSC01299.jpg" alt="Native orchid Earina autumnalis was often seen growing draped over windfall and rotting trees. It smells strongly like cheap air freshener and we often caught a whiff of it before we saw it.">
+  <figcaption>Native orchid <i>Earina autumnalis</i> was often seen growing draped over windfall and rotting trees. It smells strongly like cheap air freshener and we often caught a whiff of it before we saw it.</figcaption>
+</figure>
 
 We saw some bright orange and blue fungi, too.
 
-![Tiny snail, possibly a carnivorous <i>Powelliphanta</i> variety, on a large orange fungus](./DSC01422.jpg)
+<figure>
+  <img src="./DSC01422.jpg" alt="Tiny snail, possibly a carnivorous Powelliphanta variety, on a large orange fungus" >
+  <figcaption>Tiny snail, possibly a carnivorous <i>Powelliphanta</i> variety, on a large orange fungus</figcaption>
+</figure>
 
 ## Landscape
 

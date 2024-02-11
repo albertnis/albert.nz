@@ -23,6 +23,11 @@ export const rehypeFigure = () => (tree: Node) =>
 			return
 		}
 
+		if (parent.tagName === 'figure') {
+			// Img is already in a figure - leave it untouched
+			return
+		}
+
 		const captionContent: Text = {
 			type: 'text',
 			value: alt
