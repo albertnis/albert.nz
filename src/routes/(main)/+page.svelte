@@ -6,6 +6,7 @@
 	import Tag from '$lib/components/Tag.svelte'
 	import TagSmall from '$lib/components/TagSmall.svelte'
 	import MapIcon from '$lib/components/MapIcon.svelte'
+	import CameraIcon from '$lib/components/CameraIcon.svelte'
 	export let data: { posts: PostPreview[] }
 
 	let showTechnologyTag = true
@@ -24,31 +25,48 @@
 <div class="col-start-[wide-start] col-end-[wide-end]">
 	<h2 class="text-2xl" id="posts">
 		<span class="font-bold">Latest posts</span>
-		<span class="text-zinc-600 dark:text-zinc-400">about</span>
-		<Tag tag="technology" bind:enabled={showTechnologyTag} />
-		<span class="text-zinc-600 dark:text-zinc-400">and</span>
-		<Tag tag="adventures" bind:enabled={showAdventuresTag} />
 	</h2>
 
-	<p class="mt-4 mb-8">
+	<p class="mt-4 mb-8 text-base sm:text-lg">
 		I blog about things that are interesting to me: these days that's largely home automation,
 		electronics and tramping in New Zealand.
 	</p>
 
+	<div class="my-4">
+		<span class="text-zinc-700 dark:text-zinc-300 text-base">Tags</span>
+		<ul class="inline ml-2">
+			<li class="inline text-xl"><Tag tag="technology" bind:enabled={showTechnologyTag} /></li>
+			<li class="inline text-xl"><Tag tag="adventures" bind:enabled={showAdventuresTag} /></li>
+		</ul>
+	</div>
+
 	{#if showAdventuresTag}
-		<div
-			class="my-8 rounded-md border border-teal-800 bg-teal-600 p-2 text-zinc-50 dark:border-teal-400 sm:w-[300px]"
-		>
-			<a class="group inline-block w-full" href="/adventures">
-				<div class="flex items-center font-bold">
-					<MapIcon />
-					<div>
-						<span class="ml-2 border-b border-b-zinc-50 group-hover:border-b-2">Adventures map</span
-						>
-					</div>
-				</div>
-				<div class="text-sm text-teal-200">View adventures on an interactive map</div>
-			</a>
+		<div class="my-4 flex flex-col sm:flex-row items-baseline gap-1 sm:gap-3">
+			<span class="text-zinc-700 dark:text-zinc-300 text-base">View all adventures</span>
+			<ul class="inline text-base">
+				<li class="inline">
+					<a
+						class="group inline-block dark:bg-zinc-700 dark:hover:bg-zinc-600 dark:active:bg-zinc-950 bg-zinc-300 hover:bg-zinc-400 active:bg-zinc-50 rounded-md py-2 px-3"
+						href="/adventures"
+					>
+						<div class="flex items-center font-bold">
+							<MapIcon />
+							<span class="ml-2">Map</span>
+						</div>
+					</a>
+				</li>
+				<li class="inline">
+					<a
+						class="group inline-block dark:bg-zinc-700 dark:hover:bg-zinc-600 dark:active:bg-zinc-950 bg-zinc-300 hover:bg-zinc-400 active:bg-zinc-50 rounded-md py-2 px-3"
+						href="/gallery"
+					>
+						<div class="flex items-center font-bold">
+							<CameraIcon />
+							<span class="ml-2">Gallery</span>
+						</div>
+					</a>
+				</li>
+			</ul>
 		</div>
 	{/if}
 
