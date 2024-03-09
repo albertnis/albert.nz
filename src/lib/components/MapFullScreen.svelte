@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
-	import mapboxgl, { Map } from 'mapbox-gl'
+	import mapboxgl, { Map, Marker } from 'mapbox-gl'
 	import 'mapbox-gl/dist/mapbox-gl.css'
 	import type { PostMapPreview } from '../../types/post'
 
@@ -79,24 +79,10 @@
 						}
 					})
 
-					map.addSource(g.metadata.gpxFilePath + '_source_start', {
-						type: 'geojson',
-						data: {
-							type: 'Feature',
-							properties: {},
-							geometry: { type: 'Point', coordinates: coords[0] }
-						}
-					})
-					map.addLayer({
-						id: g.metadata.gpxFilePath + '_layer_start',
-						type: 'symbol',
-						source: g.metadata.gpxFilePath + '_source_start',
-						layout: {
-							'icon-image': 'pin',
-							'icon-size': 0.5,
-							'icon-allow-overlap': true
-						}
-					})
+					const marker = new Marker({ color: '#0ea5e9', scale: 0.75 })
+						.setLngLat([coords[0][0], coords[0][1]])
+						.addTo(map)
+					const markerEl = marker.getElement()
 
 					const onClick = () => {
 						const coordns = coords as [number, number][]
@@ -117,11 +103,9 @@
 						map.getCanvas().style.cursor = ''
 					}
 
-					map.on('click', g.metadata.gpxFilePath + '_layer_start', onClick)
+					markerEl.addEventListener('click', onClick)
 					map.on('click', g.metadata.gpxFilePath + '_layer_path', onClick)
-					map.on('mouseenter', g.metadata.gpxFilePath + '_layer_start', onMouseEnter)
 					map.on('mouseenter', g.metadata.gpxFilePath + '_layer_path', onMouseEnter)
-					map.on('mouseleave', g.metadata.gpxFilePath + '_layer_start', onMouseLeave)
 					map.on('mouseleave', g.metadata.gpxFilePath + '_layer_path', onMouseLeave)
 				})
 			})
@@ -129,10 +113,14 @@
 	})
 </script>
 
-<div class="absolute-important bottom-0 left-0 h-full w-full" bind:this={mapDiv} />
+<div class="absolute-important bottom-0 left-0 h-full w-full map-fullscreen" bind:this={mapDiv} />
 
 <style>
 	.absolute-important {
 		position: absolute !important;
+	}
+
+	:global(.map-fullscreen .mapboxgl-marker) {
+		cursor: pointer;
 	}
 </style>
