@@ -1,23 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="%sveltekit.assets%/albertnz-favicon16x16.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="%sveltekit.assets%/albertnz-favicon32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="64x64"
+			href="%sveltekit.assets%/albertnz-favicon64x64.png"
+		/>
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			title="Albert Nisbet - RSS Feed"
+			href="/rss.xml"
+		/>
+		<meta name="viewport" content="width=device-width" />
+		<script>
+			let FF_FOUC_FIX
+		</script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet" />
+		%sveltekit.head%
+	</head>
 
-<head>
-	<meta charset="utf-8" />
-	<link rel="icon" type="image/png" sizes="16x16" href="%sveltekit.assets%/albertnz-favicon16x16.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="%sveltekit.assets%/albertnz-favicon32x32.png" />
-	<link rel="icon" type="image/png" sizes="64x64" href="%sveltekit.assets%/albertnz-favicon64x64.png" />
-	<link rel="alternate" type="application/rss+xml" title="Albert Nisbet - RSS Feed" href="/rss.xml" />
-	<meta name="viewport" content="width=device-width" />
-	<script>
-		let FF_FOUC_FIX;
-	</script>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet">
-	%sveltekit.head%
-</head>
-
-<body data-sveltekit-preload-data="hover">
-	<div style="display: contents">%sveltekit.body%</div>
-</body>
-
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
 </html>
