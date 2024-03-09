@@ -14,7 +14,7 @@
 </script>
 
 <div
-	class="fixed left-5 top-5 z-10 text-xl bg-zinc-200 dark:bg-zinc-800 bg-opacity-50 flex rounded-md backdrop-blur-md items-center justify-between p-[1rem] sm:justify-start sm:p-4 shadow-md"
+	class="fixed left-5 top-5 z-10 text-xl bg-zinc-200 dark:bg-zinc-800 bg-opacity-50 dark:bg-opacity-50 flex rounded-md backdrop-blur-md items-center justify-between p-[1rem] sm:justify-start sm:p-4 shadow-md"
 >
 	<a
 		class="pointer-events-auto flex opacity-50 hover:opacity-100 dark:text-zinc-200 text-zinc-800 relative bottom-[0.05em]"
@@ -22,7 +22,7 @@
 		aria-label="Home page"><Logo /></a
 	>
 
-	<div class="ml-2 border-zinc-400 align-middle leading-none font-bold">Adventures</div>
+	<div class="ml-2 border-zinc-400 align-middle leading-none font-bold">Adventures Map</div>
 </div>
 
 {#if selectedPost != null && selectedPost != ''}
@@ -30,7 +30,7 @@
 		class="pointer-events-none fixed bottom-0 left-0 z-10 flex w-full bg-gradient-to-t from-white/60 px-3 pb-10 dark:from-black/60 sm:px-10"
 	>
 		<div
-			class="pointer-events-auto relative w-full rounded-md border border-zinc-400 bg-zinc-100 p-3 shadow-md dark:border-zinc-600 dark:bg-zinc-800 sm:max-w-[500px]"
+			class="pointer-events-auto relative w-full rounded-md bg-zinc-100 p-3 shadow-md bg-opacity-50 dark:bg-opacity-50 backdrop-blur-md dark:bg-zinc-800 sm:max-w-[500px]"
 		>
 			<div class="flex items-center justify-between text-sm">
 				<h2 class="mr-1 cursor-default font-bold text-sky-600 dark:text-sky-400">Selected route</h2>
