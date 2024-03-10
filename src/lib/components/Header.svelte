@@ -1,5 +1,7 @@
-<script>
+<script lang="ts">
 	import Logo from './Logo.svelte'
+
+	export let country: string | undefined
 </script>
 
 <header class="col-start-[wide-start] col-end-[wide-end]">
@@ -12,7 +14,13 @@
 	</h1>
 	<div class="my-10 text-base sm:text-lg font-medium sm:my-20">
 		<p>
-			<b>Kia ora!</b>
+			<b>
+				{#if country === 'NZ'}
+					Kia ora!
+				{:else}
+					Hi!
+				{/if}
+			</b>
 		</p>
 
 		<p>

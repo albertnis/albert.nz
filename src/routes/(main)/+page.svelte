@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { PageData, LayoutServerData } from './$types'
 	import { format, parseISO } from 'date-fns'
 	import type { PostPreview } from '../../types/post'
 	import Header from '$lib/components/Header.svelte'
@@ -7,7 +8,7 @@
 	import TagSmall from '$lib/components/TagSmall.svelte'
 	import MapIcon from '$lib/components/MapIcon.svelte'
 	import CameraIcon from '$lib/components/CameraIcon.svelte'
-	export let data: { posts: PostPreview[] }
+	export let data: PageData
 
 	let showTechnologyTag = true
 	let showAdventuresTag = true
@@ -20,7 +21,7 @@
 	<meta property="profile:username" content="albertnis" />
 </svelte:head>
 
-<Header />
+<Header country={data.country} />
 
 <div class="col-start-[wide-start] col-end-[wide-end]">
 	<h2 class="text-2xl" id="posts">
