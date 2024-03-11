@@ -22,11 +22,10 @@ class ElementHandler {
 
 export default {
 	async fetch(request, env) {
-		const url = new URL(request.url)
 		const country = request.cf.country
 		const countryStrings = stringsByCountry[country]
 
-		const response = env.ASSETS.fetch(request)
+		const response = await env.ASSETS.fetch(request)
 
 		if (countryStrings !== undefined) {
 			return new HTMLRewriter()
@@ -34,6 +33,6 @@ export default {
 				.transform(response)
 		}
 
-		return env.ASSETS.fetch(request)
+		return response
 	}
 }
