@@ -17,7 +17,7 @@ const config = {
 			}
 		}),
 		prerender: {
-			entries: ['/', '/rss.xml', '/404']
+			entries: ['/', '/rss.xml', '/404', '/adventures', '/gallery']
 		},
 		paths: {
 			assets: process.env.CF_PAGES_URL,
