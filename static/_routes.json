@@ -1,0 +1,6 @@
+{
+	"version": 1,
+	"description": "Only run on pages requiring i18n",
+	"include": ["/"],
+	"exclude": []
+}

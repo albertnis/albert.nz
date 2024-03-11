@@ -12,7 +12,7 @@
 	</h1>
 	<div class="my-10 text-base sm:text-lg font-medium sm:my-20">
 		<p>
-			<b>Kia ora!</b>
+			<b data-i18n="home.greeting">Hi!</b>
 		</p>
 
 		<p>
