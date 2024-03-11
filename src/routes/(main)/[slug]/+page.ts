@@ -6,7 +6,7 @@ import type { EntryGenerator } from './$types'
 export const entries: EntryGenerator = () => {
 	const allPostFiles = import.meta.glob('/content/blog/**/index.md')
 
-	return Object.keys(allPostFiles).map((path) => ({ slug: path.slice(13, -9) }))
+	return Object.keys(allPostFiles).map((path) => ({ slug: path.slice(14, -9) }))
 }
 
 export const load = async ({ params }: { params: { slug: string } }): Promise<PageData<Post>> => {
