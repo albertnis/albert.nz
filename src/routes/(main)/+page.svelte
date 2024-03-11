@@ -29,8 +29,8 @@
 	</h2>
 
 	<p class="mt-4 mb-8 text-base sm:text-lg">
-		I blog about things that are interesting to me: these days that's largely home automation,
-		electronics and tramping in New Zealand.
+		Time is {new Date().toISOString()} I blog about things that are interesting to me: these days that's
+		largely home automation, electronics and tramping in New Zealand.
 	</p>
 
 	<div class="my-4">
