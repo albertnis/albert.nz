@@ -22,17 +22,17 @@
 
 <Header />
 
-<div class="col-start-[wide-start] col-end-[wide-end]">
+<div class="col-start-[wide-start] col-end-[wide-end] mt-16">
 	<h2 class="text-2xl" id="posts">
 		<span class="font-bold">Latest posts</span>
 	</h2>
 
-	<p class="mt-4 mb-8 text-base sm:text-lg">
+	<p class="my-3 text-base sm:text-lg">
 		I blog about things that are interesting to me: these days that's largely home automation,
 		electronics and tramping in New Zealand.
 	</p>
 
-	<div class="my-4">
+	<div class="my-6">
 		<span class="text-zinc-700 dark:text-zinc-300 text-base">Tags</span>
 		<ul class="inline ml-2">
 			<li class="inline text-xl"><Tag tag="technology" bind:enabled={showTechnologyTag} /></li>
