@@ -20,9 +20,10 @@ class ElementHandler {
 	}
 }
 
+/** @type {import("@cloudflare/workers-types").Fetcher} */
 export default {
 	async fetch(request, env) {
-		const country = request.cf.country
+		const country = request.headers.get('Country') ?? request.cf.country
 		const countryStrings = stringsByCountry[country]
 
 		const response = await env.ASSETS.fetch(request)
