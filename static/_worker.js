@@ -1,6 +1,7 @@
 const stringsByCountry = {
 	NZ: {
-		'home.greeting': 'Kia ora!'
+		'home.greeting': 'Kia ora',
+		'home.city': 'Ōtautahi Christchurch'
 	}
 }
 
