@@ -4,18 +4,18 @@
 
 <header class="col-start-[wide-start] col-end-[wide-end]">
 	<h1
-		class="mb-10 mt-5 cursor-default text-xl font-extrabold sm:mb-20 sm:mt-20 sm:text-2xl"
+		class="mb-10 mt-5 cursor-default text-2xl font-extrabold sm:mb-20 sm:mt-20"
 	>
 		<span class="text-zinc-600 dark:text-zinc-400"><Logo /></span><span class="ml-[0.25em]">Albert Nisbet</span>
 	</h1>
-	<div class="mt-40 text-base sm:text-lg font-medium sm:mt-20 max-w-md sm:max-w-full">
+	<div class="mt-32 text-lg font-medium sm:mt-20 max-w-md sm:max-w-full">
 		<p class="text-3xl mb-6">
 			<b><span data-i18n="home.greeting">Hi</span>, I'm Albert!</b>
 		</p>
 
 		<p class="text-zinc-700 dark:text-zinc-300">
 			I'm a product software engineer based in
-			<span data-i18n="home.city">Christchurch, New Zealand</span>. My passion is building quality
+			<span data-i18n="home.city">Christchurch, New Zealand</span>. My passion is crafting quality
 			software to solve interesting problems. I have a track record of doing just that at
 			<a
 				class="border-b border-b-zinc-600 hover:border-b-4 transition-all duration-75 hover:border-b-[#13b5ea] dark:border-b-zinc-400"
