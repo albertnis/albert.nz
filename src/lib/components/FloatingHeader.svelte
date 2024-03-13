@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="z-100 invisible sticky top-10 left-0 col-start-2 col-end-3 flex h-0 -translate-x-20 overflow-visible text-3xl text-zinc-600 transition-all dark:text-zinc-400 lgxl:visible"
+	class="z-100 invisible sticky top-10 left-0 col-start-2 col-end-3 flex h-0 -translate-x-20 overflow-visible text-2xl text-zinc-600 transition-all dark:text-zinc-400 lgxl:visible"
 >
 	<span
 		><a

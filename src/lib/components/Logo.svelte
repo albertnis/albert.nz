@@ -1,8 +1,8 @@
 <svg
 	xmlns="http://www.w3.org/2000/svg"
 	height="1em"
-	class="inline h-[1em]"
-	viewBox="0 0 12 8"
+	class="inline h-[1em] overflow-visible"
+	viewBox="0 2 12 7"
 	version="1.1"
 	><path
 		stroke-width="1.3"
