@@ -11,7 +11,7 @@
 		stroke-linejoin="round"
 		fill="none"
 		stroke="currentColor"
-		d="M 4,7 h -3 l 3,-5 3,5 3,-5"
+		d="M4, 7L1, 7L4, 2L7, 7L10, 2"
 		class="logoMinimal-module--logoPath--2Ukgx"
 	/></svg
 >
