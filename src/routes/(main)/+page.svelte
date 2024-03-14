@@ -29,7 +29,7 @@
 
 	<p class="my-3 text-base sm:text-lg">
 		I blog about things that are interesting to me: these days that's largely home automation,
-		electronics and tramping in New Zealand.
+		electronics and <span data-i18n="home.posts.hiking">hiking</span> in New Zealand.
 	</p>
 
 	<div class="my-6">

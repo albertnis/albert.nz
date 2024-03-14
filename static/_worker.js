@@ -1,7 +1,8 @@
 const stringsByCountry = {
 	NZ: {
 		'home.greeting': 'Kia ora',
-		'home.city': 'Ōtautahi Christchurch'
+		'home.city': 'Ōtautahi Christchurch',
+		'home.posts.hiking': 'tramping'
 	}
 }
 
