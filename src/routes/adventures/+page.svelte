@@ -13,18 +13,6 @@
 	$: selectedPost = selectedPostPath && data.posts.find((p) => p.path === selectedPostPath)
 </script>
 
-<div
-	class="fixed left-5 top-5 z-10 text-xl bg-zinc-200 dark:bg-zinc-800 bg-opacity-50 dark:bg-opacity-50 flex rounded-md backdrop-blur-md items-center justify-between p-[1rem] sm:justify-start sm:p-4 shadow-md"
->
-	<a
-		class="pointer-events-auto flex opacity-50 hover:opacity-100 dark:text-zinc-200 text-zinc-800 relative bottom-[0.05em]"
-		href="/"
-		aria-label="Home page"><Logo /></a
-	>
-
-	<div class="ml-2 border-zinc-400 align-middle leading-none font-bold">Adventures Map</div>
-</div>
-
 {#if selectedPost != null && selectedPost != ''}
 	<div
 		class="pointer-events-none fixed bottom-0 left-0 z-10 flex w-full bg-gradient-to-t from-white/60 px-3 pb-10 dark:from-black/60 sm:px-10"
