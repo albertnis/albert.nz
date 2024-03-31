@@ -4,8 +4,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				inter: ['Inter', 'sans-serif'],
-				rubik: ['Rubik', 'sans-serif']
+				inter: ['Inter', 'San Francisco', 'Arial', 'system-ui', 'sans-serif']
 			},
 			gridTemplateColumns: {
 				'layout-md':

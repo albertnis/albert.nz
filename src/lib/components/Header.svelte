@@ -3,7 +3,7 @@
 </script>
 
 <header class="col-start-[wide-start] col-end-[wide-end]">
-	<h1 class="mb-10 mt-5 cursor-default text-2xl font-extrabold sm:mb-20 sm:mt-20">
+	<h1 class="mb-10 mt-5 cursor-default text-2xl font-inter font-extrabold sm:mb-20 sm:mt-20">
 		<span class="text-zinc-600 dark:text-zinc-400"><Logo /></span><span class="ml-[0.25em]"
 			>Albert Nisbet</span
 		>

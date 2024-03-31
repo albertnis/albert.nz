@@ -74,6 +74,7 @@
 	:global(.prose-custom figcaption::before) {
 		display: inline-block;
 		content: '↑';
+		font-family: 'Inter', system-ui;
 		opacity: 0.5;
 		margin-right: 0.25rem;
 	}
