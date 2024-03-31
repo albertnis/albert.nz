@@ -11,7 +11,9 @@
 		height: 1em;
 		stroke-dasharray: 38, 12.2656;
 		stroke-dashoffset: 45;
-		animation: spinning 1s linear 0s infinite reverse, vibing 2s ease-in-out 0s infinite alternate;
+		animation:
+			spinning 1s linear 0s infinite reverse,
+			vibing 2s ease-in-out 0s infinite alternate;
 		animation-fill-mode: forwards;
 	}
 

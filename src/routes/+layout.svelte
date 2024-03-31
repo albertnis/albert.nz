@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores'
+	import '../app.css'
 </script>
 
 <svelte:head>
@@ -16,7 +17,3 @@
 >
 	<slot />
 </div>
-
-<style global>
-	@import '../app.css';
-</style>

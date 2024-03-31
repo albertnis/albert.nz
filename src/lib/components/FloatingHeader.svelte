@@ -24,17 +24,21 @@
 	:global(.floatingHeaderLink svg path) {
 		stroke-dashoffset: 1;
 		stroke-dasharray: 1;
-		transition: stroke-dashoffset 0s, d 0.2s ease-out;
-		d: path("M4, 7L1, 7L4, 2L7, 7L10, 2");
+		transition:
+			stroke-dashoffset 0s,
+			d 0.2s ease-out;
+		d: path('M4, 7L1, 7L4, 2L7, 7L10, 2');
 	}
 
 	:global(.floatingHeaderLink_visible svg path) {
 		stroke-dashoffset: 0;
 		stroke-dasharray: 1;
-		transition: stroke-dashoffset 0.5s ease-out 1s, d 0.2s ease-out;
+		transition:
+			stroke-dashoffset 0.5s ease-out 1s,
+			d 0.2s ease-out;
 	}
 
 	:global(.floatingHeaderLink_visible:hover svg path) {
-		d: path("M4, 7L1, 4.5L4, 2L1, 4.5L7, 4.5");
+		d: path('M4, 7L1, 4.5L4, 2L1, 4.5L7, 4.5');
 	}
 </style>

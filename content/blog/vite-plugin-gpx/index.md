@@ -274,11 +274,11 @@ The rest of the code in this section will be within the scope of this `gpxDataTo
 
 ## Understanding GPX
 
-A GPX file is an XML file with a schema. The most useful thing to do with it in this plugin is to parse it into an GeoJSON format. This makes it easier to work with in JavaScript. Besides, most mapping libraries will accept GeoJSON as input. The [`xmldom`](https://www.npmjs.com/package/xmldom) and [`@mapbox/togeojson`](https://www.npmjs.com/package/@mapbox/togeojson) libraries work well here.
+A GPX file is an XML file with a schema. The most useful thing to do with it in this plugin is to parse it into an GeoJSON format. This makes it easier to work with in JavaScript. Besides, most mapping libraries will accept GeoJSON as input. The [`@xmldom/xmldom`](https://www.npmjs.com/package/@xmldom/xmldom) and [`@mapbox/togeojson`](https://www.npmjs.com/package/@mapbox/togeojson) libraries work well here.
 
 ```ts
 import geojson from '@mapbox/togeojson'
-import { DOMParser } from 'xmldom'
+import { DOMParser } from '@xmldom/xmldom'
 
 // ...
 
