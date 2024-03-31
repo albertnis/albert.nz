@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises'
 import geojson from '@mapbox/togeojson'
 import type { Geometry, LineString, Position } from 'geojson'
 import type { Plugin } from 'vite'
-import { DOMParser } from 'xmldom'
+import { DOMParser } from '@xmldom/xmldom'
 
 import { computeBreakIndices } from './computeBreakIndices'
 import { computeCumulativeElevationGainMetres } from './computeCumulativeElevationGainMetres'

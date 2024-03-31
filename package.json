@@ -28,6 +28,7 @@
 		"@types/xmldom": "^0.1.32",
 		"@typescript-eslint/eslint-plugin": "^6.8.0",
 		"@typescript-eslint/parser": "^6.8.0",
+		"@xmldom/xmldom": "^0.8.10",
 		"autoprefixer": "^10.4.19",
 		"date-fns": "^2.30.0",
 		"downsample": "^1.4.0",
@@ -65,8 +66,7 @@
 		"vfile-matter": "^5.0.0",
 		"vite": "^5.0.0",
 		"vite-imagetools": "^6.0.0",
-		"vitest": "^1.0.0",
-		"xmldom": "^0.6.0"
+		"vitest": "^1.0.0"
 	},
 	"type": "module"
 }
