@@ -22,7 +22,7 @@
 
 <Header />
 
-<div class="col-start-[wide-start] col-end-[wide-end] mt-20">
+<div class="col-start-[wide-start] col-end-[wide-end] mt-10">
 	<h2 class="text-2xl" id="posts">
 		<span class="font-bold">Latest posts</span>
 	</h2>
