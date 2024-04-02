@@ -15,7 +15,7 @@
 	class:font-bold={enabled}
 >
 	<input
-		class="hidden appearance-none"
+		class="appearance-none"
 		type="checkbox"
 		checked={enabled}
 		name={tag}

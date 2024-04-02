@@ -1,4 +1,5 @@
 <svg
+	aria-label="Geometric logo showing the initials A and N combined into one shape"
 	xmlns="http://www.w3.org/2000/svg"
 	height="1em"
 	class="inline h-[1em] overflow-visible"
