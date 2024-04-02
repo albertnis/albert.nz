@@ -5,16 +5,11 @@
 	import { parseISO, format } from 'date-fns'
 	import MapGroup from '$lib/components/MapGroup.svelte'
 	import { parse } from 'node-html-parser'
+	import '$lib/styles/highlight.min.css'
 
 	export let data: Post
 
 	const html = parse(data.content)
-
-	const hasCodeBlock = html.querySelector('pre')
-	if (hasCodeBlock) {
-		import('$lib/styles/highlight.min.css')
-	}
-
 	const hasMath = html.querySelector('math')
 </script>
 
