@@ -3,16 +3,32 @@
 	import HeaderSmall from '$lib/components/HeaderSmall.svelte'
 	import type { Post } from '../../../types/post'
 	import { parseISO, format } from 'date-fns'
-	import '$lib/styles/highlight.min.css'
 	import MapGroup from '$lib/components/MapGroup.svelte'
+	import { parse } from 'node-html-parser'
 
 	export let data: Post
+
+	const html = parse(data.content)
+
+	const hasCodeBlock = html.querySelector('pre')
+	if (hasCodeBlock) {
+		import('$lib/styles/highlight.min.css')
+	}
+
+	const hasMath = html.querySelector('math')
 </script>
 
 <svelte:head>
 	<meta property="og:type" content="article" />
 	<meta property="article:published_time" content={data.meta.date} />
 	<meta property="article:author" content="Albert Nisbet" />
+	{#if hasMath}
+		<link
+			href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css"
+			rel="stylesheet"
+			crossorigin="anonymous"
+		/>
+	{/if}
 </svelte:head>
 
 <HeaderSmall />
