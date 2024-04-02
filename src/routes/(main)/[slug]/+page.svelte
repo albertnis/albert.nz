@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores'
 	import Footer from '$lib/components/Footer.svelte'
 	import HeaderSmall from '$lib/components/HeaderSmall.svelte'
 	import type { Post } from '../../../types/post'
@@ -17,6 +18,7 @@
 	<meta property="og:type" content="article" />
 	<meta property="article:published_time" content={data.meta.date} />
 	<meta property="article:author" content="Albert Nisbet" />
+	<link rel="canonical" href={`https://albert.nz${$page.url.pathname}`} />
 	{#if hasMath}
 		<link
 			href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css"
