@@ -10,7 +10,7 @@
 	<span
 		><a
 			class="text-zinc-800 opacity-50 hover:opacity-100 dark:text-zinc-200 floatingHeaderLink"
-			class:floatingHeaderLink_visible={y > 250}
+			class:floatingHeaderLink_visible={y > 550}
 			href="/"
 			aria-label="Home page"
 			title="Home"><Logo /></a

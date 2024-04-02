@@ -3,13 +3,13 @@
 </script>
 
 <header
-	class="col-start-[full-start] col-end-[full-end] bg-teal-400 dark:bg-teal-600 text-black grid grid-cols-subgrid"
+	class="col-start-[full-start] col-end-[full-end] bg-teal-400 dark:bg-teal-500 text-teal-950 grid grid-cols-subgrid"
 >
 	<div class="col-start-[wide-start] col-end-[wide-end] mb-10">
 		<h1 class="mb-10 mt-5 cursor-default text-2xl font-extrabold sm:mb-20 sm:mt-20">
-			<span class="text-teal-900"><Logo /></span><span class="ml-[0.25em]">Albert Nisbet</span>
+			<span><Logo /></span><span class="ml-[0.25em]">Albert Nisbet</span>
 		</h1>
-		<div class="mt-32 text-lg font-medium sm:mt-20 max-w-md sm:max-w-full">
+		<div class="mt-32 text-lg font-medium sm:mt-20">
 			<p class="text-4xl sm:text-5xl mb-6">
 				<b><span data-i18n="home.greeting">Hi</span>, I'm Albert!</b>
 			</p>
@@ -56,11 +56,16 @@
 	</div>
 </header>
 <div
-	class="col-start-[full-start] col-end-[full-end] h-20 relative overflow-hidden"
+	class="col-start-[full-start] col-end-[full-end] h-24 -mb-4 relative overflow-x-hidden overflow-y-hidden"
 	aria-hidden="true"
 >
 	<svg
-		class="dark:text-teal-600 text-teal-400 h-full absolute divider"
+		class="dark:text-teal-700 text-teal-300 h-24 absolute divider z-5"
+		viewBox="0 0 8 8"
+		preserveAspectRatio="none"><path fill="currentColor" d="M0,0 L0,1 L2,7 L6,0 L8,6 L8,0" /></svg
+	>
+	<svg
+		class="dark:text-teal-500 text-teal-400 h-16 absolute divider z-6"
 		viewBox="0 0 8 8"
 		preserveAspectRatio="none"><path fill="currentColor" d="M0,0 L0,1 L2,7 L6,0 L8,6 L8,0" /></svg
 	>
@@ -68,8 +73,9 @@
 
 <style>
 	.divider {
-		width: calc(100% + 80vw);
+		width: 150%;
 		left: 50%;
 		transform: translate(-50%, 0);
+		min-width: 1068px;
 	}
 </style>

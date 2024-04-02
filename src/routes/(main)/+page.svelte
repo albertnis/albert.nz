@@ -75,7 +75,7 @@
 			<li class="my-8">
 				<a class="group inline-block" href={post.path}>
 					<h3
-						class="inline border-b border-b-zinc-600 font-bold group-hover:border-b-2 group-hover:border-b-sky-600 dark:border-b-zinc-400 dark:group-hover:border-b-sky-400"
+						class="inline border-b border-b-zinc-600 font-bold group-hover:border-b-4 group-hover:border-b-teal-600 dark:border-b-zinc-400 dark:group-hover:border-b-teal-400 transition-all duration-75"
 					>
 						{post.meta.title}
 					</h3>
