@@ -79,9 +79,12 @@
 					>
 						{post.meta.title}
 					</h3>
-					<span class="font-bold text-zinc-600 before:mx-2 before:content-['/'] dark:text-zinc-400">
+					<time
+						datetime={post.meta.date}
+						class="font-bold text-zinc-600 before:mx-2 before:content-['/'] dark:text-zinc-400"
+					>
 						{format(parseISO(post.meta.date), 'MMMM d, yyyy')}
-					</span>
+					</time>
 					{#if post.meta.tags.includes('technology')}
 						<TagSmall tag="technology" />
 					{/if}

@@ -30,26 +30,31 @@
 
 <HeaderSmall />
 
-<article class="contents">
-	<div class="col-start-[wide-start] col-end-[wide-end]">
-		<h1 class="mb-5 text-5xl font-bold md:text-7xl">{data.meta.title}</h1>
-		<div class="mb-12 font-bold text-zinc-600 dark:text-zinc-400">
-			{format(parseISO(data.meta.date), 'MMMM d, yyyy')}
+<main class="contents">
+	<article class="contents">
+		<div class="col-start-[wide-start] col-end-[wide-end]">
+			<h1 class="mb-5 text-5xl font-bold md:text-7xl">{data.meta.title}</h1>
+			<time
+				datetime={data.meta.date}
+				class="block mb-12 font-bold text-zinc-600 dark:text-zinc-400"
+			>
+				{format(parseISO(data.meta.date), 'MMMM d, yyyy')}
+			</time>
 		</div>
-	</div>
 
-	{#if (data.meta.routes?.length ?? 0) > 0}
-		{#each data.geo as g}
-			<MapGroup geo={g} />
-		{/each}
-	{/if}
-	<hr class="hidden" />
-	<div
-		class="prose-custom prose prose-zinc prose-quoteless relative max-w-none overflow-x-hidden dark:prose-invert prose-figcaption:mb-5 prose-img:max-w-full"
-	>
-		{@html data.content}
-	</div>
-</article>
+		{#if (data.meta.routes?.length ?? 0) > 0}
+			{#each data.geo as g}
+				<MapGroup geo={g} />
+			{/each}
+		{/if}
+		<hr class="hidden" />
+		<div
+			class="prose-custom prose prose-zinc prose-quoteless relative max-w-none overflow-x-hidden dark:prose-invert prose-figcaption:mb-5 prose-img:max-w-full"
+		>
+			{@html data.content}
+		</div>
+	</article>
+</main>
 
 <Footer />
 

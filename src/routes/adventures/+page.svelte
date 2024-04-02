@@ -35,9 +35,12 @@
 				>
 					{selectedPost.meta.title}
 				</h3>
-				<span class="font-bold text-zinc-600 before:mx-2 before:content-['/'] dark:text-zinc-400">
+				<time
+					datetime={selectedPost.meta.date}
+					class="font-bold text-zinc-600 before:mx-2 before:content-['/'] dark:text-zinc-400"
+				>
 					{format(parseISO(selectedPost.meta.date), 'MMMM d, yyyy')}
-				</span>
+				</time>
 				<div class="prose prose-zinc max-w-none">
 					<p class="text-base text-zinc-700 dark:text-zinc-300">{selectedPost.meta.description}</p>
 				</div>
