@@ -18,7 +18,7 @@
 
 	<slot />
 
-	<div class="grid grid-cols-layout-sm md:grid-cols-layout-md">
+	<div class="grid grid-cols-layout-sm md:grid-cols-layout-md dark">
 		<Footer />
 	</div>
 </div>
