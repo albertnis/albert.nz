@@ -22,7 +22,7 @@
 			>&nbsp;/&nbsp;&nbsp;<a
 				data-sveltekit-reload
 				href="/rss.xml"
-				class="border-b border-b-zinc-600 hover:border-b-2 hover:border-b-blue-600 dark:border-b-zinc-400 dark:hover:border-b-blue-400"
+				class="underline decoration-zinc-600 decoration-1 font-bold hover:decoration-4 hover:decoration-teal-600 dark:decoration-zinc-400 dark:hover:decoration-teal-400 transition-all duration-75"
 				><b>RSS</b></a
 			></span
 		>

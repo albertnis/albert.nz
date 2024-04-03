@@ -19,18 +19,18 @@
 				<span data-i18n="home.city">Christchurch, New Zealand</span>. My passion is crafting quality
 				software to solve interesting problems. I have a track record of doing just that at
 				<a
-					class="border-b border-b-teal-900 hover:border-b-4 transition-all duration-75"
+					class="underline decoration-teal-900 decoration-1 hover:decoration-4 transition-all duration-75"
 					href="https://xero.com"
 					rel="noreferrer">Xero</a
 				>,
 				<a
-					class="border-b border-b-teal-900 hover:border-b-4 transition-all duration-75"
+					class="underline decoration-teal-900 decoration-1 hover:decoration-4 transition-all duration-75"
 					href="https://hatchinvest.nz"
 					rel="noreferrer">Hatch</a
 				>
 				and
 				<a
-					class="border-b border-b-teal-900 hover:border-b-4 transition-all duration-75"
+					class="underline decoration-teal-900 decoration-1 hover:decoration-4 transition-all duration-75"
 					href="https://kilterset.com"
 					rel="noreferrer">Kilterset</a
 				>.
@@ -42,13 +42,13 @@
 				Get in touch through
 				<a
 					href="https://linkedin.com/in/albertnis"
-					class="border-b border-b-teal-900 hover:border-b-4 transition-all duration-75"
+					class="underline decoration-teal-900 decoration-1 hover:decoration-4 transition-all duration-75"
 					rel="noreferrer">LinkedIn</a
 				>
 				or find me on
 				<a
 					href="https://github.com/albertnis"
-					class="border-b border-b-teal-900 hover:border-b-4 transition-all duration-75"
+					class="underline decoration-teal-900 decoration-1 hover:decoration-4 transition-all duration-75"
 					rel="noreferrer">GitHub</a
 				>.
 			</p>
