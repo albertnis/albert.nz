@@ -6,9 +6,11 @@ accent: rgb(15, 136, 126)
 tags: [technology]
 ---
 
+**2024 update**: Obfuscator has become a project I enjoy rewriting every few years to learn about different technologies. Since this post, I deployed a [version hosted on CloudFlare Pages using htmx](/htmx-cloudflare-ai) which has replaced this React SSR version. Read on to learn more about my 2019 adventures in server-side rendering on serverless infrastructure, which has since become a very popular way of serving frontends with the rise of Next.js and other meta-frameworks. Note that some of the links below may be broken as this version is no longer hosted.
+
 I've been working on a React project called [Obfuscator][]. It's a rewrite of an older [project](/obfuscator) where you can enter a phrase to translate through multiple languages in sequence. Essentially it's a fun way to make a computer translator play Chinese whispers with itself.
 
-[![Obfuscator top screen](./top-screen.png)][obfuscator]
+![Obfuscator top screen](./top-screen.png)
 
 With the product well-defined and my React knowledge workable at this stage, there was something else I focused on with this project: infrastructure. I wanted the entire thing to be serverless, cheap and scalable-to-zero. Single-page applications (SPAs) with serverless APIs and data stores are nothing new. But I realised nobody was running React one their Lambdas. Surely that's a missed opportunity! So what did I do?
 

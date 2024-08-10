@@ -6,6 +6,8 @@ accent: rgb(184, 43, 59)
 tags: [technology]
 ---
 
+**2024 update**: Obfuscator has become a project I enjoy rewriting every few years to learn about different technologies. Since this post, I deployed a [version using server-rendered React on AWS Lambda](/serverless-side-rendering), which has since been replaced by a [version hosted on CloudFlare Pages using htmx](/htmx-cloudflare-ai). Read on to learn more about the original PHP version of Obfuscator--the principles remain the same to this day.
+
 I have always found online translators so interesting. With the continuous shrinking of the world led by the continuous growth of the internet, it is hardly surprising that we have been algorithmically converting between languages for years now, with online services like Google Translate and Bing Translate establishing themselves as vital when travelling, learning and communicating. These algorithms are good. Darn good, in fact — with [computer vision][google-translate] adding to the mix for an even more functional experience.
 
 If my years of learning French only taught me two things about language, they would have to be the following:
