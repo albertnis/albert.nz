@@ -59,9 +59,8 @@ esphome:
 
 esp32:
   board: esp32-c3-devkitm-1
-  variant: esp32c3
   framework:
-    type: esp-idf
+    type: arduino
     version: latest
 
 wifi:
@@ -98,34 +97,32 @@ output:
     id: redpin
     frequency: 19531Hz
   # - platform: ledc
-  #   pin: GPIO12
+  #   pin: GPIO4
   #   id: bluepin
   #   frequency: 19531Hz
   # - platform: ledc
-  #   pin: GPIO14
+  #   pin: GPIO3
   #   id: whitepin
   #   frequency: 19531Hz
 ```
 
 There are some important bits in here:
 
-- `board: esp32-c3-devkitm-1` signifies that this isn't an ESP32 but rather the related-by-name ESP32-C3. The ESP32-C3 is less powerful but contains many of the ESP32's key features. It's also much newer than the ESP32 and runs on the completely different RISC-V architecture. The small package size of the ESP32-C3 means it can be used by manufacturers as a drop-in replacement for the ESP8266 on boards like the ElectroDragon one, and I can only see the popularity of this chip skyrocketing. ESPHome support appears to still be in development but this config worked well enough, after a lot of trial and error!
+- `board: esp32-c3-devkitm-1` signifies that this isn't an ESP32 but rather the related-by-name ESP32-C3. The ESP32-C3 is less powerful but contains many of the ESP32's key features. It's also much newer than the ESP32 and runs on the completely different RISC-V architecture. The small package size of the ESP32-C3 means it can be used by manufacturers as a drop-in replacement for the ESP8266 on boards like the ElectroDragon one, and I can only see the popularity of this chip skyrocketing.
 - `board_build.flash_mode: dio` is absolutely required for flashing to work successfully. Without this line, the board will default to QIO mode which resulted in boot loops on my ESP32-C3 board.
 - `frequency: 19531Hz` is taken from the table of [recommended frequencies published in the ESPHome documentation](https://esphome.io/components/output/ledc.html#recommended-frequencies). Initially I tried 1220Hz as this results in the most steps available for buttery transitions. Unfortunately, my power supply produced a loud whining sound and some flickering at that frequency. So I switched to the lowest recommended frequency above my hearing limit of about 18kHz; 19.5kHz it was! A worthwhile change for the eliminated flickering and noise--and I don't notice a difference in transition smoothness. A lower recommended frequency may work well for you if you have a better quality supply.
 
 ### A note on pins
 
-I've included the other pins on the board, commented out, for reference purposes. This took some sleuthing as ElectroDragon unfortunately doesn't publish the pin numbers for the ESP32 variant of this board. Here's a table of what I found:
+I've included the other pins on the board, commented out, for reference purposes. This took some sleuthing as ElectroDragon originally didn't publish the pin numbers for the ESP32 variant of this board. Here's a table of what I found:
 
-| Output channel               | [Pin (ESP8266 variant)](https://w.electrodragon.com/w/ESP_LED_Board_HDK) | Pin (ESP32-C3 variant) |
-| ---------------------------- | ------------------------------------------------------------------------ | ---------------------- |
-| G                            | GPIO13                                                                   | GPIO5                  |
-| R                            | GPIO15                                                                   | GPIO8                  |
-| B\*                          | GPIO12                                                                   | GPIO4                  |
-| W\*                          | GPIO14                                                                   | GPIO3                  |
-| Signal (SK6812 or similar)\* | GPIO2                                                                    | GPIO10                 |
-
-> \* I haven't actually tested these ones on ESP32-C3. But comparing the pinouts of the ESP-12F and ESP-C3-12F modules, I think these are the mappings that make sense.
+| Output channel             | [Pin (ESP8266 variant)](https://w.electrodragon.com/w/ESP_LED_Board_HDK) | Pin (ESP32-C3 variant) |
+| -------------------------- | ------------------------------------------------------------------------ | ---------------------- |
+| G                          | GPIO13                                                                   | GPIO5                  |
+| R                          | GPIO15                                                                   | GPIO8                  |
+| B                          | GPIO12                                                                   | GPIO4                  |
+| W                          | GPIO14                                                                   | GPIO3                  |
+| Signal (SK6812 or similar) | GPIO2                                                                    | GPIO10                 |
 
 ## Flashing the board
 
