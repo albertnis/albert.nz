@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Works on Sonoma 14.5
+# Inspired by https://apple.stackexchange.com/questions/424789/can-i-trigger-a-homekit-scene-when-my-laptops-camera-is-turned-on-or-off
+
+exec log stream --predicate 'process == "appleh13camerad" && (eventMessage CONTAINS "PowerOnCamera" || eventMessage CONTAINS "PowerOffCamera")' --style compact --color none |
+  /usr/bin/grep -vE --line-buffered '^Filter|^Timestamp' | # filter out the informational output at launch
+  tee /dev/stderr |                             # output matching events for debugging
+  /usr/bin/sed -Eu 's/.*(PowerOnCamera|PowerOffCamera).*/\1/' |   # reduce the log message down to a single word identifying the event/state
+  while read -r event; do                       # store that word in the $event variable
+    echo "Camera $event"
+
+    system_profiler SPThunderboltDataType | grep -q "UID: 0x014AFA4DCC594700" # Check to see whether Thunderbolt Dock attached
+    OFFICE_DOCK_ATTACHED=$?  # Capture the exit status of the previous command
+
+    if [ "$OFFICE_DOCK_ATTACHED" -eq 0 ]; then
+      if [ "$event" = "PowerOnCamera" ]; then
+        echo "Lamp on"
+        curl -X POST 'http://esphome-desk-bias-light.local/light/desk_camera_light/turn_on' &
+      else
+        echo "Lamp off"
+        curl -X POST 'http://esphome-desk-bias-light.local/light/desk_camera_light/turn_off' &
+      fi
+    fi
+  done
