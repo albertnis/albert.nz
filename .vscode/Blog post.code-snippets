@@ -1,0 +1,38 @@
+{
+	"Adventure blog post": {
+		"prefix": ["blog", "adventure"],
+		"description": "Adventure post skeleton",
+		"scope": "markdown",
+		"body": [
+			"---",
+			"title: $1",
+			"date: ${2:2023-12-23T09:30:00+1300}",
+			"description: $3",
+			"routes:",
+			"  - ./${4:route.gpx}",
+			"tags: [adventures]",
+			"---",
+			"",
+			"${0:Content}",
+			"",
+			"![Image caption](./path.jpg)",
+			"",
+			"<img src=\"./path.jpg\" class=\"prose-custom-w-full\" alt=\"Image caption\"/>"
+		]
+	},
+	"Blog post": {
+		"prefix": ["blog"],
+		"description": "Blog post skeleton",
+		"scope": "markdown",
+		"body": [
+			"---",
+			"title: $1",
+			"date: ${2:2023-12-23T09:30:00+1300}",
+			"description: $3",
+			"tags: [technology]",
+			"---",
+			"",
+			"${0:Content}"
+		]
+	}
+}
