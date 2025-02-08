@@ -13,11 +13,7 @@
 			"tags: [adventures]",
 			"---",
 			"",
-			"${0:Content}",
-			"",
-			"![Image caption](./path.jpg)",
-			"",
-			"<img src=\"./path.jpg\" class=\"prose-custom-w-full\" alt=\"Image caption\"/>"
+			"${0:Content}"
 		]
 	},
 	"Blog post": {
@@ -33,6 +29,15 @@
 			"---",
 			"",
 			"${0:Content}"
+		]
+	},
+	"Wide image": {
+		"prefix": ["wide", "image"],
+		"description": "Wide image",
+		"scope": "markdown",
+		"body": [
+			"<img src=\"./${1:path.jpg}\" class=\"prose-custom-w-full\" alt=\"${2:Image caption}\"/>",
+			"$0"
 		]
 	}
 }
