@@ -39,5 +39,11 @@
 			"<img src=\"./${1:path.jpg}\" class=\"prose-custom-w-full\" alt=\"${2:Image caption}\"/>",
 			"$0"
 		]
+	},
+	"Immich URL": {
+		"prefix": ["image", "immich"],
+		"description": "Immich URL",
+		"scope": "markdown,html",
+		"body": ["https://photos.albert.nz/api/assets/${1:id}/original$0"]
 	}
 }

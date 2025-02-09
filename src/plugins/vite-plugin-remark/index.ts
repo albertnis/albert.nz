@@ -1,6 +1,6 @@
-import { inspect } from 'node:util'
+// import { inspect } from 'node:util'
 import type { Plugin } from 'vite'
-import { unified } from 'unified'
+import { unified, type Processor } from 'unified'
 import type { Node } from 'unist'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
@@ -20,6 +20,7 @@ import { rehypeLazyImg } from './rehypeLazyImage'
 import { rehypeFigure } from './rehypeFigure'
 import { rehypeResponsiveImage } from './rehypeResponsiveImage'
 import { remarkUnwrapImage } from './remarkUnwrapImage'
+import { rehypeImmich } from './rehypeImmich'
 
 type Serializable =
 	| {
@@ -43,9 +44,9 @@ export interface IntermediateOutput {
 	imports: string[]
 }
 
-const realLog = (item: any) => console.log(inspect(item, true, null, true))
+// const realLog = (item: any) => console.log(inspect(item, true, null, true))
 
-const log = () => (tree: Node, file: VFile) => realLog({ tree, file })
+// const log = () => (tree: Node, file: VFile) => realLog({ tree, file })
 
 const parseMatter =
 	() =>
@@ -55,14 +56,41 @@ const parseMatter =
 
 const fileRegex = /\.md$/
 
-export function remark(): Plugin {
+interface Config {
+	immichApiKey?: string
+	immichAllowedHosts: string[]
+}
+
+export function remark({ immichApiKey, immichAllowedHosts }: Config): Plugin {
+	if (immichApiKey == null) {
+		console.warn('Immich API key not provided. Images with Immich URLs will likely fail.')
+	}
+
+	const processor = unified()
+		.use(remarkParse)
+		.use(remarkGfm)
+		.use(remarkFrontmatter, ['yaml'])
+		.use(remarkUnwrapImage)
+		.use(remarkMath, { singleDollarTextMath: false })
+		.use(remarkRehype, { allowDangerousHtml: true })
+		.use(rehypeKatex, { output: 'mathml' })
+		.use(rehypeRaw)
+		.use(rehypeSmartypants)
+		.use(rehypeHighlight, { aliases: { html: 'svelte' } })
+		.use(rehypeImmich, { apiKey: immichApiKey, allowedHosts: immichAllowedHosts })
+		.use(rehypeResponsiveImage)
+		.use(rehypeFigure)
+		.use(rehypeLazyImg)
+		.use(rehypeStringify)
+		.use(parseMatter)
+
 	return {
 		name: '',
 		async transform(code, id) {
 			if (!fileRegex.test(id)) return null
 
 			const file = await read(id)
-			const data = await compileMarkdownToJs(file)
+			const data = await compileMarkdownToJs(processor, file)
 
 			return {
 				code: compileIntermediateToScript(data)
@@ -71,24 +99,9 @@ export function remark(): Plugin {
 	}
 }
 
-const processor = unified()
-	.use(remarkParse)
-	.use(remarkGfm)
-	.use(remarkFrontmatter, ['yaml'])
-	.use(remarkUnwrapImage)
-	.use(remarkMath, { singleDollarTextMath: false })
-	.use(remarkRehype, { allowDangerousHtml: true })
-	.use(rehypeKatex, { output: 'mathml' })
-	.use(rehypeRaw)
-	.use(rehypeSmartypants)
-	.use(rehypeHighlight, { aliases: { html: 'svelte' } })
-	.use(rehypeResponsiveImage)
-	.use(rehypeFigure)
-	.use(rehypeLazyImg)
-	.use(rehypeStringify)
-	.use(parseMatter)
-
 export const compileMarkdownToJs = async (
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	processor: Processor<any, any, any, any, string>,
 	fileData: VFileCompatible
 ): Promise<IntermediateOutput> => {
 	const output = await processor.process(fileData)

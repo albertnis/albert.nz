@@ -105,5 +105,6 @@ export const rehypeResponsiveImage = () => async (tree: Node, file: VFile) => {
 	file.data.replaceMap = replaceMap
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const isRelativeImage = (node: any): node is Element =>
 	node.type === 'element' && node.properties.src?.startsWith('.')
