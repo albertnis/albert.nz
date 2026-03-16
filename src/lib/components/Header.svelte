@@ -31,8 +31,8 @@
 				and
 				<a
 					class="underline decoration-teal-900 decoration-1 hover:decoration-4 transition-all duration-75"
-					href="https://kilterset.com"
-					rel="noreferrer">Kilterset</a
+					href="https://vxt.ai"
+					rel="noreferrer">VXT</a
 				>.
 			</p>
 			<p class="mt-6">
